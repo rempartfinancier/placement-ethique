@@ -140,7 +140,7 @@ export function ProjectionPlacement({ etatInitial }: Props) {
   };
 
   const buildDoc = (): PdfDoc => ({
-    title: "Projection d'épargne halal",
+    title: "Projection d'épargne responsable",
     subtitle: `${LIBELLE_ENVELOPPE[etat.enveloppe]} · ${etat.dureeAnnees} ans · hypothèses à jour : ${HYPOTHESES_MAJ}`,
     source: "simulateur-projection",
     sections: [
@@ -294,7 +294,7 @@ export function ProjectionPlacement({ etatInitial }: Props) {
                 onClick={() => dispatch({ type: "ENVELOPPE", valeur: env })}
                 className={`rounded-xl border p-4 text-left transition-colors ${
                   active
-                    ? "border-[var(--gold)] bg-[oklch(0.97_0.025_85)]"
+                    ? "border-[var(--grenat)] bg-[oklch(0.97_0.025_85)]"
                     : "border-border bg-card hover:border-foreground/40"
                 }`}
               >
@@ -338,7 +338,7 @@ export function ProjectionPlacement({ etatInitial }: Props) {
               onClick={() => dispatch({ type: "FREQUENCE_VERSEMENT", valeur: f.value })}
               className={`rounded-full border px-3 py-1 text-xs transition-colors ${
                 etat.frequenceVersement === f.value
-                  ? "border-[var(--gold)] bg-[oklch(0.97_0.025_85)] text-foreground"
+                  ? "border-[var(--grenat)] bg-[oklch(0.97_0.025_85)] text-foreground"
                   : "border-border text-muted-foreground hover:border-foreground/40"
               }`}
             >
@@ -372,13 +372,12 @@ export function ProjectionPlacement({ etatInitial }: Props) {
             hint={`Le reste (${pct(100 - etat.repartitionUcPct)} %) est affecté au fonds en euros.`}
           />
           {avecFondsEuros && (
-            <div className="mt-3 rounded-xl border border-[oklch(0.8_0.08_82)] bg-[oklch(0.97_0.025_85)] p-4 text-sm text-foreground leading-relaxed">
-              ⚠ Le fonds en euros classique repose principalement sur des obligations porteuses
-              d'intérêts : il n'est pas considéré comme conforme aux critères de la finance
-              islamique. Cette poche est proposée ici à titre de comparaison pédagogique — les
-              allocations construites par le cabinet reposent uniquement sur des supports
-              sélectionnés pour leur filtrage islamique (supervision charia des sociétés de gestion,
-              détaillée dans le DIC et le prospectus de chaque support).
+            <div className="mt-3 rounded-xl border border-[color-mix(in_oklch,var(--grenat)_35%,transparent)] bg-[color-mix(in_oklch,var(--grenat)_5%,var(--card))] p-4 text-sm text-foreground leading-relaxed">
+              ℹ Le fonds en euros classique est majoritairement investi en obligations
+              (souveraines et d'entreprises) : sa composition extra-financière dépend de
+              l'assureur et n'est généralement pas labellisée ISR. Si l'alignement de cette
+              poche avec vos exigences compte pour vous, le sujet se vérifie contrat par
+              contrat — parlez-en à votre conseiller.
             </div>
           )}
         </div>
@@ -403,7 +402,7 @@ export function ProjectionPlacement({ etatInitial }: Props) {
               onClick={() => dispatch({ type: "TAUX_UC", valeur: p.tauxPct })}
               className={`rounded-full border px-3 py-1 text-xs transition-colors ${
                 etat.tauxUcPct === p.tauxPct
-                  ? "border-[var(--gold)] bg-[oklch(0.97_0.025_85)] text-foreground"
+                  ? "border-[var(--grenat)] bg-[oklch(0.97_0.025_85)] text-foreground"
                   : "border-border text-muted-foreground hover:border-foreground/40"
               }`}
             >
@@ -448,7 +447,7 @@ export function ProjectionPlacement({ etatInitial }: Props) {
                     }
                     className={`rounded-xl border p-4 text-left transition-colors ${
                       active
-                        ? "border-[var(--gold)] bg-[oklch(0.97_0.025_85)]"
+                        ? "border-[var(--grenat)] bg-[oklch(0.97_0.025_85)]"
                         : "border-border bg-card hover:border-foreground/40"
                     }`}
                   >
@@ -466,7 +465,7 @@ export function ProjectionPlacement({ etatInitial }: Props) {
               onClick={() => dispatch({ type: "APPLIQUER_PRESET_FRAIS", valeur: "perso" })}
               className={`rounded-xl border p-4 text-left transition-colors ${
                 etat.presetFrais === "perso"
-                  ? "border-[var(--gold)] bg-[oklch(0.97_0.025_85)]"
+                  ? "border-[var(--grenat)] bg-[oklch(0.97_0.025_85)]"
                   : "border-border bg-card hover:border-foreground/40"
               }`}
             >
@@ -533,7 +532,7 @@ export function ProjectionPlacement({ etatInitial }: Props) {
               type="checkbox"
               checked={etat.estCouple}
               onChange={() => dispatch({ type: "TOGGLE_COUPLE" })}
-              className="h-4 w-4 accent-[var(--gold)]"
+              className="h-4 w-4 accent-[var(--grenat)]"
             />
             <span className="text-sm font-medium text-foreground">
               Couple soumis à imposition commune (abattement{" "}
@@ -545,7 +544,7 @@ export function ProjectionPlacement({ etatInitial }: Props) {
               type="checkbox"
               checked={etat.optionBareme}
               onChange={() => dispatch({ type: "TOGGLE_BAREME" })}
-              className="h-4 w-4 accent-[var(--gold)]"
+              className="h-4 w-4 accent-[var(--grenat)]"
             />
             <span className="text-sm font-medium text-foreground">
               Option pour le barème progressif (au lieu du PFU)
@@ -598,7 +597,7 @@ export function ProjectionPlacement({ etatInitial }: Props) {
                 type="checkbox"
                 checked={etat.inflationActivee}
                 onChange={() => dispatch({ type: "TOGGLE_INFLATION" })}
-                className="h-4 w-4 accent-[var(--gold)]"
+                className="h-4 w-4 accent-[var(--grenat)]"
               />
               <span className="text-sm font-medium text-foreground">
                 Afficher en euros constants (corriger de l'inflation)
@@ -674,7 +673,7 @@ export function ProjectionPlacement({ etatInitial }: Props) {
                   <p className="eyebrow" style={{ color: "oklch(0.8 0.08 82)" }}>
                     Projection à {etat.dureeAnnees} ans — {LIBELLE_ENVELOPPE[etat.enveloppe]}
                   </p>
-                  <p className="font-display text-5xl mt-3" style={{ color: "var(--gold)" }}>
+                  <p className="font-display text-5xl mt-3" style={{ color: "var(--grenat)" }}>
                     {eur(Math.round(resultat.capitalNet))}
                   </p>
                   <p className="text-sm mt-2 text-white/80">
@@ -732,7 +731,7 @@ export function ProjectionPlacement({ etatInitial }: Props) {
                       capitalisée dans la projection.
                     </p>
                   )}
-                  <Link to="/contact" className="btn-gold mt-8 w-full justify-center">
+                  <Link to="/contact" className="btn-grenat mt-8 w-full justify-center">
                     Préparer un rendez-vous avec ces chiffres
                   </Link>
                 </div>
@@ -783,7 +782,7 @@ export function ProjectionPlacement({ etatInitial }: Props) {
                 </div>
 
                 <p className="text-sm text-muted-foreground leading-relaxed">
-                  Envie de voir à quoi ressemble un portefeuille halal réel ?{" "}
+                  Envie de voir à quoi ressemble un portefeuille responsable réel ?{" "}
                   <Link
                     to="/outils/portefeuilles-types"
                     className="text-foreground underline underline-offset-4"
@@ -831,7 +830,7 @@ function TmiPills({
             onClick={() => onChange(tmi)}
             className={`rounded-full border px-3 py-1 text-xs transition-colors ${
               valeur === tmi
-                ? "border-[var(--gold)] bg-[oklch(0.97_0.025_85)] text-foreground"
+                ? "border-[var(--grenat)] bg-[oklch(0.97_0.025_85)] text-foreground"
                 : "border-border text-muted-foreground hover:border-foreground/40"
             }`}
           >

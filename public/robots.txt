@@ -1,3 +1,5 @@
 User-agent: *
 Allow: /
-Sitemap: https://placement-halal.fr/sitemap.xml
+Disallow: /espace
+
+Sitemap: https://placement-ethique.fr/sitemap.xml

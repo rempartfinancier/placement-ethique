@@ -62,7 +62,7 @@ export function SliderField({ label, value, onChange, min, max, step, unit, hard
                 (e.target as HTMLInputElement).blur();
               }
             }}
-            className="w-28 rounded-lg border border-border bg-background px-2.5 py-1.5 text-sm text-right text-foreground focus:border-[var(--gold)] focus:outline-none focus:ring-1 focus:ring-[var(--gold)] transition-colors"
+            className="w-28 rounded-lg border border-border bg-background px-2.5 py-1.5 text-sm text-right text-foreground focus:border-[var(--grenat)] focus:outline-none focus:ring-1 focus:ring-[var(--grenat)] transition-colors"
           />
           {unit && <span className="text-sm text-muted-foreground">{unit}</span>}
         </div>
@@ -75,7 +75,7 @@ export function SliderField({ label, value, onChange, min, max, step, unit, hard
         step={step}
         value={Math.min(value, max)}
         onChange={(e) => onChange(Number(e.target.value))}
-        className="w-full accent-[var(--gold)]"
+        className="w-full accent-[var(--grenat)]"
       />
       <div className="flex justify-between text-xs text-muted-foreground mt-1">
         <span>{fmt(min)}{unit ? ` ${unit}` : ""}</span>

@@ -18,6 +18,12 @@ quoi, pourquoi.
   bureaux, graphiques) déjà libres de droits dans le repo de référence ; les images
   spécifiquement halal (vaches, sukuk, familles en contexte religieux) ne sont pas
   reprises. Les articles sans image adaptée n'en ont pas (champ `image` optionnel).
+- **Tri visuel effectué image par image** (inspection réelle des fichiers) : 6
+  images conservées et renommées dans `public/images/articles/` (lettres ETF,
+  immeuble végétalisé, maquette éolienne, blocs de progression, bocal d'épargne,
+  duo devant graphiques) ; 8 supprimées — photos en contexte islamique (3),
+  clichés bannis par le brief (pousse verte ×2, globe terrestre), Bitcoin à
+  l'écran, dollars US sur pelouse. Cohérence marque > volume d'illustrations.
 
 ## Marque & design
 

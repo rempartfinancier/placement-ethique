@@ -152,10 +152,10 @@ export function LeadGate({ source, payload, onSuccess }: LeadGateProps) {
   }
 
   return (
-    <div className="rounded-2xl border border-[var(--gold)] bg-card p-8 md:p-10 shadow-[var(--shadow-elevated)] max-w-2xl mx-auto my-12 animate-in fade-in zoom-in-95 duration-500">
-      <div className="flex items-center gap-3 text-[var(--gold)] mb-4">
+    <div className="rounded-2xl border border-[var(--grenat)] bg-card p-8 md:p-10 shadow-[var(--shadow-elevated)] max-w-2xl mx-auto my-12 animate-in fade-in zoom-in-95 duration-500">
+      <div className="flex items-center gap-3 text-[var(--grenat)] mb-4">
         <CheckCircle2 size={24} />
-        <p className="eyebrow !mb-0 !text-[var(--gold)]">Vos résultats sont prêts</p>
+        <p className="eyebrow !mb-0 !text-[var(--grenat)]">Vos résultats sont prêts</p>
       </div>
 
       <h2 className="font-display text-3xl mt-2 text-foreground">
@@ -181,7 +181,7 @@ export function LeadGate({ source, payload, onSuccess }: LeadGateProps) {
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               placeholder="votre.email@exemple.com"
-              className="w-full rounded-lg border border-input bg-background py-3 pl-10 pr-4 text-sm text-foreground focus:border-[var(--gold)] focus:outline-none focus:ring-1 focus:ring-[var(--gold)] transition-colors"
+              className="w-full rounded-lg border border-input bg-background py-3 pl-10 pr-4 text-sm text-foreground focus:border-[var(--grenat)] focus:outline-none focus:ring-1 focus:ring-[var(--grenat)] transition-colors"
               required
             />
           </div>
@@ -198,7 +198,7 @@ export function LeadGate({ source, payload, onSuccess }: LeadGateProps) {
 
       <div className="mt-6 flex flex-col gap-4 border-t border-border/60 pt-6">
         <div className="flex items-start gap-3">
-          <ShieldCheck className="text-[var(--gold)] shrink-0 mt-0.5" size={18} />
+          <ShieldCheck className="text-[var(--grenat)] shrink-0 mt-0.5" size={18} />
           <p className="text-xs text-muted-foreground leading-relaxed">
             <strong className="text-foreground/80 font-medium">En toute transparence :</strong>{" "}
             votre email et le résumé de cette simulation sont transmis à notre outil d'emailing

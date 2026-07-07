@@ -125,7 +125,7 @@ export function ResultsActions({ source, buildDoc }: Props) {
           aria-label="S'inscrire à la newsletter"
           checked={newsletter}
           onChange={(e) => setNewsletter(e.target.checked)}
-          className="mt-0.5 accent-[var(--gold)]"
+          className="mt-0.5 accent-[var(--grenat)]"
         />
         <span>
           Je souhaite recevoir <strong className="text-foreground">la newsletter Placement-éthique.fr</strong> :
@@ -147,7 +147,7 @@ export function ResultsActions({ source, buildDoc }: Props) {
           type="button"
           onClick={handleEmail}
           disabled={busy !== null || !email}
-          className="inline-flex items-center justify-center gap-2 rounded-lg border border-[var(--gold)] text-foreground px-4 py-2.5 text-sm font-medium hover:bg-[oklch(0.97_0.025_85)] disabled:opacity-60"
+          className="inline-flex items-center justify-center gap-2 rounded-lg border border-[var(--grenat)] text-foreground px-4 py-2.5 text-sm font-medium hover:bg-[oklch(0.97_0.025_85)] disabled:opacity-60"
         >
           {busy === "email" ? <Loader2 className="animate-spin" size={16} /> : done === "email" ? <CheckCircle2 size={16} /> : <Mail size={16} />}
           Recevoir par email

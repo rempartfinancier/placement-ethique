@@ -2,10 +2,11 @@
 // CONTRATS RÉELS DISTRIBUÉS PAR LE CABINET — paramètres de frais
 // ------------------------------------------------------------
 // Contenu métier (pas de calcul). Les frais encodés ici sont ceux de la
-// grille publique de la page /tarifs (src/routes/tarifs.tsx), confirmée
-// par le cabinet le 06/07/2026 — jamais une moyenne de marché. Les deux
-// pages doivent rester synchronisées : toute révision de la grille
-// /tarifs se répercute ici (cf. docs/donnees-fonds-mise-a-jour.md).
+// grille publique de la page /tarifs, reprise du brief (§2.4) — même
+// cabinet et mêmes partenaires que le reste du réseau, grille confirmée
+// par écrit le 06/07/2026 côté réseau. Jamais une moyenne de marché.
+// Les deux pages doivent rester synchronisées : toute révision de la
+// grille /tarifs se répercute ici (cf. docs/donnees-fonds-mise-a-jour.md).
 //
 // Limites assumées, à rappeler en disclaimer partout où ces frais
 // s'affichent : les frais d'arbitrage et de sortie éventuels des
@@ -19,7 +20,7 @@ export type ContratId = "pvp" | "uaf";
 export type EnveloppeContrat = "av" | "per";
 
 /**
- * Grille dégressive des frais d'entrée (assurance-vie et PER, identique
+ * Grille dégressive des frais d'entrée (assurance vie et PER, identique
  * chez les deux partenaires) — page /tarifs. Le moteur applique un taux
  * uniforme librement éditable : la grille est affichée à titre
  * d'information, pas appliquée tranche par tranche (documenté).
@@ -70,10 +71,10 @@ export const CONTRATS: Record<ContratId, ContratAssurance> = {
       av: {
         entreePct: 1.0,
         gestionUcPct: 1.08,
-        // ⚠ Seule donnée non couverte par la grille /tarifs : gestion du
-        // fonds en euros reprise de la simulation BIG du cabinet (0,6 %)
-        // — à confirmer (le fonds euros classique n'est de toute façon
-        // pas conforme charia, répartition par défaut 100 % UC).
+        // ⚠ Gestion du fonds en euros reprise de la simulation BIG du
+        // cabinet (0,6 %) — à confirmer. Le fonds en euros est pleinement
+        // utilisable sur ce site ; son caractère ISR éventuel (fonds
+        // euros « vert ») reste à documenter avec l'assureur.
         gestionFondsEurosPct: 0.6,
       },
       // PER distribué par Vie Plus (Suravenir) — intitulé commercial
@@ -90,7 +91,7 @@ export const CONTRATS: Record<ContratId, ContratAssurance> = {
       "Souscription uniquement en rendez-vous avec le cabinet — ce contrat ne peut pas s'ouvrir en ligne.",
     statut: "VALIDÉ CABINET",
     source:
-      "Grille publique de la page /tarifs (entrée 1 %/0,5 %/0 % ; gestion AV 1,08 %/an, PER 1,00 %/an), confirmée par le cabinet le 06/07/2026. Gestion fonds euros : simulation BIG, à confirmer.",
+      "Grille de frais du réseau (entrée 1 %/0,5 %/0 % ; gestion AV 1,08 %/an, PER 1,00 %/an), confirmée côté réseau le 06/07/2026 (brief §2.4). Gestion fonds euros : simulation BIG, à confirmer.",
   },
   uaf: {
     id: "uaf",
@@ -111,14 +112,15 @@ export const CONTRATS: Record<ContratId, ContratAssurance> = {
       },
     },
     notesFrais: NOTES_FRAIS_COMMUNES,
-    // Existence d'un fonds euros sur ce contrat non renseignée — sans
-    // objet pour l'univers halal (100 % UC), à confirmer si besoin.
+    // Existence et conditions du fonds en euros sur ce contrat non
+    // renseignées pour ce site — à confirmer avec le cabinet avant de
+    // proposer une répartition avec fonds euros sur ce préréglage.
     fondsEurosDisponible: false,
     modaliteSouscription:
       "Souscription en rendez-vous avec le cabinet, qui présente les paramètres détaillés du contrat.",
     statut: "VALIDÉ CABINET",
     source:
-      "Grille publique de la page /tarifs (entrée 1 %/0,5 %/0 % ; gestion 1,00 %/an AV et PER), confirmée par le cabinet le 06/07/2026.",
+      "Grille de frais du réseau (entrée 1 %/0,5 %/0 % ; gestion 1,00 %/an AV et PER), confirmée côté réseau le 06/07/2026 (brief §2.4).",
   },
 };
 

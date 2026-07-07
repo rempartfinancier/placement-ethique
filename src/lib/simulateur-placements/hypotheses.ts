@@ -127,10 +127,10 @@ export const RENDEMENTS: Record<"uc" | "fondsEuros", HypotheseRendement> = {
 // profils historiques de la page /outils/simulateur (hypothèses
 // éditoriales prudentes, librement modifiables, jamais des promesses).
 export const PRESETS_TAUX_UC: { id: string; libelle: string; tauxPct: number }[] = [
-  { id: "prudent", libelle: "Prudent (dominante sukuk)", tauxPct: 2.5 },
-  { id: "equilibre", libelle: "Équilibré (mix actions/sukuk)", tauxPct: 5.5 },
+  { id: "prudent", libelle: "Prudent (dominante obligataire ISR)", tauxPct: 2.5 },
+  { id: "equilibre", libelle: "Équilibré (mix actions/obligations ISR)", tauxPct: 5.5 },
   { id: "reference", libelle: "Réf. simulation cabinet", tauxPct: 7 },
-  { id: "dynamique", libelle: "Dynamique (ETF islamiques)", tauxPct: 8 },
+  { id: "dynamique", libelle: "Dynamique (actions monde ISR)", tauxPct: 8 },
 ];
 
 // ---- Inflation ----
@@ -161,6 +161,6 @@ export const SCENARIO_PAR_DEFAUT = {
   versementInitial: 2500, // €
   versementPeriodique: 100, // € (mensuel par défaut)
   dureeAnnees: 20,
-  repartitionUcPct: 100, // 100 % UC par défaut (univers halal : pas de fonds euros conforme identifié — cf. contrats.ts)
+  repartitionUcPct: 100, // 100 % UC par défaut — librement modifiable, le fonds en euros est utilisable sur ce site (cf. contrats.ts)
   indexationAnnuellePct: 0,
 };

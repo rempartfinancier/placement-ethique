@@ -89,7 +89,7 @@ export function ContactForm({
       <div className="grid sm:grid-cols-2 gap-5">
         <div className="space-y-1.5">
           <label htmlFor="name" className="text-sm font-medium text-foreground">
-            Prénom et Nom <span className="text-[var(--gold)]">*</span>
+            Prénom et Nom <span className="text-[var(--grenat)]">*</span>
           </label>
           <input
             id="name"
@@ -97,14 +97,14 @@ export function ContactForm({
             value={formData.name}
             onChange={(e) => setFormData(p => ({ ...p, name: e.target.value }))}
             required
-            className="w-full rounded-xl border border-input bg-background px-4 py-3 text-sm text-foreground focus:border-[var(--gold)] focus:outline-none focus:ring-1 focus:ring-[var(--gold)] transition-colors"
+            className="w-full rounded-xl border border-input bg-background px-4 py-3 text-sm text-foreground focus:border-[var(--grenat)] focus:outline-none focus:ring-1 focus:ring-[var(--grenat)] transition-colors"
             placeholder="Ex: Tariq I."
           />
         </div>
         
         <div className="space-y-1.5">
           <label htmlFor="email" className="text-sm font-medium text-foreground">
-            Email <span className="text-[var(--gold)]">*</span>
+            Email <span className="text-[var(--grenat)]">*</span>
           </label>
           <input
             id="email"
@@ -112,7 +112,7 @@ export function ContactForm({
             value={formData.email}
             onChange={(e) => setFormData(p => ({ ...p, email: e.target.value }))}
             required
-            className="w-full rounded-xl border border-input bg-background px-4 py-3 text-sm text-foreground focus:border-[var(--gold)] focus:outline-none focus:ring-1 focus:ring-[var(--gold)] transition-colors"
+            className="w-full rounded-xl border border-input bg-background px-4 py-3 text-sm text-foreground focus:border-[var(--grenat)] focus:outline-none focus:ring-1 focus:ring-[var(--grenat)] transition-colors"
             placeholder="votre.email@exemple.com"
           />
         </div>
@@ -127,7 +127,7 @@ export function ContactForm({
           type="tel"
           value={formData.phone}
           onChange={(e) => setFormData(p => ({ ...p, phone: e.target.value }))}
-          className="w-full rounded-xl border border-input bg-background px-4 py-3 text-sm text-foreground focus:border-[var(--gold)] focus:outline-none focus:ring-1 focus:ring-[var(--gold)] transition-colors"
+          className="w-full rounded-xl border border-input bg-background px-4 py-3 text-sm text-foreground focus:border-[var(--grenat)] focus:outline-none focus:ring-1 focus:ring-[var(--grenat)] transition-colors"
           placeholder="06 12 34 56 78"
         />
       </div>
@@ -141,7 +141,7 @@ export function ContactForm({
           rows={4}
           value={formData.message}
           onChange={(e) => setFormData(p => ({ ...p, message: e.target.value }))}
-          className="w-full rounded-xl border border-input bg-background px-4 py-3 text-sm text-foreground focus:border-[var(--gold)] focus:outline-none focus:ring-1 focus:ring-[var(--gold)] transition-colors resize-y"
+          className="w-full rounded-xl border border-input bg-background px-4 py-3 text-sm text-foreground focus:border-[var(--grenat)] focus:outline-none focus:ring-1 focus:ring-[var(--grenat)] transition-colors resize-y"
           placeholder="Décrivez brièvement votre projet ou votre question..."
         />
       </div>

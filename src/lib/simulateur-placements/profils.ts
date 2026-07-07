@@ -10,9 +10,10 @@
 // L'UI qui consomme ce fichier doit reprendre le libellé
 // AVERTISSEMENT_PROFIL_TYPE tel quel sur chaque écran concerné.
 //
-// Données : fiche Quantalys du cabinet (« Portefeuille respectueux »).
-// Les indicateurs et performances sont ceux du BACKTEST de l'allocation
-// (rétropolation) — non contractuels, le DIC de chaque support prime.
+// ⚠ ÉTAT ACTUEL : aucune allocation ISR n'a été communiquée par le
+// cabinet pour ce site. Les trois profils sont donc affichés « en cours
+// de validation » (lignes: null) — on n'invente ni ISIN, ni poids, ni
+// indicateurs, ni backtest (règle anti-fabrication du brief).
 // ============================================================
 
 import type { PerfCalendaires, PerfCumulees } from "./fonds";
@@ -25,7 +26,7 @@ export interface LigneAllocation {
 }
 
 export interface IndicateursPortefeuille {
-  /** SRI agrégé affiché par Quantalys pour l'allocation (échelle 1-7). */
+  /** SRI agrégé affiché pour l'allocation (échelle 1-7). */
   sri: 1 | 2 | 3 | 4 | 5 | 6 | 7;
   volatilite3AnsPct: number;
   perteMax3AnsPct: number;
@@ -58,62 +59,41 @@ export const PROFILS_TYPES: Record<ProfilTypeId, ProfilType> = {
     id: "prudent",
     libelle: "Profil prudent",
     description:
-      "Dominante sukuk (obligataire conforme), part actions réduite. Composition exacte en attente de communication par le cabinet.",
-    // ⚠ PLACEHOLDER — allocation à obtenir du cabinet (liste exacte des
-    // fonds disponibles demandée) : ne rien inventer, le profil est
-    // affiché « en cours de validation » tant que lignes = null.
+      "Dominante obligataire responsable (obligations vertes, fonds en euros), part actions réduite. Composition exacte en attente de communication par le cabinet.",
+    // ⚠ PLACEHOLDER — allocation à obtenir du cabinet : ne rien inventer,
+    // le profil est affiché « en cours de validation » tant que lignes = null.
     lignes: null,
     indicateurs: null,
     perfCumulees: null,
     perfCalendaires: null,
     statut: "À VALIDER",
-    source: "En attente de la fiche d'allocation du cabinet.",
+    source: "En attente de la fiche d'allocation ISR du cabinet.",
   },
   equilibre: {
     id: "equilibre",
     libelle: "Profil équilibré",
     description:
-      "Cœur actions monde filtrées, diversification pays émergents, poche sukuk pour amortir la volatilité.",
-    lignes: [
-      { isin: "LU0806931092", poidsPct: 65 }, // HSBC Islamic Global Equity Index
-      { isin: "IE0009BC6K22", poidsPct: 10 }, // HSBC MSCI EM Islamic Screened
-      { isin: "LU0923115975", poidsPct: 25 }, // Franklin Global Sukuk
-    ],
-    indicateurs: {
-      sri: 4,
-      volatilite3AnsPct: 11.92,
-      perteMax3AnsPct: 19.02,
-      dsr3AnsPct: 8.8,
-    },
-    perfCumulees: {
-      unMoisPct: 1.63,
-      unAnPct: 2.9,
-      troisAnsPct: 21.74,
-      cinqAnsPct: 43.82,
-      depuisCreationPct: 235.58,
-    },
-    perfCalendaires: {
-      ytdPct: -4.15,
-      a2024Pct: 22.34,
-      a2023Pct: 17.71,
-      a2022Pct: -14.89,
-    },
-    statut: "À VALIDER",
-    source:
-      "Fiche Quantalys du cabinet « Portefeuille respectueux — profil équilibré » (backtest de l'allocation). ⚠ Fiche ancienne (signalé par le cabinet le 06/07/2026) : indicateurs et performances à rafraîchir avant mise en avant.",
-  },
-  dynamique: {
-    id: "dynamique",
-    libelle: "Profil dynamique",
-    description:
-      "Dominante actions (monde et émergents), poche sukuk réduite. Composition exacte en attente de communication par le cabinet.",
+      "Cœur actions monde filtrées ESG, diversification, poche obligataire responsable pour amortir la volatilité. Composition exacte en attente de communication par le cabinet.",
     // ⚠ PLACEHOLDER — même règle que le profil prudent.
     lignes: null,
     indicateurs: null,
     perfCumulees: null,
     perfCalendaires: null,
     statut: "À VALIDER",
-    source: "En attente de la fiche d'allocation du cabinet.",
+    source: "En attente de la fiche d'allocation ISR du cabinet.",
+  },
+  dynamique: {
+    id: "dynamique",
+    libelle: "Profil dynamique",
+    description:
+      "Dominante actions responsables (monde et émergents), poche obligataire réduite. Composition exacte en attente de communication par le cabinet.",
+    // ⚠ PLACEHOLDER — même règle que le profil prudent.
+    lignes: null,
+    indicateurs: null,
+    perfCumulees: null,
+    perfCalendaires: null,
+    statut: "À VALIDER",
+    source: "En attente de la fiche d'allocation ISR du cabinet.",
   },
 };
 

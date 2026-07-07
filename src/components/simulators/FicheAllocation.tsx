@@ -131,7 +131,7 @@ export function FicheAllocation({ profil }: { profil: ProfilType }) {
                   <td className="px-4 py-2.5 text-foreground">
                     {l.fonds?.nom ?? "Support à documenter"}
                     <p className="text-xs text-muted-foreground mt-0.5 leading-relaxed">
-                      {l.fonds?.conformite}
+                      {l.fonds?.cadreExtraFinancier}
                     </p>
                   </td>
                   <td className="px-4 py-2.5 text-muted-foreground font-mono text-xs">{l.isin}</td>
@@ -209,7 +209,7 @@ function JaugeSri({ sri }: { sri: number }) {
             key={n}
             className={`flex h-6 w-6 items-center justify-center rounded text-xs font-medium ${
               n === sri
-                ? "bg-[var(--gold)] text-white"
+                ? "bg-[var(--grenat)] text-white"
                 : "bg-[oklch(0.94_0.01_80)] text-muted-foreground"
             }`}
           >
