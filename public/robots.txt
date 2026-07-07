@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://placement-halal.fr/sitemap.xml
