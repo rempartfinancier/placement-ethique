@@ -11,6 +11,10 @@ export const meta: ArticleMeta = {
   date: "2026-04-24",
   tags: ["ETF", "ISR", "ESG", "indices", "débutant"],
   author: "Sébastien Petrisot",
+  image: "/images/articles/etf-isr-lettres.jpg",
+  imageAlt: "Lettres de jeu de société formant le mot ETF posées sur une table en bois",
+  imageWidth: 2000,
+  imageHeight: 1333,
 };
 
 export function Corps() {

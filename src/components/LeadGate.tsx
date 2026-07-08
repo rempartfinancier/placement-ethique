@@ -155,7 +155,7 @@ export function LeadGate({ source, payload, onSuccess }: LeadGateProps) {
     <div className="rounded-2xl border border-[var(--grenat)] bg-card p-8 md:p-10 shadow-[var(--shadow-elevated)] max-w-2xl mx-auto my-12 animate-in fade-in zoom-in-95 duration-500">
       <div className="flex items-center gap-3 text-[var(--grenat)] mb-4">
         <CheckCircle2 size={24} />
-        <p className="eyebrow !mb-0 !text-[var(--grenat)]">Vos résultats sont prêts</p>
+        <p className="eyebrow" style={{ color: "var(--grenat)" }}>Vos résultats sont prêts</p>
       </div>
 
       <h2 className="font-display text-3xl mt-2 text-foreground">

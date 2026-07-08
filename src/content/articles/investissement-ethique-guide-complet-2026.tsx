@@ -12,6 +12,11 @@ export const meta: ArticleMeta = {
   tags: ["investissement éthique", "ISR", "ESG", "labels", "SFDR", "débuter"],
   author: "Alexandre Pollet",
   featured: true,
+  image: "/images/articles/blocs-progression.jpg",
+  imageAlt:
+    "Blocs de bois empilés en escalier avec une flèche ascendante, symbolisant une progression construite étape par étape",
+  imageWidth: 4000,
+  imageHeight: 6000,
 };
 
 export function Corps() {

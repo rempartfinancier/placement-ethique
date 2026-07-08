@@ -190,12 +190,13 @@ export function Corps() {
         >
           proposition de révision publiée en février 2023
         </a>
-        , l'AMF écrit que la catégorie Article 9 « n'est ni un label ni une garantie de
-        qualité », que le règlement ne pose pas d'exigences minimales sur le fond, et que les
-        fonds classés en Article 8 comme en Article 9 recouvrent des pratiques très
-        hétérogènes — notamment en matière d'engagements climatiques. Elle propose d'ailleurs
-        d'introduire des critères environnementaux minimaux, précisément parce qu'il n'y en a
-        pas.
+        , l'AMF écrit qu'« à l'inverse d'un mécanisme de labellisation, SFDR ne prévoit pas
+        d'exigences minimales », que le règlement et sa classification ne permettent pas
+        d'apprécier le degré de durabilité réel des produits, et que leur application a
+        « alimenté l'éco-blanchiment » — la notion d'investissement durable ayant donné lieu,
+        selon ses termes, à « des conceptions très différentes de ce qu'est la durabilité ».
+        Elle propose d'ailleurs d'introduire des critères environnementaux minimaux,
+        précisément parce qu'il n'y en a pas.
       </p>
       <p>
         <strong>Troisièmement, l'étiquette ne remplace pas la stratégie.</strong> Un fonds
@@ -377,7 +378,7 @@ export function Corps() {
       </p>
       <h3>SFDR 2.0 : vers de vraies catégories de produits</h3>
       <p>
-        Surtout, la Commission européenne a publié le 20 novembre 2025 une{" "}
+        Surtout, la Commission européenne a présenté fin novembre 2025 une{" "}
         <a
           href="https://finance.ec.europa.eu/news/commission-proposes-improvements-sfdr-2025-11-21_en"
           target="_blank"
@@ -389,7 +390,7 @@ export function Corps() {
         « Article 9 » par de véritables catégories de produits assorties de critères minimaux
         — une catégorie « durable », une catégorie « transition » et une catégorie ESG de
         base, avec notamment l'exclusion, pour les deux premières, des entreprises développant
-        de nouveaux projets d'énergies fossiles. À la date de mise à jour de cet article, ce
+        de nouveaux projets d'énergies fossiles. Au moment où nous publions cet article, ce
         texte est en cours de négociation entre le Parlement et le Conseil : les catégories
         actuelles restent donc applicables, et le calendrier définitif n'est pas arrêté. Si
         vous lisez « Article 8 » ou « Article 9 » sur une fiche de fonds aujourd'hui, c'est

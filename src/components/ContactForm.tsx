@@ -66,17 +66,30 @@ export function ContactForm({
 
   if (success) {
     return (
-      <div className="rounded-2xl border border-green-200 bg-green-50/50 p-8 text-center animate-in fade-in">
-        <div className="w-16 h-16 bg-green-100 text-green-600 rounded-full flex items-center justify-center mx-auto mb-4">
+      <div
+        className="rounded-2xl border p-8 text-center animate-in fade-in"
+        style={{
+          borderColor: "color-mix(in oklch, var(--verifie) 30%, transparent)",
+          background: "color-mix(in oklch, var(--verifie) 6%, var(--card))",
+        }}
+      >
+        <div
+          className="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4"
+          style={{
+            background: "color-mix(in oklch, var(--verifie) 12%, transparent)",
+            color: "var(--verifie)",
+          }}
+        >
           <CheckCircle2 size={32} />
         </div>
-        <h3 className="text-xl font-display text-green-900 mb-2">Message envoyé avec succès</h3>
-        <p className="text-green-800/80">
-          Nous avons bien reçu votre demande. Un conseiller vous recontactera dans les plus brefs délais.
+        <h3 className="text-xl font-display text-foreground mb-2">Message envoyé avec succès</h3>
+        <p className="text-muted-foreground">
+          Nous avons bien reçu votre demande. Un conseiller vous recontactera sous 48 heures
+          ouvrées.
         </p>
-        <button 
+        <button
           onClick={() => setSuccess(false)}
-          className="mt-6 text-sm text-green-700 underline underline-offset-4 hover:text-green-900"
+          className="mt-6 text-sm underline underline-offset-4 text-foreground/80 hover:text-foreground"
         >
           Envoyer un autre message
         </button>
@@ -98,7 +111,7 @@ export function ContactForm({
             onChange={(e) => setFormData(p => ({ ...p, name: e.target.value }))}
             required
             className="w-full rounded-xl border border-input bg-background px-4 py-3 text-sm text-foreground focus:border-[var(--grenat)] focus:outline-none focus:ring-1 focus:ring-[var(--grenat)] transition-colors"
-            placeholder="Ex: Tariq I."
+            placeholder="Ex : Camille D."
           />
         </div>
         
@@ -163,7 +176,8 @@ export function ContactForm({
       </button>
       
       <p className="text-xs text-muted-foreground text-center mt-4">
-        Vos données sont sécurisées et ne seront jamais partagées.
+        Vos données servent uniquement à vous répondre et ne sont jamais revendues — détail dans
+        notre politique de confidentialité.
       </p>
     </form>
   );

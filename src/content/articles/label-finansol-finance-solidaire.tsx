@@ -141,9 +141,10 @@ export function Corps() {
       <p>
         Pourquoi cette proportion, et pas 50 ou 100 % ? Parce que les titres solidaires sont
         émis par des entreprises non cotées, donc peu liquides : un fonds grand public doit
-        pouvoir vous rembourser à tout moment. La fourchette de 5 à 10 % est précisément
-        celle que le code du travail fixe pour les fonds solidaires : la poche solidaire est
-        investie dans des entreprises agréées{" "}
+        pouvoir vous rembourser à tout moment. Cette fourchette de 5 à 10 % n'est d'ailleurs
+        pas une invention du label : c'est celle que le code monétaire et financier fixe pour
+        les fonds solidaires de l'épargne salariale (article L. 214-164). Et la poche
+        solidaire est investie dans des entreprises agréées{" "}
         <strong>« entreprise solidaire d'utilité sociale » (ESUS)</strong>, un agrément
         public défini à l'
         <a
@@ -247,8 +248,8 @@ export function Corps() {
 
       <h2>Où trouve-t-on des produits labellisés Finansol ?</h2>
       <p>
-        La finance solidaire n'est plus un marché de niche : selon la 24e édition du
-        baromètre de la finance solidaire publié par FAIR et le journal La Croix en juin
+        La finance solidaire n'est plus un marché de niche : selon l'édition 2026 du
+        baromètre de la finance solidaire, publiée par FAIR et le journal La Croix en juin
         2026, l'épargne solidaire française atteignait{" "}
         <a
           href="https://www.finance-fair.org/fr/actualites/barometre-de-la-finance-solidaire-2026-les-francais-donnent-de-plus-en-plus-de-sens-leur"

@@ -68,7 +68,7 @@ export function Corps() {
         investisseurs, une méthodologie d'analyse formalisée, la prise en compte effective de
         cette analyse dans la construction du portefeuille, une politique d'engagement et de
         vote auprès des entreprises détenues, une information transparente des investisseurs,
-        et un suivi des performances ESG du portefeuille. Le label fait ensuite l'objet de
+        et une évaluation des impacts de la démarche ESG. Le label fait ensuite l'objet de
         contrôles dans la durée, et il peut être retiré.
       </p>
       <p>
@@ -191,11 +191,20 @@ export function Corps() {
         label généraliste : écarter le pire, ou ne retenir que l'exemplaire.
       </p>
       <p>
-        Un fait donne la mesure du changement : au moment de la bascule vers le nouveau
-        référentiel, une partie des fonds est sortie du label — renoncements de sociétés de
-        gestion ou non-conformités — avant que les labellisations ne repartent. Notre grille
-        de lecture, assumée : un label qui fait le tri dans ses propres rangs regagne de la
-        valeur informative. Un tampon que tout le monde obtient ne renseigne personne.
+        Un fait donne la mesure du changement : au 1er janvier 2025, à l'issue de la période
+        de transition, 939 fonds conservaient le label — soit environ 70 % des fonds
+        labellisés fin 2024, selon{" "}
+        <a
+          href="https://www.lelabelisr.fr/wp-content/uploads/2501-CP-comite-du-label.pdf"
+          target="_blank"
+          rel="noreferrer"
+        >
+          le comité du label
+        </a>
+        . Trois fonds sur dix sont donc sortis — renoncements de sociétés de gestion ou
+        non-conformités — avant que les labellisations ne repartent. Notre grille de lecture,
+        assumée : un label qui fait le tri dans ses propres rangs regagne de la valeur
+        informative. Un tampon que tout le monde obtient ne renseigne personne.
       </p>
 
       <h2>Qu'est-ce que le label ne garantit toujours pas ?</h2>

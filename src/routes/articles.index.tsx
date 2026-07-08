@@ -138,7 +138,7 @@ function ArticlesIndex() {
                     />
                   </div>
                 )}
-                <span className="eyebrow !mb-0 text-xs">{a.category}</span>
+                <span className="eyebrow text-xs">{a.category}</span>
                 <h3 className="font-display text-xl mt-3 text-foreground leading-snug">{a.title}</h3>
                 <p className="mt-2.5 text-sm text-muted-foreground leading-relaxed flex-1">
                   {a.excerpt}

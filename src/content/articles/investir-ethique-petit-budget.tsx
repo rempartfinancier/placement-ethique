@@ -17,6 +17,10 @@ export const meta: ArticleMeta = {
     "frais",
   ],
   author: "Alexandre Pollet",
+  image: "/images/articles/bocal-epargne.jpg",
+  imageAlt: "Main tenant un bocal en verre rempli de pièces de monnaie étiqueté épargne",
+  imageWidth: 2000,
+  imageHeight: 1334,
 };
 
 export function Corps() {
