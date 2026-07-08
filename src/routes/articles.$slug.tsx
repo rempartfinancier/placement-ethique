@@ -1,5 +1,5 @@
 import { createFileRoute, notFound } from "@tanstack/react-router";
-import { articles, getArticle, articleContent } from "@/content/articles";
+import { getArticle, articleContent } from "@/content/articles";
 import { ArticleLayout } from "@/components/ArticleLayout";
 
 export const Route = createFileRoute("/articles/$slug")({
@@ -87,6 +87,3 @@ function ArticlePage() {
     </ArticleLayout>
   );
 }
-
-// Évite un avertissement d'import inutilisé dans certains setups de build
-export const _allArticles = articles;

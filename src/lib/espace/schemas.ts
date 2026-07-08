@@ -7,9 +7,7 @@ import { CRENEAUX_RAPPEL } from "./allocation";
 // montants exacts en V1 : on collecte le minimum utile à la préparation de
 // l'échange, pas un inventaire patrimonial complet.
 
-export const produitCategorieSchema = z.enum(
-  Constants.public.Enums.produit_categorie,
-);
+export const produitCategorieSchema = z.enum(Constants.public.Enums.produit_categorie);
 
 export const typePieceSchema = z.enum(Constants.public.Enums.type_piece);
 
@@ -159,7 +157,11 @@ export const documentSchema = z.object({
   typePiece: typePieceSchema,
   storagePath: z.string().min(1).max(500),
   nomFichier: z.string().trim().min(1).max(200),
-  tailleOctets: z.number().int().nonnegative().max(10 * 1024 * 1024),
+  tailleOctets: z
+    .number()
+    .int()
+    .nonnegative()
+    .max(10 * 1024 * 1024),
 });
 
 export const TYPES_PIECES: { code: z.infer<typeof typePieceSchema>; label: string }[] = [

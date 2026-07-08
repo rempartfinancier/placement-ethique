@@ -25,7 +25,10 @@ export const Route = createFileRoute("/outils/per-isr")({
         content:
           "Calculez l'économie d'impôt, l'effort d'épargne réel et le capital projeté d'un PER investi en supports ISR vérifiés. Transmission, résidence principale : les leviers au-delà de l'impôt.",
       },
-      { property: "og:title", content: "Simulateur PER ISR — économie d'impôt et capital retraite" },
+      {
+        property: "og:title",
+        content: "Simulateur PER ISR — économie d'impôt et capital retraite",
+      },
       {
         property: "og:description",
         content:
@@ -38,7 +41,8 @@ export const Route = createFileRoute("/outils/per-isr")({
   component: PerIsrPage,
 });
 
-const eur = (n: number) => new Intl.NumberFormat("fr-FR", { maximumFractionDigits: 0 }).format(n) + " €";
+const eur = (n: number) =>
+  new Intl.NumberFormat("fr-FR", { maximumFractionDigits: 0 }).format(n) + " €";
 const pct = (fraction: number) => `${(fraction * 100).toFixed(1).replace(".", ",")} %`;
 
 const TMI_BRACKETS = TMI_DISPONIBLES_PCT.map((v) => ({ value: v, label: `${v} %` }));
@@ -66,7 +70,12 @@ function PerIsrPage() {
     // supposée identique à la TMI actuelle — hypothèse prudente et
     // explicitement affichée comme telle.
     const sortie = calculerFiscaliteSortie(
-      { capitalBrut: capital, primesVersees: invested, interetsFondsEurosCredites: 0, dureeDetentionAnnees: years },
+      {
+        capitalBrut: capital,
+        primesVersees: invested,
+        interetsFondsEurosCredites: 0,
+        dureeDetentionAnnees: years,
+      },
       { enveloppe: "per", tmiEntreePct: tmi, tmiSortiePct: tmi },
     );
     return { taxSavingsYearly, totalTaxSavings, realEffortYearly, capital, invested, sortie };
@@ -92,7 +101,10 @@ function PerIsrPage() {
         rows: [
           { label: "Économie d'impôt annuelle", value: eur(Math.round(result.taxSavingsYearly)) },
           { label: "Économie d'impôt cumulée", value: eur(Math.round(result.totalTaxSavings)) },
-          { label: "Effort d'épargne réel (annuel)", value: eur(Math.round(result.realEffortYearly)) },
+          {
+            label: "Effort d'épargne réel (annuel)",
+            value: eur(Math.round(result.realEffortYearly)),
+          },
           { label: "Coût réel de 1 000 € versés", value: eur(costPerThousand) },
         ],
         note: `L'économie suppose une TMI constante et un versement restant dans votre tranche. À la sortie en capital, la part correspondant aux versements déduits est réimposée au barème (TMI de sortie), et les gains au prélèvement forfaitaire unique (${pct(IR_PFU)} + prélèvements sociaux ${pct(PS_HORS_ASSURANCE_VIE)}) : le PER est un différé d'impôt, avantageux si votre TMI à la retraite est plus faible.`,
@@ -102,8 +114,14 @@ function PerIsrPage() {
         rows: [
           { label: "Capital investi", value: eur(result.invested) },
           { label: "Capital brut projeté", value: eur(Math.round(result.capital)) },
-          { label: "Capital net estimé après fiscalité de sortie", value: eur(Math.round(result.sortie.capitalNet)) },
-          { label: "Impôt total estimé à la sortie", value: eur(Math.round(result.sortie.totalImpots)) },
+          {
+            label: "Capital net estimé après fiscalité de sortie",
+            value: eur(Math.round(result.sortie.capitalNet)),
+          },
+          {
+            label: "Impôt total estimé à la sortie",
+            value: eur(Math.round(result.sortie.totalImpots)),
+          },
         ],
         note: "Capital net calculé à hypothèse de TMI de sortie identique à la TMI actuelle — une hypothèse prudente : si votre TMI baisse à la retraite, l'avantage réel est supérieur.",
       },
@@ -112,11 +130,21 @@ function PerIsrPage() {
         rows: [
           {
             label: "Transmission (PER assurantiel)",
-            value: "Abattement de 152 500 € par bénéficiaire hors succession, en cas de décès avant 70 ans (art. 990 I du Code général des impôts)",
+            value:
+              "Abattement de 152 500 € par bénéficiaire hors succession, en cas de décès avant 70 ans (art. 990 I du Code général des impôts)",
           },
-          { label: "Sortie en rente / capital", value: "Au choix, à l'âge légal de départ à la retraite" },
-          { label: "Cas de déblocage anticipé", value: "Achat de la résidence principale + accidents de la vie" },
-          { label: "Indépendants", value: "Épargne en principe insaisissable pendant la phase d'épargne" },
+          {
+            label: "Sortie en rente / capital",
+            value: "Au choix, à l'âge légal de départ à la retraite",
+          },
+          {
+            label: "Cas de déblocage anticipé",
+            value: "Achat de la résidence principale + accidents de la vie",
+          },
+          {
+            label: "Indépendants",
+            value: "Épargne en principe insaisissable pendant la phase d'épargne",
+          },
         ],
         note: "Le PER reste utile même hors TMI élevée dès lors que la protection familiale et la transmission entrent dans vos objectifs.",
       },
@@ -148,11 +176,20 @@ function PerIsrPage() {
           >
             service-public.fr
           </a>{" "}
-          — retrouvez votre plafond exact sur votre avis d'imposition, ligne « plafond épargne retraite ».
+          — retrouvez votre plafond exact sur votre avis d'imposition, ligne « plafond épargne
+          retraite ».
         </p>
       </div>
 
-      <SliderField label="Durée de versement" value={years} onChange={setYears} min={1} max={40} step={1} unit="ans" />
+      <SliderField
+        label="Durée de versement"
+        value={years}
+        onChange={setYears}
+        min={1}
+        max={40}
+        step={1}
+        unit="ans"
+      />
 
       <div>
         <SliderField
@@ -166,7 +203,10 @@ function PerIsrPage() {
         />
         <p className="text-xs text-muted-foreground mt-2 mb-2">
           Profils indicatifs, mêmes hypothèses que notre{" "}
-          <Link to="/outils/simulateur" className="underline underline-offset-2 hover:text-foreground">
+          <Link
+            to="/outils/simulateur"
+            className="underline underline-offset-2 hover:text-foreground"
+          >
             simulateur d'épargne
           </Link>{" "}
           :
@@ -178,7 +218,11 @@ function PerIsrPage() {
               type="button"
               onClick={() => setRate(p.tauxPct)}
               className="rounded-lg border border-border bg-card px-2.5 py-2 text-left text-xs font-medium leading-snug text-muted-foreground transition-colors hover:border-foreground/40"
-              style={rate === p.tauxPct ? { borderColor: "var(--grenat)", background: "var(--accent)" } : undefined}
+              style={
+                rate === p.tauxPct
+                  ? { borderColor: "var(--grenat)", background: "var(--accent)" }
+                  : undefined
+              }
             >
               {p.libelle}
               <span className="block text-foreground mt-0.5">{p.tauxPct} %</span>
@@ -186,9 +230,9 @@ function PerIsrPage() {
           ))}
         </div>
         <p className="text-xs text-muted-foreground mt-2 leading-relaxed">
-          Rendement non garanti, y compris sur les supports en unités de compte : risque de perte en capital. Les
-          performances passées ne préjugent pas des performances futures. Hypothèses illustratives, librement
-          modifiables.
+          Rendement non garanti, y compris sur les supports en unités de compte : risque de perte en
+          capital. Les performances passées ne préjugent pas des performances futures. Hypothèses
+          illustratives, librement modifiables.
         </p>
       </div>
 
@@ -201,7 +245,11 @@ function PerIsrPage() {
               type="button"
               onClick={() => setTmi(b.value)}
               className="rounded-lg border border-border bg-card px-3 py-2 text-sm font-medium transition-colors hover:border-foreground/40"
-              style={tmi === b.value ? { borderColor: "var(--grenat)", background: "var(--accent)" } : undefined}
+              style={
+                tmi === b.value
+                  ? { borderColor: "var(--grenat)", background: "var(--accent)" }
+                  : undefined
+              }
             >
               {b.label}
             </button>
@@ -231,10 +279,14 @@ function PerIsrPage() {
           {!submitted && !emailRequested && (
             <div className="space-y-6">
               <p className="text-sm text-muted-foreground leading-relaxed">
-                Le PER n'est pas qu'un outil fiscal : c'est aussi un choix d'allocation sur 15, 20 ou 30 ans. Ce
-                simulateur calcule l'économie d'impôt et le capital projeté — pour vérifier ce que garantissent
-                réellement les supports ISR d'un contrat, direction notre{" "}
-                <Link to="/outils/decodeur-label" className="underline underline-offset-2 hover:text-foreground">
+                Le PER n'est pas qu'un outil fiscal : c'est aussi un choix d'allocation sur 15, 20
+                ou 30 ans. Ce simulateur calcule l'économie d'impôt et le capital projeté — pour
+                vérifier ce que garantissent réellement les supports ISR d'un contrat, direction
+                notre{" "}
+                <Link
+                  to="/outils/decodeur-label"
+                  className="underline underline-offset-2 hover:text-foreground"
+                >
                   décodeur de labels
                 </Link>
                 .
@@ -245,13 +297,19 @@ function PerIsrPage() {
               {tmi < 30 && (
                 <div
                   className="rounded-xl border p-5"
-                  style={{ borderColor: "var(--grenat)", background: "color-mix(in oklch, var(--grenat) 4%, var(--card))" }}
+                  style={{
+                    borderColor: "var(--grenat)",
+                    background: "color-mix(in oklch, var(--grenat) 4%, var(--card))",
+                  }}
                 >
-                  <p className="font-display text-lg text-foreground">Et si l'impôt n'était pas votre seul objectif ?</p>
+                  <p className="font-display text-lg text-foreground">
+                    Et si l'impôt n'était pas votre seul objectif ?
+                  </p>
                   <p className="text-sm text-muted-foreground mt-2 leading-relaxed">
-                    À TMI {tmi} %, l'économie fiscale est limitée. Le PER reste toutefois un outil de capitalisation
-                    et de protection familiale : sur un PER assurantiel, en cas de décès avant 70 ans, les capitaux
-                    transmis aux bénéficiaires bénéficient, comme en assurance vie, d'un{" "}
+                    À TMI {tmi} %, l'économie fiscale est limitée. Le PER reste toutefois un outil
+                    de capitalisation et de protection familiale : sur un PER assurantiel, en cas de
+                    décès avant 70 ans, les capitaux transmis aux bénéficiaires bénéficient, comme
+                    en assurance vie, d'un{" "}
                     <a
                       href="https://www.impots.gouv.fr/international-particulier/questions/je-suis-beneficiaire-dune-assurance-vie-comment-sont-imposees"
                       target="_blank"
@@ -260,8 +318,8 @@ function PerIsrPage() {
                     >
                       abattement de 152 500 € par bénéficiaire hors succession
                     </a>{" "}
-                    (art. 990 I du Code général des impôts). C'est souvent un complément judicieux pour les jeunes
-                    parents ou les indépendants en recherche de protection.
+                    (art. 990 I du Code général des impôts). C'est souvent un complément judicieux
+                    pour les jeunes parents ou les indépendants en recherche de protection.
                   </p>
                 </div>
               )}
@@ -279,9 +337,9 @@ function PerIsrPage() {
               source="Simulateur PER ISR"
               payload={{
                 "Versement annuel": `${yearly} €`,
-                "Durée": `${years} ans`,
+                Durée: `${years} ans`,
                 "Rendement annuel moyen": `${rate} %`,
-                "TMI": `${tmi} %`,
+                TMI: `${tmi} %`,
                 "Économie d'impôt annuelle": `${Math.round(result.taxSavingsYearly)} €`,
                 "Économie d'impôt cumulée": `${Math.round(result.totalTaxSavings)} €`,
                 "Effort d'épargne réel annuel": `${Math.round(result.realEffortYearly)} €`,
@@ -302,13 +360,17 @@ function PerIsrPage() {
 
                 <div
                   className="rounded-xl border p-5"
-                  style={{ borderColor: "var(--grenat)", background: "color-mix(in oklch, var(--grenat) 4%, var(--card))" }}
+                  style={{
+                    borderColor: "var(--grenat)",
+                    background: "color-mix(in oklch, var(--grenat) 4%, var(--card))",
+                  }}
                 >
                   <p className="font-display text-lg text-foreground">Au-delà de l'impôt</p>
                   <ul className="mt-3 space-y-2.5 text-sm text-muted-foreground leading-relaxed">
                     <li>
-                      <strong className="text-foreground">Transmission hors succession :</strong> sur un PER
-                      assurantiel, en cas de décès avant 70 ans, les capitaux transmis bénéficient d'un{" "}
+                      <strong className="text-foreground">Transmission hors succession :</strong>{" "}
+                      sur un PER assurantiel, en cas de décès avant 70 ans, les capitaux transmis
+                      bénéficient d'un{" "}
                       <a
                         href="https://www.impots.gouv.fr/international-particulier/questions/je-suis-beneficiaire-dune-assurance-vie-comment-sont-imposees"
                         target="_blank"
@@ -320,13 +382,14 @@ function PerIsrPage() {
                       , hors succession (art. 990 I du CGI).
                     </li>
                     <li>
-                      <strong className="text-foreground">Résidence principale :</strong> les versements volontaires
-                      peuvent être débloqués avant la retraite pour l'achat de votre résidence principale.
+                      <strong className="text-foreground">Résidence principale :</strong> les
+                      versements volontaires peuvent être débloqués avant la retraite pour l'achat
+                      de votre résidence principale.
                     </li>
                     <li>
-                      <strong className="text-foreground">Indépendants :</strong> l'épargne logée dans un PER est,
-                      en principe, insaisissable pendant la phase d'épargne — une protection utile pour les
-                      entrepreneurs.
+                      <strong className="text-foreground">Indépendants :</strong> l'épargne logée
+                      dans un PER est, en principe, insaisissable pendant la phase d'épargne — une
+                      protection utile pour les entrepreneurs.
                     </li>
                   </ul>
                 </div>
@@ -334,12 +397,19 @@ function PerIsrPage() {
 
               <div className="md:col-span-5">
                 <div className="md:sticky md:top-24 space-y-5">
-                  <div className="rounded-2xl p-7 text-primary-foreground" style={{ background: "var(--gradient-encre)" }}>
+                  <div
+                    className="rounded-2xl p-7 text-primary-foreground"
+                    style={{ background: "var(--gradient-encre)" }}
+                  >
                     <p className="eyebrow" style={{ color: "var(--grenat-clair)" }}>
                       Effort d'épargne réel
                     </p>
-                    <p className="font-display text-4xl mt-2" style={{ color: "var(--grenat-clair)" }}>
-                      {eur(Math.round(result.realEffortYearly))} <span className="text-lg text-white/70">/ an</span>
+                    <p
+                      className="font-display text-4xl mt-2"
+                      style={{ color: "var(--grenat-clair)" }}
+                    >
+                      {eur(Math.round(result.realEffortYearly))}{" "}
+                      <span className="text-lg text-white/70">/ an</span>
                     </p>
                     {tmi > 0 ? (
                       <p className="text-sm text-white/80 mt-2 leading-relaxed">
@@ -348,28 +418,39 @@ function PerIsrPage() {
                       </p>
                     ) : (
                       <p className="text-sm text-white/80 mt-2 leading-relaxed">
-                        À TMI 0 %, la déduction ne joue pas : l'intérêt du PER se situe dans la capitalisation et la
-                        protection familiale.
+                        À TMI 0 %, la déduction ne joue pas : l'intérêt du PER se situe dans la
+                        capitalisation et la protection familiale.
                       </p>
                     )}
                     <dl className="mt-5 space-y-2 text-sm">
-                      <Row k="Économie d'impôt annuelle" v={eur(Math.round(result.taxSavingsYearly))} />
-                      <Row k="Économie d'impôt cumulée" v={eur(Math.round(result.totalTaxSavings))} />
+                      <Row
+                        k="Économie d'impôt annuelle"
+                        v={eur(Math.round(result.taxSavingsYearly))}
+                      />
+                      <Row
+                        k="Économie d'impôt cumulée"
+                        v={eur(Math.round(result.totalTaxSavings))}
+                      />
                     </dl>
                     <p className="text-xs text-white/60 mt-3 leading-relaxed">
-                      L'économie suppose une TMI constante et un versement restant dans votre tranche. À la sortie
-                      en capital, les versements déduits sont réimposés au barème (TMI de sortie) : le PER est un
-                      différé d'impôt, avantageux si votre TMI à la retraite est plus faible.
+                      L'économie suppose une TMI constante et un versement restant dans votre
+                      tranche. À la sortie en capital, les versements déduits sont réimposés au
+                      barème (TMI de sortie) : le PER est un différé d'impôt, avantageux si votre
+                      TMI à la retraite est plus faible.
                     </p>
                     <dl className="mt-4 space-y-2 text-sm">
                       <Row k="Capital investi" v={eur(result.invested)} />
                       <Row k="Capital brut projeté" v={eur(Math.round(result.capital))} />
-                      <Row k="Capital net après fiscalité de sortie" v={eur(Math.round(result.sortie.capitalNet))} />
+                      <Row
+                        k="Capital net après fiscalité de sortie"
+                        v={eur(Math.round(result.sortie.capitalNet))}
+                      />
                     </dl>
                     <p className="text-xs text-white/60 mt-3 leading-relaxed">
-                      Capital net calculé à TMI de sortie supposée identique à votre TMI actuelle ({tmi} %) — une
-                      hypothèse prudente. Rendement non garanti : risque de perte en capital sur les unités de
-                      compte. Les performances passées ne préjugent pas des performances futures.
+                      Capital net calculé à TMI de sortie supposée identique à votre TMI actuelle (
+                      {tmi} %) — une hypothèse prudente. Rendement non garanti : risque de perte en
+                      capital sur les unités de compte. Les performances passées ne préjugent pas
+                      des performances futures.
                     </p>
                     <div className="mt-7">
                       <Link to="/contact" className="btn-grenat">

@@ -87,7 +87,10 @@ export const Route = createFileRoute("/contact")({
         content:
           "Réservez un premier échange offert de 45 à 60 minutes : cartographie de votre situation, réponses claires sur l'investissement responsable, sans engagement.",
       },
-      { property: "og:title", content: "Prendre rendez-vous — premier échange offert | Placement-éthique.fr" },
+      {
+        property: "og:title",
+        content: "Prendre rendez-vous — premier échange offert | Placement-éthique.fr",
+      },
       {
         property: "og:description",
         content:
@@ -136,10 +139,12 @@ function ContactPage() {
             <Clock size={15} style={{ color: "var(--grenat)" }} aria-hidden /> 45 à 60 minutes
           </span>
           <span className="inline-flex items-center gap-2">
-            <HandCoins size={15} style={{ color: "var(--grenat)" }} aria-hidden /> Offert — jamais de facture
+            <HandCoins size={15} style={{ color: "var(--grenat)" }} aria-hidden /> Offert — jamais
+            de facture
           </span>
           <span className="inline-flex items-center gap-2">
-            <ShieldCheck size={15} style={{ color: "var(--grenat)" }} aria-hidden /> Sans engagement, sans relance insistante
+            <ShieldCheck size={15} style={{ color: "var(--grenat)" }} aria-hidden /> Sans
+            engagement, sans relance insistante
           </span>
         </div>
       </PageHero>
@@ -157,10 +162,10 @@ function ContactPage() {
             <p className="text-foreground/85 leading-relaxed max-w-3xl">
               Soyons clairs sur ce qui va se passer :{" "}
               <strong>ce premier rendez-vous n'est pas un rendez-vous de vente.</strong> Nous
-              écoutons votre situation et vos exigences, nous répondons à vos questions — y
-              compris les plus inconfortables sur les frais, les risques ou les limites réelles
-              des placements « responsables ». Et notre rémunération n'a rien de secret : elle
-              est publiée, ligne par ligne, sur notre{" "}
+              écoutons votre situation et vos exigences, nous répondons à vos questions — y compris
+              les plus inconfortables sur les frais, les risques ou les limites réelles des
+              placements « responsables ». Et notre rémunération n'a rien de secret : elle est
+              publiée, ligne par ligne, sur notre{" "}
               <Link to="/tarifs" className="underline text-foreground">
                 grille de tarifs
               </Link>
@@ -179,34 +184,54 @@ function ContactPage() {
               <h2 className="display-3 mt-4">Choisissez le jour et l'heure qui vous arrangent.</h2>
               <p className="mt-5 text-muted-foreground leading-relaxed">
                 Vous recevez la confirmation par email, avec le lien de visioconférence. Si la
-                réservation en ligne n'est pas encore ouverte, écrivez-nous : nous vous proposons
-                un créneau sous 48 heures ouvrées.
+                réservation en ligne n'est pas encore ouverte, écrivez-nous : nous vous proposons un
+                créneau sous 48 heures ouvrées.
               </p>
 
               <ul className="mt-8 space-y-4 text-sm">
                 <li className="flex gap-3">
-                  <Clock size={18} className="shrink-0 mt-0.5" style={{ color: "var(--grenat)" }} aria-hidden />
+                  <Clock
+                    size={18}
+                    className="shrink-0 mt-0.5"
+                    style={{ color: "var(--grenat)" }}
+                    aria-hidden
+                  />
                   <span>
                     <strong className="text-foreground">45 à 60 minutes</strong> — le temps de ne
                     pas survoler votre situation
                   </span>
                 </li>
                 <li className="flex gap-3">
-                  <ShieldCheck size={18} className="shrink-0 mt-0.5" style={{ color: "var(--grenat)" }} aria-hidden />
+                  <ShieldCheck
+                    size={18}
+                    className="shrink-0 mt-0.5"
+                    style={{ color: "var(--grenat)" }}
+                    aria-hidden
+                  />
                   <span>
                     <strong className="text-foreground">Sans engagement</strong> — et sans relance
                     insistante ensuite
                   </span>
                 </li>
                 <li className="flex gap-3">
-                  <Video size={18} className="shrink-0 mt-0.5" style={{ color: "var(--grenat)" }} aria-hidden />
+                  <Video
+                    size={18}
+                    className="shrink-0 mt-0.5"
+                    style={{ color: "var(--grenat)" }}
+                    aria-hidden
+                  />
                   <span>
                     <strong className="text-foreground">En visio</strong> — partout en France et
                     depuis l'étranger
                   </span>
                 </li>
                 <li className="flex gap-3">
-                  <Lock size={18} className="shrink-0 mt-0.5" style={{ color: "var(--grenat)" }} aria-hidden />
+                  <Lock
+                    size={18}
+                    className="shrink-0 mt-0.5"
+                    style={{ color: "var(--grenat)" }}
+                    aria-hidden
+                  />
                   <span>
                     <strong className="text-foreground">Confidentiel</strong> — vos informations ne
                     sortent pas du cabinet
@@ -230,16 +255,13 @@ function ContactPage() {
               <p className="eyebrow">Vous préférez écrire ?</p>
               <h2 className="display-3 mt-4">Posez votre question par écrit.</h2>
               <p className="mt-5 text-muted-foreground leading-relaxed">
-                Pas encore prêt pour un appel, ou une question précise sur un label, une
-                enveloppe, un placement ? Ce formulaire arrive directement dans notre boîte —
-                nous vous répondons sous 48 heures ouvrées, par email.
+                Pas encore prêt pour un appel, ou une question précise sur un label, une enveloppe,
+                un placement ? Ce formulaire arrive directement dans notre boîte — nous vous
+                répondons sous 48 heures ouvrées, par email.
               </p>
               <p className="mt-4 text-muted-foreground leading-relaxed text-sm">
                 Vous pouvez aussi nous écrire directement à{" "}
-                <a
-                  href="mailto:contact@placement-ethique.fr"
-                  className="underline text-foreground"
-                >
+                <a href="mailto:contact@placement-ethique.fr" className="underline text-foreground">
                   contact@placement-ethique.fr
                 </a>
                 .
@@ -329,7 +351,9 @@ function ContactPage() {
       <section className="section border-t border-border/40">
         <div className="container-prose">
           <p className="eyebrow">Avant de réserver</p>
-          <h2 className="display-2 mt-4 max-w-3xl">Les questions qu'on nous pose avant le premier rendez-vous.</h2>
+          <h2 className="display-2 mt-4 max-w-3xl">
+            Les questions qu'on nous pose avant le premier rendez-vous.
+          </h2>
           <div className="mt-12 grid gap-6 md:grid-cols-2">
             {faq.map((item) => (
               <article key={item.q} className="card-paper">
@@ -356,9 +380,7 @@ function ContactPage() {
             style={{ background: "var(--gradient-paper)" }}
           >
             <p className="eyebrow">Pas encore prêt ?</p>
-            <h2 className="display-2 mt-4 max-w-3xl">
-              Faites d'abord vos propres vérifications.
-            </h2>
+            <h2 className="display-2 mt-4 max-w-3xl">Faites d'abord vos propres vérifications.</h2>
             <p className="lead mt-5 max-w-2xl">
               Rien ne vous oblige à nous parler pour avancer. Nos outils gratuits — projection
               d'épargne, décodeur de labels, diagnostic — donnent des pistes sans inscription

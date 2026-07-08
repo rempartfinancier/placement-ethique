@@ -25,8 +25,8 @@ export function Corps() {
           SCPI, souvent citées dans la même phrase, ne sont <strong>pas</strong> cotées : c'est de
           la pierre-papier hors bourse, aux cours moins nerveux mais à la revente moins immédiate.
           Quant au mot « durable », il ne se décrète pas : il se vérifie dans les certifications du
-          parc, la trajectoire énergétique et le reporting réglementaire — des documents publics
-          que cet article vous apprend à lire.
+          parc, la trajectoire énergétique et le reporting réglementaire — des documents publics que
+          cet article vous apprend à lire.
         </p>
       </div>
 
@@ -34,10 +34,9 @@ export function Corps() {
         Vous aimeriez que la part immobilière de votre épargne serve autre chose que des tours de
         bureaux énergivores — sans pour autant acheter un appartement, gérer des locataires ou
         immobiliser des centaines de milliers d'euros. Autour de vous, on parle de SCPI « ISR », de
-        foncières cotées, d'ETF immobiliers, parfois comme s'il s'agissait du même produit. Et
-        trois questions restent sans réponse claire : est-ce que ça se passe en bourse ? Est-ce que
-        je peux revendre quand je veux ? Et ce « durable » mis en avant — qui le contrôle,
-        exactement ?
+        foncières cotées, d'ETF immobiliers, parfois comme s'il s'agissait du même produit. Et trois
+        questions restent sans réponse claire : est-ce que ça se passe en bourse ? Est-ce que je
+        peux revendre quand je veux ? Et ce « durable » mis en avant — qui le contrôle, exactement ?
       </p>
       <p>
         Tous ces véhicules appartiennent à la « pierre-papier » : vous détenez un titre (action ou
@@ -52,15 +51,15 @@ export function Corps() {
       <p>
         Par les <strong>foncières cotées</strong>. Une foncière est une société dont le métier est
         de détenir et d'exploiter un patrimoine immobilier — bureaux, commerces, logements,
-        entrepôts, santé — et d'en encaisser les loyers. Quand elle est cotée en bourse, vous
-        pouvez en acheter des actions comme n'importe quelle autre valeur, pour le prix d'un titre,
-        en quelques secondes.
+        entrepôts, santé — et d'en encaisser les loyers. Quand elle est cotée en bourse, vous pouvez
+        en acheter des actions comme n'importe quelle autre valeur, pour le prix d'un titre, en
+        quelques secondes.
       </p>
       <p>
         En France, la plupart des grandes foncières cotées ont adopté le statut de{" "}
-        <strong>SIIC</strong> (société d'investissements immobiliers cotée). Ce régime fiscal,
-        prévu à l'article 208 C du code général des impôts, exonère la société d'impôt sur les
-        sociétés sur ses résultats de location — à condition de les redistribuer massivement à ses
+        <strong>SIIC</strong> (société d'investissements immobiliers cotée). Ce régime fiscal, prévu
+        à l'article 208 C du code général des impôts, exonère la société d'impôt sur les sociétés
+        sur ses résultats de location — à condition de les redistribuer massivement à ses
         actionnaires : au moins 95 % des bénéfices tirés de la location et 70 % des plus-values de
         cession, selon{" "}
         <a
@@ -70,17 +69,16 @@ export function Corps() {
         >
           le Bulletin officiel des finances publiques
         </a>
-        . C'est ce mécanisme qui fait des foncières des valeurs traditionnellement distributrices
-        de dividendes — jamais garantis pour autant. L'équivalent international s'appelle REIT
-        (<em>real estate investment trust</em>).
+        . C'est ce mécanisme qui fait des foncières des valeurs traditionnellement distributrices de
+        dividendes — jamais garantis pour autant. L'équivalent international s'appelle REIT (
+        <em>real estate investment trust</em>).
       </p>
       <p>
         Deuxième voie boursière : les <strong>ETF immobiliers</strong>, des fonds indiciels cotés
         qui répliquent un panier de foncières — le plus souvent un indice de la famille FTSE EPRA
-        Nareit, la référence du secteur de l'immobilier coté. Il en existe des déclinaisons
-        « vertes », qui pondèrent les foncières selon la part certifiée de leur parc et leur
-        intensité énergétique. La logique de vérification est exactement celle de n'importe quel
-        ETF filtré :{" "}
+        Nareit, la référence du secteur de l'immobilier coté. Il en existe des déclinaisons « vertes
+        », qui pondèrent les foncières selon la part certifiée de leur parc et leur intensité
+        énergétique. La logique de vérification est exactement celle de n'importe quel ETF filtré :{" "}
         <LienArticle slug="etf-isr-debutants">
           la méthodologie de l'indice fait foi, pas le nom du produit
         </LienArticle>
@@ -90,9 +88,9 @@ export function Corps() {
       <h2>Une SCPI, est-ce que c'est de la bourse ?</h2>
       <p>
         Non — et c'est la confusion la plus répandue de toute la pierre-papier. Une SCPI (société
-        civile de placement immobilier) est un fonds <strong>non coté</strong>, géré par une
-        société de gestion agréée par l'AMF : vous souscrivez des parts auprès de la société de
-        gestion ou d'un distributeur, pas sur un marché boursier. Conséquences très concrètes :
+        civile de placement immobilier) est un fonds <strong>non coté</strong>, géré par une société
+        de gestion agréée par l'AMF : vous souscrivez des parts auprès de la société de gestion ou
+        d'un distributeur, pas sur un marché boursier. Conséquences très concrètes :
       </p>
       <ul>
         <li>
@@ -102,8 +100,8 @@ export function Corps() {
         </li>
         <li>
           <strong>Une liquidité organisée, pas instantanée.</strong> Revendre des parts suppose de
-          trouver une contrepartie ou de passer par le mécanisme de retrait du fonds ; en période
-          de marché tendu, les délais peuvent s'allonger sensiblement.
+          trouver une contrepartie ou de passer par le mécanisme de retrait du fonds ; en période de
+          marché tendu, les délais peuvent s'allonger sensiblement.
         </li>
         <li>
           <strong>Une volatilité apparente plus faible — pas un risque plus faible.</strong> La
@@ -129,10 +127,10 @@ export function Corps() {
       <p>
         L'immobilier est l'un des rares secteurs où la transition n'est plus optionnelle. Deux
         cadres français structurent le sujet. Le dispositif Éco Énergie Tertiaire (issu du « décret
-        tertiaire » pris en application de la loi ÉLAN) impose aux bâtiments abritant plus de
-        1 000 m² d'activités tertiaires de réduire leur consommation d'énergie d'au moins 40 % en
-        2030, 50 % en 2040 et 60 % en 2050 par rapport à 2010, avec un suivi annuel déclaré sur la
-        plateforme OPERAT, selon{" "}
+        tertiaire » pris en application de la loi ÉLAN) impose aux bâtiments abritant plus de 1 000
+        m² d'activités tertiaires de réduire leur consommation d'énergie d'au moins 40 % en 2030, 50
+        % en 2040 et 60 % en 2050 par rapport à 2010, avec un suivi annuel déclaré sur la plateforme
+        OPERAT, selon{" "}
         <a
           href="https://www.ecologie.gouv.fr/politiques-publiques/eco-energie-tertiaire-eet"
           target="_blank"
@@ -141,8 +139,8 @@ export function Corps() {
           le ministère de la Transition écologique
         </a>
         . Côté logement, la loi Climat et Résilience interdit progressivement la location des
-        passoires énergétiques : les logements classés G au DPE sont interdits de location depuis
-        le 1er janvier 2025, les F le seront en 2028 et les E en 2034, comme le rappelle{" "}
+        passoires énergétiques : les logements classés G au DPE sont interdits de location depuis le
+        1er janvier 2025, les F le seront en 2028 et les E en 2034, comme le rappelle{" "}
         <a
           href="https://www.service-public.gouv.fr/particuliers/actualites/A17975"
           target="_blank"
@@ -177,8 +175,8 @@ export function Corps() {
           ce que le Label ISR garantit et ne garantit pas
         </LienArticle>{" "}
         mérite d'être compris avant d'y adosser sa confiance. Ces fonds relèvent aussi, comme les
-        fonds financiers, de la classification européenne SFDR (Article 6, 8 ou 9), déclarative
-        elle aussi.
+        fonds financiers, de la classification européenne SFDR (Article 6, 8 ou 9), déclarative elle
+        aussi.
       </p>
       <p>
         Les foncières cotées, elles, sont des sociétés : elles ne portent pas de label de fonds,
@@ -189,8 +187,8 @@ export function Corps() {
 
       <h2>Foncières cotées, ETF immobilier ou SCPI : comment choisir ?</h2>
       <p>
-        Les trois véhicules donnent accès à la même classe d'actifs, mais ne répondent pas aux
-        mêmes besoins. Voici la comparaison sous l'angle qui compte pour votre décision :
+        Les trois véhicules donnent accès à la même classe d'actifs, mais ne répondent pas aux mêmes
+        besoins. Voici la comparaison sous l'angle qui compte pour votre décision :
       </p>
       <table>
         <thead>
@@ -206,7 +204,9 @@ export function Corps() {
             <td>Cotation et liquidité</td>
             <td>En bourse, achat/vente en continu aux heures de marché</td>
             <td>En bourse, achat/vente en continu aux heures de marché</td>
-            <td>Hors bourse ; souscription et retrait via la société de gestion, délais variables</td>
+            <td>
+              Hors bourse ; souscription et retrait via la société de gestion, délais variables
+            </td>
           </tr>
           <tr>
             <td>Volatilité ressentie</td>
@@ -245,8 +245,8 @@ export function Corps() {
           Un point fiscal souvent découvert trop tard : depuis le 21 octobre 2011, les actions de
           SIIC ne peuvent plus être inscrites dans un PEA, et leurs dividendes issus des bénéfices
           exonérés n'ouvrent pas droit à l'abattement de 40 % applicable aux dividendes classiques
-          en cas d'imposition au barème — contrepartie de l'exonération dont bénéficie la
-          foncière. Les règles sont détaillées au{" "}
+          en cas d'imposition au barème — contrepartie de l'exonération dont bénéficie la foncière.
+          Les règles sont détaillées au{" "}
           <a
             href="https://bofip.impots.gouv.fr/bofip/1556-PGP.html/identifiant=BOI-RPPM-RCM-40-50-20-20-20240516"
             target="_blank"
@@ -268,32 +268,32 @@ export function Corps() {
       <h2>Comment vérifier qu'un véhicule immobilier est vraiment durable ?</h2>
       <p>
         Quelle que soit la voie choisie, la vérification suit le même fil, que nous appelons{" "}
-        <strong>Parc → Trajectoire → Preuve</strong>. Comptez une heure de lecture — peu de chose
-        au regard des années de détention.
+        <strong>Parc → Trajectoire → Preuve</strong>. Comptez une heure de lecture — peu de chose au
+        regard des années de détention.
       </p>
       <ol>
         <li>
           <strong>Le parc.</strong> Que détient réellement le véhicule ? Pour une foncière ou une
-          SCPI, le rapport annuel liste les immeubles, leurs usages et souvent la part du
-          patrimoine certifiée ou les étiquettes énergétiques. Pour un ETF, l'inventaire des
-          positions dit quelles foncières vous financez. Un « fonds immobilier durable » qui ne
-          détaille pas son patrimoine mérite votre méfiance.
+          SCPI, le rapport annuel liste les immeubles, leurs usages et souvent la part du patrimoine
+          certifiée ou les étiquettes énergétiques. Pour un ETF, l'inventaire des positions dit
+          quelles foncières vous financez. Un « fonds immobilier durable » qui ne détaille pas son
+          patrimoine mérite votre méfiance.
         </li>
         <li>
-          <strong>La trajectoire.</strong> Un parc immobilier ne devient pas sobre par
-          déclaration : cherchez les objectifs chiffrés de réduction de consommation ou d'émissions,
-          le plan de travaux qui les finance, et la référence aux obligations réglementaires
-          (dispositif tertiaire, calendrier DPE). Acheter de l'ancien énergivore pour le rénover
-          peut être une stratégie durable plus exigeante que de n'acheter que du neuf déjà
-          certifié — l'important est que la trajectoire soit écrite et suivie.
+          <strong>La trajectoire.</strong> Un parc immobilier ne devient pas sobre par déclaration :
+          cherchez les objectifs chiffrés de réduction de consommation ou d'émissions, le plan de
+          travaux qui les finance, et la référence aux obligations réglementaires (dispositif
+          tertiaire, calendrier DPE). Acheter de l'ancien énergivore pour le rénover peut être une
+          stratégie durable plus exigeante que de n'acheter que du neuf déjà certifié — l'important
+          est que la trajectoire soit écrite et suivie.
         </li>
         <li>
           <strong>La preuve.</strong> Croisez les documents opposables : Label ISR immobilier et
           classification SFDR pour un fonds, rapport de durabilité et notation sectorielle pour une
           foncière, méthodologie d'indice pour un ETF — et le DIC dans tous les cas pour les frais
-          et le niveau de risque. Notre <a href="/outils/decodeur-label">décodeur de labels</a>{" "}
-          vous donne des pistes pour lire chaque tampon : ce qu'il garantit, ce qu'il ne garantit
-          pas, et où vérifier qu'un produit le détient vraiment.
+          et le niveau de risque. Notre <a href="/outils/decodeur-label">décodeur de labels</a> vous
+          donne des pistes pour lire chaque tampon : ce qu'il garantit, ce qu'il ne garantit pas, et
+          où vérifier qu'un produit le détient vraiment.
         </li>
       </ol>
 
@@ -307,8 +307,8 @@ export function Corps() {
       </p>
       <h3>La vitrine certifiée qui cache le reste du parc</h3>
       <p>
-        Mettre en avant un immeuble phare ultra-certifié pendant que la majorité du patrimoine
-        reste énergivore est le mécanisme de greenwashing le plus courant du secteur — décrit ici
+        Mettre en avant un immeuble phare ultra-certifié pendant que la majorité du patrimoine reste
+        énergivore est le mécanisme de greenwashing le plus courant du secteur — décrit ici
         génériquement, car seul le rapport annuel de chaque véhicule permet de juger un cas précis.
         Le bon réflexe : chercher la <em>part</em> du patrimoine certifiée ou alignée sur une
         trajectoire, pas la photo de couverture.
@@ -365,9 +365,8 @@ export function Corps() {
       <p>
         En bourse, le ticket d'entrée est le prix d'une action ou d'une part d'ETF — quelques
         dizaines à quelques centaines d'euros. Une part de SCPI se situe généralement dans le même
-        ordre de grandeur de quelques centaines d'euros, avec parfois un minimum de plusieurs
-        parts. L'immobilier coté est donc l'une des portes d'entrée les plus accessibles vers la
-        pierre.
+        ordre de grandeur de quelques centaines d'euros, avec parfois un minimum de plusieurs parts.
+        L'immobilier coté est donc l'une des portes d'entrée les plus accessibles vers la pierre.
       </p>
       <h3>Un immeuble certifié est-il forcément sobre en énergie ?</h3>
       <p>
@@ -397,8 +396,7 @@ export function Corps() {
         Attendre a un coût, lui aussi vérifiable : la réglementation énergétique resserre chaque
         année l'étau sur les patrimoines mal classés, et une épargne laissée sur des supports par
         défaut ne finance ni vos projets ni la rénovation du parc immobilier. Rester spectateur ne
-        supprime pas le risque — cela vous prive seulement de choisir ce que votre argent
-        construit.
+        supprime pas le risque — cela vous prive seulement de choisir ce que votre argent construit.
       </p>
       <p>
         Pour la suite logique : si c'est la dimension patrimoniale globale qui vous questionne —
@@ -411,9 +409,9 @@ export function Corps() {
       </p>
       <p>
         Et si vous hésitez encore entre la nervosité du coté et la lenteur du non coté, c'est une
-        conversation que nous avons chaque semaine au cabinet : venez avec le nom de la foncière,
-        de l'ETF ou de la SCPI qui vous intrigue, nous lirons ensemble son rapport, sa trajectoire
-        et ses preuves. Le premier échange est offert.
+        conversation que nous avons chaque semaine au cabinet : venez avec le nom de la foncière, de
+        l'ETF ou de la SCPI qui vous intrigue, nous lirons ensemble son rapport, sa trajectoire et
+        ses preuves. Le premier échange est offert.
       </p>
     </>
   );

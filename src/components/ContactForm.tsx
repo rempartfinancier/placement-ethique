@@ -13,7 +13,7 @@ export function ContactForm({
   sourcePage = "Contact",
   offerName,
   buttonText = "Envoyer ma demande",
-  className = ""
+  className = "",
 }: ContactFormProps) {
   const [loading, setLoading] = useState(false);
   const [success, setSuccess] = useState(false);
@@ -47,7 +47,7 @@ export function ContactForm({
           offer_name: offerName,
           send_admin_notification: true, // Fire email to admin!
           send_email: false, // Don't send generic result to user
-        }
+        },
       });
 
       if (!res?.ok || res?.error) {
@@ -56,7 +56,7 @@ export function ContactForm({
 
       setSuccess(true);
       setFormData({ name: "", email: "", phone: "", message: "" });
-    } catch (err: any) {
+    } catch (err) {
       console.error(err);
       setError("Une erreur est survenue lors de l'envoi. Veuillez réessayer.");
     } finally {
@@ -108,13 +108,13 @@ export function ContactForm({
             id="name"
             type="text"
             value={formData.name}
-            onChange={(e) => setFormData(p => ({ ...p, name: e.target.value }))}
+            onChange={(e) => setFormData((p) => ({ ...p, name: e.target.value }))}
             required
             className="w-full rounded-xl border border-input bg-background px-4 py-3 text-sm text-foreground focus:border-[var(--grenat)] focus:outline-none focus:ring-1 focus:ring-[var(--grenat)] transition-colors"
             placeholder="Ex : Camille D."
           />
         </div>
-        
+
         <div className="space-y-1.5">
           <label htmlFor="email" className="text-sm font-medium text-foreground">
             Email <span className="text-[var(--grenat)]">*</span>
@@ -123,7 +123,7 @@ export function ContactForm({
             id="email"
             type="email"
             value={formData.email}
-            onChange={(e) => setFormData(p => ({ ...p, email: e.target.value }))}
+            onChange={(e) => setFormData((p) => ({ ...p, email: e.target.value }))}
             required
             className="w-full rounded-xl border border-input bg-background px-4 py-3 text-sm text-foreground focus:border-[var(--grenat)] focus:outline-none focus:ring-1 focus:ring-[var(--grenat)] transition-colors"
             placeholder="votre.email@exemple.com"
@@ -139,7 +139,7 @@ export function ContactForm({
           id="phone"
           type="tel"
           value={formData.phone}
-          onChange={(e) => setFormData(p => ({ ...p, phone: e.target.value }))}
+          onChange={(e) => setFormData((p) => ({ ...p, phone: e.target.value }))}
           className="w-full rounded-xl border border-input bg-background px-4 py-3 text-sm text-foreground focus:border-[var(--grenat)] focus:outline-none focus:ring-1 focus:ring-[var(--grenat)] transition-colors"
           placeholder="06 12 34 56 78"
         />
@@ -153,7 +153,7 @@ export function ContactForm({
           id="message"
           rows={4}
           value={formData.message}
-          onChange={(e) => setFormData(p => ({ ...p, message: e.target.value }))}
+          onChange={(e) => setFormData((p) => ({ ...p, message: e.target.value }))}
           className="w-full rounded-xl border border-input bg-background px-4 py-3 text-sm text-foreground focus:border-[var(--grenat)] focus:outline-none focus:ring-1 focus:ring-[var(--grenat)] transition-colors resize-y"
           placeholder="Décrivez brièvement votre projet ou votre question..."
         />
@@ -166,15 +166,15 @@ export function ContactForm({
         </div>
       )}
 
-      <button 
-        type="submit" 
+      <button
+        type="submit"
         disabled={loading}
         className="btn-primary w-full justify-center text-[15px] py-4 disabled:opacity-70 flex items-center gap-2"
       >
-        {loading ? "Envoi en cours..." : buttonText} 
+        {loading ? "Envoi en cours..." : buttonText}
         {!loading && <Send size={18} />}
       </button>
-      
+
       <p className="text-xs text-muted-foreground text-center mt-4">
         Vos données servent uniquement à vous répondre et ne sont jamais revendues — détail dans
         notre politique de confidentialité.

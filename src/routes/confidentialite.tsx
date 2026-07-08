@@ -32,7 +32,9 @@ function Bloc({ titre, children }: { titre: string; children: React.ReactNode })
   return (
     <section className="card-paper p-6 md:p-8">
       <h2 className="font-display text-2xl text-foreground">{titre}</h2>
-      <div className="mt-4 space-y-3 text-[15px] leading-relaxed text-muted-foreground">{children}</div>
+      <div className="mt-4 space-y-3 text-[15px] leading-relaxed text-muted-foreground">
+        {children}
+      </div>
     </section>
   );
 }
@@ -95,7 +97,9 @@ function ConfidentialitePage() {
             <p>Trois circuits distincts, avec des finalités distinctes :</p>
             <ul className="list-disc space-y-2 pl-5">
               <li>
-                <strong className="text-foreground">Simulateurs et formulaires (avant tout compte) :</strong>{" "}
+                <strong className="text-foreground">
+                  Simulateurs et formulaires (avant tout compte) :
+                </strong>{" "}
                 email, prénom/nom éventuels, résultats de simulation. Finalités : vous envoyer les
                 résultats demandés, la mini-série pédagogique de 3 emails annoncée au moment de la
                 saisie, et — uniquement si vous avez coché la case dédiée (jamais pré-cochée) — la
@@ -104,12 +108,11 @@ function ConfidentialitePage() {
               </li>
               <li>
                 <strong className="text-foreground">Espace client (dossiers) :</strong> coordonnées,
-                projet, situation patrimoniale et fiscale déclarée par tranches, pistes de
-                placement et esquisse d'allocation. Finalités : préparer et documenter l'échange
-                avec votre conseiller. Base légale : mesures précontractuelles à votre demande et
-                consentements séparés par catégorie de donnée, recueillis à la transmission du
-                dossier et archivés (libellé exact, version, date) dans votre espace, rubrique
-                Profil &amp; données.
+                projet, situation patrimoniale et fiscale déclarée par tranches, pistes de placement
+                et esquisse d'allocation. Finalités : préparer et documenter l'échange avec votre
+                conseiller. Base légale : mesures précontractuelles à votre demande et consentements
+                séparés par catégorie de donnée, recueillis à la transmission du dossier et archivés
+                (libellé exact, version, date) dans votre espace, rubrique Profil &amp; données.
               </li>
               <li>
                 <strong className="text-foreground">Pièces justificatives :</strong> uniquement si
@@ -131,12 +134,16 @@ function ConfidentialitePage() {
                 après votre dernier contact avec nous, puis suppression ou anonymisation.
               </li>
               <li>
-                <strong className="text-foreground">Dossiers de l'espace client sans suite :</strong>{" "}
+                <strong className="text-foreground">
+                  Dossiers de l'espace client sans suite :
+                </strong>{" "}
                 clôturés, ils restent consultables dans votre espace ; supprimés sur simple demande
                 (voir « Vos droits »).
               </li>
               <li>
-                <strong className="text-foreground">Dossiers ayant conduit à une souscription :</strong>{" "}
+                <strong className="text-foreground">
+                  Dossiers ayant conduit à une souscription :
+                </strong>{" "}
                 conservés pendant la durée de la relation, puis pendant les durées légales
                 applicables aux intermédiaires financiers (5 ans minimum après la fin de la
                 relation, obligations LCB-FT le cas échéant).
@@ -145,7 +152,10 @@ function ConfidentialitePage() {
           </Bloc>
 
           <Bloc titre="Sous-traitants et destinataires">
-            <p>Vos données ne sont jamais vendues ni transmises à des tiers commerciaux. Elles transitent par :</p>
+            <p>
+              Vos données ne sont jamais vendues ni transmises à des tiers commerciaux. Elles
+              transitent par :
+            </p>
             <ul className="list-disc space-y-2 pl-5">
               <li>
                 <strong className="text-foreground">Supabase</strong> — base de données et
@@ -164,8 +174,8 @@ function ConfidentialitePage() {
                 contractuelles types) — hébergement du site ;
               </li>
               <li>
-                <strong className="text-foreground">Google Tag Manager / mesure d'audience</strong> —
-                statistiques de fréquentation.
+                <strong className="text-foreground">Google Tag Manager / mesure d'audience</strong>{" "}
+                — statistiques de fréquentation.
               </li>
             </ul>
             <p>
@@ -180,8 +190,8 @@ function ConfidentialitePage() {
               Vous disposez des droits d'accès, de rectification, d'effacement, de limitation,
               d'opposition et de portabilité. Concrètement : vos données de l'espace client sont
               visibles et modifiables directement dans la rubrique Profil &amp; données ; une
-              demande transmise se retire en un clic tant que rien n'est signé ; pour tout le
-              reste, écrivez à{" "}
+              demande transmise se retire en un clic tant que rien n'est signé ; pour tout le reste,
+              écrivez à{" "}
               <a href="mailto:contact@placement-ethique.fr" className="underline">
                 contact@placement-ethique.fr
               </a>{" "}

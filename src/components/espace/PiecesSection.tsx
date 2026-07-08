@@ -199,9 +199,9 @@ export function PiecesSection({
       ) : !consentDonne ? (
         <div className="mt-5 rounded-xl border border-border/70 bg-card p-4">
           <p className="text-sm text-muted-foreground">
-            Le dépôt de pièces est désactivé : vous n'avez pas donné le consentement dédié lors de la
-            transmission. Vous pouvez l'accorder maintenant — ou simplement remettre vos pièces de
-            vive voix à votre conseiller.
+            Le dépôt de pièces est désactivé : vous n'avez pas donné le consentement dédié lors de
+            la transmission. Vous pouvez l'accorder maintenant — ou simplement remettre vos pièces
+            de vive voix à votre conseiller.
           </p>
           {metaConsent && (
             <label className="mt-3 flex cursor-pointer items-start gap-3">
@@ -210,7 +210,9 @@ export function PiecesSection({
                 onCheckedChange={(v) => setConsentChecked(v === true)}
                 className="mt-0.5"
               />
-              <span className="text-sm leading-relaxed text-muted-foreground">{metaConsent.libelle}</span>
+              <span className="text-sm leading-relaxed text-muted-foreground">
+                {metaConsent.libelle}
+              </span>
             </label>
           )}
           <button

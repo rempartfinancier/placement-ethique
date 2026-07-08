@@ -108,7 +108,9 @@ export const CHOIX_CONTRATS: ChoixContrat[] = Object.values(CONTRATS).map((c) =>
     const degressif = GRILLE_FRAIS_ENTREE.slice(1)
       .map((tranche, index) => {
         const seuil = GRILLE_FRAIS_ENTREE[index].jusquA;
-        const taux = tranche.tauxPct.toLocaleString("fr-FR", { minimumFractionDigits: tranche.tauxPct % 1 ? 2 : 0 });
+        const taux = tranche.tauxPct.toLocaleString("fr-FR", {
+          minimumFractionDigits: tranche.tauxPct % 1 ? 2 : 0,
+        });
         return `${taux} % au-delà de ${((seuil ?? 0) / 1000).toLocaleString("fr-FR")} k€`;
       })
       .join(", ");
@@ -148,7 +150,8 @@ function lignesValides(lignes: unknown): LigneAllocation[] {
 
 export function totalPoids(lignes: LigneAllocation[] | undefined): number {
   return lignesValides(lignes).reduce(
-    (somme, l) => somme + (typeof l.poidsPct === "number" && Number.isFinite(l.poidsPct) ? l.poidsPct : 0),
+    (somme, l) =>
+      somme + (typeof l.poidsPct === "number" && Number.isFinite(l.poidsPct) ? l.poidsPct : 0),
     0,
   );
 }

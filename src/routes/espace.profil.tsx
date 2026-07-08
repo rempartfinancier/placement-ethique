@@ -86,10 +86,18 @@ function ProfilPage() {
             }}
           >
             <div>
-              <label htmlFor="profil-email" className="mb-1.5 block text-sm font-medium text-foreground">
+              <label
+                htmlFor="profil-email"
+                className="mb-1.5 block text-sm font-medium text-foreground"
+              >
                 Email de connexion
               </label>
-              <Input id="profil-email" value={espace.data?.email ?? ""} disabled className="bg-muted/50" />
+              <Input
+                id="profil-email"
+                value={espace.data?.email ?? ""}
+                disabled
+                className="bg-muted/50"
+              />
               <p className="mt-1 text-xs text-muted-foreground">
                 Affiché pour information — pour le changer, contactez le cabinet (vérification
                 d'identité oblige).
@@ -97,7 +105,10 @@ function ProfilPage() {
             </div>
             <div className="grid gap-4 sm:grid-cols-2">
               <div>
-                <label htmlFor="profil-prenom" className="mb-1.5 block text-sm font-medium text-foreground">
+                <label
+                  htmlFor="profil-prenom"
+                  className="mb-1.5 block text-sm font-medium text-foreground"
+                >
                   Prénom
                 </label>
                 <Input
@@ -109,7 +120,10 @@ function ProfilPage() {
                 />
               </div>
               <div>
-                <label htmlFor="profil-nom" className="mb-1.5 block text-sm font-medium text-foreground">
+                <label
+                  htmlFor="profil-nom"
+                  className="mb-1.5 block text-sm font-medium text-foreground"
+                >
                   Nom
                 </label>
                 <Input
@@ -122,7 +136,10 @@ function ProfilPage() {
               </div>
             </div>
             <div>
-              <label htmlFor="profil-tel" className="mb-1.5 block text-sm font-medium text-foreground">
+              <label
+                htmlFor="profil-tel"
+                className="mb-1.5 block text-sm font-medium text-foreground"
+              >
                 Téléphone
               </label>
               <Input
@@ -164,8 +181,8 @@ function ProfilPage() {
               propres aux intermédiaires financiers.
             </li>
             <li>
-              <strong className="text-foreground">Aucun autre usage :</strong> pas de newsletter sans
-              opt-in séparé, pas de transmission à un tiers commercial, pas de profilage
+              <strong className="text-foreground">Aucun autre usage :</strong> pas de newsletter
+              sans opt-in séparé, pas de transmission à un tiers commercial, pas de profilage
               automatisé — les recommandations sont écrites par un conseiller, pas par un
               algorithme.
             </li>
@@ -196,11 +213,15 @@ function ProfilPage() {
                     {CONSENTEMENTS_PAR_CATEGORIE.get(consent.categorie)?.titre ?? consent.categorie}
                   </span>
                   <span className="text-xs tabular-nums text-muted-foreground">
-                    {format(new Date(consent.created_at), "d MMMM yyyy 'à' HH'h'mm", { locale: fr })} ·
-                    version {consent.version}
+                    {format(new Date(consent.created_at), "d MMMM yyyy 'à' HH'h'mm", {
+                      locale: fr,
+                    })}{" "}
+                    · version {consent.version}
                   </span>
                 </div>
-                <p className="mt-1 text-xs leading-relaxed text-muted-foreground">{consent.libelle}</p>
+                <p className="mt-1 text-xs leading-relaxed text-muted-foreground">
+                  {consent.libelle}
+                </p>
               </li>
             ))}
           </ul>

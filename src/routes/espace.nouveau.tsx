@@ -2,13 +2,26 @@ import { useEffect, useMemo, useRef, useState } from "react";
 import { createFileRoute, Link, useNavigate } from "@tanstack/react-router";
 import { useQuery, useQueryClient } from "@tanstack/react-query";
 import { useServerFn } from "@tanstack/react-start";
-import { ArrowLeft, ArrowRight, Check, Info, Save, SendHorizonal, TriangleAlert, X } from "lucide-react";
+import {
+  ArrowLeft,
+  ArrowRight,
+  Check,
+  Info,
+  Save,
+  SendHorizonal,
+  TriangleAlert,
+  X,
+} from "lucide-react";
 import { toast } from "sonner";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Checkbox } from "@/components/ui/checkbox";
 import { ConsentCheckbox } from "@/components/espace/ConsentCheckbox";
-import { getDossierDetail, sauverBrouillon, transmettreDossier } from "@/lib/espace/espace.functions";
+import {
+  getDossierDetail,
+  sauverBrouillon,
+  transmettreDossier,
+} from "@/lib/espace/espace.functions";
 import {
   EPARGNES_MENSUELLES,
   EXPERIENCES,
@@ -157,7 +170,15 @@ function MultiPills<T extends string>({
   );
 }
 
-function Champ({ label, aide, children }: { label: string; aide?: string; children: React.ReactNode }) {
+function Champ({
+  label,
+  aide,
+  children,
+}: {
+  label: string;
+  aide?: string;
+  children: React.ReactNode;
+}) {
   return (
     <div>
       <p className="text-sm font-medium text-foreground">{label}</p>
@@ -459,7 +480,10 @@ function NouveauDossier() {
       <div className="card-paper mt-8 p-6 md:p-8">
         {etape === 0 && (
           <div className="space-y-7">
-            <Champ label="Titre du dossier" aide="Pour vous y retrouver — ex. « Préparer ma retraite »">
+            <Champ
+              label="Titre du dossier"
+              aide="Pour vous y retrouver — ex. « Préparer ma retraite »"
+            >
               <Input
                 value={form.titre}
                 maxLength={120}
@@ -500,8 +524,8 @@ function NouveauDossier() {
             <p className="flex items-start gap-2 rounded-xl bg-muted/60 px-4 py-3 text-sm text-muted-foreground">
               <Info size={16} className="mt-0.5 shrink-0 text-[var(--grenat)]" aria-hidden />
               <span>
-                Ces informations servent uniquement à préparer l'échange. Chaque question propose
-                « Je préfère en parler de vive voix » — c'est une réponse parfaitement valable.
+                Ces informations servent uniquement à préparer l'échange. Chaque question propose «
+                Je préfère en parler de vive voix » — c'est une réponse parfaitement valable.
               </span>
             </p>
             <Champ label="Votre situation professionnelle">
@@ -509,7 +533,10 @@ function NouveauDossier() {
                 options={SITUATIONS_PRO}
                 value={form.situation.situationPro ?? null}
                 onChange={(v) =>
-                  setForm({ ...form, situation: { ...form.situation, situationPro: v ?? undefined } })
+                  setForm({
+                    ...form,
+                    situation: { ...form.situation, situationPro: v ?? undefined },
+                  })
                 }
               />
             </Champ>
@@ -634,7 +661,9 @@ function NouveauDossier() {
                         {produit.risques.join(" · ")}
                       </span>
                       <span className="mt-2 block rounded-lg bg-muted/60 px-3 py-2 text-xs leading-relaxed text-muted-foreground">
-                        <strong className="text-foreground/70">Jusqu'où va la démarche en ligne :</strong>{" "}
+                        <strong className="text-foreground/70">
+                          Jusqu'où va la démarche en ligne :
+                        </strong>{" "}
                         {produit.bascule}
                       </span>
                     </span>
@@ -651,7 +680,12 @@ function NouveauDossier() {
                       }}
                     >
                       <p className="flex items-start gap-2 text-sm leading-relaxed text-foreground/85">
-                        <TriangleAlert size={16} className="mt-0.5 shrink-0" style={{ color: "var(--grenat-clair)" }} aria-hidden />
+                        <TriangleAlert
+                          size={16}
+                          className="mt-0.5 shrink-0"
+                          style={{ color: "var(--grenat-clair)" }}
+                          aria-hidden
+                        />
                         {produit.miseEnGarde.texte}
                       </p>
                       <label className="mt-3 flex cursor-pointer items-center gap-2.5">
@@ -682,19 +716,27 @@ function NouveauDossier() {
               </h2>
               <div className="mt-4 space-y-3">
                 {CATEGORIES_INFORMATIVES.map((cat) => (
-                  <div key={cat.code} className="rounded-2xl border border-dashed border-border bg-muted/40 p-5">
+                  <div
+                    key={cat.code}
+                    className="rounded-2xl border border-dashed border-border bg-muted/40 p-5"
+                  >
                     <div className="flex flex-wrap items-center gap-2">
                       <span className="font-display text-lg text-foreground/80">{cat.nom}</span>
                       <span className="rounded-full bg-muted px-2.5 py-0.5 text-xs text-muted-foreground">
                         {cat.tag}
                       </span>
                     </div>
-                    <p className="mt-1.5 text-sm leading-relaxed text-muted-foreground">{cat.description}</p>
+                    <p className="mt-1.5 text-sm leading-relaxed text-muted-foreground">
+                      {cat.description}
+                    </p>
                     <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
                       <strong className="text-foreground/70">Pourquoi pas ici :</strong>{" "}
                       {cat.pourquoiPasEnLigne}
                     </p>
-                    <Link to="/contact" className="mt-3 inline-flex items-center gap-1.5 text-sm text-primary underline">
+                    <Link
+                      to="/contact"
+                      className="mt-3 inline-flex items-center gap-1.5 text-sm text-primary underline"
+                    >
                       En parler lors d'un échange <ArrowRight size={13} aria-hidden />
                     </Link>
                   </div>
@@ -724,7 +766,12 @@ function NouveauDossier() {
                   // le gate du bouton Continuer).
                   setForm({
                     ...form,
-                    allocation: { mode: "avec_conseiller", enveloppe: null, contratId: null, lignes: [] },
+                    allocation: {
+                      mode: "avec_conseiller",
+                      enveloppe: null,
+                      contratId: null,
+                      lignes: [],
+                    },
                   })
                 }
                 className={`rounded-2xl border p-5 text-left transition-colors ${
@@ -737,8 +784,8 @@ function NouveauDossier() {
                   Construire l'allocation avec mon conseiller
                 </span>
                 <span className="mt-1.5 block text-sm leading-relaxed text-muted-foreground">
-                  Le plus simple : vous transmettez votre dossier, votre conseiller vous rappelle
-                  au créneau de votre choix et construit l'allocation avec vous, de vive voix.
+                  Le plus simple : vous transmettez votre dossier, votre conseiller vous rappelle au
+                  créneau de votre choix et construit l'allocation avec vous, de vive voix.
                 </span>
               </button>
               <button
@@ -828,7 +875,9 @@ function NouveauDossier() {
                               : "border-border bg-card hover:border-primary/40"
                           }`}
                         >
-                          <span className="block font-medium text-foreground">{contrat.libelle}</span>
+                          <span className="block font-medium text-foreground">
+                            {contrat.libelle}
+                          </span>
                           <span className="mt-0.5 block text-xs text-muted-foreground">
                             {contrat.assureur} · distribué par {contrat.distribution}
                           </span>
@@ -858,7 +907,9 @@ function NouveauDossier() {
                           : "border-border bg-card hover:border-primary/40"
                       }`}
                     >
-                      <span className="block font-medium text-foreground">Je ne sais pas encore</span>
+                      <span className="block font-medium text-foreground">
+                        Je ne sais pas encore
+                      </span>
                       <span className="mt-1 block text-xs leading-relaxed text-muted-foreground">
                         Le contrat se choisit très bien pendant l'échange — vous verrez alors tous
                         les supports des deux contrats.
@@ -878,10 +929,10 @@ function NouveauDossier() {
                   </p>
                 ) : fondsDisponibles.length === 0 ? (
                   <p className="rounded-xl bg-muted/60 px-4 py-3 text-sm leading-relaxed text-muted-foreground">
-                    Aucun support à afficher : sélectionnez au moins une piste « Actions & ETF
-                    ISR », « Obligations vertes & obligataire ISR », « Épargne solidaire » ou
-                    « SCPI & immobilier durable » à l'étape précédente — ou laissez simplement
-                    votre conseiller construire l'allocation avec vous.
+                    Aucun support à afficher : sélectionnez au moins une piste « Actions & ETF ISR
+                    », « Obligations vertes & obligataire ISR », « Épargne solidaire » ou « SCPI &
+                    immobilier durable » à l'étape précédente — ou laissez simplement votre
+                    conseiller construire l'allocation avec vous.
                   </p>
                 ) : (
                   <div>
@@ -891,7 +942,9 @@ function NouveauDossier() {
                       </p>
                       <p className="text-xs text-muted-foreground">
                         Poids indicatifs, optionnels — total{" "}
-                        <strong className={totalEsquisse > 100 ? "text-destructive" : "text-foreground"}>
+                        <strong
+                          className={totalEsquisse > 100 ? "text-destructive" : "text-foreground"}
+                        >
                           {totalEsquisse} %
                         </strong>
                         {totalEsquisse < 100 && " (le solde se définit avec le conseiller)"}
@@ -899,7 +952,9 @@ function NouveauDossier() {
                     </div>
                     <div className="mt-3 space-y-4">
                       {ORDRE_CATEGORIES.map((categorie) => {
-                        const fondsCategorie = fondsDisponibles.filter((f) => f.categorie === categorie);
+                        const fondsCategorie = fondsDisponibles.filter(
+                          (f) => f.categorie === categorie,
+                        );
                         if (fondsCategorie.length === 0) return null;
                         return (
                           <div key={categorie}>
@@ -916,7 +971,9 @@ function NouveauDossier() {
                                   <li
                                     key={fonds.isin}
                                     className={`flex flex-wrap items-center gap-3 rounded-xl border px-4 py-3 transition-colors ${
-                                      selected ? "border-primary/50 bg-card" : "border-border/70 bg-card"
+                                      selected
+                                        ? "border-primary/50 bg-card"
+                                        : "border-border/70 bg-card"
                                     }`}
                                   >
                                     <Checkbox
@@ -936,8 +993,13 @@ function NouveauDossier() {
                                         });
                                       }}
                                     />
-                                    <label htmlFor={`fonds-${fonds.isin}`} className="min-w-0 flex-1 cursor-pointer">
-                                      <span className="block text-sm text-foreground">{fonds.nom}</span>
+                                    <label
+                                      htmlFor={`fonds-${fonds.isin}`}
+                                      className="min-w-0 flex-1 cursor-pointer"
+                                    >
+                                      <span className="block text-sm text-foreground">
+                                        {fonds.nom}
+                                      </span>
                                       <span className="mt-0.5 block text-xs text-muted-foreground">
                                         {fonds.isin}
                                         {fonds.sri ? ` · SRI ${fonds.sri}/7` : ""}
@@ -973,7 +1035,9 @@ function NouveauDossier() {
                                               allocation: {
                                                 ...form.allocation,
                                                 lignes: (form.allocation.lignes ?? []).map((l) =>
-                                                  l.isin === fonds.isin ? { ...l, poidsPct: poids } : l,
+                                                  l.isin === fonds.isin
+                                                    ? { ...l, poidsPct: poids }
+                                                    : l,
                                                 ),
                                               },
                                             });
@@ -1018,19 +1082,27 @@ function NouveauDossier() {
               <dl className="mt-4 grid gap-x-8 gap-y-3 text-sm md:grid-cols-2">
                 <div>
                   <dt className="text-muted-foreground">Dossier</dt>
-                  <dd className="mt-0.5 font-medium text-foreground">{form.titre || "Sans titre"}</dd>
+                  <dd className="mt-0.5 font-medium text-foreground">
+                    {form.titre || "Sans titre"}
+                  </dd>
                 </div>
                 <div>
                   <dt className="text-muted-foreground">Objectif</dt>
-                  <dd className="mt-0.5 font-medium text-foreground">{form.objectif ?? "Non renseigné"}</dd>
+                  <dd className="mt-0.5 font-medium text-foreground">
+                    {form.objectif ?? "Non renseigné"}
+                  </dd>
                 </div>
                 <div>
                   <dt className="text-muted-foreground">Horizon</dt>
-                  <dd className="mt-0.5 font-medium text-foreground">{form.horizon ?? "Non renseigné"}</dd>
+                  <dd className="mt-0.5 font-medium text-foreground">
+                    {form.horizon ?? "Non renseigné"}
+                  </dd>
                 </div>
                 <div>
                   <dt className="text-muted-foreground">Montant envisagé</dt>
-                  <dd className="mt-0.5 font-medium text-foreground">{form.montantTranche ?? "Non renseigné"}</dd>
+                  <dd className="mt-0.5 font-medium text-foreground">
+                    {form.montantTranche ?? "Non renseigné"}
+                  </dd>
                 </div>
                 <div>
                   <dt className="text-muted-foreground">Situation</dt>
@@ -1056,7 +1128,9 @@ function NouveauDossier() {
                 </div>
                 {form.allocation.mode && (
                   <div className="md:col-span-2">
-                    <dt className="text-muted-foreground">Esquisse d'allocation (support de discussion)</dt>
+                    <dt className="text-muted-foreground">
+                      Esquisse d'allocation (support de discussion)
+                    </dt>
                     <dd className="mt-0.5 space-y-0.5 font-medium text-foreground">
                       {resumeAllocation(form.allocation).map((ligne, i) => (
                         <span key={i} className="block">
@@ -1116,22 +1190,53 @@ function NouveauDossier() {
               className="rounded-2xl border bg-card p-5"
               style={{ borderColor: "color-mix(in oklch, var(--grenat) 50%, transparent)" }}
             >
-              <h3 className="font-medium text-foreground">Ce que « transmettre » veut dire — et ne veut pas dire</h3>
+              <h3 className="font-medium text-foreground">
+                Ce que « transmettre » veut dire — et ne veut pas dire
+              </h3>
               <ul className="mt-3 space-y-1.5 text-sm leading-relaxed text-muted-foreground">
                 <li className="flex gap-2">
-                  <Check size={15} className="mt-0.5 shrink-0" style={{ color: "var(--primary)" }} aria-hidden />
-                  <span>Votre conseiller reçoit votre dossier et vous recontacte pour un échange de vive voix.</span>
+                  <Check
+                    size={15}
+                    className="mt-0.5 shrink-0"
+                    style={{ color: "var(--primary)" }}
+                    aria-hidden
+                  />
+                  <span>
+                    Votre conseiller reçoit votre dossier et vous recontacte pour un échange de vive
+                    voix.
+                  </span>
                 </li>
                 <li className="flex gap-2">
-                  <Check size={15} className="mt-0.5 shrink-0" style={{ color: "var(--primary)" }} aria-hidden />
-                  <span>Vous pourrez retirer votre demande à tout moment, en un clic, sans justification.</span>
+                  <Check
+                    size={15}
+                    className="mt-0.5 shrink-0"
+                    style={{ color: "var(--primary)" }}
+                    aria-hidden
+                  />
+                  <span>
+                    Vous pourrez retirer votre demande à tout moment, en un clic, sans
+                    justification.
+                  </span>
                 </li>
                 <li className="flex gap-2">
-                  <X size={15} className="mt-0.5 shrink-0" style={{ color: "var(--grenat-clair)" }} aria-hidden />
-                  <span>Vous ne souscrivez à rien : aucune somme n'est engagée, aucun contrat n'est créé.</span>
+                  <X
+                    size={15}
+                    className="mt-0.5 shrink-0"
+                    style={{ color: "var(--grenat-clair)" }}
+                    aria-hidden
+                  />
+                  <span>
+                    Vous ne souscrivez à rien : aucune somme n'est engagée, aucun contrat n'est
+                    créé.
+                  </span>
                 </li>
                 <li className="flex gap-2">
-                  <X size={15} className="mt-0.5 shrink-0" style={{ color: "var(--grenat-clair)" }} aria-hidden />
+                  <X
+                    size={15}
+                    className="mt-0.5 shrink-0"
+                    style={{ color: "var(--grenat-clair)" }}
+                    aria-hidden
+                  />
                   <span>
                     Aucune recommandation n'est produite automatiquement : elle sera formalisée par
                     écrit par votre conseiller, après votre échange — et la signature éventuelle se

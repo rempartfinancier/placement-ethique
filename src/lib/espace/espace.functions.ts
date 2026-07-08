@@ -14,7 +14,12 @@ import {
   VERSION_CONSENTEMENTS,
   type ConsentementCategorie,
 } from "./consentements";
-import { fondsProposables, resumeAllocation, totalPoids, type AllocationDossier } from "./allocation";
+import {
+  fondsProposables,
+  resumeAllocation,
+  totalPoids,
+  type AllocationDossier,
+} from "./allocation";
 
 // Server functions de l'espace client. Toutes passent par requireSupabaseAuth :
 // le `context.supabase` est un client scoppé RLS à l'utilisateur — même un bug
@@ -35,10 +40,7 @@ export const getEspace = createServerFn({ method: "GET" })
   .handler(async ({ context }) => {
     const [profil, dossiers] = await Promise.all([
       context.supabase.from("profiles").select("*").eq("user_id", context.userId).maybeSingle(),
-      context.supabase
-        .from("dossiers")
-        .select("*")
-        .order("updated_at", { ascending: false }),
+      context.supabase.from("dossiers").select("*").order("updated_at", { ascending: false }),
     ]);
     if (profil.error) throw new Error(profil.error.message);
     if (dossiers.error) throw new Error(dossiers.error.message);
@@ -162,7 +164,9 @@ export const sauverBrouillon = createServerFn({ method: "POST" })
       if (existant.error) throw new Error(existant.error.message);
       if (!existant.data) throw new Error("Dossier introuvable.");
       if (existant.data.statut !== "brouillon") {
-        throw new Error("Ce dossier a été transmis : il ne peut plus être modifié, seulement retiré.");
+        throw new Error(
+          "Ce dossier a été transmis : il ne peut plus être modifié, seulement retiré.",
+        );
       }
 
       const { data: row, error } = await context.supabase
@@ -264,12 +268,10 @@ export const transmettreDossier = createServerFn({ method: "POST" })
     // Le registre est constitué AVANT le passage en `transmis` — le trigger
     // SQL l'exige. Upsert idempotent (contrainte UNIQUE dossier/catégorie/
     // version) : un re-essai après échec réseau ne crée aucun doublon.
-    const consentInsert = await context.supabase
-      .from("consentements")
-      .upsert(lignesConsentement, {
-        onConflict: "dossier_id,categorie,version",
-        ignoreDuplicates: true,
-      });
+    const consentInsert = await context.supabase.from("consentements").upsert(lignesConsentement, {
+      onConflict: "dossier_id,categorie,version",
+      ignoreDuplicates: true,
+    });
     if (consentInsert.error) throw new Error(consentInsert.error.message);
 
     const misesEnGardeJson = Object.fromEntries(
@@ -456,10 +458,14 @@ export const supprimerDocument = createServerFn({ method: "POST" })
     // Le fichier d'abord, la métadonnée ensuite : si le storage échoue, la
     // ligne reste et l'utilisateur peut réessayer — jamais de fichier orphelin
     // sans référence. (Les policies storage suivent celles de `documents`.)
-    const storageRes = await context.supabase.storage.from(BUCKET_PIECES).remove([doc.data.storage_path]);
+    const storageRes = await context.supabase.storage
+      .from(BUCKET_PIECES)
+      .remove([doc.data.storage_path]);
     if (storageRes.error) {
       console.error("[supprimerDocument] Fichier storage non supprimé:", storageRes.error);
-      throw new Error("Suppression impossible pour le moment : réessayez, ou contactez votre conseiller.");
+      throw new Error(
+        "Suppression impossible pour le moment : réessayez, ou contactez votre conseiller.",
+      );
     }
 
     const { error, count } = await context.supabase
@@ -468,7 +474,9 @@ export const supprimerDocument = createServerFn({ method: "POST" })
       .eq("id", data.documentId);
     if (error) throw new Error(error.message);
     if (!count) {
-      throw new Error("Ce document ne peut plus être supprimé depuis l'espace : contactez votre conseiller.");
+      throw new Error(
+        "Ce document ne peut plus être supprimé depuis l'espace : contactez votre conseiller.",
+      );
     }
     return { ok: true };
   });
@@ -489,6 +497,7 @@ export const urlDocument = createServerFn({ method: "POST" })
     const signed = await context.supabase.storage
       .from(BUCKET_PIECES)
       .createSignedUrl(doc.data.storage_path, 60 * 5);
-    if (signed.error || !signed.data) throw new Error("Impossible de générer le lien de téléchargement.");
+    if (signed.error || !signed.data)
+      throw new Error("Impossible de générer le lien de téléchargement.");
     return { url: signed.data.signedUrl };
   });

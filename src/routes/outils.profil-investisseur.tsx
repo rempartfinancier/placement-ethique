@@ -31,7 +31,9 @@ import {
 export const Route = createFileRoute("/outils/profil-investisseur")({
   head: () => ({
     meta: [
-      { title: "Profil investisseur éthique : quiz gratuit en 10 questions | Placement-éthique.fr" },
+      {
+        title: "Profil investisseur éthique : quiz gratuit en 10 questions | Placement-éthique.fr",
+      },
       {
         name: "description",
         content:
@@ -40,7 +42,8 @@ export const Route = createFileRoute("/outils/profil-investisseur")({
       { property: "og:title", content: "Quel est votre profil investisseur éthique ?" },
       {
         property: "og:description",
-        content: "10 questions de risque + 2 facultatives sur vos priorités E/S/G. Une piste en moins de 5 minutes.",
+        content:
+          "10 questions de risque + 2 facultatives sur vos priorités E/S/G. Une piste en moins de 5 minutes.",
       },
       { property: "og:url", content: "https://placement-ethique.fr/outils/profil-investisseur" },
     ],
@@ -267,8 +270,14 @@ function ScoreGauge({ label, score }: { label: string; score: number }) {
           style={{ width: `${pct}%` }}
         />
         {/* Repères des seuils 5 et 11 */}
-        <span className="absolute top-0 h-full w-px bg-background/80" style={{ left: `${(5 / 15) * 100}%` }} />
-        <span className="absolute top-0 h-full w-px bg-background/80" style={{ left: `${(11 / 15) * 100}%` }} />
+        <span
+          className="absolute top-0 h-full w-px bg-background/80"
+          style={{ left: `${(5 / 15) * 100}%` }}
+        />
+        <span
+          className="absolute top-0 h-full w-px bg-background/80"
+          style={{ left: `${(11 / 15) * 100}%` }}
+        />
       </div>
     </div>
   );
@@ -289,7 +298,11 @@ function ProfilInvestisseurPage() {
 
   const scores = useMemo(() => {
     const sum = (idx: number[]) =>
-      idx.reduce((acc, i) => acc + (answers[i] !== null ? questions[i].choices[answers[i] as number].score : 0), 0);
+      idx.reduce(
+        (acc, i) =>
+          acc + (answers[i] !== null ? questions[i].choices[answers[i] as number].score : 0),
+        0,
+      );
     const capacity = sum(CAPACITY_IDX);
     const tolerance = sum(TOLERANCE_IDX);
     const minScore = Math.min(capacity, tolerance);
@@ -316,7 +329,9 @@ function ProfilInvestisseurPage() {
     payload["Capacité de risque"] = `${scores.capacity}/15`;
     payload["Tolérance au risque"] = `${scores.tolerance}/15`;
     payload["Profil de risque"] = scores.label;
-    payload["Priorités extra-financières"] = priorites.length ? priorites.join(" · ") : "Non renseigné";
+    payload["Priorités extra-financières"] = priorites.length
+      ? priorites.join(" · ")
+      : "Non renseigné";
     payload["Exclusions souhaitées"] = exclusions.length ? exclusions.join(" · ") : "Non renseigné";
     return payload;
   }, [answers, scores, priorites, exclusions]);
@@ -336,8 +351,14 @@ function ProfilInvestisseurPage() {
       {
         heading: "Scores de risque",
         rows: [
-          { label: "Capacité de risque (situation)", value: `${scores.capacity}/15 (${bandOf(scores.capacity)})` },
-          { label: "Tolérance au risque (tempérament)", value: `${scores.tolerance}/15 (${bandOf(scores.tolerance)})` },
+          {
+            label: "Capacité de risque (situation)",
+            value: `${scores.capacity}/15 (${bandOf(scores.capacity)})`,
+          },
+          {
+            label: "Tolérance au risque (tempérament)",
+            value: `${scores.tolerance}/15 (${bandOf(scores.tolerance)})`,
+          },
           { label: "Profil de risque retenu", value: scores.label },
         ],
         note:
@@ -349,11 +370,16 @@ function ProfilInvestisseurPage() {
       {
         heading: "Priorités extra-financières (facultatif)",
         rows: [
-          { label: "Priorités E/S/G", value: priorites.length ? priorites.join(" · ") : "Non renseigné" },
-          { label: "Exclusions souhaitées", value: exclusions.length ? exclusions.join(" · ") : "Non renseigné" },
+          {
+            label: "Priorités E/S/G",
+            value: priorites.length ? priorites.join(" · ") : "Non renseigné",
+          },
+          {
+            label: "Exclusions souhaitées",
+            value: exclusions.length ? exclusions.join(" · ") : "Non renseigné",
+          },
         ],
-        note:
-          "Ces réponses ne filtrent ni ne sélectionnent aucun fonds automatiquement : elles nourrissent l'échange avec votre conseiller, qui vérifie ensuite fonds par fonds ce qu'un support finance ou exclut réellement.",
+        note: "Ces réponses ne filtrent ni ne sélectionnent aucun fonds automatiquement : elles nourrissent l'échange avec votre conseiller, qui vérifie ensuite fonds par fonds ce qu'un support finance ou exclut réellement.",
       },
       {
         heading: "Exemple de portefeuille type correspondant",
@@ -379,7 +405,11 @@ function ProfilInvestisseurPage() {
         eyebrow="Outil — Quiz"
         title={
           <>
-            Quel <span className="italic" style={{ color: "var(--grenat)" }}>profil investisseur</span> êtes-vous ?
+            Quel{" "}
+            <span className="italic" style={{ color: "var(--grenat)" }}>
+              profil investisseur
+            </span>{" "}
+            êtes-vous ?
           </>
         }
         lead="Dix questions pour mesurer séparément votre capacité de risque (votre situation) et votre tolérance au risque (votre tempérament) — puis deux questions facultatives pour amorcer l'échange sur vos priorités extra-financières. Environ 3 minutes ; le résultat est une piste, pas une allocation."
@@ -430,10 +460,15 @@ function ProfilInvestisseurPage() {
                               active
                                 ? {
                                     borderColor: "var(--grenat)",
-                                    background: "color-mix(in oklch, var(--grenat) 8%, var(--card))",
+                                    background:
+                                      "color-mix(in oklch, var(--grenat) 8%, var(--card))",
                                     color: "var(--foreground)",
                                   }
-                                : { borderColor: "var(--border)", color: "color-mix(in oklch, var(--foreground) 85%, transparent)" }
+                                : {
+                                    borderColor: "var(--border)",
+                                    color:
+                                      "color-mix(in oklch, var(--foreground) 85%, transparent)",
+                                  }
                             }
                           >
                             {c.label}
@@ -448,8 +483,9 @@ function ProfilInvestisseurPage() {
               <div className="mt-8 rounded-xl border border-dashed border-border bg-card/60 p-6">
                 <span className="badge-a-valider">Facultatif</span>
                 <p className="mt-3 text-sm text-muted-foreground leading-relaxed">
-                  Ces deux questions n'entrent dans aucun score et n'influencent pas votre profil de risque
-                  ci-dessus. Elles servent uniquement à préparer votre échange avec un conseiller.
+                  Ces deux questions n'entrent dans aucun score et n'influencent pas votre profil de
+                  risque ci-dessus. Elles servent uniquement à préparer votre échange avec un
+                  conseiller.
                 </p>
 
                 <div className="mt-6">
@@ -459,7 +495,9 @@ function ProfilInvestisseurPage() {
                     </span>
                     Quelles priorités extra-financières comptent le plus pour vous ?
                   </p>
-                  <p className="mt-1 text-xs text-muted-foreground">Plusieurs réponses possibles.</p>
+                  <p className="mt-1 text-xs text-muted-foreground">
+                    Plusieurs réponses possibles.
+                  </p>
                   <div className="mt-3 flex flex-wrap gap-2">
                     {PRIORITES_OPTIONS.map((opt) => (
                       <OptionChip
@@ -479,7 +517,9 @@ function ProfilInvestisseurPage() {
                     </span>
                     Souhaitez-vous exclure explicitement certains secteurs ?
                   </p>
-                  <p className="mt-1 text-xs text-muted-foreground">Plusieurs réponses possibles.</p>
+                  <p className="mt-1 text-xs text-muted-foreground">
+                    Plusieurs réponses possibles.
+                  </p>
                   <div className="mt-3 flex flex-wrap gap-2">
                     {EXCLUSIONS_OPTIONS.map((opt) => (
                       <OptionChip
@@ -493,11 +533,12 @@ function ProfilInvestisseurPage() {
                 </div>
 
                 <p className="mt-6 text-xs text-muted-foreground leading-relaxed border-t border-border/60 pt-4">
-                  Important : ces réponses ne filtrent et ne sélectionnent aucun fonds automatiquement. Un
-                  cabinet qui vérifie ce que les labels garantissent avant d'en parler doit vérifier de la
-                  même façon ce qu'un fonds exclut réellement — fonds par fonds, sur la base du document
-                  d'informations clés (DIC) et du reporting SFDR, jamais sur une promesse marketing. Vos
-                  réponses ici ouvrent cette vérification en rendez-vous, elles ne la remplacent pas.
+                  Important : ces réponses ne filtrent et ne sélectionnent aucun fonds
+                  automatiquement. Un cabinet qui vérifie ce que les labels garantissent avant d'en
+                  parler doit vérifier de la même façon ce qu'un fonds exclut réellement — fonds par
+                  fonds, sur la base du document d'informations clés (DIC) et du reporting SFDR,
+                  jamais sur une promesse marketing. Vos réponses ici ouvrent cette vérification en
+                  rendez-vous, elles ne la remplacent pas.
                 </p>
               </div>
 
@@ -545,8 +586,9 @@ function ProfilInvestisseurPage() {
                       Avant toute allocation risquée, constituez 3 à 6 mois d'épargne de précaution.
                     </p>
                     <p className="mt-1 text-sm text-muted-foreground leading-relaxed">
-                      Votre épargne de précaution couvre moins de 3 mois de charges. C'est la première brique
-                      de tout patrimoine : elle vous évite de devoir vendre vos placements au pire moment.
+                      Votre épargne de précaution couvre moins de 3 mois de charges. C'est la
+                      première brique de tout patrimoine : elle vous évite de devoir vendre vos
+                      placements au pire moment.
                     </p>
                   </div>
                 </div>
@@ -556,33 +598,43 @@ function ProfilInvestisseurPage() {
                 <div className="rounded-xl border border-amber-400 bg-card p-5 flex items-start gap-3">
                   <AlertTriangle className="text-amber-500 shrink-0 mt-0.5" size={20} />
                   <div>
-                    <p className="font-medium text-foreground">Profil plafonné à Prudent par sécurité.</p>
+                    <p className="font-medium text-foreground">
+                      Profil plafonné à Prudent par sécurité.
+                    </p>
                     <p className="mt-1 text-sm text-muted-foreground leading-relaxed">
                       {scores.koHorizon && scores.koProject
                         ? "Votre horizon est inférieur à 3 ans et un projet engageant est imminent : "
                         : scores.koHorizon
                           ? "Votre horizon de placement est inférieur à 3 ans : "
                           : "Un projet engageant (achat immobilier, mariage…) est imminent : "}
-                      l'argent dont vous aurez besoin bientôt ne doit pas être exposé à la volatilité des
-                      marchés, quel que soit votre tempérament
-                      {scores.rawLabel !== "Prudent" ? ` (vos réponses indiquaient sinon un profil ${scores.rawLabel})` : ""}.
+                      l'argent dont vous aurez besoin bientôt ne doit pas être exposé à la
+                      volatilité des marchés, quel que soit votre tempérament
+                      {scores.rawLabel !== "Prudent"
+                        ? ` (vos réponses indiquaient sinon un profil ${scores.rawLabel})`
+                        : ""}
+                      .
                     </p>
                   </div>
                 </div>
               )}
 
-              <div className="rounded-2xl border p-8 md:p-10" style={{ borderColor: "var(--grenat)" }}>
+              <div
+                className="rounded-2xl border p-8 md:p-10"
+                style={{ borderColor: "var(--grenat)" }}
+              >
                 <p className="eyebrow">Piste — votre profil de risque</p>
                 <h2 className="font-display text-4xl mt-3 text-foreground">{scores.label}</h2>
-                <p className="mt-6 text-foreground/85 leading-relaxed">{RISK_SUMMARIES[scores.label]}</p>
+                <p className="mt-6 text-foreground/85 leading-relaxed">
+                  {RISK_SUMMARIES[scores.label]}
+                </p>
 
                 <div className="mt-8 space-y-5">
                   <ScoreGauge label="Capacité de risque (situation)" score={scores.capacity} />
                   <ScoreGauge label="Tolérance au risque (tempérament)" score={scores.tolerance} />
                   <p className="text-sm text-muted-foreground leading-relaxed">
-                    Le profil retenu respecte la plus contraignante des deux dimensions : un tempérament
-                    audacieux ne compense pas une situation fragile, et inversement. Seuils indicatifs :
-                    Prudent &lt; 5 · Équilibré 5–10 · Dynamique ≥ 11.
+                    Le profil retenu respecte la plus contraignante des deux dimensions : un
+                    tempérament audacieux ne compense pas une situation fragile, et inversement.
+                    Seuils indicatifs : Prudent &lt; 5 · Équilibré 5–10 · Dynamique ≥ 11.
                   </p>
                 </div>
               </div>
@@ -614,8 +666,8 @@ function ProfilInvestisseurPage() {
                 <p className="eyebrow">Vos priorités à évoquer avec le conseiller</p>
                 {priorites.length === 0 && exclusions.length === 0 ? (
                   <p className="mt-3 text-sm text-muted-foreground leading-relaxed">
-                    Vous n'avez renseigné aucune priorité extra-financière particulière — nous en parlerons
-                    directement en rendez-vous.
+                    Vous n'avez renseigné aucune priorité extra-financière particulière — nous en
+                    parlerons directement en rendez-vous.
                   </p>
                 ) : (
                   <div className="mt-3 space-y-2.5 text-sm">
@@ -627,23 +679,28 @@ function ProfilInvestisseurPage() {
                     )}
                     {exclusions.length > 0 && (
                       <p>
-                        <span className="font-medium text-foreground">Exclusions souhaitées : </span>
+                        <span className="font-medium text-foreground">
+                          Exclusions souhaitées :{" "}
+                        </span>
                         <span className="text-muted-foreground">{exclusions.join(" · ")}</span>
                       </p>
                     )}
                   </div>
                 )}
                 <p className="mt-4 text-xs text-muted-foreground leading-relaxed">
-                  Rappel : ces préférences ne filtrent aucun fonds automatiquement. Elles orientent la
-                  conversation ; la vérification fonds par fonds (DIC, reporting SFDR) reste le travail du
-                  conseiller.
+                  Rappel : ces préférences ne filtrent aucun fonds automatiquement. Elles orientent
+                  la conversation ; la vérification fonds par fonds (DIC, reporting SFDR) reste le
+                  travail du conseiller.
                 </p>
               </div>
 
               <p className="text-sm text-muted-foreground leading-relaxed">
-                Étape suivante : une fois votre profil de risque situé, identifiez les enveloppes et les
-                classes d'actifs responsables les plus adaptées à votre situation avec{" "}
-                <Link to="/outils/type-investissement" className="text-foreground underline underline-offset-4">
+                Étape suivante : une fois votre profil de risque situé, identifiez les enveloppes et
+                les classes d'actifs responsables les plus adaptées à votre situation avec{" "}
+                <Link
+                  to="/outils/type-investissement"
+                  className="text-foreground underline underline-offset-4"
+                >
                   le sélecteur de type d'investissement
                 </Link>
                 .
@@ -660,7 +717,8 @@ function ProfilInvestisseurPage() {
                     setAnswers(Array(questions.length).fill(null));
                     setPriorites([]);
                     setExclusions([]);
-                    if (typeof window !== "undefined") window.scrollTo({ top: 0, behavior: "smooth" });
+                    if (typeof window !== "undefined")
+                      window.scrollTo({ top: 0, behavior: "smooth" });
                   }}
                   className="btn-ghost"
                 >

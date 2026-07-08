@@ -36,5 +36,17 @@ export default tseslint.config(
       "@typescript-eslint/no-unused-vars": "off",
     },
   },
+  {
+    // Chaque article exporte volontairement `meta` (objet ArticleMeta) à côté
+    // du composant `Corps` — c'est la convention du registre de contenu
+    // (docs/GUIDE-ARTICLE.md §1), pas un manquement à corriger fichier par
+    // fichier. `allowConstantExport` ne couvre que les primitives, pas les
+    // objets : ce fast-refresh dégradé sur ces fichiers est un compromis
+    // accepté, pas un bug.
+    files: ["src/content/articles/**/*.tsx"],
+    rules: {
+      "react-refresh/only-export-components": "off",
+    },
+  },
   eslintPluginPrettier,
 );

@@ -68,7 +68,9 @@ export function StatutTimeline({ statut }: { statut: DossierStatut }) {
                 )}
               </p>
               {estActuelle && (
-                <p className="mt-1 text-sm leading-relaxed text-muted-foreground">{meta.description}</p>
+                <p className="mt-1 text-sm leading-relaxed text-muted-foreground">
+                  {meta.description}
+                </p>
               )}
             </div>
           </li>

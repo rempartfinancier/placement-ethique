@@ -10,8 +10,7 @@ export const Route = createFileRoute("/outils/diagnostic")({
   head: () => ({
     meta: [
       {
-        title:
-          "Diagnostic patrimoine éthique — solide ET aligné ? | Placement-éthique.fr",
+        title: "Diagnostic patrimoine éthique — solide ET aligné ? | Placement-éthique.fr",
       },
       {
         name: "description",
@@ -118,7 +117,11 @@ const checkActions: ActionItem[] = [
   {
     priority: 2,
     text: "Ouvrez une assurance vie dès maintenant pour faire courir l'antériorité fiscale — chaque année compte.",
-    link: { kind: "article", slug: "assurance-vie-isr-guide-2026", label: "Guide assurance vie ISR" },
+    link: {
+      kind: "article",
+      slug: "assurance-vie-isr-guide-2026",
+      label: "Guide assurance vie ISR",
+    },
   },
   {
     priority: 3,
@@ -133,7 +136,11 @@ const checkActions: ActionItem[] = [
   {
     priority: 2,
     text: "Quelques minutes pour préciser vos clauses bénéficiaires peuvent conditionner une transmission bien plus favorable.",
-    link: { kind: "article", slug: "donation-transmission-coherence-valeurs", label: "Transmettre en cohérence avec ses valeurs" },
+    link: {
+      kind: "article",
+      slug: "donation-transmission-coherence-valeurs",
+      label: "Transmettre en cohérence avec ses valeurs",
+    },
   },
   {
     priority: 3,
@@ -143,7 +150,11 @@ const checkActions: ActionItem[] = [
   {
     priority: 1,
     text: "Vos placements actuels financent probablement des secteurs que vous n'avez jamais vérifiés — commencez par un ordre de grandeur.",
-    link: { kind: "page", to: "/outils/empreinte-carbone-epargne", label: "Empreinte carbone de votre épargne" },
+    link: {
+      kind: "page",
+      to: "/outils/empreinte-carbone-epargne",
+      label: "Empreinte carbone de votre épargne",
+    },
   },
   {
     priority: 1,
@@ -153,12 +164,20 @@ const checkActions: ActionItem[] = [
   {
     priority: 2,
     text: "Un fonds euros ou un livret réglementé ne finance rien d'identifiable — à faire sortir en priorité de votre logique d'alignement.",
-    link: { kind: "article", slug: "livrets-epargne-solidaire-alternative-livret-a", label: "L'épargne solidaire, une vraie alternative ?" },
+    link: {
+      kind: "article",
+      slug: "livrets-epargne-solidaire-alternative-livret-a",
+      label: "L'épargne solidaire, une vraie alternative ?",
+    },
   },
   {
     priority: 2,
     text: "Identifiez la classification SFDR (Article 6, 8 ou 9) de chacun de vos supports.",
-    link: { kind: "article", slug: "sfdr-article-8-ou-9-ce-que-ca-garantit", label: "Article 8 ou 9 : ce que ça garantit" },
+    link: {
+      kind: "article",
+      slug: "sfdr-article-8-ou-9-ce-que-ca-garantit",
+      label: "Article 8 ou 9 : ce que ça garantit",
+    },
   },
   {
     priority: 3,
@@ -168,7 +187,11 @@ const checkActions: ActionItem[] = [
   {
     priority: 3,
     text: "Programmez une vérification annuelle : un label ou un classement SFDR peut changer sans préavis visible.",
-    link: { kind: "article", slug: "reperer-greenwashing-fonds-vert-methode", label: "Repérer le greenwashing d'un fonds vert" },
+    link: {
+      kind: "article",
+      slug: "reperer-greenwashing-fonds-vert-methode",
+      label: "Repérer le greenwashing d'un fonds vert",
+    },
   },
 ];
 
@@ -183,7 +206,11 @@ function tierOf(ratio: number): Tier {
 }
 
 const tierStyles: Record<Tier, { border: string; text: string; bar: string }> = {
-  high: { border: "border-[var(--grenat)]", text: "text-[var(--grenat)]", bar: "bg-[var(--grenat)]" },
+  high: {
+    border: "border-[var(--grenat)]",
+    text: "text-[var(--grenat)]",
+    bar: "bg-[var(--grenat)]",
+  },
   mid: { border: "border-amber-500", text: "text-amber-600", bar: "bg-amber-500" },
   low: { border: "border-red-500", text: "text-red-600", bar: "bg-red-500" },
 };
@@ -191,12 +218,16 @@ const tierStyles: Record<Tier, { border: string; text: string; bar: string }> = 
 function subScoreReading(sub: number, kind: "patrimonial" | "valeurs"): string {
   const ratio = sub / SUB_MAX;
   if (kind === "patrimonial") {
-    if (ratio >= 0.75) return "Votre structuration patrimoniale est solide — place aux optimisations fines.";
-    if (ratio >= 0.5) return "Les bases sont posées, mais plusieurs briques structurantes restent à consolider.";
+    if (ratio >= 0.75)
+      return "Votre structuration patrimoniale est solide — place aux optimisations fines.";
+    if (ratio >= 0.5)
+      return "Les bases sont posées, mais plusieurs briques structurantes restent à consolider.";
     return "Les fondations restent à construire : épargne de précaution, enveloppes, objectifs.";
   }
-  if (ratio >= 0.75) return "Votre épargne est largement vérifiée et alignée — maintenez le rythme de vérification.";
-  if (ratio >= 0.5) return "La démarche est engagée : plusieurs supports méritent encore une vérification (label, classification SFDR).";
+  if (ratio >= 0.75)
+    return "Votre épargne est largement vérifiée et alignée — maintenez le rythme de vérification.";
+  if (ratio >= 0.5)
+    return "La démarche est engagée : plusieurs supports méritent encore une vérification (label, classification SFDR).";
   return "Une part importante de votre épargne n'a probablement jamais été vérifiée sur le fond — ce qu'elle finance reste à éclaircir.";
 }
 
@@ -219,7 +250,10 @@ function ActionLinkAnchor({ link }: { link: ActionLink }) {
     );
   }
   return (
-    <Link to={link.to} className="mt-1 inline-block text-sm font-medium text-primary hover:underline">
+    <Link
+      to={link.to}
+      className="mt-1 inline-block text-sm font-medium text-primary hover:underline"
+    >
       → {link.label}
     </Link>
   );
@@ -228,7 +262,9 @@ function ActionLinkAnchor({ link }: { link: ActionLink }) {
 /* ────────────────────────────────── Page ────────────────────────────────── */
 
 function DiagnosticPage() {
-  const [answers, setAnswers] = useState<Array<"yes" | "partial" | "no" | null>>(Array(checks.length).fill(null));
+  const [answers, setAnswers] = useState<Array<"yes" | "partial" | "no" | null>>(
+    Array(checks.length).fill(null),
+  );
   const [submitted, setSubmitted] = useState(false);
   const [emailRequested, setEmailRequested] = useState(false);
 
@@ -291,7 +327,11 @@ function DiagnosticPage() {
   }, [answers]);
 
   const actionsByUrgency = useMemo(() => {
-    const groups: Record<1 | 2 | 3, Array<ActionItem & { answer: "partial" | "no" }>> = { 1: [], 2: [], 3: [] };
+    const groups: Record<1 | 2 | 3, Array<ActionItem & { answer: "partial" | "no" }>> = {
+      1: [],
+      2: [],
+      3: [],
+    };
     answers.forEach((a, i) => {
       const action = checkActions[i];
       if ((a === "partial" || a === "no") && action) {
@@ -327,13 +367,18 @@ function DiagnosticPage() {
                     {answeredCount}/{checks.length} points renseignés
                   </p>
                   {answeredCount < checks.length && (
-                    <p className="text-xs text-muted-foreground">Répondez aux 12 points pour obtenir votre diagnostic</p>
+                    <p className="text-xs text-muted-foreground">
+                      Répondez aux 12 points pour obtenir votre diagnostic
+                    </p>
                   )}
                 </div>
                 <div className="h-1.5 w-full rounded-full bg-border overflow-hidden">
                   <div
                     className="h-full rounded-full transition-all duration-300"
-                    style={{ width: `${(answeredCount / checks.length) * 100}%`, background: "var(--gradient-grenat)" }}
+                    style={{
+                      width: `${(answeredCount / checks.length) * 100}%`,
+                      background: "var(--gradient-grenat)",
+                    }}
                   />
                 </div>
               </div>
@@ -342,7 +387,9 @@ function DiagnosticPage() {
                   <li key={i} className="rounded-xl border border-border bg-card p-5">
                     <div className="flex items-start justify-between gap-4">
                       <div className="flex-1">
-                        <p className="text-[10px] uppercase tracking-[0.2em] text-muted-foreground">{c.category}</p>
+                        <p className="text-[10px] uppercase tracking-[0.2em] text-muted-foreground">
+                          {c.category}
+                        </p>
                         <p className="mt-1 text-foreground font-medium">{c.q}</p>
                         <p className="mt-1.5 text-sm text-muted-foreground">{c.tip}</p>
                       </div>
@@ -350,7 +397,8 @@ function DiagnosticPage() {
                     <div className="mt-4 grid grid-cols-3 gap-2">
                       {(["yes", "partial", "no"] as const).map((v) => {
                         const active = answers[i] === v;
-                        const text = v === "yes" ? "Oui" : v === "partial" ? "Partiellement" : "Non";
+                        const text =
+                          v === "yes" ? "Oui" : v === "partial" ? "Partiellement" : "Non";
                         return (
                           <button
                             key={v}
@@ -394,12 +442,16 @@ function DiagnosticPage() {
               payload={{
                 "Score obtenu": `${score}/${max}`,
                 Diagnostic: summary.label,
-                ...checks.reduce((acc, check, idx) => {
-                  const ans = answers[idx];
-                  const label = ans === "yes" ? "Oui" : ans === "partial" ? "Partiellement" : "Non";
-                  acc[`Q${idx + 1} - ${check.q.slice(0, 50)}...`] = label;
-                  return acc;
-                }, {} as Record<string, string>),
+                ...checks.reduce(
+                  (acc, check, idx) => {
+                    const ans = answers[idx];
+                    const label =
+                      ans === "yes" ? "Oui" : ans === "partial" ? "Partiellement" : "Non";
+                    acc[`Q${idx + 1} - ${check.q.slice(0, 50)}...`] = label;
+                    return acc;
+                  },
+                  {} as Record<string, string>,
+                ),
               }}
               onSuccess={() => {
                 setEmailRequested(false);
@@ -420,12 +472,18 @@ function DiagnosticPage() {
                 <p className="mt-3 text-foreground/85 leading-relaxed">{summary.text}</p>
 
                 <div className="mt-8 space-y-6 border-t border-border/60 pt-6">
-                  {(
-                    [
-                      { kind: "patrimonial" as const, label: "Santé patrimoniale", value: subScores.patrimonial },
-                      { kind: "valeurs" as const, label: "Cohérence avec vos valeurs", value: subScores.valeurs },
-                    ]
-                  ).map((s) => {
+                  {[
+                    {
+                      kind: "patrimonial" as const,
+                      label: "Santé patrimoniale",
+                      value: subScores.patrimonial,
+                    },
+                    {
+                      kind: "valeurs" as const,
+                      label: "Cohérence avec vos valeurs",
+                      value: subScores.valeurs,
+                    },
+                  ].map((s) => {
                     const pct = (s.value / SUB_MAX) * 100;
                     const tier = tierOf(pct / 100);
                     return (
@@ -454,13 +512,18 @@ function DiagnosticPage() {
 
               {topPistes.length > 0 && (
                 <div className="rounded-2xl border border-[var(--grenat)]/30 bg-[var(--grenat)]/5 p-8">
-                  <h3 className="font-display text-xl text-foreground mb-5">Vos 3 premières pistes</h3>
+                  <h3 className="font-display text-xl text-foreground mb-5">
+                    Vos 3 premières pistes
+                  </h3>
                   <ol className="space-y-4">
                     {topPistes.map((action, i) => (
                       <li key={i} className="flex items-start gap-4">
                         <span
                           className="inline-flex h-7 w-7 shrink-0 items-center justify-center rounded-full font-display text-sm"
-                          style={{ background: "var(--gradient-grenat)", color: "var(--grenat-foreground)" }}
+                          style={{
+                            background: "var(--gradient-grenat)",
+                            color: "var(--grenat-foreground)",
+                          }}
                         >
                           {i + 1}
                         </span>
@@ -475,13 +538,19 @@ function DiagnosticPage() {
               )}
 
               <div className="rounded-2xl border border-border bg-card p-8">
-                <h3 className="font-display text-xl text-foreground">Toutes vos pistes de progression</h3>
+                <h3 className="font-display text-xl text-foreground">
+                  Toutes vos pistes de progression
+                </h3>
                 {answers.every((a) => a === "yes") ? (
                   <div className="mt-5 flex items-start gap-3">
-                    <Check size={18} className="mt-0.5 shrink-0" style={{ color: "var(--grenat)" }} />
+                    <Check
+                      size={18}
+                      className="mt-0.5 shrink-0"
+                      style={{ color: "var(--grenat)" }}
+                    />
                     <p className="text-foreground/85">
-                      Tous les points sont validés. Vous êtes prêt(e) pour une revue d'optimisation avancée — et un point
-                      de vérification annuel pour la maintenir.
+                      Tous les points sont validés. Vous êtes prêt(e) pour une revue d'optimisation
+                      avancée — et un point de vérification annuel pour la maintenir.
                     </p>
                   </div>
                 ) : (
@@ -499,8 +568,12 @@ function DiagnosticPage() {
                           <ul className="space-y-3">
                             {items.map((action, i) => {
                               const Icon = action.answer === "partial" ? AlertTriangle : X;
-                              const iconClass = action.answer === "partial" ? "text-amber-600" : "text-red-600";
-                              const prefix = action.answer === "partial" ? "À consolider — " : "À mettre en place — ";
+                              const iconClass =
+                                action.answer === "partial" ? "text-amber-600" : "text-red-600";
+                              const prefix =
+                                action.answer === "partial"
+                                  ? "À consolider — "
+                                  : "À mettre en place — ";
                               return (
                                 <li key={i} className="flex items-start gap-3">
                                   <Icon size={18} className={`mt-0.5 shrink-0 ${iconClass}`} />

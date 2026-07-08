@@ -14,7 +14,7 @@ import {
   LineChart,
   PiggyBank,
   HandCoins,
-  Leaf,
+  FileCheck2,
   Calculator,
   Tags,
   Gauge,
@@ -29,7 +29,10 @@ export const Route = createFileRoute("/")({
         content:
           "Cabinet de gestion de patrimoine spécialisé en investissement responsable : nous vérifions ce que les labels ISR, Greenfin et SFDR garantissent vraiment avant de vous orienter. Assurance vie, PER, SCPI — sans greenwashing.",
       },
-      { property: "og:title", content: "Placement-éthique.fr — L'investissement éthique, sans le vernis" },
+      {
+        property: "og:title",
+        content: "Placement-éthique.fr — L'investissement éthique, sans le vernis",
+      },
       { property: "og:url", content: "https://placement-ethique.fr/" },
     ],
     links: [{ rel: "canonical", href: "https://placement-ethique.fr/" }],
@@ -102,7 +105,7 @@ const placements = [
     body: "Fonds de partage et finance solidaire labellisée Finansol : une partie du rendement finance directement des projets à impact social.",
   },
   {
-    icon: Leaf,
+    icon: FileCheck2,
     title: "Obligations vertes",
     body: "Les green bonds financent des projets environnementaux identifiés — à condition de vérifier l'usage réel des fonds.",
   },
@@ -135,10 +138,7 @@ function HomePage() {
   return (
     <SiteLayout>
       {/* Hero */}
-      <section
-        className="relative overflow-hidden"
-        style={{ background: "var(--gradient-encre)" }}
-      >
+      <section className="relative overflow-hidden" style={{ background: "var(--gradient-encre)" }}>
         <div
           className="absolute -top-32 -right-32 h-96 w-96 rounded-full opacity-25 blur-3xl"
           style={{ background: "var(--gradient-grenat)" }}
@@ -158,10 +158,10 @@ function HomePage() {
             className="lead mt-6 max-w-2xl fade-up"
             style={{ color: "color-mix(in oklch, white 82%, transparent)" }}
           >
-            L'investissement « éthique » est devenu un argument marketing avant d'être une
-            méthode. Nous sommes un cabinet de gestion de patrimoine qui fait l'inverse :
-            vérifier ce que les labels garantissent vraiment, sourcer chaque affirmation, et
-            vous dire clairement ce qui est solide — et ce qui ne l'est pas.
+            L'investissement « éthique » est devenu un argument marketing avant d'être une méthode.
+            Nous sommes un cabinet de gestion de patrimoine qui fait l'inverse : vérifier ce que les
+            labels garantissent vraiment, sourcer chaque affirmation, et vous dire clairement ce qui
+            est solide — et ce qui ne l'est pas.
           </p>
           <div className="mt-9 flex flex-wrap gap-3 fade-up">
             <Link to="/contact" className="btn-grenat">
@@ -265,11 +265,7 @@ function HomePage() {
           </div>
           <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
             {placements.map(({ icon: Icon, title, body }) => (
-              <Link
-                key={title}
-                to="/placements"
-                className="card-paper group flex flex-col"
-              >
+              <Link key={title} to="/placements" className="card-paper group flex flex-col">
                 <span
                   className="inline-flex h-10 w-10 items-center justify-center rounded-lg"
                   style={{ background: "var(--accent)", color: "var(--grenat)" }}
@@ -294,8 +290,8 @@ function HomePage() {
             <p className="eyebrow justify-center">Avant même de nous parler</p>
             <h2 className="display-2 mt-4">Des outils gratuits, sans inscription forcée</h2>
             <p className="lead mt-5 max-w-2xl mx-auto">
-              Faites vos propres calculs et vos propres vérifications. Nos outils donnent des
-              pistes — la lecture de votre situation complète se fait ensuite, de vive voix.
+              Faites vos propres calculs et vos propres vérifications. Nos outils donnent des pistes
+              — la lecture de votre situation complète se fait ensuite, de vive voix.
             </p>
           </div>
           <div className="grid gap-5 md:grid-cols-3">
@@ -303,7 +299,10 @@ function HomePage() {
               <Link key={to} to={to} className="card-paper group">
                 <span
                   className="inline-flex h-11 w-11 items-center justify-center rounded-xl"
-                  style={{ background: "var(--gradient-grenat)", color: "var(--grenat-foreground)" }}
+                  style={{
+                    background: "var(--gradient-grenat)",
+                    color: "var(--grenat-foreground)",
+                  }}
                 >
                   <Icon size={20} aria-hidden />
                 </span>
@@ -336,11 +335,10 @@ function HomePage() {
                 Qui nous paie, combien, et pourquoi — publié en clair
               </h2>
               <p className="mt-4 text-foreground/80 leading-relaxed">
-                Nos rendez-vous sont offerts : nous sommes rémunérés par nos partenaires
-                (assureurs, sociétés de gestion) en tant qu'apporteurs d'affaires, comme un
-                courtier. Un site qui vous parle d'éthique vous doit d'abord cette
-                transparence-là : notre grille de rémunération est publique, solution par
-                solution, chiffre par chiffre.
+                Nos rendez-vous sont offerts : nous sommes rémunérés par nos partenaires (assureurs,
+                sociétés de gestion) en tant qu'apporteurs d'affaires, comme un courtier. Un site
+                qui vous parle d'éthique vous doit d'abord cette transparence-là : notre grille de
+                rémunération est publique, solution par solution, chiffre par chiffre.
               </p>
             </div>
             <div className="md:col-span-4 flex md:justify-end">
@@ -358,11 +356,13 @@ function HomePage() {
           <div className="grid md:grid-cols-12 gap-10 items-center">
             <div className="md:col-span-5">
               <p className="eyebrow">Qui vous répond</p>
-              <h2 className="display-2 mt-4">Deux conseillers. Pas d'algorithme, pas de call-center.</h2>
+              <h2 className="display-2 mt-4">
+                Deux conseillers. Pas d'algorithme, pas de call-center.
+              </h2>
               <p className="mt-5 text-muted-foreground leading-relaxed">
                 Derrière ce site, deux conseillers en gestion de patrimoine qui pensent qu'un
-                placement doit être lisible, structuré et cohérent avec vos valeurs — et que
-                cette cohérence se vérifie, elle ne se proclame pas.
+                placement doit être lisible, structuré et cohérent avec vos valeurs — et que cette
+                cohérence se vérifie, elle ne se proclame pas.
               </p>
               <Link to="/a-propos" className="btn-ghost mt-7">
                 Découvrir le cabinet <ArrowRight size={15} />

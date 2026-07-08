@@ -90,23 +90,27 @@ function ConnexionPage() {
             {state === "sent" ? (
               <div className="card-paper mt-8 p-6">
                 <p className="flex items-start gap-3 text-foreground">
-                  <MailCheck size={20} className="mt-0.5 shrink-0 text-[var(--grenat)]" aria-hidden />
+                  <MailCheck
+                    size={20}
+                    className="mt-0.5 shrink-0 text-[var(--grenat)]"
+                    aria-hidden
+                  />
                   <span>
                     <strong>Lien envoyé à {email}.</strong> Ouvrez l'email et cliquez sur le lien
                     pour accéder à votre espace. Pensez à vérifier vos spams — l'email vient de
                     notre prestataire d'authentification.
                   </span>
                 </p>
-                <button
-                  className="btn-ghost mt-5 text-sm"
-                  onClick={() => setState("idle")}
-                >
+                <button className="btn-ghost mt-5 text-sm" onClick={() => setState("idle")}>
                   Utiliser une autre adresse
                 </button>
               </div>
             ) : (
               <form onSubmit={handleSubmit} className="card-paper mt-8 p-6">
-                <label htmlFor="email-connexion" className="mb-1.5 block text-sm font-medium text-foreground">
+                <label
+                  htmlFor="email-connexion"
+                  className="mb-1.5 block text-sm font-medium text-foreground"
+                >
                   Votre adresse email
                 </label>
                 <Input
@@ -143,15 +147,28 @@ function ConnexionPage() {
 
             <div className="mt-8 rounded-2xl border border-border/70 bg-card p-5">
               <p className="flex items-start gap-3 text-sm leading-relaxed text-muted-foreground">
-                <ShieldCheck size={18} className="mt-0.5 shrink-0 text-[var(--grenat)]" aria-hidden />
+                <ShieldCheck
+                  size={18}
+                  className="mt-0.5 shrink-0 text-[var(--grenat)]"
+                  aria-hidden
+                />
                 <span>
                   <strong className="text-foreground">Un compte n'est jamais obligatoire.</strong>{" "}
-                  Les <Link to="/articles" className="underline">articles</Link>, les{" "}
-                  <Link to="/outils" className="underline">simulateurs</Link> et la{" "}
-                  <Link to="/contact" className="underline">prise de rendez-vous</Link> restent
-                  accessibles sans espace client. Celui-ci sert uniquement à préparer et suivre un
-                  dossier — et rien ne s'y souscrit : toute décision passe par un échange avec votre
-                  conseiller.
+                  Les{" "}
+                  <Link to="/articles" className="underline">
+                    articles
+                  </Link>
+                  , les{" "}
+                  <Link to="/outils" className="underline">
+                    simulateurs
+                  </Link>{" "}
+                  et la{" "}
+                  <Link to="/contact" className="underline">
+                    prise de rendez-vous
+                  </Link>{" "}
+                  restent accessibles sans espace client. Celui-ci sert uniquement à préparer et
+                  suivre un dossier — et rien ne s'y souscrit : toute décision passe par un échange
+                  avec votre conseiller.
                 </span>
               </p>
             </div>

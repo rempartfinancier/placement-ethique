@@ -260,7 +260,11 @@ export function SiteHeader() {
               <UserRound size={16} aria-hidden />
               Espace client
             </Link>
-            <Link to="/contact" onClick={() => setOpen(false)} className="btn-primary mt-4 self-start">
+            <Link
+              to="/contact"
+              onClick={() => setOpen(false)}
+              className="btn-primary mt-4 self-start"
+            >
               Prendre rendez-vous
             </Link>
           </nav>

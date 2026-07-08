@@ -33,7 +33,8 @@ export const Route = createFileRoute("/outils/decodeur-label")({
       },
       {
         property: "og:title",
-        content: "Décodeur de labels ISR, Greenfin, Finansol, SFDR — que garantissent-ils vraiment ?",
+        content:
+          "Décodeur de labels ISR, Greenfin, Finansol, SFDR — que garantissent-ils vraiment ?",
       },
       { property: "og:url", content: "https://placement-ethique.fr/outils/decodeur-label" },
     ],
@@ -94,9 +95,9 @@ const REFERENTIELS: Referentiel[] = [
       "Une méthodologie ESG documentée et auditée sur six piliers : objectifs ESG définis, méthodologie d'analyse extra-financière, construction et gestion du portefeuille, politique d'engagement actionnarial (vote, dialogue avec les émetteurs), transparence de la stratégie, mesure d'impact.",
       "Un socle d'exclusions obligatoires : au minimum le charbon et les hydrocarbures non conventionnels au-delà d'un seuil de chiffre d'affaires, les armes controversées, le tabac, les violations des droits humains, les manquements en matière de lutte anti-blanchiment et de coopération fiscale.",
       <>
-        Une sélectivité minimale renforcée par le référentiel V3 (entré en application le 1<sup>er</sup> janvier 2025)
-        : la part de l'univers d'investissement la moins bien notée sur le plan ESG à exclure est passée de 20 % à
-        30 %.
+        Une sélectivité minimale renforcée par le référentiel V3 (entré en application le 1
+        <sup>er</sup> janvier 2025) : la part de l'univers d'investissement la moins bien notée sur
+        le plan ESG à exclure est passée de 20 % à 30 %.
       </>,
       "Un audit indépendant réalisé par un organisme accrédité COFRAC, avec des contrôles intermédiaires pendant les trois années de validité du label.",
     ],
@@ -113,12 +114,15 @@ const REFERENTIELS: Referentiel[] = [
     ],
     commentVerifier: [
       <>
-        La liste officielle des fonds labellisés (fichier exhaustif avec codes ISIN, mis à jour régulièrement) sur{" "}
-        <Ext href="https://www.lelabelisr.fr/comment-investir/fonds-labellises/">lelabelisr.fr</Ext>.
+        La liste officielle des fonds labellisés (fichier exhaustif avec codes ISIN, mis à jour
+        régulièrement) sur{" "}
+        <Ext href="https://www.lelabelisr.fr/comment-investir/fonds-labellises/">lelabelisr.fr</Ext>
+        .
       </>,
       <>
-        Le registre trimestriel consolidé par la <Ext href="https://www.banque-france.fr">Banque de France</Ext>,
-        qui regroupe les fonds labellisés ISR, Greenfin, Finansol et CIES.
+        Le registre trimestriel consolidé par la{" "}
+        <Ext href="https://www.banque-france.fr">Banque de France</Ext>, qui regroupe les fonds
+        labellisés ISR, Greenfin, Finansol et CIES.
       </>,
       "Le prospectus et le DIC (document d'informations clés) du fonds : la mention du label, sa date d'obtention et la version du référentiel appliquée (V1, V2 ou V3) doivent y figurer.",
       "Le rapport de transparence annuel que tout fonds labellisé doit publier, détaillant la mise en œuvre concrète de sa méthodologie ESG.",
@@ -160,8 +164,9 @@ const REFERENTIELS: Referentiel[] = [
     ],
     commentVerifier: [
       <>
-        Le registre trimestriel consolidé par la <Ext href="https://www.banque-france.fr">Banque de France</Ext>,
-        qui recense l'ensemble des fonds labellisés Greenfin (nom, ISIN, encours).
+        Le registre trimestriel consolidé par la{" "}
+        <Ext href="https://www.banque-france.fr">Banque de France</Ext>, qui recense l'ensemble des
+        fonds labellisés Greenfin (nom, ISIN, encours).
       </>,
       <>
         Les publications officielles du{" "}
@@ -175,8 +180,9 @@ const REFERENTIELS: Referentiel[] = [
     ],
     signaux: [
       <>
-        Un produit qui utilise le mot « vert » ou « climat » dans son nom commercial sans figurer dans le registre
-        officiel de la <Ext href="https://www.banque-france.fr">Banque de France</Ext>.
+        Un produit qui utilise le mot « vert » ou « climat » dans son nom commercial sans figurer
+        dans le registre officiel de la{" "}
+        <Ext href="https://www.banque-france.fr">Banque de France</Ext>.
       </>,
       "Une communication qui affirme une exclusion totale du nucléaire alors que le référentiel en vigueur depuis 2024 l'intègre parmi les activités éligibles — vérifiez toujours la version exacte du référentiel appliqué par le fonds.",
       "L'absence, dans les documents du fonds, de toute mention des catégories d'éco-activités réellement financées.",
@@ -211,11 +217,15 @@ const REFERENTIELS: Referentiel[] = [
     commentVerifier: [
       <>
         La liste officielle des produits labellisés, publiée et mise à jour sur{" "}
-        <Ext href="https://www.finance-fair.org/fr/connaitre-le-label-finansol">finance-fair.org</Ext>.
+        <Ext href="https://www.finance-fair.org/fr/connaitre-le-label-finansol">
+          finance-fair.org
+        </Ext>
+        .
       </>,
       <>
-        Le registre trimestriel consolidé par la <Ext href="https://www.banque-france.fr">Banque de France</Ext>,
-        aux côtés des labels ISR, Greenfin et CIES.
+        Le registre trimestriel consolidé par la{" "}
+        <Ext href="https://www.banque-france.fr">Banque de France</Ext>, aux côtés des labels ISR,
+        Greenfin et CIES.
       </>,
       "Le règlement et le guide du label Finansol, publiés sur finance-fair.org, qui détaillent les critères exacts appliqués à chaque catégorie de produit.",
       "Le rapport annuel de FAIR sur la finance solidaire, qui publie les montants collectés et les grandes catégories de structures financées.",
@@ -397,8 +407,8 @@ function DecodeurLabelPage() {
         lead="Label ISR, Greenfin, Finansol, SFDR Article 6, 8 ou 9, taxonomie verte européenne : sept tampons, sept promesses différentes. Choisissez un référentiel pour voir ce qu'il garantit, ce qu'il ne garantit pas, qui le contrôle, et comment vérifier vous-même qu'un fonds l'a réellement obtenu."
       >
         <span className="badge-verifie">
-          <BadgeCheck size={13} aria-hidden /> Critères vérifiés en juillet 2026 — lelabelisr.fr, ecologie.gouv.fr,
-          finance-fair.org, AMF, EUR-Lex
+          <BadgeCheck size={13} aria-hidden /> Critères vérifiés en juillet 2026 — lelabelisr.fr,
+          ecologie.gouv.fr, finance-fair.org, AMF, EUR-Lex
         </span>
       </PageHero>
 
@@ -407,9 +417,9 @@ function DecodeurLabelPage() {
           <p className="eyebrow">Choisissez un référentiel</p>
           <h2 className="display-2 mt-4 max-w-2xl">Un tampon n'est jamais une garantie globale</h2>
           <p className="lead mt-4 max-w-2xl">
-            Un label ou une classification réglementaire porte toujours sur un point précis — une méthodologie, une
-            exclusion, une intention de durabilité. Connaître ce point précis, c'est déjà savoir ce qu'il faut
-            vérifier soi-même pour le reste.
+            Un label ou une classification réglementaire porte toujours sur un point précis — une
+            méthodologie, une exclusion, une intention de durabilité. Connaître ce point précis,
+            c'est déjà savoir ce qu'il faut vérifier soi-même pour le reste.
           </p>
 
           {/* Sélecteur */}
@@ -440,7 +450,11 @@ function DecodeurLabelPage() {
                             : { borderColor: "var(--border)", color: "var(--muted-foreground)" }
                         }
                       >
-                        <Icon size={15} aria-hidden style={active ? { color: "var(--grenat)" } : undefined} />
+                        <Icon
+                          size={15}
+                          aria-hidden
+                          style={active ? { color: "var(--grenat)" } : undefined}
+                        />
                         {r.nom}
                       </button>
                     );
@@ -471,7 +485,8 @@ function DecodeurLabelPage() {
             <div className="mt-9 grid gap-6 md:grid-cols-2">
               <div className="rounded-xl border border-border bg-background/60 p-5 md:p-6">
                 <p className="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-foreground/80">
-                  <Check size={15} aria-hidden style={{ color: "var(--grenat)" }} /> Ce que ça garantit vraiment
+                  <Check size={15} aria-hidden style={{ color: "var(--grenat)" }} /> Ce que ça
+                  garantit vraiment
                 </p>
                 <ul className="mt-4 space-y-3">
                   {current.garantit.map((item, i) => (
@@ -489,7 +504,8 @@ function DecodeurLabelPage() {
 
               <div className="rounded-xl border border-border bg-background/60 p-5 md:p-6">
                 <p className="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-foreground/80">
-                  <X size={15} aria-hidden className="text-muted-foreground" /> Ce que ça ne garantit PAS
+                  <X size={15} aria-hidden className="text-muted-foreground" /> Ce que ça ne
+                  garantit PAS
                 </p>
                 <ul className="mt-4 space-y-3">
                   {current.neGarantitPas.map((item, i) => (
@@ -512,7 +528,10 @@ function DecodeurLabelPage() {
               <ul className="mt-4 space-y-3">
                 {current.quiDelivre.map((item, i) => (
                   <li key={i} className="flex gap-2.5 text-sm leading-relaxed text-foreground/85">
-                    <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-muted-foreground/40" aria-hidden />
+                    <span
+                      className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-muted-foreground/40"
+                      aria-hidden
+                    />
                     <span>{item}</span>
                   </li>
                 ))}
@@ -548,13 +567,16 @@ function DecodeurLabelPage() {
 
             <div className="mt-6 rounded-xl border border-amber-400/60 bg-card p-5 md:p-6">
               <p className="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-amber-700">
-                <AlertTriangle size={15} aria-hidden className="text-amber-600" /> Signaux d'alerte greenwashing
-                associés
+                <AlertTriangle size={15} aria-hidden className="text-amber-600" /> Signaux d'alerte
+                greenwashing associés
               </p>
               <ul className="mt-4 space-y-3">
                 {current.signaux.map((item, i) => (
                   <li key={i} className="flex gap-2.5 text-sm leading-relaxed text-foreground/85">
-                    <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-amber-500" aria-hidden />
+                    <span
+                      className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-amber-500"
+                      aria-hidden
+                    />
                     <span>{item}</span>
                   </li>
                 ))}
@@ -563,10 +585,10 @@ function DecodeurLabelPage() {
           </div>
 
           <p className="mt-8 text-sm text-muted-foreground leading-relaxed max-w-2xl">
-            Cet outil décode les référentiels eux-mêmes : il ne vérifie pas un fonds en particulier et ne remplace ni
-            le DIC, ni le prospectus, ni le rapport périodique d'un produit donné. Pour confronter un support précis
-            de votre contrat à ces critères, le point de départ reste toujours ses propres documents officiels — ou
-            un échange avec un conseiller.
+            Cet outil décode les référentiels eux-mêmes : il ne vérifie pas un fonds en particulier
+            et ne remplace ni le DIC, ni le prospectus, ni le rapport périodique d'un produit donné.
+            Pour confronter un support précis de votre contrat à ces critères, le point de départ
+            reste toujours ses propres documents officiels — ou un échange avec un conseiller.
           </p>
         </div>
       </section>

@@ -107,7 +107,10 @@ function DossierDetail() {
 
   return (
     <div className="container-prose py-10 md:py-14">
-      <Link to="/espace" className="inline-flex items-center gap-1.5 text-sm text-muted-foreground hover:text-foreground">
+      <Link
+        to="/espace"
+        className="inline-flex items-center gap-1.5 text-sm text-muted-foreground hover:text-foreground"
+      >
         <ArrowLeft size={14} aria-hidden /> Tableau de bord
       </Link>
 
@@ -131,16 +134,22 @@ function DossierDetail() {
           {/* Ce qui a été saisi / transmis */}
           <div className="card-paper p-6">
             <h2 className="font-display text-xl text-foreground">
-              {dossier.statut === "brouillon" ? "Ce que contient votre brouillon" : "Ce que vous avez transmis"}
+              {dossier.statut === "brouillon"
+                ? "Ce que contient votre brouillon"
+                : "Ce que vous avez transmis"}
             </h2>
             <dl className="mt-4 grid gap-x-8 gap-y-3 text-sm md:grid-cols-2">
               <div>
                 <dt className="text-muted-foreground">Objectif</dt>
-                <dd className="mt-0.5 font-medium text-foreground">{dossier.objectif ?? "Non renseigné"}</dd>
+                <dd className="mt-0.5 font-medium text-foreground">
+                  {dossier.objectif ?? "Non renseigné"}
+                </dd>
               </div>
               <div>
                 <dt className="text-muted-foreground">Horizon</dt>
-                <dd className="mt-0.5 font-medium text-foreground">{dossier.horizon ?? "Non renseigné"}</dd>
+                <dd className="mt-0.5 font-medium text-foreground">
+                  {dossier.horizon ?? "Non renseigné"}
+                </dd>
               </div>
               <div>
                 <dt className="text-muted-foreground">Montant envisagé</dt>
@@ -204,7 +213,10 @@ function DossierDetail() {
             <h2 className="font-display text-xl text-foreground">Historique</h2>
             <ul className="mt-4 space-y-2.5">
               {events.map((event) => (
-                <li key={event.id} className="flex flex-wrap items-baseline gap-x-3 gap-y-0.5 text-sm">
+                <li
+                  key={event.id}
+                  className="flex flex-wrap items-baseline gap-x-3 gap-y-0.5 text-sm"
+                >
                   <span className="text-xs tabular-nums text-muted-foreground">
                     {formatDate(event.created_at)}
                   </span>
@@ -271,7 +283,9 @@ function DossierDetail() {
 
           {dossier.statut === "recommandation_transmise" && (
             <div className="card-paper p-6">
-              <h2 className="font-display text-lg text-foreground">Votre décision, sans pression</h2>
+              <h2 className="font-display text-lg text-foreground">
+                Votre décision, sans pression
+              </h2>
               <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
                 Vous avez reçu une recommandation individualisée écrite. Deux chemins, aussi
                 légitimes l'un que l'autre : donner suite — c'est votre conseiller qui engagera
@@ -292,7 +306,10 @@ function DossierDetail() {
                 sera clos sans suite.
               </p>
               {!retraitOuvert ? (
-                <button className="btn-ghost mt-4 w-full justify-center" onClick={() => setRetraitOuvert(true)}>
+                <button
+                  className="btn-ghost mt-4 w-full justify-center"
+                  onClick={() => setRetraitOuvert(true)}
+                >
                   <Undo2 size={15} aria-hidden /> Retirer ma demande
                 </button>
               ) : (
@@ -312,7 +329,9 @@ function DossierDetail() {
                       onClick={async () => {
                         setBusy(true);
                         try {
-                          await retirerFn({ data: { dossierId: dossier.id, motif: motif || undefined } });
+                          await retirerFn({
+                            data: { dossierId: dossier.id, motif: motif || undefined },
+                          });
                           toast.success("Demande retirée. Dossier clos sans suite.");
                           setRetraitOuvert(false);
                           refresh();
@@ -338,8 +357,8 @@ function DossierDetail() {
             <div className="card-paper p-6">
               <h2 className="font-display text-lg text-foreground">Votre interlocuteur</h2>
               <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
-                À ce stade, tout passe par votre conseiller — y compris un éventuel renoncement
-                dans les délais légaux de rétractation. Écrivez-nous à{" "}
+                À ce stade, tout passe par votre conseiller — y compris un éventuel renoncement dans
+                les délais légaux de rétractation. Écrivez-nous à{" "}
                 <a href="mailto:contact@placement-ethique.fr" className="underline">
                   contact@placement-ethique.fr
                 </a>

@@ -29,7 +29,9 @@ function Bloc({ titre, children }: { titre: string; children: React.ReactNode })
   return (
     <section className="card-paper p-6 md:p-8">
       <h2 className="font-display text-2xl text-foreground">{titre}</h2>
-      <div className="mt-4 space-y-3 text-[15px] leading-relaxed text-muted-foreground">{children}</div>
+      <div className="mt-4 space-y-3 text-[15px] leading-relaxed text-muted-foreground">
+        {children}
+      </div>
     </section>
   );
 }
@@ -41,7 +43,10 @@ function MentionsLegalesPage() {
         eyebrow="Informations réglementaires"
         title={
           <>
-            Mentions <span className="italic" style={{ color: "var(--grenat)" }}>légales</span>
+            Mentions{" "}
+            <span className="italic" style={{ color: "var(--grenat)" }}>
+              légales
+            </span>
           </>
         }
         lead="Qui édite ce site, dans quel cadre réglementaire nous exerçons, et vers qui vous tourner en cas de litige."
@@ -51,9 +56,10 @@ function MentionsLegalesPage() {
         <div className="container-prose max-w-3xl space-y-6">
           <Bloc titre="Éditeur du site">
             <p>
-              Placement-ethique.fr est édité par <strong className="text-foreground">EXP Capital</strong>,
-              SASU au capital de 1 000 €, immatriculée au RCS de Versailles sous le n° 987 986 247,
-              inscrite à l'ORIAS sous le n° 25005915 (www.orias.fr).
+              Placement-ethique.fr est édité par{" "}
+              <strong className="text-foreground">EXP Capital</strong>, SASU au capital de 1 000 €,
+              immatriculée au RCS de Versailles sous le n° 987 986 247, inscrite à l'ORIAS sous le
+              n° 25005915 (www.orias.fr).
             </p>
             <p>Siège social : [Siège social EXP Capital — à compléter].</p>
             <p>
@@ -84,10 +90,9 @@ function MentionsLegalesPage() {
               plus.
             </p>
             <p>
-              En l'absence de résolution amiable, vous pouvez saisir le médiateur compétent selon
-              la nature du produit concerné : La Médiation de l'Assurance
-              (www.mediation-assurance.org) ou le médiateur de l'AMF (www.amf-france.org, rubrique
-              « Le médiateur »).
+              En l'absence de résolution amiable, vous pouvez saisir le médiateur compétent selon la
+              nature du produit concerné : La Médiation de l'Assurance (www.mediation-assurance.org)
+              ou le médiateur de l'AMF (www.amf-france.org, rubrique « Le médiateur »).
             </p>
           </Bloc>
 
@@ -102,9 +107,9 @@ function MentionsLegalesPage() {
           <Bloc titre="Avertissement et propriété intellectuelle">
             <p>
               Les contenus publiés sur ce site ont une vocation exclusivement informative et
-              éducative. Ils ne constituent pas un conseil en investissement financier au sens de
-              la réglementation AMF. Tout investissement comporte un risque de perte en capital.
-              Les performances passées ne préjugent pas des performances futures.
+              éducative. Ils ne constituent pas un conseil en investissement financier au sens de la
+              réglementation AMF. Tout investissement comporte un risque de perte en capital. Les
+              performances passées ne préjugent pas des performances futures.
             </p>
             <p>
               L'ensemble des contenus de ce site (textes, simulateurs, identité visuelle) est la

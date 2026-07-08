@@ -111,7 +111,10 @@ const LIGNES: Ligne[] = [
     av: { v: "UC labellisées obligatoires (loi PACTE) — profondeur très variable", atout: true },
     per: { v: "Dépend de l'assureur — à vérifier avant d'ouvrir", attention: true },
     pea: { v: "Restreinte aux actions européennes (75 % minimum)", attention: true },
-    cto: { v: "La plus large : ETF ISR, fonds Article 9, green bonds, titres en direct", atout: true },
+    cto: {
+      v: "La plus large : ETF ISR, fonds Article 9, green bonds, titres en direct",
+      atout: true,
+    },
     livrets: { v: "Fléchage partiel de l'encours, non choisi par vous", attention: true },
     es: { v: "Fonds labellisé + fonds solidaire obligatoires au règlement", atout: true },
   },
@@ -136,7 +139,12 @@ function CelluleTd({ c, hl }: { c: Cellule; hl: boolean }) {
     >
       <div className="flex items-start gap-1.5">
         {c.atout && (
-          <Check size={14} className="mt-0.5 shrink-0" style={{ color: "var(--grenat)" }} aria-hidden />
+          <Check
+            size={14}
+            className="mt-0.5 shrink-0"
+            style={{ color: "var(--grenat)" }}
+            aria-hidden
+          />
         )}
         {c.attention && (
           <TriangleAlert size={13} className="mt-0.5 shrink-0 opacity-60" aria-hidden />
@@ -157,9 +165,9 @@ function ComparatifFinal() {
           Six enveloppes, sept critères — le tableau à garder sous la main
         </h2>
         <p className="lead mt-5 max-w-2xl">
-          Cliquez sur une enveloppe pour la mettre en surbrillance. Fiscalité en vigueur en
-          juillet 2026, vérifiée sur les fiches officielles citées plus haut — elle peut évoluer
-          à chaque loi de finances.
+          Cliquez sur une enveloppe pour la mettre en surbrillance. Fiscalité en vigueur en juillet
+          2026, vérifiée sur les fiches officielles citées plus haut — elle peut évoluer à chaque
+          loi de finances.
         </p>
 
         <div className="mt-8 mb-5 flex flex-wrap items-center gap-2">
@@ -218,12 +226,11 @@ function ComparatifFinal() {
         </div>
 
         <p className="mt-4 text-xs text-muted-foreground leading-relaxed">
-          * Cas de déblocage anticipé prévus par la loi (accidents de la vie ; achat de la
-          résidence principale pour le PER, hors droits issus de versements obligatoires ;
-          mariage, naissance ou rupture de contrat de travail, entre autres, pour le PEE).
-          IR = impôt sur le revenu, PS = prélèvements sociaux, TMI = tranche marginale
-          d'imposition. Ce tableau est informatif et ne tient pas compte de votre situation
-          personnelle.
+          * Cas de déblocage anticipé prévus par la loi (accidents de la vie ; achat de la résidence
+          principale pour le PER, hors droits issus de versements obligatoires ; mariage, naissance
+          ou rupture de contrat de travail, entre autres, pour le PEE). IR = impôt sur le revenu, PS
+          = prélèvements sociaux, TMI = tranche marginale d'imposition. Ce tableau est informatif et
+          ne tient pas compte de votre situation personnelle.
         </p>
       </div>
     </section>
@@ -263,20 +270,20 @@ function EnveloppesPage() {
                 L'erreur la plus fréquente : confondre l'enveloppe et le placement
               </h2>
               <p className="mt-5 text-muted-foreground leading-relaxed">
-                L'enveloppe est le <strong className="text-foreground">contenant</strong> fiscal
-                et juridique. Le placement est le{" "}
-                <strong className="text-foreground">contenu</strong> — les fonds, ETF, actions ou
-                obligations que vous y logez. Aucune enveloppe n'est « responsable » en soi : une
-                assurance vie peut être remplie de fonds labellisés ISR rigoureusement vérifiés,
-                et un compte-titres d'actions pétrolières. C'est le contenu qui porte vos valeurs.
+                L'enveloppe est le <strong className="text-foreground">contenant</strong> fiscal et
+                juridique. Le placement est le <strong className="text-foreground">contenu</strong>{" "}
+                — les fonds, ETF, actions ou obligations que vous y logez. Aucune enveloppe n'est «
+                responsable » en soi : une assurance vie peut être remplie de fonds labellisés ISR
+                rigoureusement vérifiés, et un compte-titres d'actions pétrolières. C'est le contenu
+                qui porte vos valeurs.
               </p>
               <p className="mt-4 text-muted-foreground leading-relaxed">
                 Mais le contenant n'est pas neutre pour autant : il détermine{" "}
-                <em>combien il vous restera</em> après impôt, <em>quand</em> vous pourrez
-                récupérer votre argent, et surtout — c'est le point le moins connu —{" "}
-                <em>quels supports responsables vous pourrez réellement y loger</em>. Un PEA ne
-                peut pas contenir d'obligations vertes ; un contrat d'assurance vie ne référence
-                que les fonds choisis par l'assureur ; un compte-titres accepte à peu près tout.
+                <em>combien il vous restera</em> après impôt, <em>quand</em> vous pourrez récupérer
+                votre argent, et surtout — c'est le point le moins connu —{" "}
+                <em>quels supports responsables vous pourrez réellement y loger</em>. Un PEA ne peut
+                pas contenir d'obligations vertes ; un contrat d'assurance vie ne référence que les
+                fonds choisis par l'assureur ; un compte-titres accepte à peu près tout.
               </p>
               <p className="mt-4 text-muted-foreground leading-relaxed">
                 La bonne séquence est donc toujours la même :{" "}
@@ -338,16 +345,26 @@ function EnveloppesPage() {
               La « flat tax » est passée de 30 % à 31,4 % — mais pas pour tout le monde
             </h3>
             <p className="mt-4 text-foreground/80 leading-relaxed">
-              La loi de financement de la sécurité sociale pour 2026 a relevé la CSG sur la
-              plupart des revenus du capital : les prélèvements sociaux passent de 17,2 % à
-              18,6 % sur les dividendes, intérêts et plus-values de cession de titres. Le
-              prélèvement forfaitaire unique global atteint donc{" "}
-              <strong>31,4 % (12,8 % d'impôt sur le revenu + 18,6 % de prélèvements sociaux)</strong>{" "}
+              La loi de financement de la sécurité sociale pour 2026 a relevé la CSG sur la plupart
+              des revenus du capital : les prélèvements sociaux passent de 17,2 % à 18,6 % sur les
+              dividendes, intérêts et plus-values de cession de titres (
+              <a
+                href="https://www.service-public.gouv.fr/particuliers/actualites/A17544"
+                target="_blank"
+                rel="noreferrer"
+                className="underline underline-offset-2 hover:text-[var(--grenat)] transition-colors"
+              >
+                service-public.gouv.fr
+              </a>
+              ). Le prélèvement forfaitaire unique global atteint donc{" "}
+              <strong>
+                31,4 % (12,8 % d'impôt sur le revenu + 18,6 % de prélèvements sociaux)
+              </strong>{" "}
               sur un compte-titres. L'assurance vie et le contrat de capitalisation conservent des
-              prélèvements sociaux à 17,2 %, et les livrets réglementés restent totalement
-              exonérés. Conséquence directe : l'écart de fiscalité entre le compte-titres et les
-              enveloppes capitalisantes s'est encore creusé. Les chiffres détaillés, enveloppe par
-              enveloppe, sont sourcés ci-dessous.
+              prélèvements sociaux à 17,2 %, et les livrets réglementés restent totalement exonérés.
+              Conséquence directe : l'écart de fiscalité entre le compte-titres et les enveloppes
+              capitalisantes s'est encore creusé. Les chiffres détaillés, enveloppe par enveloppe,
+              sont sourcés ci-dessous.
             </p>
           </div>
         </div>
@@ -372,7 +389,10 @@ function EnveloppesPage() {
                   <ShieldCheck size={20} aria-hidden />
                 </span>
                 <div>
-                  <p className="text-xs font-semibold uppercase tracking-[0.14em]" style={{ color: "var(--grenat)" }}>
+                  <p
+                    className="text-xs font-semibold uppercase tracking-[0.14em]"
+                    style={{ color: "var(--grenat)" }}
+                  >
                     L'enveloppe par défaut — et souvent la bonne
                   </p>
                   <h3 className="display-3 font-display">Assurance vie</h3>
@@ -383,19 +403,19 @@ function EnveloppesPage() {
                 <div>
                   <h4 className="font-semibold text-foreground">Comment elle fonctionne</h4>
                   <p className="mt-2 text-sm text-muted-foreground leading-relaxed">
-                    Un contrat d'assurance à versements libres, combinant un fonds en euros
-                    (capital garanti par l'assureur) et des unités de compte — les « UC », c'est-à-dire
-                    les supports d'investissement du contrat, non garantis en capital. Contrairement
-                    à une idée reçue tenace, l'argent n'est <em>pas</em> bloqué 8 ans : un rachat est
+                    Un contrat d'assurance à versements libres, combinant un fonds en euros (capital
+                    garanti par l'assureur) et des unités de compte — les « UC », c'est-à-dire les
+                    supports d'investissement du contrat, non garantis en capital. Contrairement à
+                    une idée reçue tenace, l'argent n'est <em>pas</em> bloqué 8 ans : un rachat est
                     possible à tout moment. C'est la fiscalité qui s'améliore à 8 ans, pas la
                     disponibilité.
                   </p>
                   <h4 className="mt-5 font-semibold text-foreground">Fiscalité</h4>
                   <p className="mt-2 text-sm text-muted-foreground leading-relaxed">
-                    Avant 8 ans, les gains rachetés supportent 12,8 % d'impôt sur le revenu +
-                    17,2 % de prélèvements sociaux. Après 8 ans : abattement annuel de 4 600 €
-                    de gains (9 200 € pour un couple), puis taux réduit de 7,5 % + 17,2 % jusqu'à
-                    150 000 € de versements tous contrats confondus (12,8 % au-delà) — détail sur{" "}
+                    Avant 8 ans, les gains rachetés supportent 12,8 % d'impôt sur le revenu + 17,2 %
+                    de prélèvements sociaux. Après 8 ans : abattement annuel de 4 600 € de gains (9
+                    200 € pour un couple), puis taux réduit de 7,5 % + 17,2 % jusqu'à 150 000 € de
+                    versements tous contrats confondus (12,8 % au-delà) — détail sur{" "}
                     <a
                       href="https://www.service-public.gouv.fr/particuliers/vosdroits/F22414"
                       target="_blank"
@@ -405,8 +425,8 @@ function EnveloppesPage() {
                       la fiche officielle service-public.gouv.fr
                     </a>
                     . À la transmission : jusqu'à 152 500 € par bénéficiaire hors droits de
-                    succession pour les primes versées avant 70 ans, abattement global de
-                    30 500 € au-delà (
+                    succession pour les primes versées avant 70 ans, abattement global de 30 500 €
+                    au-delà (
                     <a
                       href="https://www.impots.gouv.fr/particulier/questions/je-suis-beneficiaire-dune-assurance-vie-comment-la-declarer"
                       target="_blank"
@@ -442,15 +462,30 @@ function EnveloppesPage() {
                   <h4 className="mt-5 font-semibold text-foreground">Pour qui</h4>
                   <ul className="mt-2 space-y-1.5 text-sm text-muted-foreground leading-relaxed">
                     <li className="flex gap-2">
-                      <Check size={14} className="mt-1 shrink-0" style={{ color: "var(--grenat)" }} aria-hidden />
+                      <Check
+                        size={14}
+                        className="mt-1 shrink-0"
+                        style={{ color: "var(--grenat)" }}
+                        aria-hidden
+                      />
                       Le socle de toute épargne de moyen/long terme (horizon 8 ans et plus)
                     </li>
                     <li className="flex gap-2">
-                      <Check size={14} className="mt-1 shrink-0" style={{ color: "var(--grenat)" }} aria-hidden />
+                      <Check
+                        size={14}
+                        className="mt-1 shrink-0"
+                        style={{ color: "var(--grenat)" }}
+                        aria-hidden
+                      />
                       Celles et ceux qui veulent préparer une transmission
                     </li>
                     <li className="flex gap-2">
-                      <Check size={14} className="mt-1 shrink-0" style={{ color: "var(--grenat)" }} aria-hidden />
+                      <Check
+                        size={14}
+                        className="mt-1 shrink-0"
+                        style={{ color: "var(--grenat)" }}
+                        aria-hidden
+                      />
                       Les débutants : disponibilité totale, gestion déléguée possible
                     </li>
                   </ul>
@@ -485,7 +520,10 @@ function EnveloppesPage() {
                   <PiggyBank size={20} aria-hidden />
                 </span>
                 <div>
-                  <p className="text-xs font-semibold uppercase tracking-[0.14em]" style={{ color: "var(--grenat)" }}>
+                  <p
+                    className="text-xs font-semibold uppercase tracking-[0.14em]"
+                    style={{ color: "var(--grenat)" }}
+                  >
                     La déduction fiscale — à manier selon votre TMI
                   </p>
                   <h3 className="display-3 font-display">PER — Plan d'épargne retraite</h3>
@@ -498,15 +536,15 @@ function EnveloppesPage() {
                   <p className="mt-2 text-sm text-muted-foreground leading-relaxed">
                     Une enveloppe dédiée à la retraite : les sommes sont bloquées jusqu'à la
                     liquidation de vos droits, hors accidents de la vie et achat de la résidence
-                    principale. Sortie possible en capital, en rente, ou les deux. Comme
-                    l'assurance vie, il se remplit d'unités de compte — souvent via une « gestion
-                    pilotée » par défaut, dont il faut regarder ce qu'elle contient vraiment.
+                    principale. Sortie possible en capital, en rente, ou les deux. Comme l'assurance
+                    vie, il se remplit d'unités de compte — souvent via une « gestion pilotée » par
+                    défaut, dont il faut regarder ce qu'elle contient vraiment.
                   </p>
                   <h4 className="mt-5 font-semibold text-foreground">Fiscalité</h4>
                   <p className="mt-2 text-sm text-muted-foreground leading-relaxed">
-                    Les versements volontaires sont déductibles du revenu imposable, dans la
-                    limite de 10 % des revenus professionnels — plafonnée à 37 680 € et avec un
-                    plancher de 4 710 € en 2026 (
+                    Les versements volontaires sont déductibles du revenu imposable, dans la limite
+                    de 10 % des revenus professionnels — plafonnée à 37 680 € et avec un plancher de
+                    4 710 € en 2026 (
                     <a
                       href="https://www.service-public.gouv.fr/particuliers/vosdroits/F34982"
                       target="_blank"
@@ -516,32 +554,41 @@ function EnveloppesPage() {
                       service-public.gouv.fr
                     </a>
                     ). L'économie immédiate vaut votre TMI : 1 000 € versés à TMI 30 % réduisent
-                    votre impôt de 300 €. En contrepartie, à la sortie, les versements déduits
-                    sont imposés au barème et les gains à la flat tax. Le PER est donc un{" "}
-                    <em>différé</em> d'impôt, pas un cadeau : son intérêt réel vient du
-                    différentiel entre votre TMI d'actif et celle, souvent plus basse, de votre
-                    retraite.
+                    votre impôt de 300 €. En contrepartie, à la sortie, les versements déduits sont
+                    imposés au barème et les gains à la flat tax. Le PER est donc un{" "}
+                    <em>différé</em> d'impôt, pas un cadeau : son intérêt réel vient du différentiel
+                    entre votre TMI d'actif et celle, souvent plus basse, de votre retraite.
                   </p>
                 </div>
                 <div>
                   <h4 className="font-semibold text-foreground">L'offre ISR dans l'enveloppe</h4>
                   <p className="mt-2 text-sm text-muted-foreground leading-relaxed">
-                    Très inégale d'un contrat à l'autre : certains PER référencent une gamme
-                    étoffée de fonds labellisés ISR ou Greenfin, d'autres presque rien. Deux
-                    vérifications avant d'ouvrir : la liste des supports labellisés réellement
-                    accessibles, et la composition de la gestion pilotée par défaut — c'est elle
-                    qui recevra vos versements si vous ne choisissez rien, et rien ne garantit
-                    qu'elle soit investie en fonds responsables. Un PER ouvert chez le mauvais
-                    assureur ne deviendra jamais un PER responsable, quels que soient vos vœux.
+                    Très inégale d'un contrat à l'autre : certains PER référencent une gamme étoffée
+                    de fonds labellisés ISR ou Greenfin, d'autres presque rien. Deux vérifications
+                    avant d'ouvrir : la liste des supports labellisés réellement accessibles, et la
+                    composition de la gestion pilotée par défaut — c'est elle qui recevra vos
+                    versements si vous ne choisissez rien, et rien ne garantit qu'elle soit investie
+                    en fonds responsables. Un PER ouvert chez le mauvais assureur ne deviendra
+                    jamais un PER responsable, quels que soient vos vœux.
                   </p>
                   <h4 className="mt-5 font-semibold text-foreground">Pour qui</h4>
                   <ul className="mt-2 space-y-1.5 text-sm text-muted-foreground leading-relaxed">
                     <li className="flex gap-2">
-                      <Check size={14} className="mt-1 shrink-0" style={{ color: "var(--grenat)" }} aria-hidden />
+                      <Check
+                        size={14}
+                        className="mt-1 shrink-0"
+                        style={{ color: "var(--grenat)" }}
+                        aria-hidden
+                      />
                       Contribuables à TMI 30 %, 41 % ou 45 % qui préparent leur retraite
                     </li>
                     <li className="flex gap-2">
-                      <Check size={14} className="mt-1 shrink-0" style={{ color: "var(--grenat)" }} aria-hidden />
+                      <Check
+                        size={14}
+                        className="mt-1 shrink-0"
+                        style={{ color: "var(--grenat)" }}
+                        aria-hidden
+                      />
                       Indépendants et dirigeants cherchant à lisser une fiscalité élevée
                     </li>
                     <li className="flex gap-2">
@@ -586,7 +633,10 @@ function EnveloppesPage() {
                   <LineChart size={20} aria-hidden />
                 </span>
                 <div>
-                  <p className="text-xs font-semibold uppercase tracking-[0.14em]" style={{ color: "var(--grenat)" }}>
+                  <p
+                    className="text-xs font-semibold uppercase tracking-[0.14em]"
+                    style={{ color: "var(--grenat)" }}
+                  >
                     La niche fiscale actions — avec un angle mort
                   </p>
                   <h3 className="display-3 font-display">PEA — Plan d'épargne en actions</h3>
@@ -597,11 +647,11 @@ function EnveloppesPage() {
                 <div>
                   <h4 className="font-semibold text-foreground">Comment il fonctionne</h4>
                   <p className="mt-2 text-sm text-muted-foreground leading-relaxed">
-                    Une enveloppe boursière plafonnée à 150 000 € de versements (jusqu'à
-                    225 000 € au total en le combinant avec un PEA-PME), réservée aux actions
-                    d'entreprises de l'UE et de l'Espace économique européen et aux fonds investis
-                    à 75 % minimum dans ces actions. Tout retrait avant 5 ans entraîne, sauf
-                    exceptions, la clôture du plan ; après 5 ans, les retraits sont libres.
+                    Une enveloppe boursière plafonnée à 150 000 € de versements (jusqu'à 225 000 €
+                    au total en le combinant avec un PEA-PME), réservée aux actions d'entreprises de
+                    l'UE et de l'Espace économique européen et aux fonds investis à 75 % minimum
+                    dans ces actions. Tout retrait avant 5 ans entraîne, sauf exceptions, la clôture
+                    du plan ; après 5 ans, les retraits sont libres.
                   </p>
                   <h4 className="mt-5 font-semibold text-foreground">Fiscalité</h4>
                   <p className="mt-2 text-sm text-muted-foreground leading-relaxed">
@@ -624,23 +674,32 @@ function EnveloppesPage() {
                   <h4 className="font-semibold text-foreground">L'offre ISR dans l'enveloppe</h4>
                   <p className="mt-2 text-sm text-muted-foreground leading-relaxed">
                     Le quota de 75 % d'actions européennes dessine un angle mort : pas de fonds
-                    actions monde, pas d'obligations vertes, pas de fonds solidaires classiques
-                    dans un PEA. En revanche, l'Europe est le marché le plus fourni au monde en
-                    fonds actions labellisés ISR : des fonds et ETF actions européennes
-                    responsables éligibles au PEA existent bel et bien — l'éligibilité est
-                    indiquée dans le DIC, le document d'informations clés remis avant toute
-                    souscription. Le PEA peut aussi loger des actions en direct, ce qui ouvre la
-                    voie de l'engagement actionnarial : voter en assemblée générale avec ses
-                    titres.
+                    actions monde, pas d'obligations vertes, pas de fonds solidaires classiques dans
+                    un PEA. En revanche, l'Europe est le marché le plus fourni au monde en fonds
+                    actions labellisés ISR : des fonds et ETF actions européennes responsables
+                    éligibles au PEA existent bel et bien — l'éligibilité est indiquée dans le DIC,
+                    le document d'informations clés remis avant toute souscription. Le PEA peut
+                    aussi loger des actions en direct, ce qui ouvre la voie de l'engagement
+                    actionnarial : voter en assemblée générale avec ses titres.
                   </p>
                   <h4 className="mt-5 font-semibold text-foreground">Pour qui</h4>
                   <ul className="mt-2 space-y-1.5 text-sm text-muted-foreground leading-relaxed">
                     <li className="flex gap-2">
-                      <Check size={14} className="mt-1 shrink-0" style={{ color: "var(--grenat)" }} aria-hidden />
+                      <Check
+                        size={14}
+                        className="mt-1 shrink-0"
+                        style={{ color: "var(--grenat)" }}
+                        aria-hidden
+                      />
                       Investisseur long terme acceptant une poche 100 % actions européennes
                     </li>
                     <li className="flex gap-2">
-                      <Check size={14} className="mt-1 shrink-0" style={{ color: "var(--grenat)" }} aria-hidden />
+                      <Check
+                        size={14}
+                        className="mt-1 shrink-0"
+                        style={{ color: "var(--grenat)" }}
+                        aria-hidden
+                      />
                       En complément d'une assurance vie, jamais à la place
                     </li>
                     <li className="flex gap-2">
@@ -679,7 +738,10 @@ function EnveloppesPage() {
                   <Layers size={20} aria-hidden />
                 </span>
                 <div>
-                  <p className="text-xs font-semibold uppercase tracking-[0.14em]" style={{ color: "var(--grenat)" }}>
+                  <p
+                    className="text-xs font-semibold uppercase tracking-[0.14em]"
+                    style={{ color: "var(--grenat)" }}
+                  >
                     La liberté totale — fiscalité brute
                   </p>
                   <h3 className="display-3 font-display">Compte-titres ordinaire (CTO)</h3>
@@ -696,11 +758,19 @@ function EnveloppesPage() {
                   </p>
                   <h4 className="mt-5 font-semibold text-foreground">Fiscalité</h4>
                   <p className="mt-2 text-sm text-muted-foreground leading-relaxed">
-                    La moins favorable des quatre : depuis le 1ᵉʳ janvier 2026, dividendes,
-                    intérêts et plus-values supportent le prélèvement forfaitaire unique à{" "}
+                    La moins favorable des quatre : depuis le 1ᵉʳ janvier 2026, dividendes, intérêts
+                    et plus-values supportent le prélèvement forfaitaire unique à{" "}
                     <strong>31,4 %</strong> (12,8 % d'impôt sur le revenu + 18,6 % de prélèvements
-                    sociaux, relevés par la loi de financement de la sécurité sociale pour 2026),
-                    avec option possible pour le barème progressif si elle vous est plus
+                    sociaux, relevés par la{" "}
+                    <a
+                      href="https://www.service-public.gouv.fr/particuliers/actualites/A17544"
+                      target="_blank"
+                      rel="noreferrer"
+                      className="underline underline-offset-2 hover:text-[var(--grenat)] transition-colors"
+                    >
+                      loi de financement de la sécurité sociale pour 2026
+                    </a>
+                    ), avec option possible pour le barème progressif si elle vous est plus
                     favorable. Surtout, le CTO ne capitalise pas à l'abri : chaque vente en
                     plus-value et chaque dividende déclenche l'impôt au fil de l'eau, là où
                     l'assurance vie et le PEA n'imposent qu'au retrait.
@@ -714,18 +784,28 @@ function EnveloppesPage() {
                     objectif d'investissement durable), les obligations vertes en direct, les
                     actions du monde entier pour l'engagement actionnarial. Si un support
                     responsable existe sur un marché coté, il est logeable dans un CTO. C'est
-                    l'enveloppe de la précision — au prix de la fiscalité et d'une exigence :
-                    savoir vérifier soi-même ce que contiennent les fonds, car aucun assureur ne
-                    fait le premier tri à votre place.
+                    l'enveloppe de la précision — au prix de la fiscalité et d'une exigence : savoir
+                    vérifier soi-même ce que contiennent les fonds, car aucun assureur ne fait le
+                    premier tri à votre place.
                   </p>
                   <h4 className="mt-5 font-semibold text-foreground">Pour qui</h4>
                   <ul className="mt-2 space-y-1.5 text-sm text-muted-foreground leading-relaxed">
                     <li className="flex gap-2">
-                      <Check size={14} className="mt-1 shrink-0" style={{ color: "var(--grenat)" }} aria-hidden />
+                      <Check
+                        size={14}
+                        className="mt-1 shrink-0"
+                        style={{ color: "var(--grenat)" }}
+                        aria-hidden
+                      />
                       Investisseur autonome voulant une allocation mondiale fine
                     </li>
                     <li className="flex gap-2">
-                      <Check size={14} className="mt-1 shrink-0" style={{ color: "var(--grenat)" }} aria-hidden />
+                      <Check
+                        size={14}
+                        className="mt-1 shrink-0"
+                        style={{ color: "var(--grenat)" }}
+                        aria-hidden
+                      />
                       Complément une fois PEA plafonné ou pour des supports introuvables ailleurs
                     </li>
                     <li className="flex gap-2">
@@ -766,8 +846,8 @@ function EnveloppesPage() {
             Livrets réglementés et épargne salariale : ce qu'on ne vous dit pas
           </h2>
           <p className="lead mt-5 max-w-2xl">
-            Deux « enveloppes » que presque tous les Français détiennent déjà — et dont la
-            dimension responsable est soit surestimée, soit totalement ignorée.
+            Deux « enveloppes » que presque tous les Français détiennent déjà — et dont la dimension
+            responsable est soit surestimée, soit totalement ignorée.
           </p>
 
           <div className="mt-12 grid gap-6 lg:grid-cols-2">
@@ -781,9 +861,9 @@ function EnveloppesPage() {
               </span>
               <h3 className="display-3 mt-4 font-display">Livret A et LDDS</h3>
               <p className="mt-3 text-sm text-muted-foreground leading-relaxed">
-                Plafonnés à 22 950 € pour le Livret A et 12 000 € pour le LDDS, intérêts
-                totalement exonérés d'impôt et de prélèvements sociaux, argent disponible
-                immédiatement, rémunération fixée par l'État (
+                Plafonnés à 22 950 € pour le Livret A et 12 000 € pour le LDDS, intérêts totalement
+                exonérés d'impôt et de prélèvements sociaux, argent disponible immédiatement,
+                rémunération fixée par l'État (
                 <a
                   href="https://www.service-public.gouv.fr/particuliers/vosdroits/F2365"
                   target="_blank"
@@ -792,15 +872,15 @@ function EnveloppesPage() {
                 >
                   service-public.gouv.fr
                 </a>
-                ). C'est l'épargne de précaution idéale — et elle doit exister avant toute
-                enveloppe d'investissement.
+                ). C'est l'épargne de précaution idéale — et elle doit exister avant toute enveloppe
+                d'investissement.
               </p>
               <p className="mt-3 text-sm text-muted-foreground leading-relaxed">
-                Côté « responsable », soyons honnêtes sur ce que ces livrets font — et ne font
-                pas. Une part importante des dépôts est centralisée à la Caisse des dépôts, qui
-                finance notamment le logement social ; le reste doit être employé par votre banque
-                au financement des PME et, pour le LDDS, de l'économie sociale et solidaire et de
-                la transition énergétique (
+                Côté « responsable », soyons honnêtes sur ce que ces livrets font — et ne font pas.
+                Une part importante des dépôts est centralisée à la Caisse des dépôts, qui finance
+                notamment le logement social ; le reste doit être employé par votre banque au
+                financement des PME et, pour le LDDS, de l'économie sociale et solidaire et de la
+                transition énergétique (
                 <a
                   href="https://www.service-public.gouv.fr/particuliers/vosdroits/F2368"
                   target="_blank"
@@ -809,16 +889,16 @@ function EnveloppesPage() {
                 >
                   fiche LDDS
                 </a>
-                ). Le LDDS permet en outre de donner : votre banque doit vous proposer chaque
-                année d'en reverser une partie à des entreprises de l'économie sociale et
-                solidaire de votre choix, sur une liste qu'elle établit.
+                ). Le LDDS permet en outre de donner : votre banque doit vous proposer chaque année
+                d'en reverser une partie à des entreprises de l'économie sociale et solidaire de
+                votre choix, sur une liste qu'elle établit.
               </p>
               <p className="mt-3 text-sm text-muted-foreground leading-relaxed">
                 La limite : ce fléchage est <em>partiel, agrégé et non choisi</em>. Vous ne
-                sélectionnez ni les projets ni les critères, et aucun label ne vient l'auditer.
-                Un livret réglementé est une excellente épargne de précaution au fléchage
-                partiellement utile — ce n'est pas un outil d'investissement responsable au sens
-                où vous décideriez de ce que vous financez.
+                sélectionnez ni les projets ni les critères, et aucun label ne vient l'auditer. Un
+                livret réglementé est une excellente épargne de précaution au fléchage partiellement
+                utile — ce n'est pas un outil d'investissement responsable au sens où vous
+                décideriez de ce que vous financez.
               </p>
               <div className="mt-5 flex flex-wrap gap-x-6 gap-y-2 border-t border-border pt-4 text-sm font-medium">
                 <Link
@@ -846,14 +926,16 @@ function EnveloppesPage() {
               >
                 <Briefcase size={20} aria-hidden />
               </span>
-              <h3 className="display-3 mt-4 font-display">Épargne salariale — PEE et PER collectif</h3>
+              <h3 className="display-3 mt-4 font-display">
+                Épargne salariale — PEE et PER collectif
+              </h3>
               <p className="mt-3 text-sm text-muted-foreground leading-relaxed">
                 C'est souvent le premier contact des Français avec l'ISR — sans le savoir. La loi
-                impose en effet que tout plan d'épargne entreprise propose un fonds solidaire
-                (les fonds dits « 90-10 », qui investissent 5 à 10 % de leur actif dans des
-                entreprises solidaires agréées) et, depuis le 1ᵉʳ juillet 2024, au moins un fonds
-                labellisé au titre de l'investissement socialement responsable ou du financement
-                de la transition énergétique (
+                impose en effet que tout plan d'épargne entreprise propose un fonds solidaire (les
+                fonds dits « 90-10 », qui investissent 5 à 10 % de leur actif dans des entreprises
+                solidaires agréées) et, depuis le 1ᵉʳ juillet 2024, au moins un fonds labellisé au
+                titre de l'investissement socialement responsable ou du financement de la transition
+                énergétique (
                 <a
                   href="https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000038837087"
                   target="_blank"
@@ -862,12 +944,12 @@ function EnveloppesPage() {
                 >
                   article L. 3332-17 du code du travail
                 </a>
-                ). Si vous avez un PEE, vous avez probablement des fonds labellisés à portée de
-                clic — regardez la liste de vos supports.
+                ). Si vous avez un PEE, vous avez probablement des fonds labellisés à portée de clic
+                — regardez la liste de vos supports.
               </p>
               <p className="mt-3 text-sm text-muted-foreground leading-relaxed">
-                Fiscalement, l'épargne salariale est redoutable : l'abondement de l'employeur est
-                un rendement immédiat qu'aucun placement ne peut égaler, l'intéressement et la
+                Fiscalement, l'épargne salariale est redoutable : l'abondement de l'employeur est un
+                rendement immédiat qu'aucun placement ne peut égaler, l'intéressement et la
                 participation investis dans le plan sont exonérés d'impôt sur le revenu dans les
                 limites légales, et les gains sont exonérés d'IR à l'issue du blocage de 5 ans du
                 PEE — prélèvements sociaux dus (
@@ -886,8 +968,8 @@ function EnveloppesPage() {
                 La limite, là aussi dite franchement : la gamme de fonds est choisie par votre
                 employeur, pas par vous. Vos leviers : arbitrer votre encours vers les fonds
                 labellisés ou solidaires existants, et demander — via le CSE — l'enrichissement de
-                la gamme. C'est gratuit, et c'est souvent le geste ISR le plus simple à faire
-                cette année.
+                la gamme. C'est gratuit, et c'est souvent le geste ISR le plus simple à faire cette
+                année.
               </p>
             </article>
           </div>
@@ -904,8 +986,8 @@ function EnveloppesPage() {
             <p className="eyebrow justify-center">Faites vos propres calculs</p>
             <h2 className="display-2 mt-4">Passez de la théorie à votre cas</h2>
             <p className="lead mt-5 max-w-2xl mx-auto">
-              Nos outils gratuits donnent des pistes chiffrées à partir de vos propres
-              hypothèses — la lecture complète de votre situation se fait ensuite, de vive voix.
+              Nos outils gratuits donnent des pistes chiffrées à partir de vos propres hypothèses —
+              la lecture complète de votre situation se fait ensuite, de vive voix.
             </p>
           </div>
           <div className="grid gap-5 md:grid-cols-3">
@@ -918,8 +1000,8 @@ function EnveloppesPage() {
               </span>
               <h3 className="font-display text-xl mt-4">Comparateur d'enveloppes</h3>
               <p className="mt-2 text-sm text-muted-foreground leading-relaxed">
-                Assurance vie, PER, PEA, CTO : comparez le capital net d'impôt selon votre
-                horizon, votre TMI et vos versements.
+                Assurance vie, PER, PEA, CTO : comparez le capital net d'impôt selon votre horizon,
+                votre TMI et vos versements.
               </p>
               <span className="mt-4 inline-flex items-center gap-1.5 text-sm font-medium text-foreground group-hover:text-[var(--grenat)] transition-colors">
                 Ouvrir l'outil <ArrowRight size={14} />
@@ -934,8 +1016,8 @@ function EnveloppesPage() {
               </span>
               <h3 className="font-display text-xl mt-4">Projection d'épargne</h3>
               <p className="mt-2 text-sm text-muted-foreground leading-relaxed">
-                Votre épargne an par an, frais réels et fiscalité complète de l'assurance vie et
-                du PER incluses.
+                Votre épargne an par an, frais réels et fiscalité complète de l'assurance vie et du
+                PER incluses.
               </p>
               <span className="mt-4 inline-flex items-center gap-1.5 text-sm font-medium text-foreground group-hover:text-[var(--grenat)] transition-colors">
                 Ouvrir l'outil <ArrowRight size={14} />
@@ -950,8 +1032,8 @@ function EnveloppesPage() {
               </span>
               <h3 className="font-display text-xl mt-4">PER ISR : économie d'impôt</h3>
               <p className="mt-2 text-sm text-muted-foreground leading-relaxed">
-                Mesurez ce qu'un versement PER vous fait économiser selon votre TMI — et ce que
-                cela implique à la sortie.
+                Mesurez ce qu'un versement PER vous fait économiser selon votre TMI — et ce que cela
+                implique à la sortie.
               </p>
               <span className="mt-4 inline-flex items-center gap-1.5 text-sm font-medium text-foreground group-hover:text-[var(--grenat)] transition-colors">
                 Ouvrir l'outil <ArrowRight size={14} />

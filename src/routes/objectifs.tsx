@@ -400,11 +400,7 @@ function ObjectifsPage() {
         <div className="container-prose">
           <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {objectifs.map(({ id, icon: Icon, nav }, i) => (
-              <a
-                key={id}
-                href={`#${id}`}
-                className="card-paper group flex items-center gap-4 p-5"
-              >
+              <a key={id} href={`#${id}`} className="card-paper group flex items-center gap-4 p-5">
                 <span
                   className="inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-lg"
                   style={{ background: "var(--accent)", color: "var(--grenat)" }}
@@ -435,14 +431,19 @@ function ObjectifsPage() {
               background: "color-mix(in oklch, var(--grenat) 4%, var(--card))",
             }}
           >
-            <Info size={18} className="mt-0.5 shrink-0" style={{ color: "var(--grenat)" }} aria-hidden />
+            <Info
+              size={18}
+              className="mt-0.5 shrink-0"
+              style={{ color: "var(--grenat)" }}
+              aria-hidden
+            />
             <p className="text-sm leading-relaxed text-foreground/80">
-              <strong className="text-foreground">Comment lire cette page.</strong> Chaque objectif décrit
-              une situation type, ce qui compte vraiment, et des enveloppes à explorer. Ce sont des pistes
-              informatives — pas des recommandations : aucune page web ne connaît votre situation, vos
-              revenus ni vos contraintes. Un rappel qui vaut pour toute la page : les supports non garantis
-              présentent un risque de perte en capital, et les performances passées ne préjugent pas des
-              performances futures.
+              <strong className="text-foreground">Comment lire cette page.</strong> Chaque objectif
+              décrit une situation type, ce qui compte vraiment, et des enveloppes à explorer. Ce
+              sont des pistes informatives — pas des recommandations : aucune page web ne connaît
+              votre situation, vos revenus ni vos contraintes. Un rappel qui vaut pour toute la page
+              : les supports non garantis présentent un risque de perte en capital, et les
+              performances passées ne préjugent pas des performances futures.
             </p>
           </div>
         </div>
@@ -452,7 +453,21 @@ function ObjectifsPage() {
       <section className="section">
         <div className="container-prose space-y-12 md:space-y-16">
           {objectifs.map(
-            ({ id, icon: Icon, titre, badge, accroche, situation, compte, pistes, outils, articles }, i) => (
+            (
+              {
+                id,
+                icon: Icon,
+                titre,
+                badge,
+                accroche,
+                situation,
+                compte,
+                pistes,
+                outils,
+                articles,
+              },
+              i,
+            ) => (
               <article
                 key={id}
                 id={id}
@@ -462,7 +477,10 @@ function ObjectifsPage() {
                 <div className="flex flex-wrap items-start gap-4">
                   <span
                     className="inline-flex h-12 w-12 shrink-0 items-center justify-center rounded-xl"
-                    style={{ background: "var(--gradient-grenat)", color: "var(--grenat-foreground)" }}
+                    style={{
+                      background: "var(--gradient-grenat)",
+                      color: "var(--grenat-foreground)",
+                    }}
                   >
                     <Icon size={22} aria-hidden />
                   </span>
@@ -484,7 +502,9 @@ function ObjectifsPage() {
                   )}
                 </div>
 
-                <p className="mt-5 text-lg leading-relaxed text-muted-foreground max-w-3xl">{accroche}</p>
+                <p className="mt-5 text-lg leading-relaxed text-muted-foreground max-w-3xl">
+                  {accroche}
+                </p>
 
                 <div className="mt-8 grid gap-8 lg:grid-cols-2">
                   {/* Colonne gauche : situation + ce qui compte */}
@@ -503,8 +523,16 @@ function ObjectifsPage() {
                     <h3 className="eyebrow mt-7">Ce qui compte vraiment</h3>
                     <ul className="mt-3 space-y-3">
                       {compte.map((point) => (
-                        <li key={point} className="flex gap-3 text-sm leading-relaxed text-muted-foreground">
-                          <Check size={16} className="mt-0.5 shrink-0" style={{ color: "var(--grenat)" }} aria-hidden />
+                        <li
+                          key={point}
+                          className="flex gap-3 text-sm leading-relaxed text-muted-foreground"
+                        >
+                          <Check
+                            size={16}
+                            className="mt-0.5 shrink-0"
+                            style={{ color: "var(--grenat)" }}
+                            aria-hidden
+                          />
                           <span>{point}</span>
                         </li>
                       ))}
@@ -513,7 +541,9 @@ function ObjectifsPage() {
 
                   {/* Colonne droite : pistes d'enveloppes */}
                   <div>
-                    <h3 className="eyebrow">Des enveloppes à explorer — des pistes, pas des recommandations</h3>
+                    <h3 className="eyebrow">
+                      Des enveloppes à explorer — des pistes, pas des recommandations
+                    </h3>
                     <ul className="mt-3 space-y-4">
                       {pistes.map((p) => (
                         <li
@@ -521,14 +551,17 @@ function ObjectifsPage() {
                           className="rounded-2xl border border-border/60 bg-background/50 p-4"
                         >
                           <p className="font-medium text-foreground text-[15px]">{p.nom}</p>
-                          <p className="mt-1.5 text-sm leading-relaxed text-muted-foreground">{p.detail}</p>
+                          <p className="mt-1.5 text-sm leading-relaxed text-muted-foreground">
+                            {p.detail}
+                          </p>
                         </li>
                       ))}
                     </ul>
                     <p className="mt-4 text-xs leading-relaxed text-muted-foreground">
-                      Le choix — et le dosage — entre ces enveloppes dépend de votre fiscalité, de votre
-                      horizon et de votre situation familiale. Frais, conditions et supports disponibles se
-                      vérifient contrat par contrat, notamment dans le DIC de chaque support.
+                      Le choix — et le dosage — entre ces enveloppes dépend de votre fiscalité, de
+                      votre horizon et de votre situation familiale. Frais, conditions et supports
+                      disponibles se vérifient contrat par contrat, notamment dans le DIC de chaque
+                      support.
                     </p>
                   </div>
                 </div>
@@ -552,7 +585,8 @@ function ObjectifsPage() {
                           </span>
                           <span>
                             <span className="block text-sm font-medium text-foreground group-hover:text-[var(--grenat)] transition-colors">
-                              {o.label} <ArrowRight size={12} className="inline-block" aria-hidden />
+                              {o.label}{" "}
+                              <ArrowRight size={12} className="inline-block" aria-hidden />
                             </span>
                             <span className="mt-0.5 block text-xs leading-relaxed text-muted-foreground">
                               {o.desc}
@@ -610,11 +644,11 @@ function ObjectifsPage() {
                 Vous vous reconnaissez dans plusieurs cas ? C'est le signe d'une situation normale.
               </h2>
               <p className="mt-4 text-foreground/80 leading-relaxed">
-                Les situations réelles combinent presque toujours plusieurs objectifs : préparer la retraite
-                tout en épargnant pour les enfants, faire fructifier un capital tout en pensant à sa
-                transmission. L'ordre des priorités — et la répartition de l'effort entre les enveloppes —
-                est précisément ce qui ne se décide pas depuis une page web. C'est le travail d'un échange
-                de vive voix, avec vos chiffres réels sur la table.
+                Les situations réelles combinent presque toujours plusieurs objectifs : préparer la
+                retraite tout en épargnant pour les enfants, faire fructifier un capital tout en
+                pensant à sa transmission. L'ordre des priorités — et la répartition de l'effort
+                entre les enveloppes — est précisément ce qui ne se décide pas depuis une page web.
+                C'est le travail d'un échange de vive voix, avec vos chiffres réels sur la table.
               </p>
             </div>
             <div className="md:col-span-4 flex md:justify-end">

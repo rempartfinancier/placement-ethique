@@ -373,11 +373,11 @@ export function ProjectionPlacement({ etatInitial }: Props) {
           />
           {avecFondsEuros && (
             <div className="mt-3 rounded-xl border border-[color-mix(in_oklch,var(--grenat)_35%,transparent)] bg-[color-mix(in_oklch,var(--grenat)_5%,var(--card))] p-4 text-sm text-foreground leading-relaxed">
-              ℹ Le fonds en euros classique est majoritairement investi en obligations
-              (souveraines et d'entreprises) : sa composition extra-financière dépend de
-              l'assureur et n'est généralement pas labellisée ISR. Si l'alignement de cette
-              poche avec vos exigences compte pour vous, le sujet se vérifie contrat par
-              contrat — parlez-en à votre conseiller.
+              ℹ Le fonds en euros classique est majoritairement investi en obligations (souveraines
+              et d'entreprises) : sa composition extra-financière dépend de l'assureur et n'est
+              généralement pas labellisée ISR. Si l'alignement de cette poche avec vos exigences
+              compte pour vous, le sujet se vérifie contrat par contrat — parlez-en à votre
+              conseiller.
             </div>
           )}
         </div>

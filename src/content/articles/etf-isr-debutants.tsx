@@ -22,13 +22,13 @@ export function Corps() {
     <>
       <div className="callout callout-grenat">
         <p>
-          <strong>La réponse courte :</strong> un ETF ISR est un fonds indiciel coté qui réplique
-          un indice boursier filtré selon des critères environnementaux, sociaux et de gouvernance
+          <strong>La réponse courte :</strong> un ETF ISR est un fonds indiciel coté qui réplique un
+          indice boursier filtré selon des critères environnementaux, sociaux et de gouvernance
           (ESG). Deux produits étiquetés « ISR » peuvent pourtant contenir des portefeuilles très
           différents : tout se joue dans la méthode de construction de l'indice répliqué, pas dans
           le nom du produit. Avant d'acheter, lisez quatre documents — la fiche méthodologique de
-          l'indice, l'inventaire du portefeuille, la classification réglementaire SFDR et le DIC.
-          Ce réflexe prend une demi-heure et vous protège de l'essentiel du greenwashing.
+          l'indice, l'inventaire du portefeuille, la classification réglementaire SFDR et le DIC. Ce
+          réflexe prend une demi-heure et vous protège de l'essentiel du greenwashing.
         </p>
       </div>
 
@@ -43,11 +43,11 @@ export function Corps() {
       <p>
         La bonne nouvelle : un ETF (<em>exchange traded fund</em>, ou fonds indiciel coté) est
         justement l'un des placements les plus transparents qui existent, parce que sa règle du jeu
-        est publiée à l'avance. Sa version « ISR » (investissement socialement responsable)
-        réplique un indice dont l'univers a été filtré selon des critères ESG. Cet article vous
-        donne la grille de lecture complète : quelles familles d'indices existent, comment vérifier
-        ce qu'un ETF contient réellement, dans quelle enveloppe le loger et quels pièges éviter —
-        sans exiger de vous la moindre expertise préalable.
+        est publiée à l'avance. Sa version « ISR » (investissement socialement responsable) réplique
+        un indice dont l'univers a été filtré selon des critères ESG. Cet article vous donne la
+        grille de lecture complète : quelles familles d'indices existent, comment vérifier ce qu'un
+        ETF contient réellement, dans quelle enveloppe le loger et quels pièges éviter — sans exiger
+        de vous la moindre expertise préalable.
       </p>
 
       <h2>Un ETF ISR, c'est quoi exactement ?</h2>
@@ -55,42 +55,49 @@ export function Corps() {
         Un ETF est un fonds d'investissement coté en bourse dont l'unique mission est de répliquer
         un indice : si l'indice monte de 2 %, l'ETF vise de monter de 2 %, frais déduits. Personne
         n'y sélectionne des titres « au feeling » : la composition du portefeuille découle
-        mécaniquement de la règle de construction de l'indice. C'est ce qui rend les ETF peu
-        coûteux — il n'y a pas d'équipe de gérants à rémunérer pour choisir les titres — et
-        c'est aussi ce qui les rend vérifiables.
+        mécaniquement de la règle de construction de l'indice. C'est ce qui rend les ETF peu coûteux
+        — il n'y a pas d'équipe de gérants à rémunérer pour choisir les titres — et c'est aussi ce
+        qui les rend vérifiables.
       </p>
       <p>
-        Un ETF ISR fonctionne exactement pareil, à une différence près : l'indice répliqué n'est
-        pas l'indice « brut » du marché, mais une version filtrée. Le fournisseur d'indice (MSCI,
-        FTSE, S&amp;P et quelques autres) applique des critères ESG — environnement, social,
-        gouvernance — pour exclure certaines entreprises, en surpondérer d'autres, ou ne retenir
-        que les mieux notées.
+        Un ETF ISR fonctionne exactement pareil, à une différence près : l'indice répliqué n'est pas
+        l'indice « brut » du marché, mais une version filtrée. Le fournisseur d'indice (MSCI, FTSE,
+        S&amp;P et quelques autres) applique des critères ESG — environnement, social, gouvernance —
+        pour exclure certaines entreprises, en surpondérer d'autres, ou ne retenir que les mieux
+        notées.
       </p>
       <p>
-        D'où le principe central de cet article : <strong>la question « cet ETF est-il vraiment
-        responsable ? » se traduit toujours en « la méthodologie de son indice correspond-elle à
-        mes exigences ? »</strong>. Vous n'achetez pas la promesse d'un gérant, vous achetez une
-        règle de construction — et cette règle est publique.
+        D'où le principe central de cet article :{" "}
+        <strong>
+          la question « cet ETF est-il vraiment responsable ? » se traduit toujours en « la
+          méthodologie de son indice correspond-elle à mes exigences ? »
+        </strong>
+        . Vous n'achetez pas la promesse d'un gérant, vous achetez une règle de construction — et
+        cette règle est publique.
       </p>
       <p>
         Précision de vocabulaire importante : dans le langage courant, « ISR » désigne l'approche
-        générale de l'investissement responsable. Ne le confondez pas avec le <strong>Label
-        ISR</strong>, label d'État français attribué fonds par fonds : un ETF peut afficher « ESG »
-        dans son nom sans détenir le label, et inversement. Nous y revenons plus bas.
+        générale de l'investissement responsable. Ne le confondez pas avec le{" "}
+        <strong>Label ISR</strong>, label d'État français attribué fonds par fonds : un ETF peut
+        afficher « ESG » dans son nom sans détenir le label, et inversement. Nous y revenons plus
+        bas.
       </p>
 
       <h2>Pourquoi deux ETF « ISR » peuvent-ils contenir des portefeuilles très différents ?</h2>
       <p>
         Parce qu'il n'existe pas une seule façon de filtrer un indice, mais plusieurs familles de
-        méthodologies, d'exigence très variable. Les deux grandes logiques sont
-        l'<strong>exclusion sectorielle</strong> (retirer des activités jugées incompatibles :
-        armement controversé, tabac, charbon…) et le <strong>best-in-class</strong> (conserver,
-        dans chaque secteur, les entreprises les mieux notées ESG — y compris dans des secteurs que
-        vous pensiez peut-être exclus). Une compagnie pétrolière bien notée sur ses pratiques peut
-        ainsi figurer dans un indice best-in-class large : ce n'est pas une anomalie, c'est un
-        choix méthodologique documenté. À vous de savoir s'il vous convient.
+        méthodologies, d'exigence très variable. Les deux grandes logiques sont l'
+        <strong>exclusion sectorielle</strong> (retirer des activités jugées incompatibles :
+        armement controversé, tabac, charbon…) et le <strong>best-in-class</strong> (conserver, dans
+        chaque secteur, les entreprises les mieux notées ESG — y compris dans des secteurs que vous
+        pensiez peut-être exclus). Une compagnie pétrolière bien notée sur ses pratiques peut ainsi
+        figurer dans un indice best-in-class large : ce n'est pas une anomalie, c'est un choix
+        méthodologique documenté. À vous de savoir s'il vous convient.
       </p>
-      <p>Voici les quatre familles que vous croiserez le plus souvent, du filtre le plus léger au plus contraint :</p>
+      <p>
+        Voici les quatre familles que vous croiserez le plus souvent, du filtre le plus léger au
+        plus contraint :
+      </p>
       <table>
         <thead>
           <tr>
@@ -103,33 +110,46 @@ export function Corps() {
         <tbody>
           <tr>
             <td>Exclusions simples — « Screened »</td>
-            <td>Retire les activités les plus controversées (armes controversées, tabac, charbon
-              thermique, violations de normes internationales)</td>
+            <td>
+              Retire les activités les plus controversées (armes controversées, tabac, charbon
+              thermique, violations de normes internationales)
+            </td>
             <td>Portefeuille quasi identique à l'indice parent</td>
             <td>Vous voulez d'abord répliquer le marché, en écartant le pire</td>
           </tr>
           <tr>
             <td>Best-in-class large — « ESG », « Leaders »</td>
-            <td>Conserve les entreprises les mieux notées ESG de chaque secteur, sur une large part
-              de l'univers de départ</td>
-            <td>Filtre modéré, diversification préservée ; des secteurs contestés restent
-              représentés par leurs « meilleurs élèves »</td>
+            <td>
+              Conserve les entreprises les mieux notées ESG de chaque secteur, sur une large part de
+              l'univers de départ
+            </td>
+            <td>
+              Filtre modéré, diversification préservée ; des secteurs contestés restent représentés
+              par leurs « meilleurs élèves »
+            </td>
             <td>Vous cherchez un compromis entre filtre et diversification</td>
           </tr>
           <tr>
             <td>Sélectif — « SRI »</td>
-            <td>Ne conserve qu'environ un quart de la capitalisation de chaque secteur, les
-              entreprises les mieux notées</td>
+            <td>
+              Ne conserve qu'environ un quart de la capitalisation de chaque secteur, les
+              entreprises les mieux notées
+            </td>
             <td>Filtre marqué, portefeuille plus concentré, écarts au marché plus visibles</td>
-            <td>Vous voulez un filtrage exigeant et acceptez de vous éloigner de l'indice
-              classique</td>
+            <td>
+              Vous voulez un filtrage exigeant et acceptez de vous éloigner de l'indice classique
+            </td>
           </tr>
           <tr>
             <td>Climat — « PAB », « CTB », « Climate »</td>
-            <td>Cadre réglementaire européen : intensité carbone fortement réduite, puis trajectoire
-              de décarbonation annuelle imposée</td>
-            <td>Objectif climatique chiffré et contrôlable ; les indices PAB excluent par
-              construction les principaux producteurs d'énergies fossiles</td>
+            <td>
+              Cadre réglementaire européen : intensité carbone fortement réduite, puis trajectoire
+              de décarbonation annuelle imposée
+            </td>
+            <td>
+              Objectif climatique chiffré et contrôlable ; les indices PAB excluent par construction
+              les principaux producteurs d'énergies fossiles
+            </td>
             <td>Votre priorité est la décarbonation de votre épargne</td>
           </tr>
         </tbody>
@@ -138,7 +158,11 @@ export function Corps() {
         Deux de ces familles reposent sur des chiffres publics que vous pouvez vérifier vous-même.
         Les indices « SRI » de MSCI visent environ 25 % de la capitalisation de chaque secteur,
         selon{" "}
-        <a href="https://www.msci.com/index/methodology/latest/SRI" target="_blank" rel="noreferrer">
+        <a
+          href="https://www.msci.com/index/methodology/latest/SRI"
+          target="_blank"
+          rel="noreferrer"
+        >
           la méthodologie publiée par MSCI
         </a>
         . Les indices climat, eux, sont définis par le droit européen : le{" "}
@@ -149,11 +173,10 @@ export function Corps() {
         >
           règlement délégué (UE) 2020/1818
         </a>{" "}
-        impose aux indices « accord de Paris » (PAB) une intensité carbone inférieure d'au moins
-        50 % à celle de l'univers d'investissement — 30 % pour les indices « transition
-        climatique » (CTB) — puis une décarbonation d'environ 7 % par an. C'est l'un des rares cas
-        où « vert » correspond à une obligation chiffrée, contrôlable, et non à un argument
-        marketing.
+        impose aux indices « accord de Paris » (PAB) une intensité carbone inférieure d'au moins 50
+        % à celle de l'univers d'investissement — 30 % pour les indices « transition climatique »
+        (CTB) — puis une décarbonation d'environ 7 % par an. C'est l'un des rares cas où « vert »
+        correspond à une obligation chiffrée, contrôlable, et non à un argument marketing.
       </p>
 
       <h2>Comment vérifier ce qu'un ETF ISR contient vraiment ?</h2>
@@ -172,10 +195,10 @@ export function Corps() {
         </li>
         <li>
           <strong>L'inventaire du portefeuille.</strong> Contrairement à beaucoup de fonds
-          classiques, un ETF publie la liste complète de ses positions, souvent quotidiennement,
-          sur le site de son émetteur. Les dix premières lignes vous disent déjà beaucoup :
-          cherchez-y les entreprises qui vous poseraient problème. C'est le test le plus honnête
-          qui soit — on ne discute pas avec un inventaire.
+          classiques, un ETF publie la liste complète de ses positions, souvent quotidiennement, sur
+          le site de son émetteur. Les dix premières lignes vous disent déjà beaucoup : cherchez-y
+          les entreprises qui vous poseraient problème. C'est le test le plus honnête qui soit — on
+          ne discute pas avec un inventaire.
         </li>
         <li>
           <strong>L'étiquette réglementaire et les labels.</strong> Tout fonds européen est classé
@@ -210,8 +233,8 @@ export function Corps() {
 
       <h2>PEA, assurance vie ou compte-titres : où loger un ETF ISR ?</h2>
       <p>
-        Le même ETF ne se comporte pas fiscalement de la même façon selon l'enveloppe qui
-        l'héberge. Les trois principales options :
+        Le même ETF ne se comporte pas fiscalement de la même façon selon l'enveloppe qui l'héberge.
+        Les trois principales options :
       </p>
       <table>
         <thead>
@@ -225,16 +248,22 @@ export function Corps() {
         <tbody>
           <tr>
             <td>PEA</td>
-            <td>Restreint aux ETF éligibles : principalement actions européennes, certains indices
-              mondiaux via réplication indirecte</td>
-            <td>Gains exonérés d'impôt sur le revenu après 5 ans (prélèvements sociaux dus) ;
-              plafond de versements de 150 000 €</td>
+            <td>
+              Restreint aux ETF éligibles : principalement actions européennes, certains indices
+              mondiaux via réplication indirecte
+            </td>
+            <td>
+              Gains exonérés d'impôt sur le revenu après 5 ans (prélèvements sociaux dus) ; plafond
+              de versements de 150 000 €
+            </td>
             <td>L'offre ISR éligible au PEA est plus étroite qu'ailleurs</td>
           </tr>
           <tr>
             <td>Assurance vie</td>
-            <td>Dépend de la liste d'unités de compte du contrat — elle varie fortement d'un
-              assureur à l'autre</td>
+            <td>
+              Dépend de la liste d'unités de compte du contrat — elle varie fortement d'un assureur
+              à l'autre
+            </td>
             <td>Fiscalité allégée après 8 ans de détention, atouts pour la transmission</td>
             <td>Les frais du contrat s'ajoutent aux frais propres de l'ETF</td>
           </tr>
@@ -256,9 +285,9 @@ export function Corps() {
         >
           service-public.gouv.fr
         </a>
-        . En assurance vie, vérifiez la liste exacte des unités de compte avant d'ouvrir un
-        contrat : c'est elle, et non la plaquette, qui dit si vous pourrez réellement construire
-        une allocation responsable.
+        . En assurance vie, vérifiez la liste exacte des unités de compte avant d'ouvrir un contrat
+        : c'est elle, et non la plaquette, qui dit si vous pourrez réellement construire une
+        allocation responsable.
       </p>
       <div className="callout">
         <p>
@@ -285,14 +314,14 @@ export function Corps() {
       <h3>Le filtre le plus strict n'est pas gratuit</h3>
       <p>
         Plus l'indice est sélectif, plus le portefeuille est concentré et plus il peut s'écarter du
-        marché, dans un sens comme dans l'autre. Ce n'est ni un défaut ni une qualité en soi :
-        c'est un arbitrage entre exigence du filtre et diversification, à faire consciemment.
+        marché, dans un sens comme dans l'autre. Ce n'est ni un défaut ni une qualité en soi : c'est
+        un arbitrage entre exigence du filtre et diversification, à faire consciemment.
       </p>
       <h3>Les frais s'empilent en silence</h3>
       <p>
-        En assurance vie, les frais de gestion du contrat s'ajoutent chaque année aux frais
-        courants de l'ETF. Un support peu coûteux logé dans un contrat cher perd une partie de son
-        intérêt. Additionnez toujours les deux lignes.
+        En assurance vie, les frais de gestion du contrat s'ajoutent chaque année aux frais courants
+        de l'ETF. Un support peu coûteux logé dans un contrat cher perd une partie de son intérêt.
+        Additionnez toujours les deux lignes.
       </p>
       <h3>Le greenwashing se niche dans le vocabulaire flou</h3>
       <p>
@@ -305,10 +334,10 @@ export function Corps() {
 
       <h2>Combien coûte un ETF ISR — et avec combien peut-on commencer ?</h2>
       <p>
-        Les frais courants d'un ETF ISR figurent noir sur blanc dans son DIC. Ils comptent parmi
-        les plus bas du marché des fonds : généralement une fraction de ceux d'un fonds à gestion
-        active comparable, même si les versions filtrées ESG sont souvent un peu plus chères que
-        l'indice brut équivalent. Sur des décennies, cet écart de frais pèse davantage que bien des
+        Les frais courants d'un ETF ISR figurent noir sur blanc dans son DIC. Ils comptent parmi les
+        plus bas du marché des fonds : généralement une fraction de ceux d'un fonds à gestion active
+        comparable, même si les versions filtrées ESG sont souvent un peu plus chères que l'indice
+        brut équivalent. Sur des décennies, cet écart de frais pèse davantage que bien des
         subtilités de méthodologie — c'est l'une des raisons pour lesquelles les ETF sont une porte
         d'entrée sérieuse vers l'investissement responsable.
       </p>
@@ -357,10 +386,10 @@ export function Corps() {
       </p>
       <h3>Puis-je mettre un ETF monde ISR dans mon PEA ?</h3>
       <p>
-        Uniquement s'il est explicitement éligible au PEA. L'enveloppe est réservée pour
-        l'essentiel aux actions européennes, mais certains émetteurs proposent des ETF répliquant
-        des indices mondiaux de façon indirecte pour y être éligibles. La mention d'éligibilité
-        figure dans la documentation de l'ETF : vérifiez-la avant de passer l'ordre.
+        Uniquement s'il est explicitement éligible au PEA. L'enveloppe est réservée pour l'essentiel
+        aux actions européennes, mais certains émetteurs proposent des ETF répliquant des indices
+        mondiaux de façon indirecte pour y être éligibles. La mention d'éligibilité figure dans la
+        documentation de l'ETF : vérifiez-la avant de passer l'ordre.
       </p>
       <h3>Comment savoir si mon ETF ISR exclut le pétrole et le gaz ?</h3>
       <p>
@@ -372,9 +401,8 @@ export function Corps() {
       <h3>Faut-il un seul ETF ISR ou plusieurs ?</h3>
       <p>
         Pour débuter, un seul ETF très diversifié peut suffire : multiplier les lignes similaires
-        crée surtout des doublons. La vraie question est celle de votre allocation globale —
-        quelle part en actions, pour quel horizon —, et elle dépend de votre situation, pas du
-        produit.
+        crée surtout des doublons. La vraie question est celle de votre allocation globale — quelle
+        part en actions, pour quel horizon —, et elle dépend de votre situation, pas du produit.
       </p>
 
       <h2>Par où commencer, concrètement ?</h2>
@@ -385,10 +413,10 @@ export function Corps() {
         l'inventaire fait la preuve, l'enveloppe fait la fiscalité.
       </p>
       <p>
-        Le coût de l'attente, lui, est bien réel : chaque année passée à chercher le produit
-        parfait est une année où votre épargne dort sur des comptes dont vous ignorez ce qu'ils
-        financent, sans travailler ni pour vos projets ni pour vos convictions. Mieux vaut un choix
-        vérifié et perfectible aujourd'hui qu'un choix idéal indéfiniment reporté.
+        Le coût de l'attente, lui, est bien réel : chaque année passée à chercher le produit parfait
+        est une année où votre épargne dort sur des comptes dont vous ignorez ce qu'ils financent,
+        sans travailler ni pour vos projets ni pour vos convictions. Mieux vaut un choix vérifié et
+        perfectible aujourd'hui qu'un choix idéal indéfiniment reporté.
       </p>
       <p>
         Pour la suite logique : passez les tampons au crible avec notre{" "}
@@ -400,8 +428,8 @@ export function Corps() {
       <p>
         Et si vous préférez ne pas faire cette lecture seul, c'est précisément le métier de notre
         cabinet : vérifier les documents avant de vous orienter, et vous expliquer ce que nous y
-        trouvons. Le premier échange est offert — venez avec le nom de l'ETF qui vous intrigue,
-        nous le décortiquerons ensemble, méthodologie et inventaire à l'appui.
+        trouvons. Le premier échange est offert — venez avec le nom de l'ETF qui vous intrigue, nous
+        le décortiquerons ensemble, méthodologie et inventaire à l'appui.
       </p>
     </>
   );

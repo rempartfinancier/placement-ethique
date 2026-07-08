@@ -34,7 +34,13 @@ describe("fondsProposables", () => {
   test("registre vide → aucun support proposable quelles que soient les pistes sélectionnées", () => {
     expect(
       fondsProposables(
-        ["actions_etf_isr", "obligations_vertes", "epargne_solidaire", "scpi_immobilier_durable", "metaux_precieux"],
+        [
+          "actions_etf_isr",
+          "obligations_vertes",
+          "epargne_solidaire",
+          "scpi_immobilier_durable",
+          "metaux_precieux",
+        ],
         null,
       ),
     ).toEqual([]);

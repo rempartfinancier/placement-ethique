@@ -29,9 +29,7 @@ export const Route = createFileRoute("/outils/portefeuilles-types")({
       },
       { property: "og:url", content: "https://placement-ethique.fr/outils/portefeuilles-types" },
     ],
-    links: [
-      { rel: "canonical", href: "https://placement-ethique.fr/outils/portefeuilles-types" },
-    ],
+    links: [{ rel: "canonical", href: "https://placement-ethique.fr/outils/portefeuilles-types" }],
   }),
   component: PortefeuillesTypesPage,
 });
@@ -144,7 +142,9 @@ function PortefeuillesTypesPage() {
 
           {/* Sur quels contrats ? */}
           <div className="mt-12">
-            <p className="eyebrow mb-4">Sur quels contrats les futures allocations s'appliqueront</p>
+            <p className="eyebrow mb-4">
+              Sur quels contrats les futures allocations s'appliqueront
+            </p>
             <div className="grid sm:grid-cols-2 gap-5">
               {(Object.keys(CONTRATS) as ContratId[]).map((id) => {
                 const contrat = CONTRATS[id];
@@ -174,8 +174,8 @@ function PortefeuillesTypesPage() {
                       </p>
                     )}
                     <p className="text-xs text-muted-foreground mt-3">
-                      Univers de supports ISR référencés sur ce contrat : en cours de
-                      communication par le cabinet.
+                      Univers de supports ISR référencés sur ce contrat : en cours de communication
+                      par le cabinet.
                     </p>
                   </div>
                 );
@@ -193,8 +193,8 @@ function PortefeuillesTypesPage() {
 
           <p className="mt-10 text-sm text-muted-foreground leading-relaxed">
             En attendant la publication de ces allocations, vous pouvez déjà projeter une épargne
-            dans le temps avec des hypothèses librement modifiables (frais, fiscalité de
-            l'assurance vie et du PER, an par an) :{" "}
+            dans le temps avec des hypothèses librement modifiables (frais, fiscalité de l'assurance
+            vie et du PER, an par an) :{" "}
             <Link to="/outils/simulateur" className="text-foreground underline underline-offset-4">
               utilisez le simulateur de projection
             </Link>

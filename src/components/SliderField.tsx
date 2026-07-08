@@ -23,7 +23,18 @@ type Props = {
  * d'entrer une valeur exacte, éventuellement au-delà du max du curseur
  * (jusqu'à hardMax). Aucune valeur n'est perdue au blur : clamp explicite.
  */
-export function SliderField({ label, value, onChange, min, max, step, unit, hardMax, hint, format }: Props) {
+export function SliderField({
+  label,
+  value,
+  onChange,
+  min,
+  max,
+  step,
+  unit,
+  hardMax,
+  hint,
+  format,
+}: Props) {
   const ceiling = hardMax ?? max;
   const [text, setText] = useState(String(value));
 
@@ -78,9 +89,13 @@ export function SliderField({ label, value, onChange, min, max, step, unit, hard
         className="w-full accent-[var(--grenat)]"
       />
       <div className="flex justify-between text-xs text-muted-foreground mt-1">
-        <span>{fmt(min)}{unit ? ` ${unit}` : ""}</span>
         <span>
-          {fmt(max)}{unit ? ` ${unit}` : ""}
+          {fmt(min)}
+          {unit ? ` ${unit}` : ""}
+        </span>
+        <span>
+          {fmt(max)}
+          {unit ? ` ${unit}` : ""}
           {hardMax && hardMax > max ? " (saisie libre au-delà)" : ""}
         </span>
       </div>

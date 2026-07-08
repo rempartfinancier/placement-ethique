@@ -34,7 +34,10 @@ export const Route = createFileRoute("/outils/empreinte-carbone-epargne")({
         content:
           "Un outil pédagogique pour situer, poche par poche, où le choix d'un fonds change vraiment l'intensité carbone financée — méthodologie et limites incluses.",
       },
-      { property: "og:url", content: "https://placement-ethique.fr/outils/empreinte-carbone-epargne" },
+      {
+        property: "og:url",
+        content: "https://placement-ethique.fr/outils/empreinte-carbone-epargne",
+      },
     ],
     links: [
       { rel: "canonical", href: "https://placement-ethique.fr/outils/empreinte-carbone-epargne" },
@@ -112,7 +115,8 @@ const POCHES: Poche[] = [
     levier: 2,
     levierNote:
       "Le principal levier est la rénovation énergétique du parc détenu, ou le choix d'actifs récents et performants — davantage que le seul intitulé « SCPI ISR » de la société de gestion.",
-    typeMarche: "Parc bâti hétérogène, sans filtre sur la performance énergétique des actifs détenus.",
+    typeMarche:
+      "Parc bâti hétérogène, sans filtre sur la performance énergétique des actifs détenus.",
     basCarbone:
       "SCPI ciblant la rénovation énergétique ou des actifs récents, avec un reporting DPE consultable auprès de la société de gestion.",
   },
@@ -126,7 +130,8 @@ const POCHES: Poche[] = [
     levier: null,
     levierNote:
       "« Liquide » ne veut pas dire « neutre en carbone » : cela signifie surtout que la donnée n'est pas mesurée à l'échelle du produit. Pour les livrets réglementés (Livret A, LDDS), une part est centralisée par la loi à la Caisse des Dépôts, notamment pour financer le logement social — le reste suit la politique de financement générale de la banque.",
-    typeMarche: "Politique de financement de l'établissement, non choisie ni connue de l'épargnant.",
+    typeMarche:
+      "Politique de financement de l'établissement, non choisie ni connue de l'épargnant.",
     basCarbone:
       "Établissements publiant une politique de financement engagée (ex. sortie progressive du financement des énergies fossiles) — à vérifier établissement par établissement, la donnée n'étant pas encore normée pour ce type de produit.",
   },
@@ -190,7 +195,9 @@ function EmpreinteCarboneePage() {
       />
 
       <div>
-        <p className="text-sm font-medium text-foreground mb-1">Répartition indicative par grande poche</p>
+        <p className="text-sm font-medium text-foreground mb-1">
+          Répartition indicative par grande poche
+        </p>
         <p className="text-xs text-muted-foreground mb-4 leading-relaxed">
           Une estimation à la louche suffit — inutile d'aller chercher le détail de chaque support.
         </p>
@@ -261,7 +268,8 @@ function EmpreinteCarboneePage() {
         lead="Renseignez votre épargne et sa répartition indicative entre grandes poches (actions, obligations, immobilier, livrets). L'outil ne produit pas un chiffre en kgCO2 — il situe, poche par poche, où le choix d'un fonds ISR ou bas-carbone change réellement la donne, et où il ne la change pas."
       >
         <span className="badge-verifie">
-          <BadgeCheck size={13} aria-hidden /> Méthodologie sourcée — PCAF, ADEME, Oxfam France / Carbon4 Finance
+          <BadgeCheck size={13} aria-hidden /> Méthodologie sourcée — PCAF, ADEME, Oxfam France /
+          Carbon4 Finance
         </span>
       </PageHero>
 
@@ -323,7 +331,10 @@ function EmpreinteCarboneePage() {
                         <dt className="text-white/70">
                           Poches à fort levier ISR (actions + obligations)
                         </dt>
-                        <dd className="font-display text-2xl mt-1" style={{ color: "var(--grenat-clair)" }}>
+                        <dd
+                          className="font-display text-2xl mt-1"
+                          style={{ color: "var(--grenat-clair)" }}
+                        >
                           {eur(Math.round(result.montantLevierFort))}
                         </dd>
                         <p className="text-xs text-white/60 mt-0.5">
@@ -331,8 +342,13 @@ function EmpreinteCarboneePage() {
                         </p>
                       </div>
                       <div className="border-b border-white/10 pb-3">
-                        <dt className="text-white/70">Poche au levier « rénovation » (immobilier)</dt>
-                        <dd className="font-display text-2xl mt-1" style={{ color: "var(--grenat-clair)" }}>
+                        <dt className="text-white/70">
+                          Poche au levier « rénovation » (immobilier)
+                        </dt>
+                        <dd
+                          className="font-display text-2xl mt-1"
+                          style={{ color: "var(--grenat-clair)" }}
+                        >
                           {eur(Math.round(result.montantLevierModere))}
                         </dd>
                         <p className="text-xs text-white/60 mt-0.5">
@@ -340,8 +356,13 @@ function EmpreinteCarboneePage() {
                         </p>
                       </div>
                       <div>
-                        <dt className="text-white/70">Poche non mesurée à ce jour (livrets, monétaire)</dt>
-                        <dd className="font-display text-2xl mt-1" style={{ color: "var(--grenat-clair)" }}>
+                        <dt className="text-white/70">
+                          Poche non mesurée à ce jour (livrets, monétaire)
+                        </dt>
+                        <dd
+                          className="font-display text-2xl mt-1"
+                          style={{ color: "var(--grenat-clair)" }}
+                        >
                           {eur(Math.round(result.montantNonMesuree))}
                         </dd>
                         <p className="text-xs text-white/60 mt-0.5">
@@ -373,11 +394,11 @@ function EmpreinteCarboneePage() {
             </h2>
             <p className="mt-4 text-muted-foreground leading-relaxed max-w-2xl">
               Le principe, issu de la méthodologie PCAF utilisée par les sociétés de gestion et les
-              banques pour mesurer leurs émissions financées : quand vous détenez une part d'un fonds
-              qui finance une entreprise, un État ou un bien immobilier, on vous attribue une part de
-              ses émissions, proportionnelle à la part que vous détenez dans sa valeur totale. Deux
-              fonds « diversifiés » n'ont donc pas la même empreinte s'ils ne détiennent pas les mêmes
-              sociétés.
+              banques pour mesurer leurs émissions financées : quand vous détenez une part d'un
+              fonds qui finance une entreprise, un État ou un bien immobilier, on vous attribue une
+              part de ses émissions, proportionnelle à la part que vous détenez dans sa valeur
+              totale. Deux fonds « diversifiés » n'ont donc pas la même empreinte s'ils ne
+              détiennent pas les mêmes sociétés.
             </p>
             <div className="mt-8 grid gap-5 sm:grid-cols-2">
               {POCHES.map((p) => (
@@ -393,12 +414,24 @@ function EmpreinteCarboneePage() {
                   </div>
 
                   <div className="mt-4 grid grid-cols-2 gap-3">
-                    <Jauge titre="Intensité typique" niveau={p.intensite} libelles={LIBELLE_INTENSITE} />
-                    <Jauge titre="Levier du choix ISR" niveau={p.levier} libelles={LIBELLE_LEVIER} />
+                    <Jauge
+                      titre="Intensité typique"
+                      niveau={p.intensite}
+                      libelles={LIBELLE_INTENSITE}
+                    />
+                    <Jauge
+                      titre="Levier du choix ISR"
+                      niveau={p.levier}
+                      libelles={LIBELLE_LEVIER}
+                    />
                   </div>
 
-                  <p className="mt-4 text-xs text-muted-foreground leading-relaxed">{p.intensiteNote}</p>
-                  <p className="mt-2 text-xs text-muted-foreground leading-relaxed">{p.levierNote}</p>
+                  <p className="mt-4 text-xs text-muted-foreground leading-relaxed">
+                    {p.intensiteNote}
+                  </p>
+                  <p className="mt-2 text-xs text-muted-foreground leading-relaxed">
+                    {p.levierNote}
+                  </p>
                 </div>
               ))}
             </div>
@@ -411,10 +444,10 @@ function EmpreinteCarboneePage() {
               Même poche, deux logiques de sélection très différentes
             </h2>
             <p className="mt-4 text-muted-foreground leading-relaxed max-w-2xl">
-              À répartition égale entre les quatre poches, ce n'est pas le nom de l'enveloppe qui fait
-              varier l'empreinte carbone financée, mais la méthode de sélection des supports qui la
-              composent. Voici, poche par poche, ce que change concrètement une sélection ISR/bas-carbone
-              par rapport à une sélection générique.
+              À répartition égale entre les quatre poches, ce n'est pas le nom de l'enveloppe qui
+              fait varier l'empreinte carbone financée, mais la méthode de sélection des supports
+              qui la composent. Voici, poche par poche, ce que change concrètement une sélection
+              ISR/bas-carbone par rapport à une sélection générique.
             </p>
             <div className="mt-8 overflow-x-auto">
               <table className="w-full text-sm border-collapse">
@@ -431,8 +464,12 @@ function EmpreinteCarboneePage() {
                       <td className="px-4 py-3 font-medium text-foreground whitespace-nowrap">
                         {p.label}
                       </td>
-                      <td className="px-4 py-3 text-muted-foreground leading-relaxed">{p.typeMarche}</td>
-                      <td className="px-4 py-3 text-muted-foreground leading-relaxed">{p.basCarbone}</td>
+                      <td className="px-4 py-3 text-muted-foreground leading-relaxed">
+                        {p.typeMarche}
+                      </td>
+                      <td className="px-4 py-3 text-muted-foreground leading-relaxed">
+                        {p.basCarbone}
+                      </td>
                     </tr>
                   ))}
                 </tbody>
@@ -445,13 +482,13 @@ function EmpreinteCarboneePage() {
             <p className="eyebrow mb-3">Méthodologie, sources et limites</p>
             <div className="space-y-3 text-sm text-foreground/85 leading-relaxed">
               <p>
-                Il n'existe pas, à notre connaissance, de coefficient officiel et audité convertissant
-                « 1 € placé en actions » ou « 1 € placé en obligations » en un nombre de kgCO2e valable
-                pour tout épargnant : l'empreinte réelle dépend entièrement des sociétés, États ou biens
-                immobiliers effectivement détenus par les fonds choisis — pas de la seule catégorie
-                d'actif. C'est pourquoi cet outil raisonne en échelle qualitative (faible / moyenne /
-                forte, et fort / modéré / limité pour le levier du choix ISR) plutôt qu'en chiffre
-                inventé.
+                Il n'existe pas, à notre connaissance, de coefficient officiel et audité
+                convertissant « 1 € placé en actions » ou « 1 € placé en obligations » en un nombre
+                de kgCO2e valable pour tout épargnant : l'empreinte réelle dépend entièrement des
+                sociétés, États ou biens immobiliers effectivement détenus par les fonds choisis —
+                pas de la seule catégorie d'actif. C'est pourquoi cet outil raisonne en échelle
+                qualitative (faible / moyenne / forte, et fort / modéré / limité pour le levier du
+                choix ISR) plutôt qu'en chiffre inventé.
               </p>
               <p>
                 Cette échelle s'appuie sur la logique de trois références publiques :{" "}
@@ -463,9 +500,10 @@ function EmpreinteCarboneePage() {
                 >
                   le standard PCAF
                 </a>{" "}
-                (Partnership for Carbon Accounting Financials), qui structure la comptabilisation des
-                émissions financées par classe d'actifs (actions cotées, obligations d'entreprise et
-                souveraines, immobilier, prêts) selon une logique d'attribution proportionnelle ;{" "}
+                (Partnership for Carbon Accounting Financials), qui structure la comptabilisation
+                des émissions financées par classe d'actifs (actions cotées, obligations
+                d'entreprise et souveraines, immobilier, prêts) selon une logique d'attribution
+                proportionnelle ;{" "}
                 <a
                   href="https://base-empreinte.ademe.fr/"
                   target="_blank"
@@ -474,8 +512,9 @@ function EmpreinteCarboneePage() {
                 >
                   la Base Empreinte® de l'ADEME
                 </a>
-                , base publique française de facteurs d'émission par secteur d'activité, parfois utilisée
-                en complément pour estimer l'intensité carbone d'un secteur financé ; et le rapport{" "}
+                , base publique française de facteurs d'émission par secteur d'activité, parfois
+                utilisée en complément pour estimer l'intensité carbone d'un secteur financé ; et le
+                rapport{" "}
                 <a
                   href="https://www.oxfamfrance.org/rapports/banques-et-climat-le-desaccord-de-paris/"
                   target="_blank"
@@ -484,22 +523,23 @@ function EmpreinteCarboneePage() {
                 >
                   « Banques et climat : le désaccord de Paris »
                 </a>{" "}
-                d'Oxfam France (octobre 2021), qui applique la méthodologie Carbon Impact Analytics de
-                Carbon4 Finance aux six principales banques françaises et illustre concrètement que
-                l'argent déposé — y compris sur des produits d'épargne réglementée — finance des
-                émissions qui ne sont pas nulles, même si elles restent aujourd'hui peu visibles pour
-                l'épargnant individuel.
+                d'Oxfam France (octobre 2021), qui applique la méthodologie Carbon Impact Analytics
+                de Carbon4 Finance aux six principales banques françaises et illustre concrètement
+                que l'argent déposé — y compris sur des produits d'épargne réglementée — finance des
+                émissions qui ne sont pas nulles, même si elles restent aujourd'hui peu visibles
+                pour l'épargnant individuel.
               </p>
               <p>
-                Limites à garder en tête : ces trois références mesurent des empreintes à l'échelle d'un
-                fonds, d'un secteur ou d'une banque — jamais celle de « votre épargne » prise
+                Limites à garder en tête : ces trois références mesurent des empreintes à l'échelle
+                d'un fonds, d'un secteur ou d'une banque — jamais celle de « votre épargne » prise
                 isolément, qui dépendrait du détail exact des supports que vous détenez, du document
                 d'informations clés (DIC) de chacun et du rapport SFDR du fonds. Les méthodes
-                d'attribution elles-mêmes font débat (par exemple, pour la dette souveraine, l'attribution
-                « par PIB » ou « par dette » ne donnent pas le même résultat), et une approche qui
-                rapporterait un stock d'épargne à un flux annuel d'émissions macroéconomiques — sans
-                tenir compte de ce que finance réellement chaque support — est elle-même contestée
-                méthodologiquement. Cet outil ne calcule donc aucun chiffre de ce type.
+                d'attribution elles-mêmes font débat (par exemple, pour la dette souveraine,
+                l'attribution « par PIB » ou « par dette » ne donnent pas le même résultat), et une
+                approche qui rapporterait un stock d'épargne à un flux annuel d'émissions
+                macroéconomiques — sans tenir compte de ce que finance réellement chaque support —
+                est elle-même contestée méthodologiquement. Cet outil ne calcule donc aucun chiffre
+                de ce type.
               </p>
             </div>
           </div>
@@ -507,7 +547,12 @@ function EmpreinteCarboneePage() {
           {/* Ce que cet outil ne fait pas */}
           <div className="mt-8 rounded-2xl border p-6" style={{ borderColor: "var(--grenat)" }}>
             <div className="flex items-start gap-3">
-              <CircleAlert size={18} className="shrink-0 mt-0.5" style={{ color: "var(--grenat)" }} aria-hidden />
+              <CircleAlert
+                size={18}
+                className="shrink-0 mt-0.5"
+                style={{ color: "var(--grenat)" }}
+                aria-hidden
+              />
               <div>
                 <p className="font-medium text-foreground">Ce que cet outil ne fait pas</p>
                 <ul className="mt-2 space-y-1.5 text-sm text-muted-foreground leading-relaxed list-disc pl-4">
@@ -517,16 +562,16 @@ function EmpreinteCarboneePage() {
                     détenu.
                   </li>
                   <li>
-                    Il ne note pas vos placements actuels comme « bons » ou « mauvais » — il situe des
-                    ordres de grandeur qualitatifs, jamais un verdict.
+                    Il ne note pas vos placements actuels comme « bons » ou « mauvais » — il situe
+                    des ordres de grandeur qualitatifs, jamais un verdict.
                   </li>
                   <li>
-                    Il ne remplace pas un bilan carbone réalisé par un professionnel indépendant selon la
-                    méthode Bilan Carbone®.
+                    Il ne remplace pas un bilan carbone réalisé par un professionnel indépendant
+                    selon la méthode Bilan Carbone®.
                   </li>
                   <li>
-                    Sa restitution est une <strong>piste</strong> de lecture, pas une recommandation :
-                    seul un échange avec un conseiller permet de la rapprocher de votre situation
+                    Sa restitution est une <strong>piste</strong> de lecture, pas une recommandation
+                    : seul un échange avec un conseiller permet de la rapprocher de votre situation
                     réelle.
                   </li>
                 </ul>
@@ -537,7 +582,10 @@ function EmpreinteCarboneePage() {
           <p className="mt-10 text-sm text-muted-foreground leading-relaxed max-w-3xl">
             Pour comprendre ce que garantit vraiment un fonds « vert » avant de changer votre
             répartition,{" "}
-            <Link to="/outils/decodeur-label" className="text-foreground underline underline-offset-4">
+            <Link
+              to="/outils/decodeur-label"
+              className="text-foreground underline underline-offset-4"
+            >
               utilisez notre décodeur de labels
             </Link>{" "}
             ; pour projeter une épargne dans le temps, frais et fiscalité inclus,{" "}
@@ -581,7 +629,9 @@ function Jauge({
                 className="h-2.5 w-4 rounded-sm"
                 style={{
                   background:
-                    n <= niveau ? "var(--grenat)" : "color-mix(in oklch, var(--foreground) 12%, transparent)",
+                    n <= niveau
+                      ? "var(--grenat)"
+                      : "color-mix(in oklch, var(--foreground) 12%, transparent)",
                 }}
               />
             ))}

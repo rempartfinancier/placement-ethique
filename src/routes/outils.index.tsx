@@ -82,7 +82,10 @@ const PISTES = {
     title: "Profil investisseur",
     why: "Une série de questions pour mesurer votre capacité et votre tolérance au risque — le préalable indispensable avant toute allocation, responsable ou non.",
     duration: "≈ 3 min",
-    then: { to: "/outils/type-investissement", label: "Puis identifiez les enveloppes et actifs adaptés" },
+    then: {
+      to: "/outils/type-investissement",
+      label: "Puis identifiez les enveloppes et actifs adaptés",
+    },
   },
   typeInvest: {
     to: "/outils/type-investissement",
@@ -96,14 +99,20 @@ const PISTES = {
     title: "Projection d'épargne — assurance vie & PER",
     why: "Versements, durée, frais réels, fiscalité complète de l'assurance vie et du PER : visualisez votre épargne an par an, en brut et en net.",
     duration: "≈ 2 min",
-    then: { to: "/outils/portefeuilles-types", label: "Puis découvrez des exemples de portefeuilles ISR" },
+    then: {
+      to: "/outils/portefeuilles-types",
+      label: "Puis découvrez des exemples de portefeuilles ISR",
+    },
   },
   retraite: {
     to: "/outils/retraite",
     title: "Combien pour ma retraite ?",
     why: "Partez du revenu souhaité à la retraite pour calculer le capital cible et l'effort d'épargne mensuel, en supports vérifiés.",
     duration: "≈ 2 min",
-    then: { to: "/outils/per-isr", label: "Le PER reste le levier fiscal le plus direct pour y arriver" },
+    then: {
+      to: "/outils/per-isr",
+      label: "Le PER reste le levier fiscal le plus direct pour y arriver",
+    },
   },
   perIsr: {
     to: "/outils/per-isr",
@@ -159,7 +168,10 @@ const intents: Intent[] = [
           piste: {
             ...PISTES.perIsr,
             why: "À ce niveau d'imposition, le PER est un levier à regarder en priorité : chaque versement réduit votre impôt dès cette année, tout en capitalisant pour la retraite en supports ISR vérifiés.",
-            then: { to: "/outils/retraite", label: "Puis calculez le capital retraite dont vous aurez besoin" },
+            then: {
+              to: "/outils/retraite",
+              label: "Puis calculez le capital retraite dont vous aurez besoin",
+            },
           },
         },
         { label: "Non / je ne sais pas", piste: PISTES.retraite },
@@ -196,7 +208,10 @@ const intents: Intent[] = [
           piste: {
             ...PISTES.perIsr,
             why: "À votre TMI, chaque versement PER est déduit à 41-45 % — l'avantage fiscal est maximal. Reste à dimensionner l'effort d'épargne qui va avec.",
-            then: { to: "/outils/retraite", label: "Puis calculez le capital retraite dont vous avez besoin" },
+            then: {
+              to: "/outils/retraite",
+              label: "Puis calculez le capital retraite dont vous avez besoin",
+            },
           },
         },
       ],
@@ -259,7 +274,10 @@ function GuideWizard() {
                   >
                     <span
                       className="inline-flex h-9 w-9 shrink-0 items-center justify-center rounded-lg"
-                      style={{ background: "var(--gradient-grenat)", color: "var(--grenat-foreground)" }}
+                      style={{
+                        background: "var(--gradient-grenat)",
+                        color: "var(--grenat-foreground)",
+                      }}
                     >
                       <it.icon size={17} />
                     </span>
@@ -297,7 +315,9 @@ function GuideWizard() {
 
           {piste !== null && (
             <div className="animate-in fade-in duration-300">
-              <h2 className="font-display text-2xl mt-2 text-foreground">Votre piste pour démarrer</h2>
+              <h2 className="font-display text-2xl mt-2 text-foreground">
+                Votre piste pour démarrer
+              </h2>
               <div
                 className="mt-5 rounded-xl border p-6"
                 style={{
@@ -318,7 +338,11 @@ function GuideWizard() {
                 {piste.then && (
                   <p className="mt-4 text-sm text-muted-foreground">
                     Ensuite :{" "}
-                    <Link to={piste.then.to} className="font-medium hover:underline" style={{ color: "var(--grenat)" }}>
+                    <Link
+                      to={piste.then.to}
+                      className="font-medium hover:underline"
+                      style={{ color: "var(--grenat)" }}
+                    >
                       {piste.then.label}
                     </Link>
                   </p>
@@ -513,7 +537,10 @@ function OutilsIndex() {
                   <div className="flex items-start gap-4 flex-1">
                     <div
                       className="inline-flex h-11 w-11 items-center justify-center rounded-xl shrink-0"
-                      style={{ background: "var(--gradient-grenat)", color: "var(--grenat-foreground)" }}
+                      style={{
+                        background: "var(--gradient-grenat)",
+                        color: "var(--grenat-foreground)",
+                      }}
                     >
                       <t.icon size={20} />
                     </div>

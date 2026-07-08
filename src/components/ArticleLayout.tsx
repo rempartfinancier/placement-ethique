@@ -255,8 +255,8 @@ export function ArticleLayout({
                   Échanger avec un conseiller
                 </h4>
                 <p className="text-sm text-muted-foreground mt-2 leading-relaxed">
-                  Un premier échange de 30 minutes, offert et sans engagement, pour discuter de
-                  vos projets de vive voix.
+                  Un premier échange de 30 minutes, offert et sans engagement, pour discuter de vos
+                  projets de vive voix.
                 </p>
               </div>
               <Link

@@ -93,9 +93,12 @@ export function ResultsActions({ source, buildDoc }: Props) {
   return (
     <div className="rounded-2xl border border-border bg-card p-6">
       <p className="eyebrow">Vos résultats</p>
-      <h3 className="font-display text-xl mt-2 text-foreground">Télécharger ou recevoir par email</h3>
+      <h3 className="font-display text-xl mt-2 text-foreground">
+        Télécharger ou recevoir par email
+      </h3>
       <p className="text-sm text-muted-foreground mt-2">
-        Recevez un récapitulatif PDF propre — pour vos archives, ou pour le présenter à votre conseiller.
+        Recevez un récapitulatif PDF propre — pour vos archives, ou pour le présenter à votre
+        conseiller.
       </p>
 
       <div className="mt-5 grid sm:grid-cols-2 gap-3">
@@ -128,8 +131,9 @@ export function ResultsActions({ source, buildDoc }: Props) {
           className="mt-0.5 accent-[var(--grenat)]"
         />
         <span>
-          Je souhaite recevoir <strong className="text-foreground">la newsletter Placement-éthique.fr</strong> :
-          1 email/mois maximum, des analyses pédagogiques, désabonnement en 1 clic.
+          Je souhaite recevoir{" "}
+          <strong className="text-foreground">la newsletter Placement-éthique.fr</strong> : 1
+          email/mois maximum, des analyses pédagogiques, désabonnement en 1 clic.
         </span>
       </label>
 
@@ -140,7 +144,13 @@ export function ResultsActions({ source, buildDoc }: Props) {
           disabled={busy !== null}
           className="inline-flex items-center justify-center gap-2 rounded-lg bg-foreground text-background px-4 py-2.5 text-sm font-medium hover:opacity-90 disabled:opacity-60"
         >
-          {busy === "download" ? <Loader2 className="animate-spin" size={16} /> : done === "download" ? <CheckCircle2 size={16} /> : <Download size={16} />}
+          {busy === "download" ? (
+            <Loader2 className="animate-spin" size={16} />
+          ) : done === "download" ? (
+            <CheckCircle2 size={16} />
+          ) : (
+            <Download size={16} />
+          )}
           Télécharger le PDF
         </button>
         <button
@@ -149,7 +159,13 @@ export function ResultsActions({ source, buildDoc }: Props) {
           disabled={busy !== null || !email}
           className="inline-flex items-center justify-center gap-2 rounded-lg border border-[var(--grenat)] text-foreground px-4 py-2.5 text-sm font-medium hover:bg-[oklch(0.97_0.025_85)] disabled:opacity-60"
         >
-          {busy === "email" ? <Loader2 className="animate-spin" size={16} /> : done === "email" ? <CheckCircle2 size={16} /> : <Mail size={16} />}
+          {busy === "email" ? (
+            <Loader2 className="animate-spin" size={16} />
+          ) : done === "email" ? (
+            <CheckCircle2 size={16} />
+          ) : (
+            <Mail size={16} />
+          )}
           Recevoir par email
         </button>
       </div>
@@ -161,8 +177,9 @@ export function ResultsActions({ source, buildDoc }: Props) {
       )}
       {error && <p className="mt-3 text-sm text-destructive">{error}</p>}
       <p className="mt-4 text-xs text-muted-foreground leading-relaxed">
-        Vos données sont conservées par Placement-éthique.fr pour assurer le suivi et, si vous le souhaitez, vous adresser la
-        newsletter. Aucune transmission à un tiers commercial. Désabonnement à tout moment.
+        Vos données sont conservées par Placement-éthique.fr pour assurer le suivi et, si vous le
+        souhaitez, vous adresser la newsletter. Aucune transmission à un tiers commercial.
+        Désabonnement à tout moment.
       </p>
     </div>
   );

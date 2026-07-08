@@ -3,20 +3,13 @@ import { LienArticle } from "./lien";
 
 export const meta: ArticleMeta = {
   slug: "investissement-immobilier-responsable-commencer",
-  title:
-    "Par où commencer un investissement immobilier responsable ? Trois voies, une méthode",
+  title: "Par où commencer un investissement immobilier responsable ? Trois voies, une méthode",
   excerpt:
     "Pierre-papier ISR, immobilier coté ou achat à rénover : la voie dépend de votre budget, de votre temps et de votre horizon. La méthode pour choisir — et tout vérifier.",
   readingTime: "12 min",
   category: "Enveloppes",
   date: "2026-06-21",
-  tags: [
-    "immobilier responsable",
-    "SCPI ISR",
-    "rénovation énergétique",
-    "DPE",
-    "pierre-papier",
-  ],
+  tags: ["immobilier responsable", "SCPI ISR", "rénovation énergétique", "DPE", "pierre-papier"],
   author: "Alexandre Pollet",
 };
 
@@ -26,14 +19,14 @@ export function Corps() {
       <div className="callout callout-grenat">
         <p>
           <strong>La réponse courte :</strong> ne commencez pas par un produit, commencez par un
-          cadrage. Trois voies mènent à l'immobilier responsable : la pierre-papier labellisée
-          (SCPI et fonds ISR, accessibles dès quelques centaines d'euros), l'immobilier coté en
-          bourse (foncières, ETF) et l'achat en direct d'un bien à rénover énergétiquement. Le bon
-          point de départ dépend de trois paramètres — votre budget, le temps que vous pouvez y
-          consacrer, votre horizon — et le caractère « responsable » ne se lit pas sur la
-          brochure : il se vérifie dans le DPE et l'audit énergétique pour un bien, dans le Label
-          ISR immobilier, la classification SFDR et le rapport annuel pour un fonds. Cet article
-          vous donne l'ordre des opérations.
+          cadrage. Trois voies mènent à l'immobilier responsable : la pierre-papier labellisée (SCPI
+          et fonds ISR, accessibles dès quelques centaines d'euros), l'immobilier coté en bourse
+          (foncières, ETF) et l'achat en direct d'un bien à rénover énergétiquement. Le bon point de
+          départ dépend de trois paramètres — votre budget, le temps que vous pouvez y consacrer,
+          votre horizon — et le caractère « responsable » ne se lit pas sur la brochure : il se
+          vérifie dans le DPE et l'audit énergétique pour un bien, dans le Label ISR immobilier, la
+          classification SFDR et le rapport annuel pour un fonds. Cet article vous donne l'ordre des
+          opérations.
         </p>
       </div>
 
@@ -42,9 +35,9 @@ export function Corps() {
         surtout qu'elle ne finance ni passoires thermiques louées au prix fort, ni tours de bureaux
         climatisées à moitié vides. Mais au moment de commencer, tout se brouille : les publicités
         vantent des SCPI « vertes », un proche ne jure que par l'achat-rénovation, un autre par les
-        foncières en bourse — et les montants en jeu, souvent les plus gros d'un patrimoine,
-        rendent l'erreur plus coûteuse qu'ailleurs. Le doute est double : celui de l'immobilier
-        lui-même, et celui du greenwashing qui s'y est installé comme partout.
+        foncières en bourse — et les montants en jeu, souvent les plus gros d'un patrimoine, rendent
+        l'erreur plus coûteuse qu'ailleurs. Le doute est double : celui de l'immobilier lui-même, et
+        celui du greenwashing qui s'y est installé comme partout.
       </p>
       <p>
         La bonne nouvelle, c'est que « investir dans l'immobilier responsable » recouvre des
@@ -70,18 +63,18 @@ export function Corps() {
       <p>
         Un immeuble responsable est d'abord un immeuble dont la performance environnementale se
         mesure : étiquette du diagnostic de performance énergétique (DPE, de A à G) pour le
-        logement, certifications environnementales (HQE, BREEAM, LEED) et consommations réelles
-        pour le tertiaire. Le bâtiment est l'un des tout premiers postes de consommation d'énergie
-        du pays : la transition du parc n'est pas une option militante, c'est une trajectoire
+        logement, certifications environnementales (HQE, BREEAM, LEED) et consommations réelles pour
+        le tertiaire. Le bâtiment est l'un des tout premiers postes de consommation d'énergie du
+        pays : la transition du parc n'est pas une option militante, c'est une trajectoire
         réglementaire déjà écrite — nous y revenons plus bas.
       </p>
       <h3>L'usage : ce que les murs abritent</h3>
       <p>
         Deuxième couche, plus sociale : à quoi sert l'immeuble ? Établissements de santé,
         d'éducation, logement intermédiaire, locaux d'activité de proximité ne portent pas le même
-        sens qu'un actif détenu pour la seule spéculation foncière. Cette dimension n'a pas de
-        label dédié : elle se lit dans la stratégie déclarée d'un fonds et, surtout, dans la liste
-        réelle de son patrimoine.
+        sens qu'un actif détenu pour la seule spéculation foncière. Cette dimension n'a pas de label
+        dédié : elle se lit dans la stratégie déclarée d'un fonds et, surtout, dans la liste réelle
+        de son patrimoine.
       </p>
       <h3>Le véhicule : la démarche de celui qui gère</h3>
       <p>
@@ -196,9 +189,9 @@ export function Corps() {
       <p>
         <strong>Votre horizon et votre besoin de liquidité.</strong> Les frais d'entrée de la
         pierre-papier comme les frais d'acquisition du direct ne s'amortissent que sur la durée —
-        pensez en décennie, pas en années. Si vous pourriez avoir besoin de ces fonds à moyen
-        terme, seul l'immobilier coté se revend en quelques secondes… au prix du marché du jour,
-        quel qu'il soit.
+        pensez en décennie, pas en années. Si vous pourriez avoir besoin de ces fonds à moyen terme,
+        seul l'immobilier coté se revend en quelques secondes… au prix du marché du jour, quel qu'il
+        soit.
       </p>
       <p>
         Notez enfin que la question de l'enveloppe se pose en parallèle : des parts de SCPI peuvent
@@ -217,10 +210,10 @@ export function Corps() {
         provoqué, mesurable par un simple avant/après de DPE.
       </p>
       <p>
-        La réglementation a d'ailleurs déjà tranché une partie du débat. La loi Climat et
-        Résilience interdit progressivement la location des logements énergivores : les logements
-        classés G au DPE ne peuvent plus être mis en location depuis le 1er janvier 2025, les F
-        suivront au 1er janvier 2028 et les E au 1er janvier 2034, selon{" "}
+        La réglementation a d'ailleurs déjà tranché une partie du débat. La loi Climat et Résilience
+        interdit progressivement la location des logements énergivores : les logements classés G au
+        DPE ne peuvent plus être mis en location depuis le 1er janvier 2025, les F suivront au 1er
+        janvier 2028 et les E au 1er janvier 2034, selon{" "}
         <a
           href="https://www.service-public.gouv.fr/particuliers/actualites/A17975"
           target="_blank"
@@ -254,11 +247,11 @@ export function Corps() {
           service-public.gouv.fr
         </a>{" "}
         — notre <a href="/outils/comparateur-eco-ptz">comparateur éco-PTZ</a> vous aide à situer
-        votre projet parmi les plafonds selon les travaux envisagés. MaPrimeRénov' peut subventionner
-        une partie du chantier selon vos revenus. Et côté fiscalité locative, le dispositif
-        Denormandie accorde une réduction d'impôt pour l'achat-rénovation dans certaines communes, à
-        condition que les travaux représentent au moins 25 % du coût total de l'opération, pour des
-        investissements réalisés jusqu'au 31 décembre 2027, d'après{" "}
+        votre projet parmi les plafonds selon les travaux envisagés. MaPrimeRénov' peut
+        subventionner une partie du chantier selon vos revenus. Et côté fiscalité locative, le
+        dispositif Denormandie accorde une réduction d'impôt pour l'achat-rénovation dans certaines
+        communes, à condition que les travaux représentent au moins 25 % du coût total de
+        l'opération, pour des investissements réalisés jusqu'au 31 décembre 2027, d'après{" "}
         <a
           href="https://www.service-public.gouv.fr/particuliers/vosdroits/F35011"
           target="_blank"
@@ -276,9 +269,9 @@ export function Corps() {
         <p>
           Les aides à la rénovation et leurs plafonds évoluent régulièrement au fil des lois de
           finances. Les montants cités ici sont ceux publiés par service-public.gouv.fr à la date de
-          mise à jour de cet article — vérifiez les conditions en vigueur avant d'engager un
-          projet, et faites chiffrer les travaux par des professionnels qualifiés RGE, condition
-          d'accès à la plupart des dispositifs.
+          mise à jour de cet article — vérifiez les conditions en vigueur avant d'engager un projet,
+          et faites chiffrer les travaux par des professionnels qualifiés RGE, condition d'accès à
+          la plupart des dispositifs.
         </p>
       </div>
 
@@ -330,8 +323,8 @@ export function Corps() {
       </ul>
       <p>
         Trois signaux d'alerte génériques, enfin : un immeuble vitrine en couverture sans que la
-        part certifiée du parc soit chiffrée nulle part ; un vocabulaire (« vert », « durable »,
-        « engagé ») jamais adossé à un indicateur mesuré ; un label brandi sans date d'obtention ni
+        part certifiée du parc soit chiffrée nulle part ; un vocabulaire (« vert », « durable », «
+        engagé ») jamais adossé à un indicateur mesuré ; un label brandi sans date d'obtention ni
         rapport de suivi. Pour décoder chaque tampon — ce qu'il garantit, ce qu'il ne garantit pas,
         où vérifier qu'un fonds le détient vraiment —, notre{" "}
         <a href="/outils/decodeur-label">décodeur de labels</a> vous donne des pistes en quelques
@@ -340,15 +333,15 @@ export function Corps() {
 
       <h2>Par quelles étapes concrètes passer pour vous lancer ?</h2>
       <p>
-        Le processus tient en cinq étapes — <strong>Cadrer → Choisir → Vérifier → Financer →
-        Suivre</strong> — et la tentation habituelle est de commencer par la quatrième.
-        Résistez-y : l'ordre fait la solidité.
+        Le processus tient en cinq étapes —{" "}
+        <strong>Cadrer → Choisir → Vérifier → Financer → Suivre</strong> — et la tentation
+        habituelle est de commencer par la quatrième. Résistez-y : l'ordre fait la solidité.
       </p>
       <ol>
         <li>
           <strong>Cadrer.</strong> Posez par écrit votre budget de départ, votre capacité d'épargne
-          mensuelle, votre horizon, le temps que vous acceptez d'y consacrer — et ce que
-          « responsable » signifie pour vous : rénovation énergétique ? usage social des immeubles ?
+          mensuelle, votre horizon, le temps que vous acceptez d'y consacrer — et ce que «
+          responsable » signifie pour vous : rénovation énergétique ? usage social des immeubles ?
           exclusion de certains actifs ? Ce cadrage est votre boussole pour tout le reste.
         </li>
         <li>
@@ -358,9 +351,9 @@ export function Corps() {
         </li>
         <li>
           <strong>Vérifier.</strong> Selon la voie : DPE et audit énergétique pour un bien, Label
-          ISR immobilier, reporting SFDR, rapport annuel et DIC pour un fonds, rapport de
-          durabilité et méthodologie d'indice pour du coté. Comptez quelques heures de lecture —
-          peu de chose au regard des années de détention.
+          ISR immobilier, reporting SFDR, rapport annuel et DIC pour un fonds, rapport de durabilité
+          et méthodologie d'indice pour du coté. Comptez quelques heures de lecture — peu de chose
+          au regard des années de détention.
         </li>
         <li>
           <strong>Financer.</strong> Comptant et progressif pour la pierre-papier et le coté ;
@@ -432,8 +425,8 @@ export function Corps() {
       <p>
         C'est un autre métier : vous prêtez à un promoteur pour une opération courte, avec un risque
         de défaut réel, sans détenir d'immeuble. Le caractère responsable dépend alors entièrement
-        du projet financé, à examiner cas par cas — ce n'est pas une voie patrimoniale de long
-        terme comparable aux trois présentées ici.
+        du projet financé, à examiner cas par cas — ce n'est pas une voie patrimoniale de long terme
+        comparable aux trois présentées ici.
       </p>
 
       <h2>Votre premier pas : petit, vérifié, daté</h2>
@@ -441,8 +434,8 @@ export function Corps() {
         Par où commencer, donc ? Par le cadrage, puis par la voie qui correspond à votre budget,
         votre temps et votre horizon — jamais par le produit le plus visible du moment. Une première
         part de fonds immobilier labellisé, choisie après lecture de son rapport annuel, est un
-        meilleur départ qu'un « projet parfait » indéfiniment reporté : la méthode Cadrer →
-        Choisir → Vérifier → Financer → Suivre s'applique à 500 € comme à 500 000 €.
+        meilleur départ qu'un « projet parfait » indéfiniment reporté : la méthode Cadrer → Choisir
+        → Vérifier → Financer → Suivre s'applique à 500 € comme à 500 000 €.
       </p>
       <p>
         Attendre a un coût, lui aussi vérifiable : le calendrier réglementaire resserre chaque année

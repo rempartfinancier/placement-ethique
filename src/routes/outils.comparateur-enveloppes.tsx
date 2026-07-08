@@ -1,11 +1,25 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { useMemo, useState } from "react";
-import { ArrowRight, Check, Info, Layers, PiggyBank, ShieldCheck, TriangleAlert, type LucideIcon } from "lucide-react";
+import {
+  ArrowRight,
+  Check,
+  Info,
+  Layers,
+  PiggyBank,
+  ShieldCheck,
+  TriangleAlert,
+  type LucideIcon,
+} from "lucide-react";
 import { SiteLayout } from "@/components/SiteLayout";
 import { PageHero } from "@/components/PageHero";
 import { CTA } from "@/components/CTA";
 import { SliderField } from "@/components/SliderField";
-import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
 import { projeterContrat } from "@/lib/simulateur-placements/engine";
 import { CONTRATS } from "@/lib/simulateur-placements/contrats";
 import {
@@ -25,7 +39,8 @@ export const Route = createFileRoute("/outils/comparateur-enveloppes")({
   head: () => ({
     meta: [
       {
-        title: "Comparateur d'enveloppes — Assurance vie, PER ou compte-titres ? | Placement-éthique.fr",
+        title:
+          "Comparateur d'enveloppes — Assurance vie, PER ou compte-titres ? | Placement-éthique.fr",
       },
       {
         name: "description",
@@ -43,14 +58,17 @@ export const Route = createFileRoute("/outils/comparateur-enveloppes")({
       },
       { property: "og:url", content: "https://placement-ethique.fr/outils/comparateur-enveloppes" },
     ],
-    links: [{ rel: "canonical", href: "https://placement-ethique.fr/outils/comparateur-enveloppes" }],
+    links: [
+      { rel: "canonical", href: "https://placement-ethique.fr/outils/comparateur-enveloppes" },
+    ],
   }),
   component: ComparateurEnveloppesPage,
 });
 
 /* ─────────────────────────────── Formatage ─────────────────────────────── */
 
-const eur = (n: number) => new Intl.NumberFormat("fr-FR", { maximumFractionDigits: 0 }).format(Math.round(n)) + " €";
+const eur = (n: number) =>
+  new Intl.NumberFormat("fr-FR", { maximumFractionDigits: 0 }).format(Math.round(n)) + " €";
 const pctFrac = (fraction: number) =>
   `${(fraction * 100).toLocaleString("fr-FR", { minimumFractionDigits: 1, maximumFractionDigits: 1 })} %`;
 
@@ -58,8 +76,16 @@ const pctFrac = (fraction: number) =>
 // Grille du cabinet (page /tarifs, src/lib/simulateur-placements/contrats.ts) : contrat
 // Patrimoine Vie Plus (Suravenir) retenu par défaut pour l'AV et le PER — les deux
 // partenaires distribués appliquent la même grille pour le PER (entrée 1 %, gestion 1 %).
-const FRAIS_AV = CONTRATS.pvp.frais.av ?? { entreePct: 1, gestionUcPct: 1.08, gestionFondsEurosPct: 0.6 };
-const FRAIS_PER = CONTRATS.pvp.frais.per ?? { entreePct: 1, gestionUcPct: 1.0, gestionFondsEurosPct: null };
+const FRAIS_AV = CONTRATS.pvp.frais.av ?? {
+  entreePct: 1,
+  gestionUcPct: 1.08,
+  gestionFondsEurosPct: 0.6,
+};
+const FRAIS_PER = CONTRATS.pvp.frais.per ?? {
+  entreePct: 1,
+  gestionUcPct: 1.0,
+  gestionFondsEurosPct: null,
+};
 
 const TMI_OPTIONS = TMI_DISPONIBLES_PCT.map((v) => ({ value: v, label: `${v} %` }));
 
@@ -74,7 +100,10 @@ function buildLignes(): Ligne[] {
     {
       critere: "Avantage fiscal à l'entrée",
       av: { v: "Aucun" },
-      per: { v: "Oui — versements déduits du revenu imposable, à hauteur de votre TMI", atout: true },
+      per: {
+        v: "Oui — versements déduits du revenu imposable, à hauteur de votre TMI",
+        atout: true,
+      },
       cto: { v: "Aucun" },
     },
     {
@@ -100,7 +129,10 @@ function buildLignes(): Ligne[] {
     },
     {
       critere: "Transmission au décès",
-      av: { v: "152 500 € par bénéficiaire hors succession (primes versées avant 70 ans)", atout: true },
+      av: {
+        v: "152 500 € par bénéficiaire hors succession (primes versées avant 70 ans)",
+        atout: true,
+      },
       per: { v: "Régime assurantiel spécifique, selon l'âge au décès" },
       cto: { v: "Intégré à la succession" },
     },
@@ -113,7 +145,10 @@ function buildLignes(): Ligne[] {
     {
       critere: "Univers de fonds ISR accessible",
       av: { v: "UC labellisées obligatoires (loi PACTE) — profondeur variable selon l'assureur" },
-      per: { v: "Dépend de l'assureur, y compris dans la gestion pilotée par défaut — à vérifier", attention: true },
+      per: {
+        v: "Dépend de l'assureur, y compris dans la gestion pilotée par défaut — à vérifier",
+        attention: true,
+      },
       cto: { v: "Le plus large : tout ETF ou fonds coté, y compris Article 9 SFDR", atout: true },
     },
   ];
@@ -123,27 +158,32 @@ const OBJECTIFS: { objectif: string; enveloppe: string; pourquoi: string }[] = [
   {
     objectif: "Capitaliser 8 ans et plus, en gardant l'argent disponible",
     enveloppe: "Assurance vie responsable",
-    pourquoi: "Fiscalité allégée après 8 ans, rachat possible à tout moment, univers ISR le plus étoffé des enveloppes assurantielles.",
+    pourquoi:
+      "Fiscalité allégée après 8 ans, rachat possible à tout moment, univers ISR le plus étoffé des enveloppes assurantielles.",
   },
   {
     objectif: "Préparer sa retraite avec une TMI de 30 % ou plus",
     enveloppe: "PER investi en supports ISR",
-    pourquoi: "La déduction immédiate est d'autant plus intéressante que votre tranche d'imposition actuelle est élevée.",
+    pourquoi:
+      "La déduction immédiate est d'autant plus intéressante que votre tranche d'imposition actuelle est élevée.",
   },
   {
     objectif: "Piloter soi-même une allocation ISR mondiale précise (ETF, Article 9, green bonds)",
     enveloppe: "Compte-titres",
-    pourquoi: "Aucune restriction d'univers ni de plafond de versement — la fiscalité au fil de l'eau est le prix de cette liberté.",
+    pourquoi:
+      "Aucune restriction d'univers ni de plafond de versement — la fiscalité au fil de l'eau est le prix de cette liberté.",
   },
   {
     objectif: "Protéger sa famille en cas de décès",
     enveloppe: "Assurance vie et/ou PER assurantiel",
-    pourquoi: "Abattement de 152 500 € par bénéficiaire hors succession sur les deux enveloppes, sous conditions d'âge.",
+    pourquoi:
+      "Abattement de 152 500 € par bénéficiaire hors succession sur les deux enveloppes, sous conditions d'âge.",
   },
   {
     objectif: "Démarrer une première épargne responsable, montant modeste",
     enveloppe: "Assurance vie responsable",
-    pourquoi: "Pas de plafond, pas de blocage, versements libres : l'enveloppe la plus simple pour commencer.",
+    pourquoi:
+      "Pas de plafond, pas de blocage, versements libres : l'enveloppe la plus simple pour commencer.",
   },
 ];
 
@@ -157,7 +197,16 @@ function ComparateurEnveloppesPage() {
   const [tmi, setTmi] = useState(TMI_PER_PAR_DEFAUT_PCT);
   const [estCouple, setEstCouple] = useState(false);
 
-  const { resAv, resPer, gainCto, impotCto, psCto, capitalBrutCto, capitalNetCto, versementsCumules } = useMemo(() => {
+  const {
+    resAv,
+    resPer,
+    gainCto,
+    impotCto,
+    psCto,
+    capitalBrutCto,
+    capitalNetCto,
+    versementsCumules,
+  } = useMemo(() => {
     const base = {
       versementInitial,
       versementPeriodique: versementMensuel,
@@ -293,7 +342,10 @@ function ComparateurEnveloppesPage() {
         />
         <p className="text-xs text-muted-foreground mt-2 mb-2">
           Même rendement brut appliqué aux trois enveloppes — mêmes hypothèses que le{" "}
-          <Link to="/outils/simulateur" className="underline underline-offset-2 hover:text-foreground">
+          <Link
+            to="/outils/simulateur"
+            className="underline underline-offset-2 hover:text-foreground"
+          >
             simulateur d'épargne
           </Link>{" "}
           :
@@ -305,7 +357,11 @@ function ComparateurEnveloppesPage() {
               type="button"
               onClick={() => setTaux(p.tauxPct)}
               className="rounded-lg border border-border bg-card px-2.5 py-2 text-left text-xs font-medium leading-snug text-muted-foreground transition-colors hover:border-foreground/40"
-              style={taux === p.tauxPct ? { borderColor: "var(--grenat)", background: "var(--accent)" } : undefined}
+              style={
+                taux === p.tauxPct
+                  ? { borderColor: "var(--grenat)", background: "var(--accent)" }
+                  : undefined
+              }
             >
               {p.libelle}
               <span className="block text-foreground mt-0.5">{p.tauxPct} %</span>
@@ -313,8 +369,8 @@ function ComparateurEnveloppesPage() {
           ))}
         </div>
         <p className="text-xs text-muted-foreground mt-2 leading-relaxed">
-          Rendement non garanti, y compris sur les unités de compte : risque de perte en capital. Les performances
-          passées ne préjugent pas des performances futures.
+          Rendement non garanti, y compris sur les unités de compte : risque de perte en capital.
+          Les performances passées ne préjugent pas des performances futures.
         </p>
       </div>
       <div>
@@ -326,15 +382,19 @@ function ComparateurEnveloppesPage() {
               type="button"
               onClick={() => setTmi(b.value)}
               className="rounded-lg border border-border bg-card px-3 py-2 text-sm font-medium transition-colors hover:border-foreground/40"
-              style={tmi === b.value ? { borderColor: "var(--grenat)", background: "var(--accent)" } : undefined}
+              style={
+                tmi === b.value
+                  ? { borderColor: "var(--grenat)", background: "var(--accent)" }
+                  : undefined
+              }
             >
               {b.label}
             </button>
           ))}
         </div>
         <p className="text-xs text-muted-foreground mt-2 leading-relaxed">
-          Utilisée pour l'économie d'impôt à l'entrée et la fiscalité de sortie du PER — hypothèse simplificatrice :
-          TMI de sortie supposée identique à votre TMI actuelle.
+          Utilisée pour l'économie d'impôt à l'entrée et la fiscalité de sortie du PER — hypothèse
+          simplificatrice : TMI de sortie supposée identique à votre TMI actuelle.
         </p>
       </div>
       <div>
@@ -344,7 +404,9 @@ function ComparateurEnveloppesPage() {
             type="button"
             onClick={() => setEstCouple(false)}
             className="rounded-lg border border-border bg-card px-3 py-2.5 text-sm font-medium transition-colors hover:border-foreground/40"
-            style={!estCouple ? { borderColor: "var(--grenat)", background: "var(--accent)" } : undefined}
+            style={
+              !estCouple ? { borderColor: "var(--grenat)", background: "var(--accent)" } : undefined
+            }
           >
             Seul(e)
           </button>
@@ -352,7 +414,9 @@ function ComparateurEnveloppesPage() {
             type="button"
             onClick={() => setEstCouple(true)}
             className="rounded-lg border border-border bg-card px-3 py-2.5 text-sm font-medium transition-colors hover:border-foreground/40"
-            style={estCouple ? { borderColor: "var(--grenat)", background: "var(--accent)" } : undefined}
+            style={
+              estCouple ? { borderColor: "var(--grenat)", background: "var(--accent)" } : undefined
+            }
           >
             En couple (déclaration commune)
           </button>
@@ -403,12 +467,18 @@ function ComparateurEnveloppesPage() {
                       Piste la plus avantageuse selon ces hypothèses
                     </p>
                     <div className="flex items-center gap-2.5 mt-2">
-                      <meilleur.icon size={22} style={{ color: "var(--grenat-clair)" }} aria-hidden />
+                      <meilleur.icon
+                        size={22}
+                        style={{ color: "var(--grenat-clair)" }}
+                        aria-hidden
+                      />
                       <p className="font-display text-2xl" style={{ color: "var(--grenat-clair)" }}>
                         {meilleur.label}
                       </p>
                     </div>
-                    <p className="font-display text-4xl mt-1 text-white">{eur(meilleur.capitalNet)}</p>
+                    <p className="font-display text-4xl mt-1 text-white">
+                      {eur(meilleur.capitalNet)}
+                    </p>
                     <p className="text-xs text-white/60 mt-1">capital net estimé au terme</p>
 
                     <div className="mt-5 space-y-3">
@@ -425,7 +495,10 @@ function ComparateurEnveloppesPage() {
                               className="h-full rounded-full"
                               style={{
                                 width: `${Math.max(2, (r.capitalNet / maxCapital) * 100)}%`,
-                                background: r.cle === meilleur.cle ? "var(--grenat-clair)" : "color-mix(in oklch, white 55%, transparent)",
+                                background:
+                                  r.cle === meilleur.cle
+                                    ? "var(--grenat-clair)"
+                                    : "color-mix(in oklch, white 55%, transparent)",
                               }}
                             />
                           </div>
@@ -446,11 +519,12 @@ function ComparateurEnveloppesPage() {
                       )}
                     </dl>
                     <p className="mt-4 text-xs text-white/60 leading-relaxed">
-                      Hypothèse illustrative et non contractuelle : {taux.toString().replace(".", ",")} %/an, TMI{" "}
-                      {tmi} %. Les performances passées ne préjugent pas des performances futures et un placement en
-                      unités de compte comporte un risque de perte en capital. Ce classement compare le capital net
-                      à la sortie uniquement — hors économie d'impôt à l'entrée du PER, indiquée séparément
-                      ci-dessus.
+                      Hypothèse illustrative et non contractuelle :{" "}
+                      {taux.toString().replace(".", ",")} %/an, TMI {tmi} %. Les performances
+                      passées ne préjugent pas des performances futures et un placement en unités de
+                      compte comporte un risque de perte en capital. Ce classement compare le
+                      capital net à la sortie uniquement — hors économie d'impôt à l'entrée du PER,
+                      indiquée séparément ci-dessus.
                     </p>
                     <div className="mt-6">
                       <Link to="/contact" className="btn-grenat">
@@ -466,18 +540,23 @@ function ComparateurEnveloppesPage() {
                     <ul className="mt-3 space-y-2.5 text-xs text-muted-foreground leading-relaxed">
                       {alertesUniques.map((a) => (
                         <li key={a.code} className="flex gap-2">
-                          <TriangleAlert size={13} className="mt-0.5 shrink-0 opacity-60" aria-hidden />
+                          <TriangleAlert
+                            size={13}
+                            className="mt-0.5 shrink-0 opacity-60"
+                            aria-hidden
+                          />
                           <span>{a.message}</span>
                         </li>
                       ))}
                       <li className="flex gap-2">
                         <Info size={13} className="mt-0.5 shrink-0 opacity-60" aria-hidden />
                         <span>
-                          Compte-titres : frais de courtage ponctuels non modélisés (pas de gestion annuelle) ;
-                          imposition calculée comme si la totalité de la plus-value ({eur(gainCto)} sur un capital
-                          brut de {eur(capitalBrutCto)}) était réalisée en une fois au terme, au taux en vigueur (
-                          {pctFrac(IR_PFU)} + PS {pctFrac(PS_HORS_ASSURANCE_VIE)}). En réalité, dividendes et
-                          arbitrages sont imposés au fil de l'eau, année après année.
+                          Compte-titres : frais de courtage ponctuels non modélisés (pas de gestion
+                          annuelle) ; imposition calculée comme si la totalité de la plus-value (
+                          {eur(gainCto)} sur un capital brut de {eur(capitalBrutCto)}) était
+                          réalisée en une fois au terme, au taux en vigueur ({pctFrac(IR_PFU)} + PS{" "}
+                          {pctFrac(PS_HORS_ASSURANCE_VIE)}). En réalité, dividendes et arbitrages
+                          sont imposés au fil de l'eau, année après année.
                         </span>
                       </li>
                     </ul>
@@ -492,9 +571,10 @@ function ComparateurEnveloppesPage() {
             <Link to="/tarifs" className="text-foreground underline underline-offset-4">
               publiée en clair sur /tarifs
             </Link>
-            ) — entrée {FRAIS_AV.entreePct} %, gestion annuelle {FRAIS_AV.gestionUcPct} % (assurance vie Patrimoine
-            Vie Plus, Suravenir) et {FRAIS_PER.gestionUcPct} % (PER). Pour une projection détaillée année par année
-            d'une seule enveloppe, frais et fiscalité inclus, utilisez{" "}
+            ) — entrée {FRAIS_AV.entreePct} %, gestion annuelle {FRAIS_AV.gestionUcPct} % (assurance
+            vie Patrimoine Vie Plus, Suravenir) et {FRAIS_PER.gestionUcPct} % (PER). Pour une
+            projection détaillée année par année d'une seule enveloppe, frais et fiscalité inclus,
+            utilisez{" "}
             <Link to="/outils/simulateur" className="text-foreground underline underline-offset-4">
               le simulateur d'épargne responsable
             </Link>{" "}
@@ -513,8 +593,8 @@ function ComparateurEnveloppesPage() {
           <p className="eyebrow">Au-delà des chiffres</p>
           <h2 className="display-2 mt-4 max-w-3xl">Le comparatif complet, critère par critère</h2>
           <p className="lead mt-5 max-w-2xl">
-            La fiscalité n'est qu'un des critères de choix. Disponibilité, transmission et profondeur de l'offre ISR
-            comptent tout autant selon votre situation.
+            La fiscalité n'est qu'un des critères de choix. Disponibilité, transmission et
+            profondeur de l'offre ISR comptent tout autant selon votre situation.
           </p>
 
           <div className="mt-10 overflow-x-auto rounded-2xl border border-border">
@@ -540,10 +620,11 @@ function ComparateurEnveloppesPage() {
             </table>
           </div>
           <p className="mt-4 text-xs text-muted-foreground leading-relaxed">
-            * Cas de déblocage anticipé du PER prévus par la loi : achat de la résidence principale (hors droits
-            issus de versements obligatoires) et accidents de la vie (invalidité, décès du conjoint, surendettement,
-            expiration des droits au chômage, liquidation judiciaire). IR = impôt sur le revenu, PS = prélèvements
-            sociaux, TMI = tranche marginale d'imposition.
+            * Cas de déblocage anticipé du PER prévus par la loi : achat de la résidence principale
+            (hors droits issus de versements obligatoires) et accidents de la vie (invalidité, décès
+            du conjoint, surendettement, expiration des droits au chômage, liquidation judiciaire).
+            IR = impôt sur le revenu, PS = prélèvements sociaux, TMI = tranche marginale
+            d'imposition.
           </p>
         </div>
       </section>
@@ -554,8 +635,9 @@ function ComparateurEnveloppesPage() {
           <p className="eyebrow">La séquence de décision</p>
           <h2 className="display-2 mt-4 max-w-3xl">Quelle enveloppe selon votre objectif ?</h2>
           <p className="lead mt-5 max-w-2xl">
-            Rappel du principe : l'enveloppe ne rend rien « responsable » en soi — c'est ce que vous y logez qui
-            compte. Elle décide en revanche de ce qu'il vous en restera, et de ce que vous pourrez y loger.
+            Rappel du principe : l'enveloppe ne rend rien « responsable » en soi — c'est ce que vous
+            y logez qui compte. Elle décide en revanche de ce qu'il vous en restera, et de ce que
+            vous pourrez y loger.
           </p>
 
           <div className="mt-10 overflow-x-auto rounded-2xl border border-border">
@@ -563,7 +645,9 @@ function ComparateurEnveloppesPage() {
               <thead>
                 <tr className="bg-muted/50">
                   <th className="p-3.5 text-left font-semibold text-foreground">Votre objectif</th>
-                  <th className="p-3.5 text-left font-semibold text-foreground">Enveloppe prioritaire</th>
+                  <th className="p-3.5 text-left font-semibold text-foreground">
+                    Enveloppe prioritaire
+                  </th>
                   <th className="p-3.5 text-left font-semibold text-foreground">Pourquoi</th>
                 </tr>
               </thead>
@@ -580,7 +664,8 @@ function ComparateurEnveloppesPage() {
           </div>
 
           <p className="mt-8 text-sm text-muted-foreground leading-relaxed max-w-3xl">
-            Retrouvez le détail de chaque enveloppe — fonctionnement, fiscalité complète et offre ISR — sur la page{" "}
+            Retrouvez le détail de chaque enveloppe — fonctionnement, fiscalité complète et offre
+            ISR — sur la page{" "}
             <Link to="/enveloppes" className="text-foreground underline underline-offset-4">
               Enveloppes fiscales
             </Link>
@@ -604,10 +689,11 @@ function ComparateurEnveloppesPage() {
                 Cet outil peut-il remplacer un échange avec un conseiller ?
               </AccordionTrigger>
               <AccordionContent className="text-muted-foreground leading-relaxed">
-                Non. Il calcule des pistes à partir des hypothèses que vous choisissez librement — ce n'est ni un
-                engagement ni une recommandation personnalisée, qui suppose de connaître l'ensemble de votre
-                situation (autres revenus, régime matrimonial, objectifs de transmission, contrats déjà détenus). Un
-                échange avec un conseiller permet de confronter ces pistes à vos chiffres réels.
+                Non. Il calcule des pistes à partir des hypothèses que vous choisissez librement —
+                ce n'est ni un engagement ni une recommandation personnalisée, qui suppose de
+                connaître l'ensemble de votre situation (autres revenus, régime matrimonial,
+                objectifs de transmission, contrats déjà détenus). Un échange avec un conseiller
+                permet de confronter ces pistes à vos chiffres réels.
               </AccordionContent>
             </AccordionItem>
             <AccordionItem value="q2">
@@ -615,10 +701,11 @@ function ComparateurEnveloppesPage() {
                 Pourquoi le compte-titres n'a-t-il pas toujours le capital net le plus élevé ?
               </AccordionTrigger>
               <AccordionContent className="text-muted-foreground leading-relaxed">
-                Le compte-titres ne supporte ni frais d'entrée ni gestion annuelle dans ce comparateur — son capital
-                brut est donc souvent le plus élevé au terme. Mais sa fiscalité s'applique sur la totalité des
-                gains, chaque année, sans abattement : au-delà de {ASSURANCE_VIE.dureeAbattementAnnees} ans,
-                l'avantage fiscal de l'assurance vie (voire du PER, selon votre TMI) compense fréquemment l'écart de
+                Le compte-titres ne supporte ni frais d'entrée ni gestion annuelle dans ce
+                comparateur — son capital brut est donc souvent le plus élevé au terme. Mais sa
+                fiscalité s'applique sur la totalité des gains, chaque année, sans abattement :
+                au-delà de {ASSURANCE_VIE.dureeAbattementAnnees} ans, l'avantage fiscal de
+                l'assurance vie (voire du PER, selon votre TMI) compense fréquemment l'écart de
                 frais. Plus la durée est courte, plus le compte-titres regagne l'avantage.
               </AccordionContent>
             </AccordionItem>
@@ -627,16 +714,23 @@ function ComparateurEnveloppesPage() {
                 Et le PEA, la SCPI ou l'épargne salariale ?
               </AccordionTrigger>
               <AccordionContent className="text-muted-foreground leading-relaxed">
-                Ce comparateur modélise les trois enveloppes financières les plus universelles. Le PEA a une
-                fiscalité de sortie proche de celle du compte-titres après 5 ans, mais un univers restreint aux
-                actions européennes ; la SCPI répond à une logique de rendement locatif et de liquidité totalement
-                différente, non modélisable dans ce même moteur de calcul. Retrouvez le comparatif qualitatif
-                complet, incluant ces enveloppes, sur{" "}
-                <Link to="/enveloppes" className="underline underline-offset-2 hover:text-foreground">
+                Ce comparateur modélise les trois enveloppes financières les plus universelles. Le
+                PEA a une fiscalité de sortie proche de celle du compte-titres après 5 ans, mais un
+                univers restreint aux actions européennes ; la SCPI répond à une logique de
+                rendement locatif et de liquidité totalement différente, non modélisable dans ce
+                même moteur de calcul. Retrouvez le comparatif qualitatif complet, incluant ces
+                enveloppes, sur{" "}
+                <Link
+                  to="/enveloppes"
+                  className="underline underline-offset-2 hover:text-foreground"
+                >
                   la page Enveloppes fiscales
                 </Link>
                 , et les solutions concrètes sur{" "}
-                <Link to="/placements" className="underline underline-offset-2 hover:text-foreground">
+                <Link
+                  to="/placements"
+                  className="underline underline-offset-2 hover:text-foreground"
+                >
                   Placements responsables
                 </Link>
                 .
@@ -647,10 +741,10 @@ function ComparateurEnveloppesPage() {
                 Je ne connais pas ma tranche marginale d'imposition (TMI), que faire ?
               </AccordionTrigger>
               <AccordionContent className="text-muted-foreground leading-relaxed">
-                Choisissez la tranche la plus proche de votre situation : elle sert uniquement à estimer l'économie
-                d'impôt et la fiscalité de sortie du PER. Vous la retrouvez sur votre avis d'imposition, à la ligne
-                « Taux marginal d'imposition ». À défaut, ce comparateur retient {TMI_PER_PAR_DEFAUT_PCT} % par
-                défaut.
+                Choisissez la tranche la plus proche de votre situation : elle sert uniquement à
+                estimer l'économie d'impôt et la fiscalité de sortie du PER. Vous la retrouvez sur
+                votre avis d'imposition, à la ligne « Taux marginal d'imposition ». À défaut, ce
+                comparateur retient {TMI_PER_PAR_DEFAUT_PCT} % par défaut.
               </AccordionContent>
             </AccordionItem>
           </Accordion>
@@ -679,8 +773,17 @@ function CelluleTd({ c }: { c: Cellule }) {
   return (
     <td className="p-3.5 align-top text-muted-foreground">
       <div className="flex items-start gap-1.5">
-        {c.atout && <Check size={14} className="mt-0.5 shrink-0" style={{ color: "var(--grenat)" }} aria-hidden />}
-        {c.attention && <TriangleAlert size={13} className="mt-0.5 shrink-0 opacity-60" aria-hidden />}
+        {c.atout && (
+          <Check
+            size={14}
+            className="mt-0.5 shrink-0"
+            style={{ color: "var(--grenat)" }}
+            aria-hidden
+          />
+        )}
+        {c.attention && (
+          <TriangleAlert size={13} className="mt-0.5 shrink-0 opacity-60" aria-hidden />
+        )}
         <span className="leading-snug">{c.v}</span>
       </div>
     </td>

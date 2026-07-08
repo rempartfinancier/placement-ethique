@@ -129,7 +129,10 @@ export function downloadPdf(doc: PdfDoc) {
     pdf.text(`${i} / ${pageCount}`, pageW - marginX - 30, pdf.internal.pageSize.getHeight() - 32);
   }
 
-  const slug = doc.source.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)/g, "");
+  const slug = doc.source
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/(^-|-$)/g, "");
   pdf.save(`placement-halal-${slug}.pdf`);
 }
 

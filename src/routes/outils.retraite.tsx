@@ -31,8 +31,10 @@ export const Route = createFileRoute("/outils/retraite")({
   component: RetraitePage,
 });
 
-const eur = (n: number) => new Intl.NumberFormat("fr-FR", { maximumFractionDigits: 0 }).format(n) + " €";
-const pct = (n: number) => new Intl.NumberFormat("fr-FR", { maximumFractionDigits: 2 }).format(n) + " %";
+const eur = (n: number) =>
+  new Intl.NumberFormat("fr-FR", { maximumFractionDigits: 0 }).format(n) + " €";
+const pct = (n: number) =>
+  new Intl.NumberFormat("fr-FR", { maximumFractionDigits: 2 }).format(n) + " %";
 
 function RetraitePage() {
   const [targetMonthly, setTargetMonthly] = useState(2500);
@@ -74,7 +76,8 @@ function RetraitePage() {
 
       let capitalNeeded = 0;
       if (monthlyRate > 0) {
-        capitalNeeded = (netMonthlyAtRetirement * (1 - Math.pow(1 + monthlyRate, -months))) / monthlyRate;
+        capitalNeeded =
+          (netMonthlyAtRetirement * (1 - Math.pow(1 + monthlyRate, -months))) / monthlyRate;
       } else {
         capitalNeeded = netMonthlyAtRetirement * months;
       }
@@ -106,9 +109,15 @@ function RetraitePage() {
       };
     } catch (e) {
       console.error("Erreur de calcul dans le simulateur retraite :", e);
-      return { netMonthlyToday: 0, netMonthlyAtRetirement: 0, capitalNeeded: 0, capitalFromExisting: 0, monthlyEffort: 0 };
+      return {
+        netMonthlyToday: 0,
+        netMonthlyAtRetirement: 0,
+        capitalNeeded: 0,
+        capitalFromExisting: 0,
+        monthlyEffort: 0,
+      };
     }
-  }, [targetMonthly, pension, age, retireAge, currentCapital, rate, inflation, withdrawalYears, years]);
+  }, [targetMonthly, pension, currentCapital, rate, inflation, withdrawalYears, years]);
 
   const inputs = (
     <div className="space-y-6">
@@ -248,29 +257,45 @@ function RetraitePage() {
                     <p className="eyebrow" style={{ color: "var(--grenat-clair)" }}>
                       Piste d'épargne mensuelle
                     </p>
-                    <p className="font-display text-5xl mt-2" style={{ color: "var(--grenat-clair)" }}>
+                    <p
+                      className="font-display text-5xl mt-2"
+                      style={{ color: "var(--grenat-clair)" }}
+                    >
                       {eur(Math.round(result.monthlyEffort))}
                     </p>
                     {result.netMonthlyToday === 0 && (
                       <p className="mt-3 text-sm text-white/80">
-                        Votre pension estimée couvre déjà le revenu visé : selon ces hypothèses, aucun
-                        effort d'épargne supplémentaire n'est nécessaire.
+                        Votre pension estimée couvre déjà le revenu visé : selon ces hypothèses,
+                        aucun effort d'épargne supplémentaire n'est nécessaire.
                       </p>
                     )}
                     <dl className="mt-5 space-y-2 text-sm">
-                      <Row k={`Besoin net (euros de ${departYear})`} v={`${eur(Math.round(result.netMonthlyAtRetirement))}/mois`} />
-                      <Row k="Soit en euros d'aujourd'hui" v={`${eur(Math.round(result.netMonthlyToday))}/mois`} />
-                      <Row k={`Capital cible à ${retireAge} ans`} v={eur(Math.round(result.capitalNeeded))} />
-                      <Row k="Capital actuel, une fois projeté" v={eur(Math.round(result.capitalFromExisting))} />
+                      <Row
+                        k={`Besoin net (euros de ${departYear})`}
+                        v={`${eur(Math.round(result.netMonthlyAtRetirement))}/mois`}
+                      />
+                      <Row
+                        k="Soit en euros d'aujourd'hui"
+                        v={`${eur(Math.round(result.netMonthlyToday))}/mois`}
+                      />
+                      <Row
+                        k={`Capital cible à ${retireAge} ans`}
+                        v={eur(Math.round(result.capitalNeeded))}
+                      />
+                      <Row
+                        k="Capital actuel, une fois projeté"
+                        v={eur(Math.round(result.capitalFromExisting))}
+                      />
                       <Row k="Horizon d'épargne" v={`${years} ans`} />
                       <Row k="Capital consommé vers" v={`${depletionAge} ans`} />
                     </dl>
                     <p className="mt-5 text-xs text-white/60 leading-relaxed">
                       Hypothèse illustrative et non contractuelle : {pct(rate)} pendant l'épargne,{" "}
-                      {pct(rate / 2)} pendant la retraite (allocation plus défensive), inflation {pct(inflation)}.
-                      Pension supposée revalorisée comme l'inflation ; le capital est consommé en{" "}
-                      {withdrawalYears} ans. Les performances passées ne préjugent pas des performances
-                      futures et un placement en unités de compte comporte un risque de perte en capital.
+                      {pct(rate / 2)} pendant la retraite (allocation plus défensive), inflation{" "}
+                      {pct(inflation)}. Pension supposée revalorisée comme l'inflation ; le capital
+                      est consommé en {withdrawalYears} ans. Les performances passées ne préjugent
+                      pas des performances futures et un placement en unités de compte comporte un
+                      risque de perte en capital.
                     </p>
                     <div className="mt-6 flex flex-wrap gap-3">
                       <Link to="/contact" className="btn-grenat">
@@ -316,19 +341,19 @@ function RetraitePage() {
                 </div>
 
                 <p className="text-xs text-muted-foreground leading-relaxed">
-                  Cette piste est une estimation pédagogique, fondée sur des hypothèses illustratives
-                  que vous pouvez modifier librement : elle ne constitue ni un engagement ni une
-                  recommandation. Elle ne tient pas compte de la fiscalité de sortie, de votre régime
-                  matrimonial ni de vos autres revenus — des paramètres à poser avec un conseiller
-                  avant toute décision.
+                  Cette piste est une estimation pédagogique, fondée sur des hypothèses
+                  illustratives que vous pouvez modifier librement : elle ne constitue ni un
+                  engagement ni une recommandation. Elle ne tient pas compte de la fiscalité de
+                  sortie, de votre régime matrimonial ni de vos autres revenus — des paramètres à
+                  poser avec un conseiller avant toute décision.
                 </p>
               </div>
             </div>
           </div>
 
           <p className="mt-12 text-sm text-muted-foreground leading-relaxed max-w-3xl">
-            Pour comparer cette piste avec une projection année par année, frais et fiscalité inclus,
-            utilisez{" "}
+            Pour comparer cette piste avec une projection année par année, frais et fiscalité
+            inclus, utilisez{" "}
             <Link to="/outils/simulateur" className="text-foreground underline underline-offset-4">
               le simulateur d'épargne responsable
             </Link>

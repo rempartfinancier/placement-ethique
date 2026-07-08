@@ -43,7 +43,8 @@ function TableauDeBord() {
 
       {error && (
         <p className="mt-10 rounded-xl border border-destructive/40 bg-destructive/5 px-4 py-3 text-sm text-destructive">
-          Impossible de charger vos dossiers pour le moment. Rechargez la page ou réessayez plus tard.
+          Impossible de charger vos dossiers pour le moment. Rechargez la page ou réessayez plus
+          tard.
         </p>
       )}
 
@@ -105,7 +106,9 @@ function TableauDeBord() {
                   >
                     <div className="min-w-0">
                       <div className="flex flex-wrap items-center gap-3">
-                        <span className="font-display text-lg text-foreground">{dossier.titre}</span>
+                        <span className="font-display text-lg text-foreground">
+                          {dossier.titre}
+                        </span>
                         <StatutBadge statut={dossier.statut} />
                       </div>
                       <p className="mt-1.5 text-sm text-muted-foreground">

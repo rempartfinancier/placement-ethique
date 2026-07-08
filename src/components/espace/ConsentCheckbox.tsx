@@ -35,7 +35,9 @@ export function ConsentCheckbox({
             </span>
           )}
         </span>
-        <span className="mt-1 block text-sm leading-relaxed text-muted-foreground">{meta.libelle}</span>
+        <span className="mt-1 block text-sm leading-relaxed text-muted-foreground">
+          {meta.libelle}
+        </span>
       </span>
     </label>
   );

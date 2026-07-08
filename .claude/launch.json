@@ -1,0 +1,12 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "placement-ethique-dev",
+      "runtimeExecutable": "/Users/alexmacmini/.bun/bin/bun",
+      "runtimeArgs": ["node_modules/vite/bin/vite.js", "dev"],
+      "port": 8080,
+      "autoPort": true
+    }
+  ]
+}

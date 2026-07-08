@@ -83,7 +83,7 @@ async function sendResultsEmail(input: ProcessLeadInput) {
     }
 
     const html = `<!doctype html><html><body style="font-family:Georgia,serif;color:#1a1a1a;max-width:640px;margin:24px auto;padding:24px;">
-      <h1 style="color:#2b3a55;">Vos résultats — Placement-éthique.fr</h1>
+      <h1 style="color:#142030;">Vos résultats — Placement-éthique.fr</h1>
       <p>Bonjour${input.name ? " " + input.name : ""},</p>
       <p>Voici les informations liées à votre demande <strong>${input.source}</strong> :</p>
       <div style="background:#fafaf7;border-left:3px solid #b8893d;padding:16px;white-space:pre-wrap;">${dynamicSummary || "Demande bien reçue."}</div>
@@ -124,7 +124,10 @@ async function sendAdminNotification(input: ProcessLeadInput) {
     const safeMessage = input.message ? input.message.replace(/</g, "&lt;") : "Aucun message.";
     const payloadRows = input.payload
       ? Object.entries(input.payload)
-          .map(([k, v]) => `<li><strong>${String(k).replace(/</g, "&lt;")} :</strong> ${String(v).replace(/</g, "&lt;")}</li>`)
+          .map(
+            ([k, v]) =>
+              `<li><strong>${String(k).replace(/</g, "&lt;")} :</strong> ${String(v).replace(/</g, "&lt;")}</li>`,
+          )
           .join("")
       : "";
     const html = `<!doctype html><html><body style="font-family:sans-serif;color:#1a1a1a;">
@@ -240,7 +243,10 @@ export async function processLead(data: ProcessLeadInput): Promise<ProcessLeadRe
     }
 
     if (data.send_email && !brevo.ok) {
-      console.warn("[processLead] Brevo sync failed but returning ok to avoid UX crash:", brevo.error);
+      console.warn(
+        "[processLead] Brevo sync failed but returning ok to avoid UX crash:",
+        brevo.error,
+      );
     }
 
     return { ok: true, emailed };

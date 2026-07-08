@@ -34,9 +34,7 @@ export const Route = createFileRoute("/outils/comparateur-eco-ptz")({
       },
       { property: "og:url", content: "https://placement-ethique.fr/outils/comparateur-eco-ptz" },
     ],
-    links: [
-      { rel: "canonical", href: "https://placement-ethique.fr/outils/comparateur-eco-ptz" },
-    ],
+    links: [{ rel: "canonical", href: "https://placement-ethique.fr/outils/comparateur-eco-ptz" }],
   }),
   component: ComparateurEcoPtzPage,
 });
@@ -73,7 +71,8 @@ const CATEGORIES: Categorie[] = [
     label: "1 action — autre nature",
     plafond: 15000,
     dureeMax: 15,
-    detail: "Isolation des combles, changement de chaudière ou de mode de chauffage, etc. — une seule action.",
+    detail:
+      "Isolation des combles, changement de chaudière ou de mode de chauffage, etc. — une seule action.",
   },
   {
     id: "2-actions",
@@ -101,7 +100,8 @@ const CATEGORIES: Categorie[] = [
     label: "Assainissement non collectif",
     plafond: 10000,
     dureeMax: 15,
-    detail: "Réhabilitation d'un système d'assainissement individuel — pas de qualification RGE exigée ici.",
+    detail:
+      "Réhabilitation d'un système d'assainissement individuel — pas de qualification RGE exigée ici.",
   },
 ];
 
@@ -110,9 +110,9 @@ const ELIGIBILITE: { q: string; a: ReactNode }[] = [
     q: "Quel logement est éligible à l'éco-PTZ ?",
     a: (
       <>
-        Un logement achevé depuis plus de deux ans à la date de début des travaux, qui constitue
-        ou est destiné à constituer une résidence principale — occupée dans les six mois suivant
-        la clôture du prêt. Vous pouvez être propriétaire occupant ou propriétaire bailleur.
+        Un logement achevé depuis plus de deux ans à la date de début des travaux, qui constitue ou
+        est destiné à constituer une résidence principale — occupée dans les six mois suivant la
+        clôture du prêt. Vous pouvez être propriétaire occupant ou propriétaire bailleur.
       </>
     ),
   },
@@ -120,8 +120,8 @@ const ELIGIBILITE: { q: string; a: ReactNode }[] = [
     q: "Faut-il respecter une condition de ressources ?",
     a: (
       <>
-        Non. Contrairement à MaPrimeRénov', dont le montant varie selon vos revenus, l'éco-PTZ
-        est attribué sans aucune condition de ressources — c'est l'un des points qui le distingue.
+        Non. Contrairement à MaPrimeRénov', dont le montant varie selon vos revenus, l'éco-PTZ est
+        attribué sans aucune condition de ressources — c'est l'un des points qui le distingue.
       </>
     ),
   },
@@ -130,10 +130,10 @@ const ELIGIBILITE: { q: string; a: ReactNode }[] = [
     a: (
       <>
         Des entreprises titulaires d'un signe de qualité RGE (Reconnu Garant de l'Environnement),
-        pour toutes les catégories de travaux à l'exception de la réhabilitation de
-        l'assainissement non collectif. Depuis le 1er juillet 2025, les travaux éligibles doivent
-        en outre respecter les mêmes exigences techniques que celles de MaPrimeRénov' (arrêté du
-        27 mars 2025) : un point à vérifier avec l'artisan avant signature du devis.
+        pour toutes les catégories de travaux à l'exception de la réhabilitation de l'assainissement
+        non collectif. Depuis le 1er juillet 2025, les travaux éligibles doivent en outre respecter
+        les mêmes exigences techniques que celles de MaPrimeRénov' (arrêté du 27 mars 2025) : un
+        point à vérifier avec l'artisan avant signature du devis.
       </>
     ),
   },
@@ -161,9 +161,9 @@ const ELIGIBILITE: { q: string; a: ReactNode }[] = [
       <>
         Oui. L'éco-PTZ est cumulable avec MaPrimeRénov' (parcours accompagné ou non) et
         MaPrimeRénov' Copropriété : il peut financer tout ou partie du reste à charge des travaux
-        ayant ouvert droit à MaPrimeRénov'. Exemple illustratif : si MaPrimeRénov' couvre 50 %
-        d'un projet à 40 000 €, l'éco-PTZ peut financer les 20 000 € restants, dans la limite de
-        son propre plafond.
+        ayant ouvert droit à MaPrimeRénov'. Exemple illustratif : si MaPrimeRénov' couvre 50 % d'un
+        projet à 40 000 €, l'éco-PTZ peut financer les 20 000 € restants, dans la limite de son
+        propre plafond.
       </>
     ),
   },
@@ -184,9 +184,9 @@ const ELIGIBILITE: { q: string; a: ReactNode }[] = [
     a: (
       <>
         Non. L'éco-PTZ reste un prêt bancaire : l'établissement prêteur instruit votre dossier,
-        vérifie les devis et les qualifications RGE, et reste libre de l'accorder ou non. L'État
-        se contente de compenser l'absence d'intérêts auprès de la banque — il ne garantit pas
-        l'octroi du prêt.
+        vérifie les devis et les qualifications RGE, et reste libre de l'accorder ou non. L'État se
+        contente de compenser l'absence d'intérêts auprès de la banque — il ne garantit pas l'octroi
+        du prêt.
       </>
     ),
   },
@@ -215,9 +215,7 @@ function ComparateurEcoPtzPage() {
       const tauxMensuel = Math.max(0, Number(tauxClassique) || 0) / 100 / 12;
 
       const mensualiteClassique =
-        tauxMensuel > 0
-          ? (p * tauxMensuel) / (1 - Math.pow(1 + tauxMensuel, -n))
-          : p / n;
+        tauxMensuel > 0 ? (p * tauxMensuel) / (1 - Math.pow(1 + tauxMensuel, -n)) : p / n;
       const coutTotalClassique = mensualiteClassique * n;
       const interetsClassique = Math.max(0, coutTotalClassique - p);
 
@@ -357,7 +355,10 @@ function ComparateurEcoPtzPage() {
                     <p className="eyebrow" style={{ color: "var(--grenat-clair)" }}>
                       Économie d'intérêts avec l'éco-PTZ
                     </p>
-                    <p className="font-display text-5xl mt-2" style={{ color: "var(--grenat-clair)" }}>
+                    <p
+                      className="font-display text-5xl mt-2"
+                      style={{ color: "var(--grenat-clair)" }}
+                    >
                       {eur(result.interetsClassique)}
                     </p>
                     <p className="mt-3 text-sm text-white/80">
@@ -365,7 +366,10 @@ function ComparateurEcoPtzPage() {
                       classique au taux réglé ci-contre, à montant et durée égaux.
                     </p>
                     <dl className="mt-5 space-y-2 text-sm">
-                      <Row k="Mensualité éco-PTZ (0 %)" v={`${eur(result.mensualiteEcoPtz)}/mois`} />
+                      <Row
+                        k="Mensualité éco-PTZ (0 %)"
+                        v={`${eur(result.mensualiteEcoPtz)}/mois`}
+                      />
                       <Row
                         k={`Mensualité classique (${pct(tauxClassique)})`}
                         v={`${eur(result.mensualiteClassique)}/mois`}
@@ -375,9 +379,9 @@ function ComparateurEcoPtzPage() {
                     </dl>
                     <p className="mt-5 text-xs text-white/60 leading-relaxed">
                       Simulation illustrative et non contractuelle, hors assurance emprunteur et
-                      hors frais de dossier, mensualité constante sur toute la durée. Un crédit
-                      vous engage et doit être remboursé : vérifiez vos capacités de remboursement
-                      avant de vous engager.
+                      hors frais de dossier, mensualité constante sur toute la durée. Un crédit vous
+                      engage et doit être remboursé : vérifiez vos capacités de remboursement avant
+                      de vous engager.
                     </p>
                     <div className="mt-6 flex flex-wrap gap-3">
                       <Link to="/contact" className="btn-grenat">
@@ -403,7 +407,10 @@ function ComparateurEcoPtzPage() {
                       </a>{" "}
                       avant de lancer les travaux.
                     </li>
-                    <li>Comparez plusieurs banques : toutes ne proposent pas l'éco-PTZ, et son octroi n'est jamais garanti.</li>
+                    <li>
+                      Comparez plusieurs banques : toutes ne proposent pas l'éco-PTZ, et son octroi
+                      n'est jamais garanti.
+                    </li>
                   </ul>
                 </div>
               </div>
@@ -419,7 +426,10 @@ function ComparateurEcoPtzPage() {
                 <thead>
                   <tr className="bg-muted/50">
                     <th className="p-3.5 text-left font-semibold text-foreground">Poste</th>
-                    <th className="p-3.5 text-left font-semibold" style={{ color: "var(--grenat)" }}>
+                    <th
+                      className="p-3.5 text-left font-semibold"
+                      style={{ color: "var(--grenat)" }}
+                    >
                       <span className="inline-flex items-center gap-1.5">
                         <Percent size={14} aria-hidden /> Éco-PTZ
                       </span>
@@ -529,14 +539,19 @@ function ComparateurEcoPtzPage() {
           </p>
 
           <div className="mt-10 rounded-2xl border border-border bg-card p-6 flex gap-4">
-            <Info size={20} className="shrink-0 mt-0.5" style={{ color: "var(--grenat)" }} aria-hidden />
+            <Info
+              size={20}
+              className="shrink-0 mt-0.5"
+              style={{ color: "var(--grenat)" }}
+              aria-hidden
+            />
             <p className="text-sm text-muted-foreground leading-relaxed">
               Ce comparateur est un outil pédagogique gratuit, sans lien avec une offre de crédit :
               EXP Capital n'intervient pas sur le financement bancaire de vos travaux. Il donne une
               piste de coût comparé — l'offre de prêt chiffrée, ferme et définitive, ne peut venir
-              que d'une banque. Si cette rénovation s'inscrit dans un projet patrimonial plus
-              large, échangez avec un conseiller pour la resituer dans votre stratégie globale
-              (fiscalité, épargne, autres objectifs) —{" "}
+              que d'une banque. Si cette rénovation s'inscrit dans un projet patrimonial plus large,
+              échangez avec un conseiller pour la resituer dans votre stratégie globale (fiscalité,
+              épargne, autres objectifs) —{" "}
               <Link
                 to="/articles/$slug"
                 params={{ slug: "dispositifs-fiscaux-demarche-ethique" }}
@@ -544,8 +559,8 @@ function ComparateurEcoPtzPage() {
               >
                 notre article sur les dispositifs fiscaux compatibles avec une démarche éthique
               </Link>{" "}
-              détaille comment l'éco-PTZ s'articule avec d'autres leviers comme le Denormandie ou
-              le Girardin.
+              détaille comment l'éco-PTZ s'articule avec d'autres leviers comme le Denormandie ou le
+              Girardin.
             </p>
           </div>
         </div>

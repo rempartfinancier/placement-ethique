@@ -18,11 +18,10 @@ export function SiteFooter() {
             </span>
           </div>
           <p className="mt-5 text-sm leading-relaxed text-white/70">
-            Cabinet de conseil en gestion de patrimoine spécialisé dans
-            l'investissement éthique et responsable. Nous accompagnons les
-            épargnants qui veulent que leur argent serve leurs valeurs — en
-            vérifiant ce que les labels garantissent vraiment, plutôt qu'en
-            croyant les brochures sur parole.
+            Cabinet de conseil en gestion de patrimoine spécialisé dans l'investissement éthique et
+            responsable. Nous accompagnons les épargnants qui veulent que leur argent serve leurs
+            valeurs — en vérifiant ce que les labels garantissent vraiment, plutôt qu'en croyant les
+            brochures sur parole.
           </p>
         </div>
 

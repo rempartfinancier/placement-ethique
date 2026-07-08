@@ -76,7 +76,11 @@ export function CookieConsent() {
   if (!visible) return null;
 
   return (
-    <div role="dialog" aria-label="Gestion des cookies" className="fixed inset-x-0 bottom-0 z-50 p-4">
+    <div
+      role="dialog"
+      aria-label="Gestion des cookies"
+      className="fixed inset-x-0 bottom-0 z-50 p-4"
+    >
       <div className="container-prose">
         <div
           className="mx-auto max-w-3xl rounded-2xl border border-border bg-background p-5"
@@ -93,7 +97,11 @@ export function CookieConsent() {
             .
           </p>
           <div className="mt-4 flex flex-wrap gap-3">
-            <button type="button" className="btn-primary text-sm" onClick={() => decider("accepte")}>
+            <button
+              type="button"
+              className="btn-primary text-sm"
+              onClick={() => decider("accepte")}
+            >
               Accepter la mesure d'audience
             </button>
             <button type="button" className="btn-ghost text-sm" onClick={() => decider("refuse")}>

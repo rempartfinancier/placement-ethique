@@ -42,9 +42,15 @@ const questions: Question[] = [
     q: "Quel est votre objectif principal ?",
     options: [
       { label: "Faire croître mon capital sur le long terme", weight: { etf: 3, av: 1 } },
-      { label: "Générer des revenus réguliers", weight: { scpi: 3, obligations: 2, immobilier: 1 } },
+      {
+        label: "Générer des revenus réguliers",
+        weight: { scpi: 3, obligations: 2, immobilier: 1 },
+      },
       { label: "Réduire mon impôt sur le revenu", weight: { per: 3 } },
-      { label: "Donner du sens à mon épargne, au-delà du seul rendement", weight: { solidaire: 3, obligations: 1 } },
+      {
+        label: "Donner du sens à mon épargne, au-delà du seul rendement",
+        weight: { solidaire: 3, obligations: 1 },
+      },
       { label: "Transmettre un capital dans de bonnes conditions", weight: { av: 3, scpi: 1 } },
     ],
   },
@@ -61,18 +67,36 @@ const questions: Question[] = [
     q: "Quel levier fiscal recherchez-vous en priorité ?",
     options: [
       { label: "Réduire mon revenu imposable dès cette année", weight: { per: 3 } },
-      { label: "Un cadre fiscal qui s'améliore après plusieurs années de détention", weight: { av: 3 } },
-      { label: "Optimiser la fiscalité de revenus fonciers (travaux, déficit foncier)", weight: { immobilier: 3 } },
-      { label: "Aucune préférence : je regarde d'abord le placement lui-même", weight: { etf: 2, scpi: 1, solidaire: 1, obligations: 1 } },
+      {
+        label: "Un cadre fiscal qui s'améliore après plusieurs années de détention",
+        weight: { av: 3 },
+      },
+      {
+        label: "Optimiser la fiscalité de revenus fonciers (travaux, déficit foncier)",
+        weight: { immobilier: 3 },
+      },
+      {
+        label: "Aucune préférence : je regarde d'abord le placement lui-même",
+        weight: { etf: 2, scpi: 1, solidaire: 1, obligations: 1 },
+      },
     ],
   },
   {
     q: "Quel est votre besoin de liquidité ?",
     options: [
-      { label: "Je dois pouvoir récupérer mon argent rapidement en cas de besoin", weight: { av: 2, etf: 2, solidaire: 2 } },
-      { label: "Je peux immobiliser une partie de mon épargne plusieurs années", weight: { scpi: 2, obligations: 2, av: 1 } },
+      {
+        label: "Je dois pouvoir récupérer mon argent rapidement en cas de besoin",
+        weight: { av: 2, etf: 2, solidaire: 2 },
+      },
+      {
+        label: "Je peux immobiliser une partie de mon épargne plusieurs années",
+        weight: { scpi: 2, obligations: 2, av: 1 },
+      },
       { label: "Je suis prêt(e) à bloquer cette épargne jusqu'à ma retraite", weight: { per: 3 } },
-      { label: "Je peux immobiliser ce capital durablement, sans besoin de le revendre vite", weight: { immobilier: 3, scpi: 1 } },
+      {
+        label: "Je peux immobiliser ce capital durablement, sans besoin de le revendre vite",
+        weight: { immobilier: 3, scpi: 1 },
+      },
     ],
   },
   {
@@ -87,9 +111,19 @@ const questions: Question[] = [
   {
     q: "Quelle est votre tolérance aux variations de marché ?",
     options: [
-      { label: "Faible — je veux limiter les fluctuations", weight: { solidaire: 3, obligations: 2, av: 1 } },
-      { label: "Modérée — j'accepte des fluctuations pour un meilleur potentiel", weight: { scpi: 2, av: 2, obligations: 1, immobilier: 1 } },
-      { label: "Forte — je vise la performance long terme, quitte à accepter des baisses temporaires", weight: { etf: 3, per: 1 } },
+      {
+        label: "Faible — je veux limiter les fluctuations",
+        weight: { solidaire: 3, obligations: 2, av: 1 },
+      },
+      {
+        label: "Modérée — j'accepte des fluctuations pour un meilleur potentiel",
+        weight: { scpi: 2, av: 2, obligations: 1, immobilier: 1 },
+      },
+      {
+        label:
+          "Forte — je vise la performance long terme, quitte à accepter des baisses temporaires",
+        weight: { etf: 3, per: 1 },
+      },
     ],
   },
 ];
@@ -271,7 +305,8 @@ function TypeInvestissementPage() {
                               active
                                 ? {
                                     borderColor: "var(--grenat)",
-                                    background: "color-mix(in oklch, var(--grenat) 8%, var(--card))",
+                                    background:
+                                      "color-mix(in oklch, var(--grenat) 8%, var(--card))",
                                     color: "var(--foreground)",
                                   }
                                 : undefined
@@ -335,7 +370,10 @@ function TypeInvestissementPage() {
                   <div className="flex items-start gap-4">
                     <span
                       className="inline-flex h-9 w-9 shrink-0 items-center justify-center rounded-full font-display text-sm"
-                      style={{ background: "var(--gradient-grenat)", color: "var(--grenat-foreground)" }}
+                      style={{
+                        background: "var(--gradient-grenat)",
+                        color: "var(--grenat-foreground)",
+                      }}
                     >
                       {idx + 1}
                     </span>
@@ -343,10 +381,15 @@ function TypeInvestissementPage() {
                       <p className="text-xs text-muted-foreground uppercase tracking-wider">
                         {rankLabel[idx]}
                       </p>
-                      <h3 className="font-display text-xl text-foreground mt-0.5">{labels[k].name}</h3>
-                      <p className="mt-2 text-muted-foreground leading-relaxed text-sm">{labels[k].body}</p>
+                      <h3 className="font-display text-xl text-foreground mt-0.5">
+                        {labels[k].name}
+                      </h3>
+                      <p className="mt-2 text-muted-foreground leading-relaxed text-sm">
+                        {labels[k].body}
+                      </p>
                       <p className="mt-2 text-xs text-muted-foreground">
-                        Compatibilité indicative : <strong className="text-foreground">{percent(k)} %</strong>
+                        Compatibilité indicative :{" "}
+                        <strong className="text-foreground">{percent(k)} %</strong>
                       </p>
                     </div>
                   </div>
@@ -363,7 +406,10 @@ function TypeInvestissementPage() {
                     </p>
                     <ul className="space-y-1.5">
                       {reasons[k].map((r, ri) => (
-                        <li key={ri} className="flex items-start gap-2 text-sm text-foreground/80 leading-relaxed">
+                        <li
+                          key={ri}
+                          className="flex items-start gap-2 text-sm text-foreground/80 leading-relaxed"
+                        >
                           <span className="mt-0.5 shrink-0" style={{ color: "var(--grenat)" }}>
                             ◆
                           </span>
@@ -403,7 +449,9 @@ function TypeInvestissementPage() {
                           >
                             {labels[k].name}
                           </Link>
-                          <span className="text-sm text-muted-foreground tabular-nums shrink-0">{p} %</span>
+                          <span className="text-sm text-muted-foreground tabular-nums shrink-0">
+                            {p} %
+                          </span>
                         </div>
                         <div className="h-2 rounded-full bg-border/60 overflow-hidden">
                           <div
@@ -420,8 +468,9 @@ function TypeInvestissementPage() {
                   })}
                 </div>
                 <p className="mt-4 text-xs text-muted-foreground leading-relaxed">
-                  Pourcentages indicatifs, calculés sur le score maximal atteignable par chaque classe
-                  d'actifs dans ce questionnaire. Cliquez sur une piste pour lire son guide complet.
+                  Pourcentages indicatifs, calculés sur le score maximal atteignable par chaque
+                  classe d'actifs dans ce questionnaire. Cliquez sur une piste pour lire son guide
+                  complet.
                 </p>
               </div>
 
@@ -429,7 +478,9 @@ function TypeInvestissementPage() {
                 <summary className="cursor-pointer text-sm font-medium text-foreground list-none flex items-center justify-between gap-3">
                   Vos réponses
                   <span className="text-xs text-muted-foreground group-open:hidden">Afficher</span>
-                  <span className="text-xs text-muted-foreground hidden group-open:inline">Masquer</span>
+                  <span className="text-xs text-muted-foreground hidden group-open:inline">
+                    Masquer
+                  </span>
                 </summary>
                 <ol className="mt-4 space-y-3">
                   {questions.map((q, i) => (
@@ -449,7 +500,11 @@ function TypeInvestissementPage() {
               </details>
 
               <div className="rounded-xl border border-border bg-card p-6 flex items-start gap-3">
-                <ShieldCheck className="shrink-0 mt-0.5" size={18} style={{ color: "var(--grenat)" }} />
+                <ShieldCheck
+                  className="shrink-0 mt-0.5"
+                  size={18}
+                  style={{ color: "var(--grenat)" }}
+                />
                 <p className="text-xs text-muted-foreground leading-relaxed">
                   Les supports en unités de compte, en SCPI ou en actions ne garantissent pas le
                   capital investi et peuvent perdre de la valeur. Ces pistes sont génériques et non

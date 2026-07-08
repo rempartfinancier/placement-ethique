@@ -125,8 +125,8 @@ export function LeadGate({ source, payload, onSuccess }: LeadGateProps) {
         <CheckCircle2 className="mx-auto text-emerald-500 mb-4" size={48} />
         <h2 className="font-display text-2xl text-foreground">C'est envoyé !</h2>
         <p className="mt-3 text-[15px] text-muted-foreground">
-          Le récapitulatif part vers <strong className="text-foreground">{email}</strong>.
-          Pensez à vérifier vos courriers indésirables.
+          Le récapitulatif part vers <strong className="text-foreground">{email}</strong>. Pensez à
+          vérifier vos courriers indésirables.
         </p>
         <p className="mt-4 text-xs text-muted-foreground animate-pulse">
           Affichage de vos résultats détaillés...
@@ -141,8 +141,8 @@ export function LeadGate({ source, payload, onSuccess }: LeadGateProps) {
         <AlertTriangle className="mx-auto text-amber-500 mb-4" size={40} />
         <h2 className="font-display text-2xl text-foreground">L'envoi n'a pas pu être confirmé</h2>
         <p className="mt-3 text-[15px] text-muted-foreground leading-relaxed">
-          Pas d'inquiétude : vos résultats restent accessibles. Vous pourrez réessayer l'envoi
-          par email depuis le bloc « Télécharger ou recevoir par email » sous vos résultats.
+          Pas d'inquiétude : vos résultats restent accessibles. Vous pourrez réessayer l'envoi par
+          email depuis le bloc « Télécharger ou recevoir par email » sous vos résultats.
         </p>
         <button type="button" onClick={fireSuccess} className="btn-primary mt-6">
           Voir mes résultats
@@ -155,17 +155,17 @@ export function LeadGate({ source, payload, onSuccess }: LeadGateProps) {
     <div className="rounded-2xl border border-[var(--grenat)] bg-card p-8 md:p-10 shadow-[var(--shadow-elevated)] max-w-2xl mx-auto my-12 animate-in fade-in zoom-in-95 duration-500">
       <div className="flex items-center gap-3 text-[var(--grenat)] mb-4">
         <CheckCircle2 size={24} />
-        <p className="eyebrow" style={{ color: "var(--grenat)" }}>Vos résultats sont prêts</p>
+        <p className="eyebrow" style={{ color: "var(--grenat)" }}>
+          Vos résultats sont prêts
+        </p>
       </div>
 
-      <h2 className="font-display text-3xl mt-2 text-foreground">
-        Gardez-en une trace par email.
-      </h2>
+      <h2 className="font-display text-3xl mt-2 text-foreground">Gardez-en une trace par email.</h2>
 
       <p className="mt-4 text-[15px] leading-relaxed text-muted-foreground">
-        Recevez ce récapitulatif dans votre boîte mail, suivi de notre mini-série de 3 emails
-        pour passer à l'action — ou consultez vos résultats directement. Vous ne verrez ce
-        formulaire qu'une seule fois.
+        Recevez ce récapitulatif dans votre boîte mail, suivi de notre mini-série de 3 emails pour
+        passer à l'action — ou consultez vos résultats directement. Vous ne verrez ce formulaire
+        qu'une seule fois.
       </p>
 
       <form onSubmit={handleSubmit} className="mt-8 space-y-3">
@@ -174,7 +174,10 @@ export function LeadGate({ source, payload, onSuccess }: LeadGateProps) {
         </label>
         <div className="flex flex-col sm:flex-row gap-3">
           <div className="relative flex-1">
-            <Mail className="absolute left-3 top-1/2 -translate-y-1/2 text-muted-foreground" size={18} />
+            <Mail
+              className="absolute left-3 top-1/2 -translate-y-1/2 text-muted-foreground"
+              size={18}
+            />
             <input
               id="lead-email"
               type="email"

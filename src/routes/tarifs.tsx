@@ -109,8 +109,14 @@ const solutions = [
       { label: "Frais d'entrée — jusqu'à 200 000 €", value: "1,00 %" },
       { label: "Frais d'entrée — de 200 000 € à 400 000 €", value: "0,50 %" },
       { label: "Frais d'entrée — au-delà de 400 000 €", value: "0 %" },
-      { label: "Frais de gestion — Patrimoine Vie Plus (Suravenir / Crédit Mutuel Arkéa)", value: "1,08 % / an" },
-      { label: "Frais de gestion — Version Absolue 2 (Spirica / UAF Life Patrimoine)", value: "1,00 % / an" },
+      {
+        label: "Frais de gestion — Patrimoine Vie Plus (Suravenir / Crédit Mutuel Arkéa)",
+        value: "1,08 % / an",
+      },
+      {
+        label: "Frais de gestion — Version Absolue 2 (Spirica / UAF Life Patrimoine)",
+        value: "1,00 % / an",
+      },
     ],
     note: "Les frais de gestion sont prélevés par la compagnie d'assurance sur l'encours — ils financent la tenue du contrat, l'arbitrage en ligne, le reporting, et notre suivi continu.",
   },
@@ -127,8 +133,14 @@ const solutions = [
     icon: LineChart,
     title: "Fonds ISR au sein de l'assurance vie",
     rows: [
-      { label: "Supports indiciels ISR (ETF) — frais courants faibles", value: "Rétrocession faible ou nulle" },
-      { label: "Fonds ISR à gestion active — frais courants plus élevés", value: "Rétrocession plus élevée" },
+      {
+        label: "Supports indiciels ISR (ETF) — frais courants faibles",
+        value: "Rétrocession faible ou nulle",
+      },
+      {
+        label: "Fonds ISR à gestion active — frais courants plus élevés",
+        value: "Rétrocession plus élevée",
+      },
     ],
     note: "Les rétrocessions sur les supports logés dans un contrat varient selon les fonds : elles sont financées par les frais courants de chaque support, qui diffèrent fortement entre un ETF indiciel ISR et un fonds actif thématique. Nous ne publions pas de taux fonds par fonds ici — l'univers exact de supports de nos contrats est en cours de consolidation — mais les frais courants de chaque support figurent dans son DIC, que nous commentons avec vous avant toute souscription. L'asymétrie que cela crée est détaillée sans détour en section 8 du guide ci-dessous.",
   },
@@ -163,10 +175,19 @@ const tocItems = [
   { id: "modele-placement-ethique", label: "4. Le modèle de rémunération de Placement-éthique.fr" },
   { id: "retrocessions-expliquees", label: "5. Que sont exactement les rétrocessions ?" },
   { id: "cout-plus-eleve", label: "6. Les solutions coûtent-elles plus cher ?" },
-  { id: "pourquoi-partenaires-remunerent", label: "7. Pourquoi les partenaires rémunèrent-ils les conseillers ?" },
-  { id: "commissions-influencent-elles", label: "8. Les commissions influencent-elles nos pistes ?" },
+  {
+    id: "pourquoi-partenaires-remunerent",
+    label: "7. Pourquoi les partenaires rémunèrent-ils les conseillers ?",
+  },
+  {
+    id: "commissions-influencent-elles",
+    label: "8. Les commissions influencent-elles nos pistes ?",
+  },
   { id: "pourquoi-honoraires", label: "9. Pourquoi certains cabinets facturent des honoraires" },
-  { id: "cabinets-semblent-ne-rien-couter", label: "10. Pourquoi certains cabinets semblent ne rien coûter" },
+  {
+    id: "cabinets-semblent-ne-rien-couter",
+    label: "10. Pourquoi certains cabinets semblent ne rien coûter",
+  },
   { id: "qui-paie-quoi", label: "11. Qui paie réellement quoi ?" },
   { id: "deroulement-accompagnement", label: "12. Le déroulé d'un accompagnement" },
   { id: "ce-que-peu-expliquent", label: "13. Ce que peu de cabinets expliquent" },
@@ -185,24 +206,29 @@ const payerRows = [
   {
     flux: "Frais de gestion annuels (assurance vie, PER)",
     payeur: "Vous, prélevés chaque année sur la valorisation de votre épargne",
-    beneficiaire: "Majoritairement la compagnie d'assurance ; une part est rétrocédée à notre cabinet",
+    beneficiaire:
+      "Majoritairement la compagnie d'assurance ; une part est rétrocédée à notre cabinet",
     ou: "Relevé annuel, Document d'Informations Clés (DIC) de chaque support",
   },
   {
     flux: "Frais courants des supports (ETF ISR, fonds actifs)",
-    payeur: "Vous, déduits en continu de la valeur de chaque support — que vous soyez accompagné ou non",
-    beneficiaire: "La société de gestion du fonds ; sur les fonds les plus chargés, une part peut être rétrocédée à notre cabinet",
+    payeur:
+      "Vous, déduits en continu de la valeur de chaque support — que vous soyez accompagné ou non",
+    beneficiaire:
+      "La société de gestion du fonds ; sur les fonds les plus chargés, une part peut être rétrocédée à notre cabinet",
     ou: "DIC de chaque support, rubrique « coûts au fil du temps »",
   },
   {
     flux: "Frais d'entrée (SCPI)",
     payeur: "Vous, prélevés à la souscription — identiques en direct",
-    beneficiaire: "Société de gestion, dont une part rétrocédée à notre cabinet (+ cashback à vous au-delà de 100 000 €)",
+    beneficiaire:
+      "Société de gestion, dont une part rétrocédée à notre cabinet (+ cashback à vous au-delà de 100 000 €)",
     ou: "Bulletin de souscription, note d'information de la SCPI",
   },
   {
     flux: "Commission Girardin, immobilier direct",
-    payeur: "Intégrée dans le montage ou dans le prix affiché — pas un supplément que vous réglez à part",
+    payeur:
+      "Intégrée dans le montage ou dans le prix affiché — pas un supplément que vous réglez à part",
     beneficiaire: "L'opérateur, dont une part rétrocédée à notre cabinet",
     ou: "Grille publique de l'opérateur partenaire",
   },
@@ -215,7 +241,8 @@ const payerRows = [
   {
     flux: "Premier échange, bilan patrimonial initial",
     payeur: "Personne — aucune facture n'est émise pour cet échange",
-    beneficiaire: "Aucune rémunération n'est générée à ce stade, quelle que soit l'issue du rendez-vous",
+    beneficiaire:
+      "Aucune rémunération n'est générée à ce stade, quelle que soit l'issue du rendez-vous",
     ou: "—",
   },
 ];
@@ -285,7 +312,8 @@ const notForItems = [
     body: "Un accompagnement patrimonial sérieux prend du temps. Notre premier rendez-vous dure 45 à 60 minutes, et notre synthèse écrite arrive après analyse de votre situation complète — et après vérification des supports envisagés. Si l'urgence prime sur la rigueur, nous ne sommes pas le bon cabinet.",
   },
   {
-    strong: "Vous êtes convaincu que l'éthique coûte forcément plus cher — et ne souhaitez pas regarder les chiffres.",
+    strong:
+      "Vous êtes convaincu que l'éthique coûte forcément plus cher — et ne souhaitez pas regarder les chiffres.",
     body: "Nous passons nos journées à comparer des frais courants et des performances nettes, DIC en main. La réalité est nuancée : certains supports responsables sont peu chargés, d'autres le sont beaucoup. Si aucune donnée ne peut faire évoluer votre conviction, l'échange tournera court — dans un sens comme dans l'autre.",
   },
 ];
@@ -488,7 +516,9 @@ function Sommaire() {
                 type="button"
                 onClick={() => handleClick(item.id)}
                 className={`text-left w-full leading-snug transition-colors ${
-                  isActive ? "text-foreground font-medium" : "text-muted-foreground hover:text-foreground"
+                  isActive
+                    ? "text-foreground font-medium"
+                    : "text-muted-foreground hover:text-foreground"
                 }`}
               >
                 {item.label}
@@ -515,7 +545,10 @@ function LongSection({
   children: React.ReactNode;
 }) {
   return (
-    <section id={id} className="scroll-mt-28 pb-16 border-b border-border/50 last:border-b-0 last:pb-0">
+    <section
+      id={id}
+      className="scroll-mt-28 pb-16 border-b border-border/50 last:border-b-0 last:pb-0"
+    >
       <div className="flex items-center gap-3 mb-4">
         <span
           className="h-10 w-10 shrink-0 rounded-full flex items-center justify-center"
@@ -613,21 +646,23 @@ function TarifsPage() {
       <section className="pb-4 pt-10">
         <div className="container-prose max-w-3xl">
           <p className="text-foreground/80 leading-relaxed text-base">
-            Vous êtes probablement arrivé sur cette page avec une question simple, et parfois inavouée :{" "}
+            Vous êtes probablement arrivé sur cette page avec une question simple, et parfois
+            inavouée :{" "}
             <em>
-              « si ce cabinet ne me facture rien directement, qui le paie, et est-ce que cela influence ce
-              qu'on va me proposer ? »
+              « si ce cabinet ne me facture rien directement, qui le paie, et est-ce que cela
+              influence ce qu'on va me proposer ? »
             </em>{" "}
-            C'est une excellente question. C'est même la bonne question à poser à n'importe quel conseiller
-            financier avant de lui confier quoi que ce soit.
+            C'est une excellente question. C'est même la bonne question à poser à n'importe quel
+            conseiller financier avant de lui confier quoi que ce soit.
           </p>
           <p className="text-foreground/80 leading-relaxed text-base mt-4">
-            Elle se pose avec une acuité particulière ici. Ce site passe son temps à examiner les promesses
-            des autres — ce qu'un label garantit vraiment, ce qu'un fonds « vert » détient réellement. Un
-            site qui vous parle d'éthique vous doit d'abord cette transparence-là, appliquée à lui-même :
-            il serait incohérent de traquer le flou des brochures en entretenant le flou sur notre propre
-            modèle économique. Nous avons donc écrit cette page pour répondre en entier — pas en trois
-            lignes rassurantes, mais avec le niveau de détail que le sujet mérite.
+            Elle se pose avec une acuité particulière ici. Ce site passe son temps à examiner les
+            promesses des autres — ce qu'un label garantit vraiment, ce qu'un fonds « vert » détient
+            réellement. Un site qui vous parle d'éthique vous doit d'abord cette transparence-là,
+            appliquée à lui-même : il serait incohérent de traquer le flou des brochures en
+            entretenant le flou sur notre propre modèle économique. Nous avons donc écrit cette page
+            pour répondre en entier — pas en trois lignes rassurantes, mais avec le niveau de détail
+            que le sujet mérite.
           </p>
         </div>
       </section>
@@ -649,18 +684,19 @@ function TarifsPage() {
               L'épargnant a le droit de savoir qui rémunère son conseiller, combien, et pourquoi.
             </h2>
             <p className="mt-5 text-foreground/80 leading-relaxed max-w-3xl text-sm font-medium">
-              Pendant des années, nous avons opéré au sein de réseaux qui taisaient leurs marges. Nous avons
-              construit ce cabinet — et ce site — pour faire l'inverse.
+              Pendant des années, nous avons opéré au sein de réseaux qui taisaient leurs marges.
+              Nous avons construit ce cabinet — et ce site — pour faire l'inverse.
             </p>
             <p className="mt-4 text-foreground/80 leading-relaxed max-w-3xl text-sm">
-              Avant d'être spécialistes de l'investissement responsable, nous sommes conseillers en gestion
-              de patrimoine, au sein d'EXP Capital (ORIAS n° 25005915, vérifiable sur{" "}
+              Avant d'être spécialistes de l'investissement responsable, nous sommes conseillers en
+              gestion de patrimoine, au sein d'EXP Capital (ORIAS n° 25005915, vérifiable sur{" "}
               <a href="https://www.orias.fr" target="_blank" rel="noreferrer">
                 www.orias.fr
               </a>
-              ) — une structure qui nous donne accès à des conditions tarifaires négociées auprès de nos
-              partenaires assureurs, que nous vous répercutons intégralement. La rigueur que nous demandons
-              aux fonds — prouver, pas proclamer — commence par notre propre grille de rémunération.
+              ) — une structure qui nous donne accès à des conditions tarifaires négociées auprès de
+              nos partenaires assureurs, que nous vous répercutons intégralement. La rigueur que
+              nous demandons aux fonds — prouver, pas proclamer — commence par notre propre grille
+              de rémunération.
             </p>
           </div>
         </div>
@@ -670,7 +706,9 @@ function TarifsPage() {
       <section className="section pt-12">
         <div className="container-prose">
           <p className="eyebrow">Nos 4 règles</p>
-          <h2 className="display-2 mt-4 max-w-3xl">Ce que vous réglez, ce que vous ne réglez pas.</h2>
+          <h2 className="display-2 mt-4 max-w-3xl">
+            Ce que vous réglez, ce que vous ne réglez pas.
+          </h2>
 
           <div className="mt-10 grid md:grid-cols-2 gap-5">
             {principles.map(({ icon: Icon, title, body }) => (
@@ -699,13 +737,13 @@ function TarifsPage() {
           <p className="eyebrow">Solution par solution</p>
           <h2 className="display-2 mt-4 max-w-3xl">Chaque commission, chiffrée.</h2>
           <p className="lead mt-5 max-w-2xl">
-            Les chiffres ci-dessous sont les nôtres. Pour la plupart des solutions (SCPI, immobilier,
-            Girardin), la grille est fixée par le partenaire et strictement identique en direct. Pour
-            l'assurance vie et le PER, les frais de gestion sont fixés par la compagnie, mais les frais
-            d'entrée relèvent d'une marge de manœuvre que le courtier — donc nous — peut moduler dans une
-            fourchette autorisée. Nous l'avons plafonnée à une grille dégressive plutôt que de la
-            maximiser : c'est un choix que nous assumons et détaillons en section 6 de notre guide de
-            rémunération.
+            Les chiffres ci-dessous sont les nôtres. Pour la plupart des solutions (SCPI,
+            immobilier, Girardin), la grille est fixée par le partenaire et strictement identique en
+            direct. Pour l'assurance vie et le PER, les frais de gestion sont fixés par la
+            compagnie, mais les frais d'entrée relèvent d'une marge de manœuvre que le courtier —
+            donc nous — peut moduler dans une fourchette autorisée. Nous l'avons plafonnée à une
+            grille dégressive plutôt que de la maximiser : c'est un choix que nous assumons et
+            détaillons en section 6 de notre guide de rémunération.
           </p>
 
           <div className="mt-10 grid lg:grid-cols-2 gap-6">
@@ -762,9 +800,10 @@ function TarifsPage() {
               </p>
               <h3 className="font-display text-2xl md:text-3xl mt-3">Faites vos propres calculs</h3>
               <p className="mt-3 text-muted-foreground leading-relaxed">
-                Nos outils en libre accès projettent votre épargne frais réels inclus, décodent ce que
-                chaque label garantit vraiment, ou estiment l'empreinte carbone de vos placements actuels.
-                Ils donnent des pistes, sans inscription forcée — avant même de nous parler.
+                Nos outils en libre accès projettent votre épargne frais réels inclus, décodent ce
+                que chaque label garantit vraiment, ou estiment l'empreinte carbone de vos
+                placements actuels. Ils donnent des pistes, sans inscription forcée — avant même de
+                nous parler.
               </p>
             </div>
             <Link to="/outils" className="btn-grenat shrink-0">
@@ -780,8 +819,9 @@ function TarifsPage() {
           <p className="eyebrow justify-center">Le guide complet</p>
           <h2 className="display-2 mt-4">Tout ce que l'industrie explique rarement en entier</h2>
           <p className="lead mt-5">
-            Treize sections pour comprendre, dans le détail, comment un conseiller en gestion de patrimoine
-            gagne sa vie en France — et comment nous, précisément, avons construit notre modèle.
+            Treize sections pour comprendre, dans le détail, comment un conseiller en gestion de
+            patrimoine gagne sa vie en France — et comment nous, précisément, avons construit notre
+            modèle.
           </p>
         </div>
       </section>
@@ -791,74 +831,87 @@ function TarifsPage() {
           <div className="lg:grid lg:grid-cols-12 lg:gap-12 items-start">
             <div className="lg:col-span-8 space-y-16">
               {/* 1 */}
-              <LongSection id="pourquoi-cette-page" eyebrow="Introduction" title="Pourquoi cette page existe" icon={BookOpen}>
+              <LongSection
+                id="pourquoi-cette-page"
+                eyebrow="Introduction"
+                title="Pourquoi cette page existe"
+                icon={BookOpen}
+              >
                 <p>
-                  La plupart des sites de conseillers en gestion de patrimoine consacrent une ligne à leur
-                  rémunération, généralement en bas de page, en petits caractères. Nous avons fait le choix
-                  inverse : lui consacrer l'une des pages les plus longues de notre site.
+                  La plupart des sites de conseillers en gestion de patrimoine consacrent une ligne
+                  à leur rémunération, généralement en bas de page, en petits caractères. Nous avons
+                  fait le choix inverse : lui consacrer l'une des pages les plus longues de notre
+                  site.
                 </p>
                 <p>
-                  Ce choix n'est pas cosmétique. Dans notre expérience, la question de la rémunération est
-                  celle qui pèse le plus lourd — souvent silencieusement — dans la décision de faire
-                  confiance ou non à un conseiller. Un épargnant qui ne comprend pas comment son conseiller
-                  est payé ne peut pas juger, en connaissance de cause, si une piste le sert lui ou sert la
-                  commission. Cette incertitude, légitime, mérite une réponse complète plutôt qu'une phrase
-                  rassurante.
+                  Ce choix n'est pas cosmétique. Dans notre expérience, la question de la
+                  rémunération est celle qui pèse le plus lourd — souvent silencieusement — dans la
+                  décision de faire confiance ou non à un conseiller. Un épargnant qui ne comprend
+                  pas comment son conseiller est payé ne peut pas juger, en connaissance de cause,
+                  si une piste le sert lui ou sert la commission. Cette incertitude, légitime,
+                  mérite une réponse complète plutôt qu'une phrase rassurante.
                 </p>
                 <p>
-                  Il y a une raison supplémentaire, propre à ce site. La première question qu'un lecteur
-                  averti pose à un média, un comparateur ou un cabinet qui parle d'investissement
-                  « responsable », c'est : <em>qui vous paie ?</em> Et il a raison de la poser — une partie
-                  du greenwashing de l'épargne se niche exactement là, dans des mises en avant rémunérées
-                  qui ne se présentent pas comme telles. Nous appliquons donc à notre propre modèle la
-                  discipline que nous réclamons aux fonds : documenter, sourcer, laisser le lecteur juger.
+                  Il y a une raison supplémentaire, propre à ce site. La première question qu'un
+                  lecteur averti pose à un média, un comparateur ou un cabinet qui parle
+                  d'investissement « responsable », c'est : <em>qui vous paie ?</em> Et il a raison
+                  de la poser — une partie du greenwashing de l'épargne se niche exactement là, dans
+                  des mises en avant rémunérées qui ne se présentent pas comme telles. Nous
+                  appliquons donc à notre propre modèle la discipline que nous réclamons aux fonds :
+                  documenter, sourcer, laisser le lecteur juger.
                 </p>
                 <p>
-                  Notre objectif ici n'est pas de vous convaincre que notre modèle est le meilleur. Il est de
-                  vous donner tous les éléments pour comprendre comment fonctionne cette industrie — la
-                  nôtre comme celle de nos confrères — afin que vous puissiez juger par vous-même, avec des
-                  faits, pas avec des slogans.
+                  Notre objectif ici n'est pas de vous convaincre que notre modèle est le meilleur.
+                  Il est de vous donner tous les éléments pour comprendre comment fonctionne cette
+                  industrie — la nôtre comme celle de nos confrères — afin que vous puissiez juger
+                  par vous-même, avec des faits, pas avec des slogans.
                 </p>
               </LongSection>
 
               {/* 2 */}
-              <LongSection id="engagement-transparence" eyebrow="Notre position" title="Notre engagement de transparence" icon={ShieldCheck}>
+              <LongSection
+                id="engagement-transparence"
+                eyebrow="Notre position"
+                title="Notre engagement de transparence"
+                icon={ShieldCheck}
+              >
                 <p>
-                  Nous avons longtemps exercé au sein de structures où la rémunération du conseiller n'était
-                  jamais mentionnée au client — ni son montant, ni son origine, ni la façon dont elle
-                  pouvait, en théorie, orienter une proposition. Ce silence n'était pas illégal : la
-                  réglementation impose une information sur les coûts avant la souscription d'un produit
-                  précis, pas une transparence globale et proactive sur le modèle économique du cabinet.
-                  Mais ce silence nous a toujours semblé être un manque de respect envers le client.
+                  Nous avons longtemps exercé au sein de structures où la rémunération du conseiller
+                  n'était jamais mentionnée au client — ni son montant, ni son origine, ni la façon
+                  dont elle pouvait, en théorie, orienter une proposition. Ce silence n'était pas
+                  illégal : la réglementation impose une information sur les coûts avant la
+                  souscription d'un produit précis, pas une transparence globale et proactive sur le
+                  modèle économique du cabinet. Mais ce silence nous a toujours semblé être un
+                  manque de respect envers le client.
                 </p>
                 <p>
-                  Placement-éthique.fr est né de cette conviction, appliquée au champ de l'investissement
-                  responsable : un épargnant qui veut que son argent serve ses valeurs mérite, sur la
-                  rémunération de son conseiller, une transparence au moins égale à celle qu'il exige des
-                  fonds dans lesquels il investit. C'est un engagement que nous tenons de trois façons
-                  concrètes.
+                  Placement-éthique.fr est né de cette conviction, appliquée au champ de
+                  l'investissement responsable : un épargnant qui veut que son argent serve ses
+                  valeurs mérite, sur la rémunération de son conseiller, une transparence au moins
+                  égale à celle qu'il exige des fonds dans lesquels il investit. C'est un engagement
+                  que nous tenons de trois façons concrètes.
                 </p>
                 <ul>
                   <li>
-                    <strong>Publier nos grilles de frais précises</strong>, solution par solution, sur une
-                    page publique — pas seulement au moment où vous les demandez.
+                    <strong>Publier nos grilles de frais précises</strong>, solution par solution,
+                    sur une page publique — pas seulement au moment où vous les demandez.
                   </li>
                   <li>
-                    <strong>Expliquer la mécanique</strong>, pas seulement le chiffre — pour que vous
-                    compreniez d'où vient chaque euro, pas seulement combien il représente.
+                    <strong>Expliquer la mécanique</strong>, pas seulement le chiffre — pour que
+                    vous compreniez d'où vient chaque euro, pas seulement combien il représente.
                   </li>
                   <li>
-                    <strong>Répondre aux questions inconfortables</strong> plutôt que de les éviter — y
-                    compris celle de savoir si nos commissions influencent les pistes que nous vous
-                    proposons (voir section 8).
+                    <strong>Répondre aux questions inconfortables</strong> plutôt que de les éviter
+                    — y compris celle de savoir si nos commissions influencent les pistes que nous
+                    vous proposons (voir section 8).
                   </li>
                 </ul>
                 <Callout label="Ce que cet engagement ne signifie pas">
-                  Être transparent sur notre rémunération ne signifie pas que nous travaillons sans en tirer
-                  de revenu, ni que notre accompagnement serait « désintéressé » au sens absolu. Nous sommes
-                  un cabinet qui doit générer un chiffre d'affaires pour exister durablement. La transparence
-                  n'efface pas cette réalité économique — elle vous permet simplement de l'évaluer
-                  vous-même.
+                  Être transparent sur notre rémunération ne signifie pas que nous travaillons sans
+                  en tirer de revenu, ni que notre accompagnement serait « désintéressé » au sens
+                  absolu. Nous sommes un cabinet qui doit générer un chiffre d'affaires pour exister
+                  durablement. La transparence n'efface pas cette réalité économique — elle vous
+                  permet simplement de l'évaluer vous-même.
                 </Callout>
               </LongSection>
 
@@ -870,38 +923,39 @@ function TarifsPage() {
                 icon={Landmark}
               >
                 <p>
-                  Il n'existe pas un modèle unique de rémunération pour les conseillers en gestion de
-                  patrimoine (CGP) en France. Trois grandes familles coexistent, chacune avec sa propre
-                  logique économique.
+                  Il n'existe pas un modèle unique de rémunération pour les conseillers en gestion
+                  de patrimoine (CGP) en France. Trois grandes familles coexistent, chacune avec sa
+                  propre logique économique.
                 </p>
                 <h3>Le modèle honoraires (fee-only)</h3>
                 <p>
-                  Le client règle directement le cabinet — au forfait, à l'heure, ou en pourcentage du
-                  patrimoine conseillé. Certains cabinets fee-only s'engagent en outre à reverser
+                  Le client règle directement le cabinet — au forfait, à l'heure, ou en pourcentage
+                  du patrimoine conseillé. Certains cabinets fee-only s'engagent en outre à reverser
                   intégralement au client toute rétrocession qu'ils percevraient malgré tout des
-                  partenaires, pour éliminer toute ambiguïté. L'avantage : la rémunération du conseiller ne
-                  dépend d'aucune solution en particulier, ce qui réduit un type de biais. La limite : le
-                  coût est immédiat et visible dès le premier euro, ce qui peut freiner l'accès au conseil
-                  pour les patrimoines modestes ou en construction.
+                  partenaires, pour éliminer toute ambiguïté. L'avantage : la rémunération du
+                  conseiller ne dépend d'aucune solution en particulier, ce qui réduit un type de
+                  biais. La limite : le coût est immédiat et visible dès le premier euro, ce qui
+                  peut freiner l'accès au conseil pour les patrimoines modestes ou en construction.
                 </p>
                 <h3>Le modèle courtage (rétrocessions)</h3>
                 <p>
-                  Le client ne règle rien directement au cabinet. Le conseiller, agissant comme courtier ou
-                  apporteur d'affaires, perçoit une rétrocession de la part du partenaire distribué —
-                  assureur, société de gestion, opérateur. C'est le modèle le plus répandu en France pour
-                  l'assurance vie et les SCPI, et c'est le modèle que nous avons choisi par défaut.
-                  L'avantage : l'accès à l'accompagnement est ouvert dès les premiers montants investis. La
-                  limite théorique : la rémunération dépend de la souscription effective d'une solution, ce
-                  qui peut, en théorie, inciter à proposer de faire plutôt que de ne rien faire — nous
-                  détaillons ce point sans détour en section 8.
+                  Le client ne règle rien directement au cabinet. Le conseiller, agissant comme
+                  courtier ou apporteur d'affaires, perçoit une rétrocession de la part du
+                  partenaire distribué — assureur, société de gestion, opérateur. C'est le modèle le
+                  plus répandu en France pour l'assurance vie et les SCPI, et c'est le modèle que
+                  nous avons choisi par défaut. L'avantage : l'accès à l'accompagnement est ouvert
+                  dès les premiers montants investis. La limite théorique : la rémunération dépend
+                  de la souscription effective d'une solution, ce qui peut, en théorie, inciter à
+                  proposer de faire plutôt que de ne rien faire — nous détaillons ce point sans
+                  détour en section 8.
                 </p>
                 <h3>Le modèle hybride</h3>
                 <p>
-                  De nombreux cabinets, dont le nôtre, combinent les deux : rémunération par défaut via
-                  rétrocessions pour l'accompagnement standard, et honoraires ponctuels pour des missions
-                  spécifiques (audit patrimonial complexe, structuration de transmission, bilan retraite
-                  chiffré) qui exigent un travail d'analyse indépendant du fait qu'une solution soit ou non
-                  souscrite ensuite.
+                  De nombreux cabinets, dont le nôtre, combinent les deux : rémunération par défaut
+                  via rétrocessions pour l'accompagnement standard, et honoraires ponctuels pour des
+                  missions spécifiques (audit patrimonial complexe, structuration de transmission,
+                  bilan retraite chiffré) qui exigent un travail d'analyse indépendant du fait
+                  qu'une solution soit ou non souscrite ensuite.
                 </p>
                 <div className="overflow-x-auto rounded-xl border border-border mt-6">
                   <table className="w-full text-sm">
@@ -946,76 +1000,85 @@ function TarifsPage() {
               >
                 <p>Trois faits, dans l'ordre où ils s'appliquent réellement.</p>
                 <p>
-                  <strong>Premièrement, vous ne réglez rien directement à notre cabinet</strong> pour
-                  l'accompagnement standard — ni au moment du premier échange, ni au moment de la
-                  souscription, ni ensuite pour le suivi annuel. Aucune facture ne vous est adressée dans ce
-                  cadre.
+                  <strong>Premièrement, vous ne réglez rien directement à notre cabinet</strong>{" "}
+                  pour l'accompagnement standard — ni au moment du premier échange, ni au moment de
+                  la souscription, ni ensuite pour le suivi annuel. Aucune facture ne vous est
+                  adressée dans ce cadre.
                 </p>
                 <p>
-                  <strong>Deuxièmement, ce sont nos partenaires qui nous rémunèrent</strong> — compagnies
-                  d'assurance, sociétés de gestion de SCPI, opérateurs immobiliers et Girardin — sous forme
-                  de commissions prévues contractuellement dans nos conventions de distribution. Les
-                  tableaux détaillés plus haut sur cette page vous montrent exactement le taux appliqué pour
-                  chaque famille de solutions — et, pour les supports au sein d'un contrat, la logique qui
-                  détermine si une rétrocession existe ou non.
+                  <strong>Deuxièmement, ce sont nos partenaires qui nous rémunèrent</strong> —
+                  compagnies d'assurance, sociétés de gestion de SCPI, opérateurs immobiliers et
+                  Girardin — sous forme de commissions prévues contractuellement dans nos
+                  conventions de distribution. Les tableaux détaillés plus haut sur cette page vous
+                  montrent exactement le taux appliqué pour chaque famille de solutions — et, pour
+                  les supports au sein d'un contrat, la logique qui détermine si une rétrocession
+                  existe ou non.
                 </p>
                 <p>
-                  <strong>Troisièmement, cette rémunération n'est pas ponctuelle et sans suite</strong> :
-                  notre cabinet vous accompagne dans la durée — suivi annuel, vérification que les critères
-                  extra-financiers de vos supports tiennent dans le temps, révision de votre clause
-                  bénéficiaire, arbitrages en cas d'événement de vie. Une partie de la commission perçue (en
-                  particulier la part récurrente sur l'assurance vie et le PER) rémunère précisément ce
-                  travail de suivi, pas seulement l'acte de souscription initial.
+                  <strong>
+                    Troisièmement, cette rémunération n'est pas ponctuelle et sans suite
+                  </strong>{" "}
+                  : notre cabinet vous accompagne dans la durée — suivi annuel, vérification que les
+                  critères extra-financiers de vos supports tiennent dans le temps, révision de
+                  votre clause bénéficiaire, arbitrages en cas d'événement de vie. Une partie de la
+                  commission perçue (en particulier la part récurrente sur l'assurance vie et le
+                  PER) rémunère précisément ce travail de suivi, pas seulement l'acte de
+                  souscription initial.
                 </p>
                 <Callout variant="muted" label="Exception : la lettre de mission">
-                  Pour des missions ponctuelles qui ne débouchent pas nécessairement sur une souscription —
-                  un audit de transmission, un bilan retraite chiffré, une optimisation fiscale complexe —
-                  nous pouvons établir un devis d'honoraires. Cette formule reste l'exception, activée
-                  uniquement à votre demande.
+                  Pour des missions ponctuelles qui ne débouchent pas nécessairement sur une
+                  souscription — un audit de transmission, un bilan retraite chiffré, une
+                  optimisation fiscale complexe — nous pouvons établir un devis d'honoraires. Cette
+                  formule reste l'exception, activée uniquement à votre demande.
                 </Callout>
               </LongSection>
 
               {/* 5 */}
-              <LongSection id="retrocessions-expliquees" eyebrow="Pédagogie" title="Que sont exactement les rétrocessions ?" icon={Percent}>
+              <LongSection
+                id="retrocessions-expliquees"
+                eyebrow="Pédagogie"
+                title="Que sont exactement les rétrocessions ?"
+                icon={Percent}
+              >
                 <p>
-                  Une rétrocession est la part des frais que vous réglez déjà — frais d'entrée, frais de
-                  gestion annuels, frais courants d'un support — qu'une compagnie d'assurance ou une société
-                  de gestion reverse à l'intermédiaire qui vous a apporté et qui vous accompagne. Ce n'est
-                  pas un frais supplémentaire ajouté à votre facture : c'est une répartition, en interne,
-                  d'un flux qui existe de toute façon.
+                  Une rétrocession est la part des frais que vous réglez déjà — frais d'entrée,
+                  frais de gestion annuels, frais courants d'un support — qu'une compagnie
+                  d'assurance ou une société de gestion reverse à l'intermédiaire qui vous a apporté
+                  et qui vous accompagne. Ce n'est pas un frais supplémentaire ajouté à votre
+                  facture : c'est une répartition, en interne, d'un flux qui existe de toute façon.
                 </p>
                 <h3>Une analogie utile</h3>
                 <p>
-                  Pensez à un billet d'avion acheté via une agence de voyage plutôt que directement sur le
-                  site de la compagnie aérienne. Le prix affiché est identique dans les deux cas — la
-                  compagnie a intégré, dans son prix « catalogue », une commission de distribution qu'elle
-                  reversera à l'agence si vous passez par elle. Vous ne payez pas l'agence en plus : vous
-                  payez le même prix, et l'agence est rémunérée sur la part déjà prévue dans ce prix. Le
-                  mécanisme des rétrocessions fonctionne de manière structurellement identique dans la
-                  gestion de patrimoine — à une nuance près sur l'assurance vie et le PER, où l'agence (donc
-                  nous) conserve une marge de manœuvre sur une partie du prix. Nous détaillons cette nuance
-                  en section 6.
+                  Pensez à un billet d'avion acheté via une agence de voyage plutôt que directement
+                  sur le site de la compagnie aérienne. Le prix affiché est identique dans les deux
+                  cas — la compagnie a intégré, dans son prix « catalogue », une commission de
+                  distribution qu'elle reversera à l'agence si vous passez par elle. Vous ne payez
+                  pas l'agence en plus : vous payez le même prix, et l'agence est rémunérée sur la
+                  part déjà prévue dans ce prix. Le mécanisme des rétrocessions fonctionne de
+                  manière structurellement identique dans la gestion de patrimoine — à une nuance
+                  près sur l'assurance vie et le PER, où l'agence (donc nous) conserve une marge de
+                  manœuvre sur une partie du prix. Nous détaillons cette nuance en section 6.
                 </p>
                 <h3>Un exemple chiffré</h3>
                 <p>
-                  Prenons une assurance vie avec 1 % de frais de gestion annuels sur l'encours. Sur ce 1 %,
-                  une compagnie d'assurance type reverse une fraction à l'intermédiaire qui a apporté et
-                  suit le client — le reste finance la gestion administrative et technique du contrat par la
-                  compagnie elle-même. Le taux exact de reversement varie selon les compagnies et les
-                  conventions ; ce qui compte pour vous, c'est que le total des 1 % que vous réglez ne
-                  change pas, que vous soyez accompagné ou non.
+                  Prenons une assurance vie avec 1 % de frais de gestion annuels sur l'encours. Sur
+                  ce 1 %, une compagnie d'assurance type reverse une fraction à l'intermédiaire qui
+                  a apporté et suit le client — le reste finance la gestion administrative et
+                  technique du contrat par la compagnie elle-même. Le taux exact de reversement
+                  varie selon les compagnies et les conventions ; ce qui compte pour vous, c'est que
+                  le total des 1 % que vous réglez ne change pas, que vous soyez accompagné ou non.
                 </p>
                 <p>
-                  Le même mécanisme existe à l'étage des supports : les frais courants d'un fonds — ceux que
-                  vous voyez dans son DIC — peuvent inclure une part reversée au distributeur. C'est
-                  précisément ce qui crée l'asymétrie entre fonds peu chargés et fonds très chargés que nous
-                  détaillons en section 8.
+                  Le même mécanisme existe à l'étage des supports : les frais courants d'un fonds —
+                  ceux que vous voyez dans son DIC — peuvent inclure une part reversée au
+                  distributeur. C'est précisément ce qui crée l'asymétrie entre fonds peu chargés et
+                  fonds très chargés que nous détaillons en section 8.
                 </p>
                 <Callout label="Le terme technique">
-                  Dans les textes européens sur la distribution de produits financiers et d'assurance, on
-                  parle d'« avantages et rémunérations » (ou d'« inducements »). Le terme « rétrocession »
-                  (ou « rétrocommission ») est l'usage courant du secteur en France — nous l'utilisons tout
-                  au long de cette page dans ce sens précis.
+                  Dans les textes européens sur la distribution de produits financiers et
+                  d'assurance, on parle d'« avantages et rémunérations » (ou d'« inducements »). Le
+                  terme « rétrocession » (ou « rétrocommission ») est l'usage courant du secteur en
+                  France — nous l'utilisons tout au long de cette page dans ce sens précis.
                 </Callout>
               </LongSection>
 
@@ -1027,71 +1090,73 @@ function TarifsPage() {
                 icon={Scale}
               >
                 <p>
-                  La réponse honnête demande de distinguer deux mécaniques, car elles ne fonctionnent pas de
-                  la même façon.
+                  La réponse honnête demande de distinguer deux mécaniques, car elles ne
+                  fonctionnent pas de la même façon.
                 </p>
                 <p>
-                  Pour la SCPI, l'immobilier direct et le Girardin, le prix est fixé par le partenaire dans
-                  une grille publique, identique que vous passiez par nous ou en direct : notre rémunération
-                  est prélevée sur un flux qui existe indépendamment de notre intervention, vous ne réglez
-                  rien de plus.
+                  Pour la SCPI, l'immobilier direct et le Girardin, le prix est fixé par le
+                  partenaire dans une grille publique, identique que vous passiez par nous ou en
+                  direct : notre rémunération est prélevée sur un flux qui existe indépendamment de
+                  notre intervention, vous ne réglez rien de plus.
                 </p>
                 <p>
-                  Pour l'assurance vie et le PER, la réalité est plus nuancée — et nous préférons vous le
-                  dire plutôt que de le simplifier à l'excès. Les frais de gestion annuels sont fixés
-                  uniformément par la compagnie d'assurance, quel que soit l'intermédiaire. Les frais
-                  d'entrée, en revanche, relèvent d'une fourchette que le courtier — donc notre cabinet — a
-                  la possibilité de moduler, jusqu'à un plafond fixé par la compagnie. Nous aurions
-                  techniquement la latitude d'appliquer systématiquement le taux maximal autorisé. Nous
-                  avons choisi l'inverse : une grille dégressive et plafonnée (1 % jusqu'à 200 000 €, 0,50 %
-                  jusqu'à 400 000 €, 0 % au-delà), identique pour tous nos clients, sans négociation au cas
-                  par cas qui favoriserait les plus habiles à négocier au détriment des autres.
+                  Pour l'assurance vie et le PER, la réalité est plus nuancée — et nous préférons
+                  vous le dire plutôt que de le simplifier à l'excès. Les frais de gestion annuels
+                  sont fixés uniformément par la compagnie d'assurance, quel que soit
+                  l'intermédiaire. Les frais d'entrée, en revanche, relèvent d'une fourchette que le
+                  courtier — donc notre cabinet — a la possibilité de moduler, jusqu'à un plafond
+                  fixé par la compagnie. Nous aurions techniquement la latitude d'appliquer
+                  systématiquement le taux maximal autorisé. Nous avons choisi l'inverse : une
+                  grille dégressive et plafonnée (1 % jusqu'à 200 000 €, 0,50 % jusqu'à 400 000 €, 0
+                  % au-delà), identique pour tous nos clients, sans négociation au cas par cas qui
+                  favoriserait les plus habiles à négocier au détriment des autres.
                 </p>
                 <p>
-                  Ce que vous gagnez en passant par nous n'est donc pas seulement un prix comparable au
-                  direct — c'est aussi une marge que nous nous imposons de plafonner, plus l'accompagnement,
-                  la vérification extra-financière en amont, et le suivi. Des éléments qui ont une valeur
-                  réelle, même s'ils ne figurent pas tous sur une ligne de frais séparée.
+                  Ce que vous gagnez en passant par nous n'est donc pas seulement un prix comparable
+                  au direct — c'est aussi une marge que nous nous imposons de plafonner, plus
+                  l'accompagnement, la vérification extra-financière en amont, et le suivi. Des
+                  éléments qui ont une valeur réelle, même s'ils ne figurent pas tous sur une ligne
+                  de frais séparée.
                 </p>
                 <div className="grid md:grid-cols-3 gap-6 mt-6">
                   <div className="rounded-xl border border-border bg-card p-5">
                     <Sparkles size={18} style={{ color: "var(--grenat)" }} />
                     <h4 className="font-display font-semibold text-base mt-3">L'accompagnement</h4>
                     <p className="text-xs text-muted-foreground leading-relaxed mt-2">
-                      Calibrer un versement PER sur votre tranche marginale d'imposition, arbitrer entre
-                      deux enveloppes selon votre horizon, rédiger une clause bénéficiaire qui protège
-                      vraiment votre famille : ces arbitrages ont une valeur réelle non facturée
-                      séparément.
+                      Calibrer un versement PER sur votre tranche marginale d'imposition, arbitrer
+                      entre deux enveloppes selon votre horizon, rédiger une clause bénéficiaire qui
+                      protège vraiment votre famille : ces arbitrages ont une valeur réelle non
+                      facturée séparément.
                     </p>
                   </div>
                   <div className="rounded-xl border border-border bg-card p-5">
                     <SearchCheck size={18} style={{ color: "var(--grenat)" }} />
                     <h4 className="font-display font-semibold text-base mt-3">La vérification</h4>
                     <p className="text-xs text-muted-foreground leading-relaxed mt-2">
-                      Lire les DIC, les reportings SFDR et les méthodologies de labels avant d'ouvrir une
-                      piste ; vérifier ce qu'un fonds « responsable » détient réellement plutôt que de
-                      relayer sa brochure : c'est le cœur de notre travail, et il se fait en amont, sans
-                      ligne de facturation.
+                      Lire les DIC, les reportings SFDR et les méthodologies de labels avant
+                      d'ouvrir une piste ; vérifier ce qu'un fonds « responsable » détient
+                      réellement plutôt que de relayer sa brochure : c'est le cœur de notre travail,
+                      et il se fait en amont, sans ligne de facturation.
                     </p>
                   </div>
                   <div className="rounded-xl border border-border bg-card p-5">
                     <CheckCircle2 size={18} style={{ color: "var(--grenat)" }} />
                     <h4 className="font-display font-semibold text-base mt-3">Le suivi</h4>
                     <p className="text-xs text-muted-foreground leading-relaxed mt-2">
-                      Revue annuelle de l'allocation, surveillance des labels (validité, renouvellement) et
-                      des classifications SFDR de vos supports, révision de la clause bénéficiaire à chaque
-                      changement de situation : un accompagnement dans la durée, pas une transaction
-                      isolée.
+                      Revue annuelle de l'allocation, surveillance des labels (validité,
+                      renouvellement) et des classifications SFDR de vos supports, révision de la
+                      clause bénéficiaire à chaque changement de situation : un accompagnement dans
+                      la durée, pas une transaction isolée.
                     </p>
                   </div>
                 </div>
                 <p className="mt-6">
-                  Une nuance mérite d'être ajoutée : certains distributeurs pratiquent le modèle « fee-only
-                  sans rétrocession », en reversant au client la part normalement destinée à
-                  l'intermédiaire, contre le paiement d'honoraires directs. Selon les montants en jeu et la
-                  structure exacte de leurs honoraires, ce modèle peut, dans certains cas, s'avérer
-                  légèrement moins coûteux — ou légèrement plus coûteux — que le nôtre. Cela dépend de votre
-                  situation précise, pas d'une règle générale.
+                  Une nuance mérite d'être ajoutée : certains distributeurs pratiquent le modèle «
+                  fee-only sans rétrocession », en reversant au client la part normalement destinée
+                  à l'intermédiaire, contre le paiement d'honoraires directs. Selon les montants en
+                  jeu et la structure exacte de leurs honoraires, ce modèle peut, dans certains cas,
+                  s'avérer légèrement moins coûteux — ou légèrement plus coûteux — que le nôtre.
+                  Cela dépend de votre situation précise, pas d'une règle générale.
                 </p>
               </LongSection>
 
@@ -1104,34 +1169,39 @@ function TarifsPage() {
               >
                 <p>
                   Une compagnie d'assurance ou une société de gestion pourrait théoriquement vendre
-                  uniquement en direct, sans intermédiaire, et garder l'intégralité de ses marges. Si elle
-                  choisit malgré tout de rémunérer des conseillers, c'est parce que ce canal de distribution
-                  lui apporte un travail qu'elle ne réalise pas elle-même.
+                  uniquement en direct, sans intermédiaire, et garder l'intégralité de ses marges.
+                  Si elle choisit malgré tout de rémunérer des conseillers, c'est parce que ce canal
+                  de distribution lui apporte un travail qu'elle ne réalise pas elle-même.
                 </p>
                 <ul>
                   <li>
-                    <strong>L'accompagnement en amont.</strong> Un partenaire ne connaît pas votre situation
-                    personnelle avant que vous ne souscriviez. Le conseiller, lui, l'analyse en détail :
-                    revenus, tranche marginale d'imposition, objectifs, situation familiale, horizon — et,
-                    dans notre cas, exigences extra-financières précises.
+                    <strong>L'accompagnement en amont.</strong> Un partenaire ne connaît pas votre
+                    situation personnelle avant que vous ne souscriviez. Le conseiller, lui,
+                    l'analyse en détail : revenus, tranche marginale d'imposition, objectifs,
+                    situation familiale, horizon — et, dans notre cas, exigences extra-financières
+                    précises.
                   </li>
                   <li>
-                    <strong>La pédagogie.</strong> Expliquer la différence entre un PER et une assurance
-                    vie, ou entre ce que garantit un Label ISR et ce que déclare un fonds Article 8, demande
-                    un temps que peu de partenaires consacrent individuellement à chaque client.
+                    <strong>La pédagogie.</strong> Expliquer la différence entre un PER et une
+                    assurance vie, ou entre ce que garantit un Label ISR et ce que déclare un fonds
+                    Article 8, demande un temps que peu de partenaires consacrent individuellement à
+                    chaque client.
                   </li>
                   <li>
-                    <strong>L'accompagnement administratif.</strong> Constitution du dossier, vérification
-                    des pièces, suivi de la signature — un travail qui allège la charge du partenaire tout
-                    en fluidifiant votre expérience.
+                    <strong>L'accompagnement administratif.</strong> Constitution du dossier,
+                    vérification des pièces, suivi de la signature — un travail qui allège la charge
+                    du partenaire tout en fluidifiant votre expérience.
                   </li>
                   <li>
-                    <strong>Le suivi dans la durée.</strong> Un partenaire gère des milliers de contrats ;
-                    il ne peut pas, à lui seul, revoir individuellement chaque situation chaque année. Le
-                    conseiller le fait.
+                    <strong>Le suivi dans la durée.</strong> Un partenaire gère des milliers de
+                    contrats ; il ne peut pas, à lui seul, revoir individuellement chaque situation
+                    chaque année. Le conseiller le fait.
                   </li>
                 </ul>
-                <p>Trois exemples concrets, issus de notre pratique, illustrent la valeur de ce travail.</p>
+                <p>
+                  Trois exemples concrets, issus de notre pratique, illustrent la valeur de ce
+                  travail.
+                </p>
                 <div className="grid md:grid-cols-3 gap-6 mt-6">
                   <div className="card-paper p-6 space-y-3">
                     <span className="h-10 w-10 rounded-full flex items-center justify-center bg-[var(--accent)] text-[var(--grenat)]">
@@ -1139,21 +1209,24 @@ function TarifsPage() {
                     </span>
                     <h3 className="font-display font-semibold text-base">Un PER mal calibré</h3>
                     <p className="text-xs text-muted-foreground leading-relaxed">
-                      Un épargnant dans la tranche marginale d'imposition de 11 % qui verse 300 € par mois
-                      sur un PER économise environ 33 € d'impôt par mois — au prix d'un blocage jusqu'à la
-                      retraite. Le même versement sur une assurance vie donne accès aux mêmes supports
-                      responsables, sans blocage, avec une fiscalité avantageuse après 8 ans. Sans
-                      accompagnement, cet arbitrage est souvent fait dans le mauvais sens.
+                      Un épargnant dans la tranche marginale d'imposition de 11 % qui verse 300 €
+                      par mois sur un PER économise environ 33 € d'impôt par mois — au prix d'un
+                      blocage jusqu'à la retraite. Le même versement sur une assurance vie donne
+                      accès aux mêmes supports responsables, sans blocage, avec une fiscalité
+                      avantageuse après 8 ans. Sans accompagnement, cet arbitrage est souvent fait
+                      dans le mauvais sens.
                     </p>
                   </div>
                   <div className="card-paper p-6 space-y-3">
                     <span className="h-10 w-10 rounded-full flex items-center justify-center bg-[var(--accent)] text-[var(--grenat)]">
                       <FileSignature size={18} />
                     </span>
-                    <h3 className="font-display font-semibold text-base">Une clause bénéficiaire vague</h3>
+                    <h3 className="font-display font-semibold text-base">
+                      Une clause bénéficiaire vague
+                    </h3>
                     <p className="text-xs text-muted-foreground leading-relaxed">
-                      Une assurance vie transmet, pour les capitaux issus de primes versées avant 70 ans,
-                      jusqu'à{" "}
+                      Une assurance vie transmet, pour les capitaux issus de primes versées avant 70
+                      ans, jusqu'à{" "}
                       <a
                         href="https://www.impots.gouv.fr/particulier/questions/je-suis-beneficiaire-dune-assurance-vie-comment-la-declarer"
                         target="_blank"
@@ -1161,22 +1234,25 @@ function TarifsPage() {
                       >
                         152 500 € par bénéficiaire
                       </a>{" "}
-                      en franchise du prélèvement spécifique. Une clause mal rédigée — bénéficiaires flous,
-                      clause jamais mise à jour — peut faire perdre tout ou partie de cet avantage. Une
-                      phrase bien écrite, revue à chaque événement familial, protège concrètement les
-                      vôtres.
+                      en franchise du prélèvement spécifique. Une clause mal rédigée — bénéficiaires
+                      flous, clause jamais mise à jour — peut faire perdre tout ou partie de cet
+                      avantage. Une phrase bien écrite, revue à chaque événement familial, protège
+                      concrètement les vôtres.
                     </p>
                   </div>
                   <div className="card-paper p-6 space-y-3">
                     <span className="h-10 w-10 rounded-full flex items-center justify-center bg-[var(--accent)] text-[var(--grenat)]">
                       <SearchCheck size={18} />
                     </span>
-                    <h3 className="font-display font-semibold text-base">Un label perdu, sans que personne ne le voie</h3>
+                    <h3 className="font-display font-semibold text-base">
+                      Un label perdu, sans que personne ne le voie
+                    </h3>
                     <p className="text-xs text-muted-foreground leading-relaxed">
-                      Un fonds choisi pour son label peut ne pas le renouveler, être reclassé d'Article 9
-                      vers Article 8, ou infléchir sa stratégie. Sans suivi, l'épargnant continue de
-                      détenir — parfois pendant des années — un support qui ne correspond plus au critère
-                      qui avait motivé son choix. La revue annuelle sert exactement à détecter cela.
+                      Un fonds choisi pour son label peut ne pas le renouveler, être reclassé
+                      d'Article 9 vers Article 8, ou infléchir sa stratégie. Sans suivi, l'épargnant
+                      continue de détenir — parfois pendant des années — un support qui ne
+                      correspond plus au critère qui avait motivé son choix. La revue annuelle sert
+                      exactement à détecter cela.
                     </p>
                   </div>
                 </div>
@@ -1190,99 +1266,106 @@ function TarifsPage() {
                 icon={ShieldAlert}
               >
                 <p>
-                  C'est la question centrale de cette page, et nous refusons d'y répondre par une pirouette.
-                  La réponse honnête tient en trois temps : la tentation structurelle existe ; elle prend,
-                  dans l'univers des fonds responsables, une forme précise que peu de cabinets détaillent ;
-                  et un résidu de biais subsiste, que nous préférons nommer plutôt que taire.
+                  C'est la question centrale de cette page, et nous refusons d'y répondre par une
+                  pirouette. La réponse honnête tient en trois temps : la tentation structurelle
+                  existe ; elle prend, dans l'univers des fonds responsables, une forme précise que
+                  peu de cabinets détaillent ; et un résidu de biais subsiste, que nous préférons
+                  nommer plutôt que taire.
                 </p>
                 <p>
-                  <strong>Structurellement, une tentation existe.</strong> Tout conseiller rémunéré à la
-                  souscription — nous inclus — fait face, en théorie, à un biais possible : proposer de
-                  faire quelque chose plutôt que de ne rien faire, ou privilégier, à situation équivalente,
-                  une solution qui rémunère davantage. Prétendre que ce biais n'existe nulle part dans notre
-                  industrie serait malhonnête. Nous préférons le nommer plutôt que le nier.
+                  <strong>Structurellement, une tentation existe.</strong> Tout conseiller rémunéré
+                  à la souscription — nous inclus — fait face, en théorie, à un biais possible :
+                  proposer de faire quelque chose plutôt que de ne rien faire, ou privilégier, à
+                  situation équivalente, une solution qui rémunère davantage. Prétendre que ce biais
+                  n'existe nulle part dans notre industrie serait malhonnête. Nous préférons le
+                  nommer plutôt que le nier.
                 </p>
 
                 <h3>L'asymétrie de rétrocession entre supports responsables</h3>
                 <p>
-                  Voici un point que nous n'avons vu détaillé presque nulle part, et qui mérite de l'être :
-                  à l'intérieur d'une même assurance vie ou d'un même PER, tous les supports
-                  « responsables » ne rémunèrent pas le cabinet de la même façon — parce que la rétrocession
-                  éventuelle est financée par les frais courants de chaque support, et que ces frais varient
-                  fortement d'un type de fonds à l'autre.
+                  Voici un point que nous n'avons vu détaillé presque nulle part, et qui mérite de
+                  l'être : à l'intérieur d'une même assurance vie ou d'un même PER, tous les
+                  supports « responsables » ne rémunèrent pas le cabinet de la même façon — parce
+                  que la rétrocession éventuelle est financée par les frais courants de chaque
+                  support, et que ces frais varient fortement d'un type de fonds à l'autre.
                 </p>
                 <p>
-                  Les fonds indiciels ISR (ETF), dont les frais courants sont faibles, ne versent dans
-                  l'immense majorité des cas quasiment aucune rétrocession récurrente au cabinet qui les a
-                  proposés. Les fonds à gestion active — y compris labellisés ISR ou Greenfin, y compris
-                  classés Article 8 ou 9 — portent des frais courants plus élevés, qui permettent, eux, une
-                  rétrocession au distributeur.
+                  Les fonds indiciels ISR (ETF), dont les frais courants sont faibles, ne versent
+                  dans l'immense majorité des cas quasiment aucune rétrocession récurrente au
+                  cabinet qui les a proposés. Les fonds à gestion active — y compris labellisés ISR
+                  ou Greenfin, y compris classés Article 8 ou 9 — portent des frais courants plus
+                  élevés, qui permettent, eux, une rétrocession au distributeur.
                 </p>
                 <p>
-                  Il faut être précis sur ce que cela implique. À stratégie et univers d'investissement
-                  comparables, un support plus chargé en frais part chaque année avec un handicap de
-                  performance nette égal à ce surcoût — et c'est pourtant lui qui rémunère le mieux notre
-                  cabinet à l'euro investi. Il n'y a pas, ici, de mécanisme qui annulerait automatiquement ce
-                  conflit d'intérêts potentiel. Un contrepoids structurel existe néanmoins : notre
-                  rémunération récurrente sur l'assurance vie et le PER est assise sur l'encours de votre
-                  contrat. Des supports moins chargés laissent, toutes choses égales par ailleurs, davantage
-                  de performance nette dans votre contrat — donc un encours qui croît plus vite, et c'est
-                  cet encours qui alimente notre rémunération sur la durée d'une relation de plusieurs
-                  années. Cet alignement de long terme est réel, mais partiel : il ne compense pas
-                  mécaniquement l'écart de rétrocession immédiat, et nous ne vous dirons pas le contraire.
+                  Il faut être précis sur ce que cela implique. À stratégie et univers
+                  d'investissement comparables, un support plus chargé en frais part chaque année
+                  avec un handicap de performance nette égal à ce surcoût — et c'est pourtant lui
+                  qui rémunère le mieux notre cabinet à l'euro investi. Il n'y a pas, ici, de
+                  mécanisme qui annulerait automatiquement ce conflit d'intérêts potentiel. Un
+                  contrepoids structurel existe néanmoins : notre rémunération récurrente sur
+                  l'assurance vie et le PER est assise sur l'encours de votre contrat. Des supports
+                  moins chargés laissent, toutes choses égales par ailleurs, davantage de
+                  performance nette dans votre contrat — donc un encours qui croît plus vite, et
+                  c'est cet encours qui alimente notre rémunération sur la durée d'une relation de
+                  plusieurs années. Cet alignement de long terme est réel, mais partiel : il ne
+                  compense pas mécaniquement l'écart de rétrocession immédiat, et nous ne vous
+                  dirons pas le contraire.
                 </p>
                 <p>
-                  Une précision utile pour la suite de vos lectures : ni un label (ISR, Greenfin, Finansol),
-                  ni une classification SFDR ne modifie en soi notre rémunération. Ce sont les frais
-                  courants du support qui la déterminent. Le « niveau d'éthique » affiché d'un fonds et son
-                  niveau de rétrocession sont deux variables indépendantes — un fonds peut être exigeant et
-                  peu chargé, médiocre et très chargé, ou l'inverse.
+                  Une précision utile pour la suite de vos lectures : ni un label (ISR, Greenfin,
+                  Finansol), ni une classification SFDR ne modifie en soi notre rémunération. Ce
+                  sont les frais courants du support qui la déterminent. Le « niveau d'éthique »
+                  affiché d'un fonds et son niveau de rétrocession sont deux variables indépendantes
+                  — un fonds peut être exigeant et peu chargé, médiocre et très chargé, ou
+                  l'inverse.
                 </p>
 
                 <h3>La méthodologie précède le support</h3>
                 <p>
-                  C'est le garde-fou qui compte le plus, précisément parce que l'argument précédent est
-                  structurel et non absolu. Notre premier rendez-vous part systématiquement de vos
-                  objectifs, votre horizon, votre fiscalité, votre situation familiale — et de vos exigences
-                  extra-financières précises : secteurs exclus, causes prioritaires, niveau de preuve
-                  attendu. Le choix entre gestion indicielle et gestion active se justifie ensuite par des
-                  critères documentables — profondeur de la méthodologie d'exclusion, pratique réelle
-                  d'engagement actionnarial, qualité du reporting extra-financier, frais courants — jamais
-                  par le taux de rétrocession. Certaines exigences (fonds thématiques, épargne solidaire)
-                  ne peuvent être servies que par des fonds actifs plus chargés ; d'autres situations
-                  appellent une ossature indicielle à bas coût. Dans les deux cas, le raisonnement figure
-                  noir sur blanc dans la synthèse écrite que nous vous remettons — vous pouvez donc vérifier
-                  qu'il ne repose jamais sur notre rémunération.
+                  C'est le garde-fou qui compte le plus, précisément parce que l'argument précédent
+                  est structurel et non absolu. Notre premier rendez-vous part systématiquement de
+                  vos objectifs, votre horizon, votre fiscalité, votre situation familiale — et de
+                  vos exigences extra-financières précises : secteurs exclus, causes prioritaires,
+                  niveau de preuve attendu. Le choix entre gestion indicielle et gestion active se
+                  justifie ensuite par des critères documentables — profondeur de la méthodologie
+                  d'exclusion, pratique réelle d'engagement actionnarial, qualité du reporting
+                  extra-financier, frais courants — jamais par le taux de rétrocession. Certaines
+                  exigences (fonds thématiques, épargne solidaire) ne peuvent être servies que par
+                  des fonds actifs plus chargés ; d'autres situations appellent une ossature
+                  indicielle à bas coût. Dans les deux cas, le raisonnement figure noir sur blanc
+                  dans la synthèse écrite que nous vous remettons — vous pouvez donc vérifier qu'il
+                  ne repose jamais sur notre rémunération.
                 </p>
 
                 <h3>La réputation à long terme pèse plus lourd qu'une commission ponctuelle</h3>
                 <p>
-                  Une part significative de nos nouveaux clients nous sont adressés par d'anciens clients.
-                  Une piste mal calibrée qui satisferait une commission ponctuelle, mais desservirait votre
-                  intérêt, coûte structurellement plus cher à notre cabinet sur la durée qu'elle ne lui
-                  rapporte une seule fois. Sur un site dont le positionnement entier repose sur la chasse au
-                  greenwashing, ce mécanisme est encore plus brutal : notre crédibilité est notre seul
-                  actif.
+                  Une part significative de nos nouveaux clients nous sont adressés par d'anciens
+                  clients. Une piste mal calibrée qui satisferait une commission ponctuelle, mais
+                  desservirait votre intérêt, coûte structurellement plus cher à notre cabinet sur
+                  la durée qu'elle ne lui rapporte une seule fois. Sur un site dont le
+                  positionnement entier repose sur la chasse au greenwashing, ce mécanisme est
+                  encore plus brutal : notre crédibilité est notre seul actif.
                 </p>
 
                 <h3>Ce que ces garde-fous ne couvrent pas entièrement</h3>
                 <p>
-                  Des biais plus subtils demeurent, et nous préférons les nommer : celui de proposer une
-                  action plutôt que l'inaction ; celui de la marge que nous conservons la possibilité de
-                  moduler sur les frais d'entrée d'assurance vie et de PER (voir section 6) ; celui de
-                  privilégier, à qualité équivalente, un partenaire dont les outils sont plus simples à
-                  mettre en œuvre ; et l'asymétrie de rétrocession entre supports décrite ci-dessus, qui ne
-                  disparaît pas parce qu'elle est documentée. C'est pour limiter ces biais que nous
-                  formulons explicitement, à chaque premier rendez-vous, la possibilité de ne rien
-                  souscrire — et que nous publions, sur cette page, précisément ce que nous préférerions
-                  parfois ne pas devoir détailler.
+                  Des biais plus subtils demeurent, et nous préférons les nommer : celui de proposer
+                  une action plutôt que l'inaction ; celui de la marge que nous conservons la
+                  possibilité de moduler sur les frais d'entrée d'assurance vie et de PER (voir
+                  section 6) ; celui de privilégier, à qualité équivalente, un partenaire dont les
+                  outils sont plus simples à mettre en œuvre ; et l'asymétrie de rétrocession entre
+                  supports décrite ci-dessus, qui ne disparaît pas parce qu'elle est documentée.
+                  C'est pour limiter ces biais que nous formulons explicitement, à chaque premier
+                  rendez-vous, la possibilité de ne rien souscrire — et que nous publions, sur cette
+                  page, précisément ce que nous préférerions parfois ne pas devoir détailler.
                 </p>
                 <Callout label="En résumé, sans détour">
-                  Nous ne prétendons pas être immunisés contre tout biais — personne ne l'est. Le support le
-                  plus rémunérateur pour nous n'est pas nécessairement le plus pertinent pour vous après
-                  frais, et aucun label n'y change rien. C'est précisément pour cela que notre méthode part
-                  de vos exigences et de votre horizon plutôt que d'un produit, que le raisonnement vous est
-                  remis par écrit, et que cette asymétrie est publiée ici plutôt que passée sous silence.
+                  Nous ne prétendons pas être immunisés contre tout biais — personne ne l'est. Le
+                  support le plus rémunérateur pour nous n'est pas nécessairement le plus pertinent
+                  pour vous après frais, et aucun label n'y change rien. C'est précisément pour cela
+                  que notre méthode part de vos exigences et de votre horizon plutôt que d'un
+                  produit, que le raisonnement vous est remis par écrit, et que cette asymétrie est
+                  publiée ici plutôt que passée sous silence.
                 </Callout>
               </LongSection>
 
@@ -1294,22 +1377,24 @@ function TarifsPage() {
                 icon={FileSignature}
               >
                 <p>
-                  Un cabinet qui choisit le modèle honoraires (fee-only) ne fait pas un choix moins légitime
-                  que le nôtre — il répond à une logique différente, avec ses propres avantages.
+                  Un cabinet qui choisit le modèle honoraires (fee-only) ne fait pas un choix moins
+                  légitime que le nôtre — il répond à une logique différente, avec ses propres
+                  avantages.
                 </p>
                 <p>
-                  En facturant directement le client plutôt qu'en percevant des rétrocessions, ce type de
-                  cabinet élimine par construction tout lien entre sa rémunération et la solution retenue :
-                  il est payé pour son analyse, que vous souscriviez ou non, quel que soit le produit
-                  finalement choisi. Cette indépendance a un prix visible et immédiat — mais elle offre une
-                  clarté que le modèle courtage ne peut pas égaler sur ce point précis.
+                  En facturant directement le client plutôt qu'en percevant des rétrocessions, ce
+                  type de cabinet élimine par construction tout lien entre sa rémunération et la
+                  solution retenue : il est payé pour son analyse, que vous souscriviez ou non, quel
+                  que soit le produit finalement choisi. Cette indépendance a un prix visible et
+                  immédiat — mais elle offre une clarté que le modèle courtage ne peut pas égaler
+                  sur ce point précis.
                 </p>
                 <p>
-                  Ce modèle convient particulièrement bien aux situations où le conseil lui-même est le
-                  produit principal : audit patrimonial global sans souscription immédiate, arbitrage entre
-                  plusieurs stratégies déjà en place, mission de structuration complexe. C'est d'ailleurs
-                  pour ce type de situations que nous proposons, nous aussi, une lettre de mission tarifée —
-                  sans en faire notre modèle par défaut.
+                  Ce modèle convient particulièrement bien aux situations où le conseil lui-même est
+                  le produit principal : audit patrimonial global sans souscription immédiate,
+                  arbitrage entre plusieurs stratégies déjà en place, mission de structuration
+                  complexe. C'est d'ailleurs pour ce type de situations que nous proposons, nous
+                  aussi, une lettre de mission tarifée — sans en faire notre modèle par défaut.
                 </p>
               </LongSection>
 
@@ -1321,34 +1406,40 @@ function TarifsPage() {
                 icon={Eye}
               >
                 <p>
-                  Aucun cabinet sérieux ne « travaille sans être rémunéré ». Quand un site affiche un
-                  accompagnement présenté comme entièrement dénué de coût, cela signifie presque toujours
-                  que sa rémunération provient exclusivement de rétrocessions — exactement notre cas — mais
-                  que cette information n'est simplement pas détaillée aussi explicitement que sur cette
-                  page.
+                  Aucun cabinet sérieux ne « travaille sans être rémunéré ». Quand un site affiche
+                  un accompagnement présenté comme entièrement dénué de coût, cela signifie presque
+                  toujours que sa rémunération provient exclusivement de rétrocessions — exactement
+                  notre cas — mais que cette information n'est simplement pas détaillée aussi
+                  explicitement que sur cette page.
                 </p>
                 <p>
-                  Ce n'est pas nécessairement une tromperie délibérée : beaucoup de cabinets considèrent, à
-                  tort selon nous, que cette précision relève du détail technique plutôt que d'une
-                  information essentielle à la confiance. D'autres, plus rarement, entretiennent
-                  volontairement l'ambiguïté pour éviter la question du conflit d'intérêts potentiel.
+                  Ce n'est pas nécessairement une tromperie délibérée : beaucoup de cabinets
+                  considèrent, à tort selon nous, que cette précision relève du détail technique
+                  plutôt que d'une information essentielle à la confiance. D'autres, plus rarement,
+                  entretiennent volontairement l'ambiguïté pour éviter la question du conflit
+                  d'intérêts potentiel.
                 </p>
                 <p>
-                  Notre position : un accompagnement « sans facture directe » n'est jamais un accompagnement
-                  « sans rémunération ». Il est simplement rémunéré par un tiers plutôt que par vous — ce
-                  qui mérite d'être expliqué, pas seulement mentionné en passant. Le lecteur qui a appris à
-                  se demander « qui paie ? » devant un fonds « vert » devrait se poser exactement la même
-                  question devant un conseiller « gratuit ». Nous préférons y avoir répondu avant qu'il ne
-                  la pose.
+                  Notre position : un accompagnement « sans facture directe » n'est jamais un
+                  accompagnement « sans rémunération ». Il est simplement rémunéré par un tiers
+                  plutôt que par vous — ce qui mérite d'être expliqué, pas seulement mentionné en
+                  passant. Le lecteur qui a appris à se demander « qui paie ? » devant un fonds «
+                  vert » devrait se poser exactement la même question devant un conseiller « gratuit
+                  ». Nous préférons y avoir répondu avant qu'il ne la pose.
                 </p>
               </LongSection>
 
               {/* 11 */}
-              <LongSection id="qui-paie-quoi" eyebrow="Vue d'ensemble" title="Qui paie réellement quoi ?" icon={Users}>
+              <LongSection
+                id="qui-paie-quoi"
+                eyebrow="Vue d'ensemble"
+                title="Qui paie réellement quoi ?"
+                icon={Users}
+              >
                 <p>
-                  Un tableau vaut souvent mieux qu'un paragraphe pour ce genre de question. Voici, pour
-                  chaque type de flux financier qui peut exister dans notre relation, qui règle quoi, à qui
-                  cela va, et où vous pouvez le vérifier vous-même.
+                  Un tableau vaut souvent mieux qu'un paragraphe pour ce genre de question. Voici,
+                  pour chaque type de flux financier qui peut exister dans notre relation, qui règle
+                  quoi, à qui cela va, et où vous pouvez le vérifier vous-même.
                 </p>
                 <div className="overflow-x-auto rounded-xl border border-border mt-6">
                   <table className="w-full text-sm">
@@ -1382,9 +1473,9 @@ function TarifsPage() {
                 icon={CalendarCheck}
               >
                 <p>
-                  Pour que la question de la rémunération ne reste pas abstraite, voici précisément à quel
-                  moment, dans le déroulé réel d'un accompagnement, chaque étape se situe — et à quel
-                  moment, exactement, un flux financier apparaît pour la première fois.
+                  Pour que la question de la rémunération ne reste pas abstraite, voici précisément
+                  à quel moment, dans le déroulé réel d'un accompagnement, chaque étape se situe —
+                  et à quel moment, exactement, un flux financier apparaît pour la première fois.
                 </p>
                 <div className="mt-8 space-y-6">
                   {timelineSteps.map((step, i) => (
@@ -1392,18 +1483,27 @@ function TarifsPage() {
                       <div className="flex flex-col items-center shrink-0">
                         <span
                           className="h-10 w-10 rounded-full flex items-center justify-center font-display text-sm"
-                          style={{ background: "var(--gradient-grenat)", color: "var(--grenat-foreground)" }}
+                          style={{
+                            background: "var(--gradient-grenat)",
+                            color: "var(--grenat-foreground)",
+                          }}
                         >
                           {i + 1}
                         </span>
-                        {i < timelineSteps.length - 1 && <span className="w-px flex-1 bg-border mt-2" />}
+                        {i < timelineSteps.length - 1 && (
+                          <span className="w-px flex-1 bg-border mt-2" />
+                        )}
                       </div>
                       <div className="pb-6">
                         <div className="flex items-center gap-2">
                           <step.icon size={16} style={{ color: "var(--grenat)" }} />
-                          <h4 className="font-display font-semibold text-base text-foreground">{step.title}</h4>
+                          <h4 className="font-display font-semibold text-base text-foreground">
+                            {step.title}
+                          </h4>
                         </div>
-                        <p className="text-sm text-muted-foreground leading-relaxed mt-1.5">{step.body}</p>
+                        <p className="text-sm text-muted-foreground leading-relaxed mt-1.5">
+                          {step.body}
+                        </p>
                       </div>
                     </div>
                   ))}
@@ -1418,57 +1518,61 @@ function TarifsPage() {
                 icon={Quote}
               >
                 <p>
-                  Voici cinq précisions que nous jugeons importantes, et que la plupart des pages « tarifs »
-                  du secteur ne détaillent pas — non par malice, le plus souvent, mais parce qu'elles
-                  demandent plus de mots qu'un tableau de frais n'en laisse de place.
+                  Voici cinq précisions que nous jugeons importantes, et que la plupart des pages «
+                  tarifs » du secteur ne détaillent pas — non par malice, le plus souvent, mais
+                  parce qu'elles demandent plus de mots qu'un tableau de frais n'en laisse de place.
                 </p>
                 <h3>1. Le moment exact où la rémunération se déclenche</h3>
                 <p>
-                  Notre cabinet n'est rémunéré à aucun moment du premier échange, de la restitution, ni même
-                  de votre réflexion. Le flux financier n'existe qu'à partir de la signature effective d'un
-                  contrat — jamais avant. Cela signifie qu'un rendez-vous qui ne débouche sur rien ne génère
-                  aucune rémunération pour nous, quel que soit le temps investi.
+                  Notre cabinet n'est rémunéré à aucun moment du premier échange, de la restitution,
+                  ni même de votre réflexion. Le flux financier n'existe qu'à partir de la signature
+                  effective d'un contrat — jamais avant. Cela signifie qu'un rendez-vous qui ne
+                  débouche sur rien ne génère aucune rémunération pour nous, quel que soit le temps
+                  investi.
                 </p>
                 <h3>2. Commission « one-shot » contre commission récurrente</h3>
                 <p>
-                  Une commission SCPI, Girardin ou immobilier est perçue une seule fois, à la souscription.
-                  Une commission d'assurance vie ou de PER est en grande partie récurrente, perçue chaque
-                  année tant que l'encours reste investi. Cette différence de nature crée des incitations
-                  différentes : une commission récurrente nous incite structurellement à vous garder
-                  satisfait dans la durée ; une commission ponctuelle nous incite davantage à bien calibrer
-                  la piste dès le départ, puisqu'il n'y aura pas de « rattrapage » ensuite.
+                  Une commission SCPI, Girardin ou immobilier est perçue une seule fois, à la
+                  souscription. Une commission d'assurance vie ou de PER est en grande partie
+                  récurrente, perçue chaque année tant que l'encours reste investi. Cette différence
+                  de nature crée des incitations différentes : une commission récurrente nous incite
+                  structurellement à vous garder satisfait dans la durée ; une commission ponctuelle
+                  nous incite davantage à bien calibrer la piste dès le départ, puisqu'il n'y aura
+                  pas de « rattrapage » ensuite.
                 </p>
                 <h3>3. L'asymétrie de rétrocession entre supports responsables</h3>
                 <p>
-                  Nous l'avons détaillée en section 8, mais ce point mérite d'être répété tant il est
-                  rarement expliqué ailleurs : à l'intérieur d'une même assurance vie, notre rémunération
-                  n'est pas neutre selon le support choisi. Les ETF indiciels ISR, peu chargés en frais,
-                  versent peu ou pas de rétrocession récurrente ; les fonds à gestion active, plus chargés,
-                  en versent davantage — alors qu'à stratégie comparable, leur surcoût pèse mécaniquement
-                  sur votre performance nette. Ni le label, ni la classification SFDR n'y changent rien :
-                  seuls les frais courants comptent. Cette asymétrie n'élimine pas toute tentation ; c'est
-                  justement pourquoi le dosage entre gestion indicielle et gestion active repose sur vos
-                  exigences extra-financières, votre horizon et votre tolérance au risque — pas sur le taux
-                  de rétrocession du support.
+                  Nous l'avons détaillée en section 8, mais ce point mérite d'être répété tant il
+                  est rarement expliqué ailleurs : à l'intérieur d'une même assurance vie, notre
+                  rémunération n'est pas neutre selon le support choisi. Les ETF indiciels ISR, peu
+                  chargés en frais, versent peu ou pas de rétrocession récurrente ; les fonds à
+                  gestion active, plus chargés, en versent davantage — alors qu'à stratégie
+                  comparable, leur surcoût pèse mécaniquement sur votre performance nette. Ni le
+                  label, ni la classification SFDR n'y changent rien : seuls les frais courants
+                  comptent. Cette asymétrie n'élimine pas toute tentation ; c'est justement pourquoi
+                  le dosage entre gestion indicielle et gestion active repose sur vos exigences
+                  extra-financières, votre horizon et votre tolérance au risque — pas sur le taux de
+                  rétrocession du support.
                 </p>
                 <h3>4. Pourquoi les commissions one-shot sont, en pourcentage, plus élevées</h3>
                 <p>
-                  Une commission SCPI d'environ 6 % peut sembler élevée comparée au 1 % de frais de gestion
-                  annuel d'une assurance vie. Mais ce pourcentage unique doit couvrir l'intégralité du
-                  travail d'analyse et de suivi, puisqu'aucune rémunération récurrente ne suivra ensuite.
-                  Comparer un pourcentage one-shot à un pourcentage annuel récurrent, sans ajuster pour
-                  cette différence de nature, conduit à des conclusions trompeuses.
+                  Une commission SCPI d'environ 6 % peut sembler élevée comparée au 1 % de frais de
+                  gestion annuel d'une assurance vie. Mais ce pourcentage unique doit couvrir
+                  l'intégralité du travail d'analyse et de suivi, puisqu'aucune rémunération
+                  récurrente ne suivra ensuite. Comparer un pourcentage one-shot à un pourcentage
+                  annuel récurrent, sans ajuster pour cette différence de nature, conduit à des
+                  conclusions trompeuses.
                 </p>
                 <h3>5. Le cadre réglementaire</h3>
                 <p>
-                  Notre activité s'exerce au sein d'EXP Capital (SASU au capital de 1 000 €, RCS Versailles
-                  987 986 247), immatriculée à l'ORIAS sous le n° 25005915 — un registre public que
-                  n'importe qui peut consulter sur{" "}
+                  Notre activité s'exerce au sein d'EXP Capital (SASU au capital de 1 000 €, RCS
+                  Versailles 987 986 247), immatriculée à l'ORIAS sous le n° 25005915 — un registre
+                  public que n'importe qui peut consulter sur{" "}
                   <a href="https://www.orias.fr" target="_blank" rel="noreferrer">
                     orias.fr
                   </a>{" "}
-                  avant de signer quoi que ce soit. En France, l'intermédiation financière est encadrée par
-                  deux régulateurs distincts :{" "}
+                  avant de signer quoi que ce soit. En France, l'intermédiation financière est
+                  encadrée par deux régulateurs distincts :{" "}
                   <a href="https://acpr.banque-france.fr" target="_blank" rel="noreferrer">
                     l'ACPR
                   </a>{" "}
@@ -1476,10 +1580,10 @@ function TarifsPage() {
                   <a href="https://www.amf-france.org" target="_blank" rel="noreferrer">
                     l'AMF
                   </a>{" "}
-                  pour les marchés financiers, chacun imposant des obligations de loyauté et de transparence
-                  envers le client. La plupart des épargnants ignorent que ces deux cadres existent
-                  séparément — le premier réflexe de vigilance, lui, ne change pas : vérifier le numéro
-                  ORIAS de tout intermédiaire avant de s'engager.
+                  pour les marchés financiers, chacun imposant des obligations de loyauté et de
+                  transparence envers le client. La plupart des épargnants ignorent que ces deux
+                  cadres existent séparément — le premier réflexe de vigilance, lui, ne change pas :
+                  vérifier le numéro ORIAS de tout intermédiaire avant de s'engager.
                 </p>
               </LongSection>
             </div>
@@ -1511,8 +1615,9 @@ function TarifsPage() {
               Parce qu'un bon cabinet sait aussi dire non.
             </p>
             <p className="text-sm text-muted-foreground leading-relaxed">
-              Nous préférons être clairs dès le départ plutôt que de vous faire perdre du temps — ou d'en
-              perdre nous-mêmes. Placement-éthique.fr n'est probablement pas le bon interlocuteur si :
+              Nous préférons être clairs dès le départ plutôt que de vous faire perdre du temps — ou
+              d'en perdre nous-mêmes. Placement-éthique.fr n'est probablement pas le bon
+              interlocuteur si :
             </p>
 
             <ul className="space-y-4 text-sm text-foreground/90">
@@ -1535,8 +1640,8 @@ function TarifsPage() {
           <p className="eyebrow">Aller plus loin</p>
           <h2 className="display-2 mt-4">Les questions qu'on n'ose pas toujours poser</h2>
           <p className="lead mt-5">
-            {faqItems.length} questions directes, sans langue de bois — parce qu'une question inconfortable
-            mérite une réponse complète, pas une esquive.
+            {faqItems.length} questions directes, sans langue de bois — parce qu'une question
+            inconfortable mérite une réponse complète, pas une esquive.
           </p>
 
           <div className="mt-10 space-y-3">
@@ -1554,38 +1659,43 @@ function TarifsPage() {
           <h2 className="display-2 mt-4">Notre philosophie</h2>
           <div className="prose-article mt-6">
             <p>
-              Nous ne pensons pas qu'un modèle de rémunération soit, en soi, plus vertueux qu'un autre. Un
-              cabinet fee-only peut être excellent ou médiocre. Un cabinet rémunéré par rétrocessions peut
-              être rigoureux ou complaisant. Ce qui distingue, à notre sens, un accompagnement digne de
-              confiance, ce n'est pas le modèle économique choisi — c'est la disposition à l'expliquer en
-              entier, sans en cacher les zones grises.
+              Nous ne pensons pas qu'un modèle de rémunération soit, en soi, plus vertueux qu'un
+              autre. Un cabinet fee-only peut être excellent ou médiocre. Un cabinet rémunéré par
+              rétrocessions peut être rigoureux ou complaisant. Ce qui distingue, à notre sens, un
+              accompagnement digne de confiance, ce n'est pas le modèle économique choisi — c'est la
+              disposition à l'expliquer en entier, sans en cacher les zones grises.
             </p>
             <p>
-              C'est, au fond, la même grille de lecture que nous appliquons aux placements responsables : un
-              label ne dit pas tout, une déclaration SFDR ne dit pas tout, un beau récit ne prouve rien — ce
-              qui compte, c'est ce qui est documenté, vérifiable et assumé, zones grises comprises. Nous
-              avons écrit cette page comme nous conseillerions un membre de notre famille : en disant « cela
-              dépend » plutôt que « toujours », en nommant les tentations structurelles plutôt qu'en
-              prétendant qu'elles n'existent pas, et en acceptant qu'une partie de nos lecteurs, après avoir
-              tout lu, choisisse un autre cabinet — ou un modèle fee-only. Ce serait une décision informée,
-              et c'est précisément l'objectif que nous poursuivions en écrivant ce texte.
+              C'est, au fond, la même grille de lecture que nous appliquons aux placements
+              responsables : un label ne dit pas tout, une déclaration SFDR ne dit pas tout, un beau
+              récit ne prouve rien — ce qui compte, c'est ce qui est documenté, vérifiable et
+              assumé, zones grises comprises. Nous avons écrit cette page comme nous conseillerions
+              un membre de notre famille : en disant « cela dépend » plutôt que « toujours », en
+              nommant les tentations structurelles plutôt qu'en prétendant qu'elles n'existent pas,
+              et en acceptant qu'une partie de nos lecteurs, après avoir tout lu, choisisse un autre
+              cabinet — ou un modèle fee-only. Ce serait une décision informée, et c'est précisément
+              l'objectif que nous poursuivions en écrivant ce texte.
             </p>
             <p>
-              La confiance ne se décrète pas. Elle se construit, patiemment, par la cohérence entre ce qu'un
-              cabinet affiche et ce qu'il fait réellement. Cette page est notre part du contrat : vous
-              montrer, avant même votre premier échange avec nous, exactement ce que vous pouvez attendre de
-              notre rapport à l'argent.
+              La confiance ne se décrète pas. Elle se construit, patiemment, par la cohérence entre
+              ce qu'un cabinet affiche et ce qu'il fait réellement. Cette page est notre part du
+              contrat : vous montrer, avant même votre premier échange avec nous, exactement ce que
+              vous pouvez attendre de notre rapport à l'argent.
             </p>
           </div>
 
           <div className="mt-12 pt-8 flex flex-col sm:flex-row items-center gap-6 bg-card/60 p-6 rounded-2xl border border-border/80">
-            <div className="w-24 h-24 rounded-full overflow-hidden shrink-0 border-2 shadow-md" style={{ borderColor: "color-mix(in oklch, var(--grenat) 40%, transparent)" }}>
+            <div
+              className="w-24 h-24 rounded-full overflow-hidden shrink-0 border-2 shadow-md"
+              style={{ borderColor: "color-mix(in oklch, var(--grenat) 40%, transparent)" }}
+            >
               <img
                 src="/alexandre.jpg"
                 alt="Alexandre Pollet"
                 className="w-full h-full object-cover"
                 onError={(e) => {
-                  e.currentTarget.src = "https://ui-avatars.com/api/?name=Alexandre+Pollet&background=random";
+                  e.currentTarget.src =
+                    "https://ui-avatars.com/api/?name=Alexandre+Pollet&background=random";
                 }}
               />
             </div>
@@ -1595,10 +1705,10 @@ function TarifsPage() {
                 Communication, contenu et partenariats — EXP Capital
               </p>
               <p className="text-[14px] text-foreground/80 italic mt-3 leading-relaxed">
-                « On me demande souvent pourquoi nous détaillons nos commissions à ce point. La réponse est
-                simple : on ne peut pas passer ses journées à demander des preuves aux fonds « verts » et
-                refuser d'en donner sur soi-même. Je préfère qu'un lecteur nous dise non après avoir tout
-                compris, plutôt que oui sans avoir tout su. »
+                « On me demande souvent pourquoi nous détaillons nos commissions à ce point. La
+                réponse est simple : on ne peut pas passer ses journées à demander des preuves aux
+                fonds « verts » et refuser d'en donner sur soi-même. Je préfère qu'un lecteur nous
+                dise non après avoir tout compris, plutôt que oui sans avoir tout su. »
               </p>
             </div>
           </div>

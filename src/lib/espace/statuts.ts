@@ -109,5 +109,7 @@ export function clientPeutModifier(statut: DossierStatut): boolean {
 // Dépôt de pièces : après transmission (le consentement pièces est recueilli
 // à ce moment-là) et avant toute phase de signature.
 export function clientPeutDeposerPieces(statut: DossierStatut): boolean {
-  return statut === "transmis" || statut === "echange_planifie" || statut === "recommandation_transmise";
+  return (
+    statut === "transmis" || statut === "echange_planifie" || statut === "recommandation_transmise"
+  );
 }

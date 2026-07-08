@@ -9,54 +9,675 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as TarifsRouteImport } from './routes/tarifs'
+import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
+import { Route as QuestionsRouteImport } from './routes/questions'
+import { Route as PlacementsRouteImport } from './routes/placements'
+import { Route as OutilsRouteImport } from './routes/outils'
+import { Route as ObjectifsRouteImport } from './routes/objectifs'
+import { Route as MentionsLegalesRouteImport } from './routes/mentions-legales'
+import { Route as EspaceRouteImport } from './routes/espace'
+import { Route as EnveloppesRouteImport } from './routes/enveloppes'
+import { Route as ContactRouteImport } from './routes/contact'
+import { Route as ConfidentialiteRouteImport } from './routes/confidentialite'
+import { Route as ArticlesRouteImport } from './routes/articles'
+import { Route as AProposRouteImport } from './routes/a-propos'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as OutilsIndexRouteImport } from './routes/outils.index'
+import { Route as EspaceIndexRouteImport } from './routes/espace.index'
+import { Route as ArticlesIndexRouteImport } from './routes/articles.index'
+import { Route as OutilsTypeInvestissementRouteImport } from './routes/outils.type-investissement'
+import { Route as OutilsSimulateurRouteImport } from './routes/outils.simulateur'
+import { Route as OutilsRetraiteRouteImport } from './routes/outils.retraite'
+import { Route as OutilsProfilInvestisseurRouteImport } from './routes/outils.profil-investisseur'
+import { Route as OutilsPortefeuillesTypesRouteImport } from './routes/outils.portefeuilles-types'
+import { Route as OutilsPerIsrRouteImport } from './routes/outils.per-isr'
+import { Route as OutilsEmpreinteCarboneEpargneRouteImport } from './routes/outils.empreinte-carbone-epargne'
+import { Route as OutilsDiagnosticRouteImport } from './routes/outils.diagnostic'
+import { Route as OutilsDecodeurLabelRouteImport } from './routes/outils.decodeur-label'
+import { Route as OutilsComparateurEnveloppesRouteImport } from './routes/outils.comparateur-enveloppes'
+import { Route as OutilsComparateurEcoPtzRouteImport } from './routes/outils.comparateur-eco-ptz'
+import { Route as EspaceConnexionRouteImport } from './routes/espace_.connexion'
+import { Route as EspaceProfilRouteImport } from './routes/espace.profil'
+import { Route as EspaceNouveauRouteImport } from './routes/espace.nouveau'
+import { Route as ArticlesSlugRouteImport } from './routes/articles.$slug'
 import { Route as ApiLeadRouteImport } from './routes/api.lead'
+import { Route as EspaceDossiersDossierIdRouteImport } from './routes/espace.dossiers.$dossierId'
 
+const TarifsRoute = TarifsRouteImport.update({
+  id: '/tarifs',
+  path: '/tarifs',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
+  id: '/sitemap.xml',
+  path: '/sitemap.xml',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const QuestionsRoute = QuestionsRouteImport.update({
+  id: '/questions',
+  path: '/questions',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PlacementsRoute = PlacementsRouteImport.update({
+  id: '/placements',
+  path: '/placements',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const OutilsRoute = OutilsRouteImport.update({
+  id: '/outils',
+  path: '/outils',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ObjectifsRoute = ObjectifsRouteImport.update({
+  id: '/objectifs',
+  path: '/objectifs',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const MentionsLegalesRoute = MentionsLegalesRouteImport.update({
+  id: '/mentions-legales',
+  path: '/mentions-legales',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const EspaceRoute = EspaceRouteImport.update({
+  id: '/espace',
+  path: '/espace',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const EnveloppesRoute = EnveloppesRouteImport.update({
+  id: '/enveloppes',
+  path: '/enveloppes',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ContactRoute = ContactRouteImport.update({
+  id: '/contact',
+  path: '/contact',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ConfidentialiteRoute = ConfidentialiteRouteImport.update({
+  id: '/confidentialite',
+  path: '/confidentialite',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ArticlesRoute = ArticlesRouteImport.update({
+  id: '/articles',
+  path: '/articles',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AProposRoute = AProposRouteImport.update({
+  id: '/a-propos',
+  path: '/a-propos',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
+} as any)
+const OutilsIndexRoute = OutilsIndexRouteImport.update({
+  id: '/',
+  path: '/',
+  getParentRoute: () => OutilsRoute,
+} as any)
+const EspaceIndexRoute = EspaceIndexRouteImport.update({
+  id: '/',
+  path: '/',
+  getParentRoute: () => EspaceRoute,
+} as any)
+const ArticlesIndexRoute = ArticlesIndexRouteImport.update({
+  id: '/',
+  path: '/',
+  getParentRoute: () => ArticlesRoute,
+} as any)
+const OutilsTypeInvestissementRoute =
+  OutilsTypeInvestissementRouteImport.update({
+    id: '/type-investissement',
+    path: '/type-investissement',
+    getParentRoute: () => OutilsRoute,
+  } as any)
+const OutilsSimulateurRoute = OutilsSimulateurRouteImport.update({
+  id: '/simulateur',
+  path: '/simulateur',
+  getParentRoute: () => OutilsRoute,
+} as any)
+const OutilsRetraiteRoute = OutilsRetraiteRouteImport.update({
+  id: '/retraite',
+  path: '/retraite',
+  getParentRoute: () => OutilsRoute,
+} as any)
+const OutilsProfilInvestisseurRoute =
+  OutilsProfilInvestisseurRouteImport.update({
+    id: '/profil-investisseur',
+    path: '/profil-investisseur',
+    getParentRoute: () => OutilsRoute,
+  } as any)
+const OutilsPortefeuillesTypesRoute =
+  OutilsPortefeuillesTypesRouteImport.update({
+    id: '/portefeuilles-types',
+    path: '/portefeuilles-types',
+    getParentRoute: () => OutilsRoute,
+  } as any)
+const OutilsPerIsrRoute = OutilsPerIsrRouteImport.update({
+  id: '/per-isr',
+  path: '/per-isr',
+  getParentRoute: () => OutilsRoute,
+} as any)
+const OutilsEmpreinteCarboneEpargneRoute =
+  OutilsEmpreinteCarboneEpargneRouteImport.update({
+    id: '/empreinte-carbone-epargne',
+    path: '/empreinte-carbone-epargne',
+    getParentRoute: () => OutilsRoute,
+  } as any)
+const OutilsDiagnosticRoute = OutilsDiagnosticRouteImport.update({
+  id: '/diagnostic',
+  path: '/diagnostic',
+  getParentRoute: () => OutilsRoute,
+} as any)
+const OutilsDecodeurLabelRoute = OutilsDecodeurLabelRouteImport.update({
+  id: '/decodeur-label',
+  path: '/decodeur-label',
+  getParentRoute: () => OutilsRoute,
+} as any)
+const OutilsComparateurEnveloppesRoute =
+  OutilsComparateurEnveloppesRouteImport.update({
+    id: '/comparateur-enveloppes',
+    path: '/comparateur-enveloppes',
+    getParentRoute: () => OutilsRoute,
+  } as any)
+const OutilsComparateurEcoPtzRoute = OutilsComparateurEcoPtzRouteImport.update({
+  id: '/comparateur-eco-ptz',
+  path: '/comparateur-eco-ptz',
+  getParentRoute: () => OutilsRoute,
+} as any)
+const EspaceConnexionRoute = EspaceConnexionRouteImport.update({
+  id: '/espace_/connexion',
+  path: '/espace/connexion',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const EspaceProfilRoute = EspaceProfilRouteImport.update({
+  id: '/profil',
+  path: '/profil',
+  getParentRoute: () => EspaceRoute,
+} as any)
+const EspaceNouveauRoute = EspaceNouveauRouteImport.update({
+  id: '/nouveau',
+  path: '/nouveau',
+  getParentRoute: () => EspaceRoute,
+} as any)
+const ArticlesSlugRoute = ArticlesSlugRouteImport.update({
+  id: '/$slug',
+  path: '/$slug',
+  getParentRoute: () => ArticlesRoute,
 } as any)
 const ApiLeadRoute = ApiLeadRouteImport.update({
   id: '/api/lead',
   path: '/api/lead',
   getParentRoute: () => rootRouteImport,
 } as any)
+const EspaceDossiersDossierIdRoute = EspaceDossiersDossierIdRouteImport.update({
+  id: '/dossiers/$dossierId',
+  path: '/dossiers/$dossierId',
+  getParentRoute: () => EspaceRoute,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/a-propos': typeof AProposRoute
+  '/articles': typeof ArticlesRouteWithChildren
+  '/confidentialite': typeof ConfidentialiteRoute
+  '/contact': typeof ContactRoute
+  '/enveloppes': typeof EnveloppesRoute
+  '/espace': typeof EspaceRouteWithChildren
+  '/mentions-legales': typeof MentionsLegalesRoute
+  '/objectifs': typeof ObjectifsRoute
+  '/outils': typeof OutilsRouteWithChildren
+  '/placements': typeof PlacementsRoute
+  '/questions': typeof QuestionsRoute
+  '/sitemap.xml': typeof SitemapDotxmlRoute
+  '/tarifs': typeof TarifsRoute
   '/api/lead': typeof ApiLeadRoute
+  '/articles/$slug': typeof ArticlesSlugRoute
+  '/espace/nouveau': typeof EspaceNouveauRoute
+  '/espace/profil': typeof EspaceProfilRoute
+  '/espace/connexion': typeof EspaceConnexionRoute
+  '/outils/comparateur-eco-ptz': typeof OutilsComparateurEcoPtzRoute
+  '/outils/comparateur-enveloppes': typeof OutilsComparateurEnveloppesRoute
+  '/outils/decodeur-label': typeof OutilsDecodeurLabelRoute
+  '/outils/diagnostic': typeof OutilsDiagnosticRoute
+  '/outils/empreinte-carbone-epargne': typeof OutilsEmpreinteCarboneEpargneRoute
+  '/outils/per-isr': typeof OutilsPerIsrRoute
+  '/outils/portefeuilles-types': typeof OutilsPortefeuillesTypesRoute
+  '/outils/profil-investisseur': typeof OutilsProfilInvestisseurRoute
+  '/outils/retraite': typeof OutilsRetraiteRoute
+  '/outils/simulateur': typeof OutilsSimulateurRoute
+  '/outils/type-investissement': typeof OutilsTypeInvestissementRoute
+  '/articles/': typeof ArticlesIndexRoute
+  '/espace/': typeof EspaceIndexRoute
+  '/outils/': typeof OutilsIndexRoute
+  '/espace/dossiers/$dossierId': typeof EspaceDossiersDossierIdRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/a-propos': typeof AProposRoute
+  '/confidentialite': typeof ConfidentialiteRoute
+  '/contact': typeof ContactRoute
+  '/enveloppes': typeof EnveloppesRoute
+  '/mentions-legales': typeof MentionsLegalesRoute
+  '/objectifs': typeof ObjectifsRoute
+  '/placements': typeof PlacementsRoute
+  '/questions': typeof QuestionsRoute
+  '/sitemap.xml': typeof SitemapDotxmlRoute
+  '/tarifs': typeof TarifsRoute
   '/api/lead': typeof ApiLeadRoute
+  '/articles/$slug': typeof ArticlesSlugRoute
+  '/espace/nouveau': typeof EspaceNouveauRoute
+  '/espace/profil': typeof EspaceProfilRoute
+  '/espace/connexion': typeof EspaceConnexionRoute
+  '/outils/comparateur-eco-ptz': typeof OutilsComparateurEcoPtzRoute
+  '/outils/comparateur-enveloppes': typeof OutilsComparateurEnveloppesRoute
+  '/outils/decodeur-label': typeof OutilsDecodeurLabelRoute
+  '/outils/diagnostic': typeof OutilsDiagnosticRoute
+  '/outils/empreinte-carbone-epargne': typeof OutilsEmpreinteCarboneEpargneRoute
+  '/outils/per-isr': typeof OutilsPerIsrRoute
+  '/outils/portefeuilles-types': typeof OutilsPortefeuillesTypesRoute
+  '/outils/profil-investisseur': typeof OutilsProfilInvestisseurRoute
+  '/outils/retraite': typeof OutilsRetraiteRoute
+  '/outils/simulateur': typeof OutilsSimulateurRoute
+  '/outils/type-investissement': typeof OutilsTypeInvestissementRoute
+  '/articles': typeof ArticlesIndexRoute
+  '/espace': typeof EspaceIndexRoute
+  '/outils': typeof OutilsIndexRoute
+  '/espace/dossiers/$dossierId': typeof EspaceDossiersDossierIdRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/a-propos': typeof AProposRoute
+  '/articles': typeof ArticlesRouteWithChildren
+  '/confidentialite': typeof ConfidentialiteRoute
+  '/contact': typeof ContactRoute
+  '/enveloppes': typeof EnveloppesRoute
+  '/espace': typeof EspaceRouteWithChildren
+  '/mentions-legales': typeof MentionsLegalesRoute
+  '/objectifs': typeof ObjectifsRoute
+  '/outils': typeof OutilsRouteWithChildren
+  '/placements': typeof PlacementsRoute
+  '/questions': typeof QuestionsRoute
+  '/sitemap.xml': typeof SitemapDotxmlRoute
+  '/tarifs': typeof TarifsRoute
   '/api/lead': typeof ApiLeadRoute
+  '/articles/$slug': typeof ArticlesSlugRoute
+  '/espace/nouveau': typeof EspaceNouveauRoute
+  '/espace/profil': typeof EspaceProfilRoute
+  '/espace_/connexion': typeof EspaceConnexionRoute
+  '/outils/comparateur-eco-ptz': typeof OutilsComparateurEcoPtzRoute
+  '/outils/comparateur-enveloppes': typeof OutilsComparateurEnveloppesRoute
+  '/outils/decodeur-label': typeof OutilsDecodeurLabelRoute
+  '/outils/diagnostic': typeof OutilsDiagnosticRoute
+  '/outils/empreinte-carbone-epargne': typeof OutilsEmpreinteCarboneEpargneRoute
+  '/outils/per-isr': typeof OutilsPerIsrRoute
+  '/outils/portefeuilles-types': typeof OutilsPortefeuillesTypesRoute
+  '/outils/profil-investisseur': typeof OutilsProfilInvestisseurRoute
+  '/outils/retraite': typeof OutilsRetraiteRoute
+  '/outils/simulateur': typeof OutilsSimulateurRoute
+  '/outils/type-investissement': typeof OutilsTypeInvestissementRoute
+  '/articles/': typeof ArticlesIndexRoute
+  '/espace/': typeof EspaceIndexRoute
+  '/outils/': typeof OutilsIndexRoute
+  '/espace/dossiers/$dossierId': typeof EspaceDossiersDossierIdRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/api/lead'
+  fullPaths:
+    | '/'
+    | '/a-propos'
+    | '/articles'
+    | '/confidentialite'
+    | '/contact'
+    | '/enveloppes'
+    | '/espace'
+    | '/mentions-legales'
+    | '/objectifs'
+    | '/outils'
+    | '/placements'
+    | '/questions'
+    | '/sitemap.xml'
+    | '/tarifs'
+    | '/api/lead'
+    | '/articles/$slug'
+    | '/espace/nouveau'
+    | '/espace/profil'
+    | '/espace/connexion'
+    | '/outils/comparateur-eco-ptz'
+    | '/outils/comparateur-enveloppes'
+    | '/outils/decodeur-label'
+    | '/outils/diagnostic'
+    | '/outils/empreinte-carbone-epargne'
+    | '/outils/per-isr'
+    | '/outils/portefeuilles-types'
+    | '/outils/profil-investisseur'
+    | '/outils/retraite'
+    | '/outils/simulateur'
+    | '/outils/type-investissement'
+    | '/articles/'
+    | '/espace/'
+    | '/outils/'
+    | '/espace/dossiers/$dossierId'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/api/lead'
-  id: '__root__' | '/' | '/api/lead'
+  to:
+    | '/'
+    | '/a-propos'
+    | '/confidentialite'
+    | '/contact'
+    | '/enveloppes'
+    | '/mentions-legales'
+    | '/objectifs'
+    | '/placements'
+    | '/questions'
+    | '/sitemap.xml'
+    | '/tarifs'
+    | '/api/lead'
+    | '/articles/$slug'
+    | '/espace/nouveau'
+    | '/espace/profil'
+    | '/espace/connexion'
+    | '/outils/comparateur-eco-ptz'
+    | '/outils/comparateur-enveloppes'
+    | '/outils/decodeur-label'
+    | '/outils/diagnostic'
+    | '/outils/empreinte-carbone-epargne'
+    | '/outils/per-isr'
+    | '/outils/portefeuilles-types'
+    | '/outils/profil-investisseur'
+    | '/outils/retraite'
+    | '/outils/simulateur'
+    | '/outils/type-investissement'
+    | '/articles'
+    | '/espace'
+    | '/outils'
+    | '/espace/dossiers/$dossierId'
+  id:
+    | '__root__'
+    | '/'
+    | '/a-propos'
+    | '/articles'
+    | '/confidentialite'
+    | '/contact'
+    | '/enveloppes'
+    | '/espace'
+    | '/mentions-legales'
+    | '/objectifs'
+    | '/outils'
+    | '/placements'
+    | '/questions'
+    | '/sitemap.xml'
+    | '/tarifs'
+    | '/api/lead'
+    | '/articles/$slug'
+    | '/espace/nouveau'
+    | '/espace/profil'
+    | '/espace_/connexion'
+    | '/outils/comparateur-eco-ptz'
+    | '/outils/comparateur-enveloppes'
+    | '/outils/decodeur-label'
+    | '/outils/diagnostic'
+    | '/outils/empreinte-carbone-epargne'
+    | '/outils/per-isr'
+    | '/outils/portefeuilles-types'
+    | '/outils/profil-investisseur'
+    | '/outils/retraite'
+    | '/outils/simulateur'
+    | '/outils/type-investissement'
+    | '/articles/'
+    | '/espace/'
+    | '/outils/'
+    | '/espace/dossiers/$dossierId'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  AProposRoute: typeof AProposRoute
+  ArticlesRoute: typeof ArticlesRouteWithChildren
+  ConfidentialiteRoute: typeof ConfidentialiteRoute
+  ContactRoute: typeof ContactRoute
+  EnveloppesRoute: typeof EnveloppesRoute
+  EspaceRoute: typeof EspaceRouteWithChildren
+  MentionsLegalesRoute: typeof MentionsLegalesRoute
+  ObjectifsRoute: typeof ObjectifsRoute
+  OutilsRoute: typeof OutilsRouteWithChildren
+  PlacementsRoute: typeof PlacementsRoute
+  QuestionsRoute: typeof QuestionsRoute
+  SitemapDotxmlRoute: typeof SitemapDotxmlRoute
+  TarifsRoute: typeof TarifsRoute
   ApiLeadRoute: typeof ApiLeadRoute
+  EspaceConnexionRoute: typeof EspaceConnexionRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/tarifs': {
+      id: '/tarifs'
+      path: '/tarifs'
+      fullPath: '/tarifs'
+      preLoaderRoute: typeof TarifsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/sitemap.xml': {
+      id: '/sitemap.xml'
+      path: '/sitemap.xml'
+      fullPath: '/sitemap.xml'
+      preLoaderRoute: typeof SitemapDotxmlRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/questions': {
+      id: '/questions'
+      path: '/questions'
+      fullPath: '/questions'
+      preLoaderRoute: typeof QuestionsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/placements': {
+      id: '/placements'
+      path: '/placements'
+      fullPath: '/placements'
+      preLoaderRoute: typeof PlacementsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/outils': {
+      id: '/outils'
+      path: '/outils'
+      fullPath: '/outils'
+      preLoaderRoute: typeof OutilsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/objectifs': {
+      id: '/objectifs'
+      path: '/objectifs'
+      fullPath: '/objectifs'
+      preLoaderRoute: typeof ObjectifsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/mentions-legales': {
+      id: '/mentions-legales'
+      path: '/mentions-legales'
+      fullPath: '/mentions-legales'
+      preLoaderRoute: typeof MentionsLegalesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/espace': {
+      id: '/espace'
+      path: '/espace'
+      fullPath: '/espace'
+      preLoaderRoute: typeof EspaceRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/enveloppes': {
+      id: '/enveloppes'
+      path: '/enveloppes'
+      fullPath: '/enveloppes'
+      preLoaderRoute: typeof EnveloppesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/contact': {
+      id: '/contact'
+      path: '/contact'
+      fullPath: '/contact'
+      preLoaderRoute: typeof ContactRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/confidentialite': {
+      id: '/confidentialite'
+      path: '/confidentialite'
+      fullPath: '/confidentialite'
+      preLoaderRoute: typeof ConfidentialiteRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/articles': {
+      id: '/articles'
+      path: '/articles'
+      fullPath: '/articles'
+      preLoaderRoute: typeof ArticlesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/a-propos': {
+      id: '/a-propos'
+      path: '/a-propos'
+      fullPath: '/a-propos'
+      preLoaderRoute: typeof AProposRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/': {
       id: '/'
       path: '/'
       fullPath: '/'
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
+    }
+    '/outils/': {
+      id: '/outils/'
+      path: '/'
+      fullPath: '/outils/'
+      preLoaderRoute: typeof OutilsIndexRouteImport
+      parentRoute: typeof OutilsRoute
+    }
+    '/espace/': {
+      id: '/espace/'
+      path: '/'
+      fullPath: '/espace/'
+      preLoaderRoute: typeof EspaceIndexRouteImport
+      parentRoute: typeof EspaceRoute
+    }
+    '/articles/': {
+      id: '/articles/'
+      path: '/'
+      fullPath: '/articles/'
+      preLoaderRoute: typeof ArticlesIndexRouteImport
+      parentRoute: typeof ArticlesRoute
+    }
+    '/outils/type-investissement': {
+      id: '/outils/type-investissement'
+      path: '/type-investissement'
+      fullPath: '/outils/type-investissement'
+      preLoaderRoute: typeof OutilsTypeInvestissementRouteImport
+      parentRoute: typeof OutilsRoute
+    }
+    '/outils/simulateur': {
+      id: '/outils/simulateur'
+      path: '/simulateur'
+      fullPath: '/outils/simulateur'
+      preLoaderRoute: typeof OutilsSimulateurRouteImport
+      parentRoute: typeof OutilsRoute
+    }
+    '/outils/retraite': {
+      id: '/outils/retraite'
+      path: '/retraite'
+      fullPath: '/outils/retraite'
+      preLoaderRoute: typeof OutilsRetraiteRouteImport
+      parentRoute: typeof OutilsRoute
+    }
+    '/outils/profil-investisseur': {
+      id: '/outils/profil-investisseur'
+      path: '/profil-investisseur'
+      fullPath: '/outils/profil-investisseur'
+      preLoaderRoute: typeof OutilsProfilInvestisseurRouteImport
+      parentRoute: typeof OutilsRoute
+    }
+    '/outils/portefeuilles-types': {
+      id: '/outils/portefeuilles-types'
+      path: '/portefeuilles-types'
+      fullPath: '/outils/portefeuilles-types'
+      preLoaderRoute: typeof OutilsPortefeuillesTypesRouteImport
+      parentRoute: typeof OutilsRoute
+    }
+    '/outils/per-isr': {
+      id: '/outils/per-isr'
+      path: '/per-isr'
+      fullPath: '/outils/per-isr'
+      preLoaderRoute: typeof OutilsPerIsrRouteImport
+      parentRoute: typeof OutilsRoute
+    }
+    '/outils/empreinte-carbone-epargne': {
+      id: '/outils/empreinte-carbone-epargne'
+      path: '/empreinte-carbone-epargne'
+      fullPath: '/outils/empreinte-carbone-epargne'
+      preLoaderRoute: typeof OutilsEmpreinteCarboneEpargneRouteImport
+      parentRoute: typeof OutilsRoute
+    }
+    '/outils/diagnostic': {
+      id: '/outils/diagnostic'
+      path: '/diagnostic'
+      fullPath: '/outils/diagnostic'
+      preLoaderRoute: typeof OutilsDiagnosticRouteImport
+      parentRoute: typeof OutilsRoute
+    }
+    '/outils/decodeur-label': {
+      id: '/outils/decodeur-label'
+      path: '/decodeur-label'
+      fullPath: '/outils/decodeur-label'
+      preLoaderRoute: typeof OutilsDecodeurLabelRouteImport
+      parentRoute: typeof OutilsRoute
+    }
+    '/outils/comparateur-enveloppes': {
+      id: '/outils/comparateur-enveloppes'
+      path: '/comparateur-enveloppes'
+      fullPath: '/outils/comparateur-enveloppes'
+      preLoaderRoute: typeof OutilsComparateurEnveloppesRouteImport
+      parentRoute: typeof OutilsRoute
+    }
+    '/outils/comparateur-eco-ptz': {
+      id: '/outils/comparateur-eco-ptz'
+      path: '/comparateur-eco-ptz'
+      fullPath: '/outils/comparateur-eco-ptz'
+      preLoaderRoute: typeof OutilsComparateurEcoPtzRouteImport
+      parentRoute: typeof OutilsRoute
+    }
+    '/espace_/connexion': {
+      id: '/espace_/connexion'
+      path: '/espace/connexion'
+      fullPath: '/espace/connexion'
+      preLoaderRoute: typeof EspaceConnexionRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/espace/profil': {
+      id: '/espace/profil'
+      path: '/profil'
+      fullPath: '/espace/profil'
+      preLoaderRoute: typeof EspaceProfilRouteImport
+      parentRoute: typeof EspaceRoute
+    }
+    '/espace/nouveau': {
+      id: '/espace/nouveau'
+      path: '/nouveau'
+      fullPath: '/espace/nouveau'
+      preLoaderRoute: typeof EspaceNouveauRouteImport
+      parentRoute: typeof EspaceRoute
+    }
+    '/articles/$slug': {
+      id: '/articles/$slug'
+      path: '/$slug'
+      fullPath: '/articles/$slug'
+      preLoaderRoute: typeof ArticlesSlugRouteImport
+      parentRoute: typeof ArticlesRoute
     }
     '/api/lead': {
       id: '/api/lead'
@@ -65,12 +686,97 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ApiLeadRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/espace/dossiers/$dossierId': {
+      id: '/espace/dossiers/$dossierId'
+      path: '/dossiers/$dossierId'
+      fullPath: '/espace/dossiers/$dossierId'
+      preLoaderRoute: typeof EspaceDossiersDossierIdRouteImport
+      parentRoute: typeof EspaceRoute
+    }
   }
 }
 
+interface ArticlesRouteChildren {
+  ArticlesSlugRoute: typeof ArticlesSlugRoute
+  ArticlesIndexRoute: typeof ArticlesIndexRoute
+}
+
+const ArticlesRouteChildren: ArticlesRouteChildren = {
+  ArticlesSlugRoute: ArticlesSlugRoute,
+  ArticlesIndexRoute: ArticlesIndexRoute,
+}
+
+const ArticlesRouteWithChildren = ArticlesRoute._addFileChildren(
+  ArticlesRouteChildren,
+)
+
+interface EspaceRouteChildren {
+  EspaceNouveauRoute: typeof EspaceNouveauRoute
+  EspaceProfilRoute: typeof EspaceProfilRoute
+  EspaceIndexRoute: typeof EspaceIndexRoute
+  EspaceDossiersDossierIdRoute: typeof EspaceDossiersDossierIdRoute
+}
+
+const EspaceRouteChildren: EspaceRouteChildren = {
+  EspaceNouveauRoute: EspaceNouveauRoute,
+  EspaceProfilRoute: EspaceProfilRoute,
+  EspaceIndexRoute: EspaceIndexRoute,
+  EspaceDossiersDossierIdRoute: EspaceDossiersDossierIdRoute,
+}
+
+const EspaceRouteWithChildren =
+  EspaceRoute._addFileChildren(EspaceRouteChildren)
+
+interface OutilsRouteChildren {
+  OutilsComparateurEcoPtzRoute: typeof OutilsComparateurEcoPtzRoute
+  OutilsComparateurEnveloppesRoute: typeof OutilsComparateurEnveloppesRoute
+  OutilsDecodeurLabelRoute: typeof OutilsDecodeurLabelRoute
+  OutilsDiagnosticRoute: typeof OutilsDiagnosticRoute
+  OutilsEmpreinteCarboneEpargneRoute: typeof OutilsEmpreinteCarboneEpargneRoute
+  OutilsPerIsrRoute: typeof OutilsPerIsrRoute
+  OutilsPortefeuillesTypesRoute: typeof OutilsPortefeuillesTypesRoute
+  OutilsProfilInvestisseurRoute: typeof OutilsProfilInvestisseurRoute
+  OutilsRetraiteRoute: typeof OutilsRetraiteRoute
+  OutilsSimulateurRoute: typeof OutilsSimulateurRoute
+  OutilsTypeInvestissementRoute: typeof OutilsTypeInvestissementRoute
+  OutilsIndexRoute: typeof OutilsIndexRoute
+}
+
+const OutilsRouteChildren: OutilsRouteChildren = {
+  OutilsComparateurEcoPtzRoute: OutilsComparateurEcoPtzRoute,
+  OutilsComparateurEnveloppesRoute: OutilsComparateurEnveloppesRoute,
+  OutilsDecodeurLabelRoute: OutilsDecodeurLabelRoute,
+  OutilsDiagnosticRoute: OutilsDiagnosticRoute,
+  OutilsEmpreinteCarboneEpargneRoute: OutilsEmpreinteCarboneEpargneRoute,
+  OutilsPerIsrRoute: OutilsPerIsrRoute,
+  OutilsPortefeuillesTypesRoute: OutilsPortefeuillesTypesRoute,
+  OutilsProfilInvestisseurRoute: OutilsProfilInvestisseurRoute,
+  OutilsRetraiteRoute: OutilsRetraiteRoute,
+  OutilsSimulateurRoute: OutilsSimulateurRoute,
+  OutilsTypeInvestissementRoute: OutilsTypeInvestissementRoute,
+  OutilsIndexRoute: OutilsIndexRoute,
+}
+
+const OutilsRouteWithChildren =
+  OutilsRoute._addFileChildren(OutilsRouteChildren)
+
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  AProposRoute: AProposRoute,
+  ArticlesRoute: ArticlesRouteWithChildren,
+  ConfidentialiteRoute: ConfidentialiteRoute,
+  ContactRoute: ContactRoute,
+  EnveloppesRoute: EnveloppesRoute,
+  EspaceRoute: EspaceRouteWithChildren,
+  MentionsLegalesRoute: MentionsLegalesRoute,
+  ObjectifsRoute: ObjectifsRoute,
+  OutilsRoute: OutilsRouteWithChildren,
+  PlacementsRoute: PlacementsRoute,
+  QuestionsRoute: QuestionsRoute,
+  SitemapDotxmlRoute: SitemapDotxmlRoute,
+  TarifsRoute: TarifsRoute,
   ApiLeadRoute: ApiLeadRoute,
+  EspaceConnexionRoute: EspaceConnexionRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

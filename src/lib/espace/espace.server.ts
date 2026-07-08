@@ -87,12 +87,15 @@ export async function notifierTransmissionDossier(input: TransmissionNotificatio
 
   // ── Accusé de réception client — répète noir sur blanc que rien n'est
   // souscrit : le mail de confirmation ne doit jamais ressembler à un mail
-  // de bienvenue post-souscription. ──
+  // de bienvenue post-souscription. Couleurs en hex : les clients email ne
+  // consomment ni les variables CSS ni oklch — #142030 et #902731 sont les
+  // équivalents sRGB calculés de --ink et --grenat (styles.css), pas des
+  // teintes ad hoc. ──
   const clientHtml = `<!doctype html><html><body style="font-family:Georgia,serif;color:#1a1a1a;max-width:640px;margin:24px auto;padding:24px;">
-    <h1 style="color:#1a3d2e;">Votre demande est bien transmise</h1>
+    <h1 style="color:#142030;">Votre demande est bien transmise</h1>
     <p>Bonjour${input.prenom ? " " + escapeHtml(input.prenom) : ""},</p>
     <p>Votre dossier <strong>${escapeHtml(input.titre)}</strong> vient d'être transmis à votre conseiller.</p>
-    <div style="background:#fafaf7;border-left:3px solid #8a3a3a;padding:16px;">
+    <div style="background:#fafaf7;border-left:3px solid #902731;padding:16px;">
       <p style="margin:0;"><strong>Où vous en êtes :</strong> votre demande est une demande d'échange, pas une souscription.
       Rien n'est engagé : votre conseiller vous recontacte pour un échange de vive voix, puis vous remettra une
       recommandation individualisée écrite. La signature éventuelle n'intervient qu'après, sur les documents

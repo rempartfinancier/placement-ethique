@@ -38,7 +38,8 @@ const CATEGORIES: (ArticleCategory | "Tous")[] = [
 function ArticlesIndex() {
   const [categorie, setCategorie] = useState<(typeof CATEGORIES)[number]>("Tous");
 
-  const filtres = categorie === "Tous" ? articles : articles.filter((a) => a.category === categorie);
+  const filtres =
+    categorie === "Tous" ? articles : articles.filter((a) => a.category === categorie);
   const featured = articles.filter((a) => a.featured).slice(0, 2);
 
   return (
@@ -99,7 +100,11 @@ function ArticlesIndex() {
       {/* Filtres + liste */}
       <section className="section pt-10">
         <div className="container-prose">
-          <div className="flex flex-wrap gap-2 mb-10" role="tablist" aria-label="Filtrer par catégorie">
+          <div
+            className="flex flex-wrap gap-2 mb-10"
+            role="tablist"
+            aria-label="Filtrer par catégorie"
+          >
             {CATEGORIES.map((c) => (
               <button
                 key={c}
@@ -139,7 +144,9 @@ function ArticlesIndex() {
                   </div>
                 )}
                 <span className="eyebrow text-xs">{a.category}</span>
-                <h3 className="font-display text-xl mt-3 text-foreground leading-snug">{a.title}</h3>
+                <h3 className="font-display text-xl mt-3 text-foreground leading-snug">
+                  {a.title}
+                </h3>
                 <p className="mt-2.5 text-sm text-muted-foreground leading-relaxed flex-1">
                   {a.excerpt}
                 </p>
@@ -160,7 +167,9 @@ function ArticlesIndex() {
           </div>
 
           {filtres.length === 0 && (
-            <p className="text-muted-foreground">Aucun article dans cette catégorie pour le moment.</p>
+            <p className="text-muted-foreground">
+              Aucun article dans cette catégorie pour le moment.
+            </p>
           )}
         </div>
       </section>
