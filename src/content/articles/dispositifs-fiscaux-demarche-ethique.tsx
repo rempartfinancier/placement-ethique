@@ -394,7 +394,7 @@ export function Corps() {
         La réponse à la question de départ est donc positive, à une condition de méthode près :
         les dispositifs fiscaux compatibles avec une démarche éthique existent, et ce sont ceux
         qui rémunèrent un effet réel et vérifiable — un logement rénové, un centre-ville
-        rhabité, une entreprise équipée. Le filtre « l'Opération, l'Impact, l'Impôt » suffit à
+        réhabilité, une entreprise équipée. Le filtre « l'Opération, l'Impact, l'Impôt » suffit à
         écarter l'essentiel des mauvaises surprises : jamais une opération médiocre pour une
         carotte fiscale, jamais un impact proclamé sans mécanisme concret, jamais un avantage
         que votre situation ne peut pas absorber.

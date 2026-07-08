@@ -228,9 +228,9 @@ export function Corps() {
         >
           service-public.gouv.fr
         </a>
-        . Et depuis le 1er janvier 2025, la vente d'un logement classé E, F ou G impose de fournir à
-        l'acheteur un audit énergétique en plus du DPE, qui chiffre les scénarios de travaux, comme
-        le détaille{" "}
+        . Et la vente d'un logement classé F ou G impose de fournir à l'acheteur un audit
+        énergétique en plus du DPE depuis le 1er avril 2023 — une obligation étendue à la classe E
+        depuis le 1er janvier 2025 —, qui chiffre les scénarios de travaux, comme le détaille{" "}
         <a
           href="https://www.service-public.gouv.fr/particuliers/vosdroits/F37110"
           target="_blank"

@@ -7,7 +7,7 @@ export const meta: ArticleMeta = {
     "Bilan patrimonial : à quoi ressemble un vrai rendez-vous de conseil en investissement éthique ?",
   excerpt:
     "Durée, questions posées, documents à préparer, préférences de durabilité, signaux d'alerte : le déroulé réel d'un premier rendez-vous patrimonial, sans mystère.",
-  readingTime: "11 min",
+  readingTime: "9 min",
   category: "Conseil",
   date: "2026-07-03",
   tags: [
@@ -274,11 +274,9 @@ export function Corps() {
       <p>
         Le vrai critère n'est pas le modèle, c'est la <strong>transparence</strong> : un
         professionnel doit pouvoir vous dire qui le paie, combien et sur quel produit —
-        avant que vous ne signiez quoi que ce soit. Pour ce qui nous concerne, notre cabinet
-        fonctionne au courtage : rendez-vous offerts, rémunération versée par les
-        partenaires, et grille publiée en clair, ligne par ligne, sur{" "}
-        <a href="/tarifs">notre page tarifs</a> — vous pouvez la lire avant même de nous
-        écrire.
+        avant que vous ne signiez quoi que ce soit. Une grille de rémunération que le
+        cabinet refuse de détailler, ou qui ne se découvre qu'après la souscription, est en
+        elle-même une raison suffisante de continuer à comparer.
       </p>
 
       <h2>Quelles questions poser — et quels signaux doivent vous alerter ?</h2>

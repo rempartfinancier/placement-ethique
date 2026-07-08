@@ -344,18 +344,27 @@ export function Corps() {
         </li>
         <li>
           <strong>L'option pour le régime réel des plus-values sur biens meubles</strong> :
-          la plus-value réelle est alors imposée au{" "}
+          la plus-value réelle est alors imposée, sur{" "}
           <a
             href="https://www.economie.gouv.fr/particuliers/impots-et-fiscalite/gerer-mes-autres-impots-et-taxes/vente-dobjets-precieux-quelle"
             target="_blank"
             rel="noreferrer"
           >
-            taux global de 36,2 %
-          </a>{" "}
-          (19 % d'impôt et 17,2 % de prélèvements sociaux), avec un abattement de 5 % par
-          année de détention au-delà de la deuxième — soit une exonération totale après
-          vingt-deux ans. Condition impérative : pouvoir justifier la date et le prix
-          d'acquisition, facture nominative à l'appui.
+            option
+          </a>
+          , au taux global de 37,6 % (19 % d'impôt sur le revenu et 18,6 % de prélèvements
+          sociaux — ce dernier taux étant passé de 17,2 % à 18,6 % depuis le 1er janvier
+          2026, avec la hausse de CSG votée en{" "}
+          <a
+            href="https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000053226384"
+            target="_blank"
+            rel="noreferrer"
+          >
+            loi de financement de la Sécurité sociale pour 2026
+          </a>
+          ), avec un abattement de 5 % par année de détention au-delà de la deuxième — soit
+          une exonération totale après vingt-deux ans. Condition impérative : pouvoir
+          justifier la date et le prix d'acquisition, facture nominative à l'appui.
         </li>
       </ul>
       <p>
