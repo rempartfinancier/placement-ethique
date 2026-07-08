@@ -4,6 +4,26 @@ Journal des décisions non triviales prises en autonomie pendant la construction
 (cf. brief, section 11 « Protocole d'autonomie totale »). Une ligne par décision :
 quoi, pourquoi.
 
+## État final (QA)
+
+Site complet : 9 pages marketing, 33 articles, 12 outils interactifs, espace
+client (code + migrations). Vérifié à la fin de la construction :
+`tsc --noEmit` propre, `eslint` 0 erreur (8 avertissements résiduels, tous dans
+du vendor shadcn/ui non modifié), 48/48 tests unitaires, build de production
+réussi, et les 33 articles + 22 pages/outils confirmés servis en HTTP 200 par
+un vrai serveur SSR (aucun résidu « halal », aucune page en état de repli).
+
+Un bug réel a été trouvé et corrigé en QA : `src/integrations/supabase/types.ts`
+(fichier généré, copié depuis placement-halal) référençait encore l'ancien enum
+`produit_categorie` (etf_actions_halal, fonds_sukuk…) alors que la migration
+SQL et le code de l'espace client utilisent déjà les valeurs ISR renommées —
+resynchronisé avec la migration. `src/components/ui/chart.tsx` (vendor shadcn
+inutilisé nulle part, seule source d'erreurs tsc) a été supprimé plutôt que
+rafistolé. Cinq findings mineurs de la revue de conformité (sources
+manquantes sur des chiffres réglementaires par ailleurs exacts, une formule de
+CTA trop proche de « étude de votre situation », une couleur email verte
+décorative) ont été corrigés avec vérification web des sources ajoutées.
+
 ## Fondations
 
 - **Scaffold copié depuis placement-halal plutôt que généré from scratch** — l'agent
