@@ -26,9 +26,10 @@ export function Corps() {
         <p>
           <strong>En résumé :</strong> oui, on peut investir de façon éthique avec un petit
           budget — souvent dès quelques dizaines d'euros par mois, grâce aux versements
-          programmés. Depuis 2022, tout contrat d'assurance vie multisupport doit d'ailleurs
-          proposer au moins une unité de compte labellisée ISR, une labellisée Greenfin et
-          une solidaire : l'offre responsable n'est plus réservée aux gros patrimoines. Les
+          programmés. Tout contrat d'assurance vie multisupport souscrit depuis 2022 doit
+          d'ailleurs proposer au moins une unité de compte labellisée ISR, une labellisée
+          Greenfin et une solidaire : l'offre responsable n'est plus réservée aux gros
+          patrimoines. Les
           vrais points de vigilance ne sont pas le montant de départ, mais les frais —
           proportionnellement plus lourds sur les petites sommes — et la régularité des
           versements, qui compte davantage, sur la durée, que le capital initial.
@@ -71,12 +72,20 @@ export function Corps() {
         c'est une ligne à vérifier avant la souscription, pas une fatalité à subir.
       </p>
       <p>
-        Surtout, l'offre éthique n'est plus une option de luxe. Depuis le 1er janvier 2022,
-        en application de la loi PACTE, tout contrat d'assurance vie multisupport doit
-        proposer au moins une unité de compte labellisée ISR, une unité de compte
-        labellisée Greenfin (finance verte) et une unité de compte solidaire — une
-        information que l'assureur doit vous communiquer avant la souscription, avec la
-        part de supports labellisés du contrat (
+        Surtout, l'offre éthique n'est plus une option de luxe. En application de la loi
+        PACTE, tout contrat d'assurance vie multisupport souscrit depuis le 1er janvier
+        2022 doit proposer au moins une unité de compte labellisée ISR, une unité de
+        compte labellisée Greenfin (finance verte) et une unité de compte solidaire —
+        c'est l'article{" "}
+        <a
+          href="https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000038507523"
+          target="_blank"
+          rel="noreferrer"
+        >
+          L. 131-1-2 du Code des assurances
+        </a>
+        . La part de supports labellisés du contrat doit en outre vous être communiquée
+        avant la souscription (
         <a
           href="https://www.lelabelisr.fr/loi-pacte-lassurance-vie-en-soutien-de-linvestissement-socialement-responsable/"
           target="_blank"
@@ -324,8 +333,8 @@ export function Corps() {
       <h3>Puis-je vraiment investir 50 € par mois de façon éthique ?</h3>
       <p>
         Oui. De nombreux contrats d'assurance vie multisupports acceptent des versements
-        programmés de cet ordre, et tous doivent proposer des unités de compte labellisées
-        ISR, Greenfin et solidaires depuis 2022. Un ETF ISR s'achète aussi, sur un PEA ou
+        programmés de cet ordre, et tout contrat souscrit depuis 2022 doit proposer des
+        unités de compte labellisées ISR, Greenfin et solidaires. Un ETF ISR s'achète aussi, sur un PEA ou
         un compte-titres, au prix d'une part — souvent quelques dizaines d'euros. Le
         minimum exact dépend de chaque contrat ou courtier : vérifiez-le avant de signer.
       </p>
