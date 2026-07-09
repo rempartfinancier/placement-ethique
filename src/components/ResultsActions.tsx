@@ -33,22 +33,37 @@ export function ResultsActions({ source, buildDoc }: Props) {
     try {
       const doc = buildDoc();
       downloadPdf(doc);
-      // Optionnel : si email rempli, on log aussi le lead
-      if (email && /.+@.+\..+/.test(email)) {
-        await submit({
-          data: {
-            email,
-            name: name || null,
-            source,
-            payload: { mode: "download" },
-            newsletter_opt_in: newsletter,
-            send_email: false,
-            result_summary: null,
-          },
-        });
-      }
+      // Le fichier est téléchargé à ce stade, quoi qu'il arrive ensuite.
       setDone("download");
       setTimeout(() => setDone(null), 3000);
+
+      // Optionnel : si email rempli, on enregistre aussi le lead. On vérifie
+      // le résultat réel — pas question d'afficher une confirmation
+      // d'enregistrement si l'appel a échoué (le PDF, lui, est bien téléchargé).
+      if (email && /.+@.+\..+/.test(email)) {
+        try {
+          const res = await submit({
+            data: {
+              email,
+              name: name || null,
+              source,
+              payload: { mode: "download" },
+              newsletter_opt_in: newsletter,
+              send_email: false,
+              result_summary: null,
+            },
+          });
+          if (!res.ok) {
+            setError(
+              "Le PDF a bien été téléchargé, mais l'enregistrement de votre demande a échoué. Réessayez plus tard.",
+            );
+          }
+        } catch {
+          setError(
+            "Le PDF a bien été téléchargé, mais l'enregistrement de votre demande a échoué. Réessayez plus tard.",
+          );
+        }
+      }
     } catch (e) {
       setError(e instanceof Error ? e.message : "Erreur");
     } finally {

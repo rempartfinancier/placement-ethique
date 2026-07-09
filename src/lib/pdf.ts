@@ -27,12 +27,12 @@ export function downloadPdf(doc: PdfDoc) {
   pdf.setFont("times", "bold");
   pdf.setFontSize(20);
   pdf.setTextColor(26, 61, 46);
-  pdf.text("Placement-halal.fr", marginX, y);
+  pdf.text("Placement-éthique.fr", marginX, y);
 
   pdf.setFont("times", "normal");
   pdf.setFontSize(10);
   pdf.setTextColor(120, 120, 120);
-  pdf.text("Gestion de patrimoine éthique — conforme à la finance islamique", marginX, y + 16);
+  pdf.text("Gestion de patrimoine éthique et responsable — sans greenwashing", marginX, y + 16);
   y += 56;
 
   pdf.setFont("times", "bold");
@@ -122,7 +122,7 @@ export function downloadPdf(doc: PdfDoc) {
     pdf.setFontSize(9);
     pdf.setTextColor(150, 150, 150);
     pdf.text(
-      `Placement-halal.fr · ${doc.source} · ${new Date().toLocaleDateString("fr-FR")}`,
+      `Placement-éthique.fr · ${doc.source} · ${new Date().toLocaleDateString("fr-FR")}`,
       marginX,
       pdf.internal.pageSize.getHeight() - 32,
     );
@@ -133,7 +133,7 @@ export function downloadPdf(doc: PdfDoc) {
     .toLowerCase()
     .replace(/[^a-z0-9]+/g, "-")
     .replace(/(^-|-$)/g, "");
-  pdf.save(`placement-halal-${slug}.pdf`);
+  pdf.save(`placement-ethique-${slug}.pdf`);
 }
 
 export function summarizeForEmail(doc: PdfDoc): string {

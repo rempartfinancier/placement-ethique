@@ -118,7 +118,11 @@ async function sendAdminNotification(input: ProcessLeadInput) {
   const brevoKey = process.env.BREVO_API_KEY;
   if (!brevoKey) return { ok: false };
   const senderEmail = process.env.PLACEMENT_ETHIQUE_SENDER || "contact@placement-ethique.fr";
-  const adminEmail = "alexandre.pollet@epargneplurielle.fr";
+  // Pas d'adresse de conseiller nommément confirmée pour ce site : le repli
+  // pointe sur la boîte générique du cabinet, comme dans espace.server.ts —
+  // à surcharger par variable d'environnement une fois une adresse dédiée
+  // communiquée.
+  const adminEmail = process.env.PLACEMENT_ETHIQUE_ADMIN_EMAIL || "contact@placement-ethique.fr";
 
   try {
     const safeMessage = input.message ? input.message.replace(/</g, "&lt;") : "Aucun message.";
