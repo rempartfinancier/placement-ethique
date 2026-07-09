@@ -2,7 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import type {} from "@tanstack/react-start";
 import { articles } from "@/content/articles";
 
-const BASE_URL = "https://placement-ethique.fr";
+const BASE_URL = "https://www.placement-ethique.fr";
 
 interface SitemapEntry {
   path: string;

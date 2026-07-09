@@ -2,4 +2,4 @@ User-agent: *
 Allow: /
 Disallow: /espace
 
-Sitemap: https://placement-ethique.fr/sitemap.xml
+Sitemap: https://www.placement-ethique.fr/sitemap.xml
