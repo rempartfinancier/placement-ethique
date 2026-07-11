@@ -170,6 +170,46 @@ async function sendAdminNotification(input: ProcessLeadInput) {
   }
 }
 
+// CRM interne du groupe (rempart-crm) — tourne EN PLUS de Brevo/Supabase,
+// jamais à leur place. N'affecte jamais le retour de processLead ; erreur
+// avalée et loguée si le CRM est indisponible ou si INGEST_TOKEN manque.
+const CRM_INGEST_URL = "https://rempart-crm.vercel.app/api/ingest/lead";
+
+async function notifierCrmInterne(input: ProcessLeadInput) {
+  const token = process.env.INGEST_TOKEN;
+  if (!token) return;
+  try {
+    let prenom: string | undefined;
+    let nom: string | undefined;
+    if (input.name) {
+      const parts = input.name.split(" ");
+      prenom = parts[0];
+      if (parts.length > 1) nom = parts.slice(1).join(" ");
+    }
+    const res = await fetch(CRM_INGEST_URL, {
+      method: "POST",
+      headers: { "Content-Type": "application/json", Authorization: `Bearer ${token}` },
+      body: JSON.stringify({
+        sourceSite: "placement-ethique",
+        email: input.email,
+        prenom,
+        nom,
+        telephone: input.phone || undefined,
+        message: input.message || undefined,
+      }),
+    });
+    if (!res.ok) {
+      console.error(
+        "[notifierCrmInterne] CRM interne a refusé le lead:",
+        res.status,
+        await res.text(),
+      );
+    }
+  } catch (e) {
+    console.error("[notifierCrmInterne] Erreur notification CRM interne:", e);
+  }
+}
+
 export async function processLead(data: ProcessLeadInput): Promise<ProcessLeadResult> {
   try {
     // ── 1. Brevo CRM sync (priorité — fonctionne sans Supabase) ──
@@ -240,6 +280,9 @@ export async function processLead(data: ProcessLeadInput): Promise<ProcessLeadRe
         "[processLead] SUPABASE_URL or SUPABASE_PUBLISHABLE_KEY not set — skipping DB insert. Lead sent to Brevo only.",
       );
     }
+
+    // ── 3bis. CRM interne — comme le insert Supabase, entièrement optionnel ──
+    void notifierCrmInterne(data);
 
     // ── 4. Réponse — succès si Brevo OK ou email envoyé ──
     if (data.send_admin_notification && !adminEmailed) {
