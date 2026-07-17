@@ -11,6 +11,7 @@ import {
   Video,
   Lock,
   Mail,
+  Phone,
   CalendarCheck,
 } from "lucide-react";
 
@@ -263,6 +264,10 @@ function ContactPage() {
                 Vous pouvez aussi nous écrire directement à{" "}
                 <a href="mailto:contact@placement-ethique.fr" className="underline text-foreground">
                   contact@placement-ethique.fr
+                </a>{" "}
+                ou nous appeler au{" "}
+                <a href="tel:+33184163791" className="underline text-foreground">
+                  01 84 16 37 91
                 </a>
                 .
               </p>
@@ -337,6 +342,12 @@ function ContactPage() {
                   className="mt-4 font-display text-lg break-all hover:text-[var(--grenat)] transition-colors"
                 >
                   contact@placement-ethique.fr
+                </a>
+                <a
+                  href="tel:+33184163791"
+                  className="mt-2 inline-flex items-center gap-1.5 text-sm hover:text-[var(--grenat)] transition-colors"
+                >
+                  <Phone size={14} aria-hidden /> 01 84 16 37 91
                 </a>
                 <p className="mt-2 text-sm text-muted-foreground">
                   Réponse sous 48 h ouvrées · rendez-vous en visio partout en France

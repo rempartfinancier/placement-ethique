@@ -80,6 +80,11 @@ export function SiteFooter() {
               </Link>
             </li>
             <li>contact@placement-ethique.fr</li>
+            <li>
+              <a href="tel:+33184163791" className="hover:text-white">
+                01 84 16 37 91
+              </a>
+            </li>
           </ul>
         </div>
       </div>
