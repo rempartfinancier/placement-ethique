@@ -285,8 +285,14 @@ export async function processLead(data: ProcessLeadInput): Promise<ProcessLeadRe
     void notifierCrmInterne(data);
 
     // ── 4. Réponse — succès si Brevo OK ou email envoyé ──
+    // L'échec de l'email de notification admin ne doit jamais faire échouer
+    // le formulaire côté visiteur : le lead est déjà capturé par syncToBrevo
+    // et notifierCrmInterne (rempart-crm), indépendants de cet email. Même
+    // logique que LeadGate.submitLead, qui tolère déjà ce cas.
     if (data.send_admin_notification && !adminEmailed) {
-      return { ok: false, emailed, error: "L'envoi de la notification a échoué." };
+      console.warn(
+        "[processLead] sendAdminNotification failed but returning ok to avoid blocking the visitor:",
+      );
     }
 
     if (data.send_email && !brevo.ok) {
