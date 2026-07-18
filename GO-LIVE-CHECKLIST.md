@@ -31,9 +31,10 @@ construit et fonctionnel.
        personnes) ; remplacer si de nouvelles photos sont souhaitées.
 9. [ ] **Relecture légale finale par Fabienne** (convention réseau EXP Capital) —
        pages /mentions-legales, /confidentialite, /tarifs, footer.
-10. [ ] **Siège social EXP Capital** — remplacer le placeholder
-        `[Siège social EXP Capital — à compléter]` dans /mentions-legales dès que
-        l'adresse est communiquée (elle manque aussi dans la source Notion du réseau).
+10. [x] ~~Siège social EXP Capital~~ — adresse communiquée et intégrée dans
+        /mentions-legales : 25 bis rue de la Côte, 78220 Viroflay. Note : elle
+        manquait aussi dans la source Notion du réseau — mise à jour de cette
+        source hors périmètre de ce dépôt, à vérifier séparément.
 11. [ ] **Données fonds ISR** — fournir la liste des supports ISR/SFDR disponibles
         dans les contrats Vie Plus / Version Absolue 2 + fiches d'allocation des
         portefeuilles types (cf. `docs/donnees-fonds-mise-a-jour.md`) ; tant

@@ -5,8 +5,6 @@ import { PageHero } from "@/components/PageHero";
 // Mentions légales — texte canonique du brief (§9.1), commun au réseau
 // EXP Capital : EXP Capital est la SEULE entité mentionnée ; jamais
 // Épargne Plurielle ni Uptimi Conseil, ni aucun statut CIF/mandat.
-// TODO cabinet : adresse du siège social à compléter (placeholder visible
-// ci-dessous) — à remplacer dès qu'elle est fournie.
 
 export const Route = createFileRoute("/mentions-legales")({
   head: () => ({
@@ -61,7 +59,7 @@ function MentionsLegalesPage() {
               immatriculée au RCS de Versailles sous le n° 987 986 247, inscrite à l'ORIAS sous le
               n° 25005915 (www.orias.fr).
             </p>
-            <p>Siège social : [Siège social EXP Capital — à compléter].</p>
+            <p>Siège social : 25 bis rue de la Côte, 78220 Viroflay.</p>
             <p>
               Directeur de la publication : Alexandre Pollet.
               <br />
