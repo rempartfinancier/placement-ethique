@@ -87,9 +87,18 @@ décorative) ont été corrigés avec vérification web des sources ajoutées.
 - **Clé cookies : `pe-consent-traceurs`** (préfixe site), GTM en placeholder
   `GTM-XXXXXXX` gaté par consentement — le conteneur réel est une dépendance humaine
   (GO-LIVE-CHECKLIST item 3).
-- **iClosed : URL placeholder** — le lien `EpargnePlurielleAJ` du site de référence
-  pointe vers un autre compte du réseau ; le composant affiche un repli propre
-  (formulaire de contact) tant que l'URL dédiée n'est pas fournie.
+- **iClosed : compte EpargnePlurielleAJ réutilisé, sur validation explicite du
+  cabinet** — la consigne initiale (ne pas réutiliser ce compte, en créer un
+  dédié) a été levée à la demande d'Alex Pollet : c'est le compte réseau
+  existant, chaque site y a son propre événement (finance halal, SCPI,
+  capital retraite…). L'événement « Appel découverte - Placement Éthique » a
+  été créé par duplication de l'événement finance-halal (mêmes réglages :
+  30 min, Google Meet, questions du formulaire), renommé sans mention
+  « Épargne Plurielle » dans le titre affiché, et repassé en français (la
+  langue de l'événement dupliqué était restée sur l'anglais — jours de
+  calendrier affichés en anglais sinon). Le préfixe d'URL `/e/EpargnePlurielleAJ/`
+  reste visible : c'est l'identifiant fixe du compte, commun à tout le
+  réseau, pas un artefact corrigible par événement.
 - **Téléphone : non affiché** tant que le cabinet n'a pas confirmé la ligne à
   utiliser (le 01 84 60 25 30 du site halal n'est pas repris d'office — appartenance
   à ce site précis non confirmée). Email `contact@placement-ethique.fr` affiché

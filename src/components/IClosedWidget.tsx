@@ -2,11 +2,12 @@ import { useEffect } from "react";
 import { Mail } from "lucide-react";
 
 const SCRIPT_SRC = "https://app.iclosed.io/assets/widget.js";
-// Lien de réservation iClosed DÉDIÉ à placement-ethique.fr — À CRÉER
-// (GO-LIVE-CHECKLIST item 5). Ne pas réutiliser le lien du site halal
-// (EpargnePlurielleAJ), qui pointe vers un autre compte du réseau.
-// Tant que la valeur est vide, le composant affiche un repli propre.
-const WIDGET_URL = "";
+// Lien de réservation iClosed dédié à placement-ethique.fr (GO-LIVE-CHECKLIST
+// item 5, résolu). Événement "Appel découverte - Placement Éthique" créé par
+// duplication de l'événement finance-halal, sur le même compte réseau
+// (EpargnePlurielleAJ — décision actée dans DECISIONS.md, contrairement à
+// l'ancienne consigne d'ici).
+const WIDGET_URL = "https://app.iclosed.io/e/EpargnePlurielleAJ/appel-d-couverte-placement-thique";
 
 export function IClosedWidget({ height = 720 }: { height?: number }) {
   useEffect(() => {

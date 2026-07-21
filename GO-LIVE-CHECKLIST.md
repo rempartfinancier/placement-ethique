@@ -20,10 +20,10 @@ construit et fonctionnel.
        `GTM-XXXXXXX` dans `src/components/CookieConsent.tsx`.
 4. [ ] **Brevo** (ou équivalent) — compte/clé API pour les emails de résultats de
        simulateurs et la newsletter.
-5. [ ] **iClosed** — créer un lien de réservation dédié à placement-ethique.fr et
-       renseigner `WIDGET_URL` dans `src/components/IClosedWidget.tsx` (ne pas
-       réutiliser le lien EpargnePlurielleAJ du site halal). En attendant, la page
-       contact affiche le formulaire email seul.
+5. [x] ~~**iClosed**~~ — événement dédié « Appel découverte - Placement Éthique »
+       créé (duplication de l'événement finance-halal, compte réseau
+       EpargnePlurielleAJ — décision actée dans DECISIONS.md), `WIDGET_URL`
+       renseigné dans `src/components/IClosedWidget.tsx`.
 6. [ ] **Boîte email** `contact@placement-ethique.fr` fonctionnelle.
 7. [ ] **Téléphone** — décider : mutualiser la ligne du réseau ou ligne dédiée,
        puis l'ajouter dans SiteFooter, /contact et /mentions-legales.
