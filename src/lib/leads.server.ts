@@ -19,6 +19,12 @@ export interface ProcessLeadInput {
   send_email?: boolean;
   send_admin_notification?: boolean;
   result_summary?: string | null;
+  // Lead magnet PDF éditorial (ex. diagnostic-contrat-isr) : quand renseigné,
+  // sendResultsEmail() envoie une variante avec le lien de téléchargement
+  // direct + le pont éditorial vers l'offre, au lieu du récapitulatif
+  // générique de simulateur.
+  download_url?: string | null;
+  download_label?: string | null;
 }
 
 export interface ProcessLeadResult {
@@ -73,6 +79,40 @@ async function sendResultsEmail(input: ProcessLeadInput) {
   if (!brevoKey) return { ok: false, error: "Brevo API key not configured" };
   const senderEmail = process.env.PLACEMENT_ETHIQUE_SENDER || "contact@placement-ethique.fr";
   try {
+    // Lead magnet PDF éditorial : email dédié avec lien de téléchargement
+    // direct + pont vers l'offre, distinct du récapitulatif de simulateur.
+    if (input.download_url) {
+      const label = input.download_label || "votre guide";
+      const html = `<!doctype html><html><body style="font-family:Georgia,serif;color:#1a1a1a;max-width:640px;margin:24px auto;padding:24px;">
+        <h1 style="color:#142030;">Voici ${label} — Placement-éthique.fr</h1>
+        <p>Bonjour${input.name ? " " + input.name : ""},</p>
+        <p>Comme demandé, voici le lien de téléchargement de votre document :</p>
+        <p style="margin:28px 0;"><a href="${input.download_url}" style="background:#7a2331;color:#fff;padding:14px 24px;border-radius:999px;text-decoration:none;font-weight:600;display:inline-block;">Télécharger le PDF</a></p>
+        <p style="font-size:13px;color:#555;">Si le bouton ne s'affiche pas, copiez ce lien dans votre navigateur : <a href="${input.download_url}">${input.download_url}</a></p>
+        <p style="margin-top:28px;">Quel que soit le résultat de votre lecture, ce document vous dit où chercher — pas ce qu'il faut en conclure pour votre situation propre (antériorité fiscale, autres enveloppes, horizon, objectifs de transmission). C'est l'objet du premier échange offert, 30 minutes, sans engagement : <a href="https://placement-ethique.fr/contact">placement-ethique.fr/contact</a></p>
+        <p style="font-size:12px;color:#777;margin-top:32px;">Cet email est purement pédagogique et ne constitue pas un conseil en investissement personnalisé.</p>
+      </body></html>`;
+      const res = await fetch("https://api.brevo.com/v3/smtp/email", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          "api-key": brevoKey,
+        },
+        body: JSON.stringify({
+          sender: { name: "Placement-éthique.fr", email: senderEmail },
+          to: [{ email: input.email, name: input.name || undefined }],
+          subject: `${label} — votre lien de téléchargement`,
+          htmlContent: html,
+        }),
+      });
+      if (!res.ok) {
+        const txt = await res.text();
+        console.error(`[sendResultsEmail] Brevo SMTP Error - Status: ${res.status}, Body:`, txt);
+        return { ok: false, error: `Brevo email ${res.status}: ${txt.slice(0, 300)}` };
+      }
+      return { ok: true };
+    }
+
     let dynamicSummary = input.result_summary
       ? input.result_summary.replace(/&/g, "&amp;").replace(/</g, "&lt;")
       : "";

@@ -49,6 +49,11 @@ export function SiteFooter() {
               </Link>
             </li>
             <li>
+              <Link to="/guide" className="hover:text-white">
+                Guide gratuit : diagnostic contrat ISR
+              </Link>
+            </li>
+            <li>
               <Link to="/tarifs" className="hover:text-white">
                 Tarifs & transparence
               </Link>

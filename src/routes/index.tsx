@@ -1,6 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { SiteLayout } from "@/components/SiteLayout";
 import { CTA } from "@/components/CTA";
+import { LeadMagnetForm } from "@/components/LeadMagnetForm";
 import {
   ArrowRight,
   SearchCheck,
@@ -313,6 +314,43 @@ function HomePage() {
                 </span>
               </Link>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Guide gratuit — lead magnet PDF */}
+      <section className="section border-b border-border/40">
+        <div className="container-prose">
+          <div
+            className="rounded-3xl border p-8 md:p-12 grid md:grid-cols-12 gap-10 items-center"
+            style={{
+              borderColor: "var(--grenat)",
+              background: "color-mix(in oklch, var(--grenat) 4%, var(--card))",
+            }}
+          >
+            <div className="md:col-span-7">
+              <p className="eyebrow" style={{ color: "var(--grenat)" }}>
+                Guide gratuit
+              </p>
+              <h2 className="display-3 mt-3 max-w-xl">
+                Le diagnostic documentaire noté sur 40 pour votre contrat « ISR »
+              </h2>
+              <p className="mt-4 text-foreground/80 leading-relaxed max-w-xl">
+                Vérifiez en 30 minutes si votre assurance vie ou votre PER étiqueté « ISR » est
+                réellement transparent — ou juste bien marketé. La checklist des 8 documents à
+                réunir (avec le modèle d'email pour les obtenir si vous ne les avez pas encore), la
+                grille de notation, et la lecture de votre score. En PDF, sans jargon.
+              </p>
+            </div>
+            <div className="md:col-span-5">
+              <LeadMagnetForm />
+              <Link
+                to="/guide"
+                className="mt-4 inline-flex items-center gap-1.5 text-sm font-medium text-foreground hover:text-[var(--grenat)] transition-colors"
+              >
+                Voir le sommaire complet du guide <ArrowRight size={14} />
+              </Link>
+            </div>
           </div>
         </div>
       </section>

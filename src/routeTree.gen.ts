@@ -16,6 +16,7 @@ import { Route as PlacementsRouteImport } from './routes/placements'
 import { Route as OutilsRouteImport } from './routes/outils'
 import { Route as ObjectifsRouteImport } from './routes/objectifs'
 import { Route as MentionsLegalesRouteImport } from './routes/mentions-legales'
+import { Route as GuideRouteImport } from './routes/guide'
 import { Route as EspaceRouteImport } from './routes/espace'
 import { Route as EnveloppesRouteImport } from './routes/enveloppes'
 import { Route as ContactRouteImport } from './routes/contact'
@@ -77,6 +78,11 @@ const ObjectifsRoute = ObjectifsRouteImport.update({
 const MentionsLegalesRoute = MentionsLegalesRouteImport.update({
   id: '/mentions-legales',
   path: '/mentions-legales',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const GuideRoute = GuideRouteImport.update({
+  id: '/guide',
+  path: '/guide',
   getParentRoute: () => rootRouteImport,
 } as any)
 const EspaceRoute = EspaceRouteImport.update({
@@ -228,6 +234,7 @@ export interface FileRoutesByFullPath {
   '/contact': typeof ContactRoute
   '/enveloppes': typeof EnveloppesRoute
   '/espace': typeof EspaceRouteWithChildren
+  '/guide': typeof GuideRoute
   '/mentions-legales': typeof MentionsLegalesRoute
   '/objectifs': typeof ObjectifsRoute
   '/outils': typeof OutilsRouteWithChildren
@@ -262,6 +269,7 @@ export interface FileRoutesByTo {
   '/confidentialite': typeof ConfidentialiteRoute
   '/contact': typeof ContactRoute
   '/enveloppes': typeof EnveloppesRoute
+  '/guide': typeof GuideRoute
   '/mentions-legales': typeof MentionsLegalesRoute
   '/objectifs': typeof ObjectifsRoute
   '/placements': typeof PlacementsRoute
@@ -298,6 +306,7 @@ export interface FileRoutesById {
   '/contact': typeof ContactRoute
   '/enveloppes': typeof EnveloppesRoute
   '/espace': typeof EspaceRouteWithChildren
+  '/guide': typeof GuideRoute
   '/mentions-legales': typeof MentionsLegalesRoute
   '/objectifs': typeof ObjectifsRoute
   '/outils': typeof OutilsRouteWithChildren
@@ -336,6 +345,7 @@ export interface FileRouteTypes {
     | '/contact'
     | '/enveloppes'
     | '/espace'
+    | '/guide'
     | '/mentions-legales'
     | '/objectifs'
     | '/outils'
@@ -370,6 +380,7 @@ export interface FileRouteTypes {
     | '/confidentialite'
     | '/contact'
     | '/enveloppes'
+    | '/guide'
     | '/mentions-legales'
     | '/objectifs'
     | '/placements'
@@ -405,6 +416,7 @@ export interface FileRouteTypes {
     | '/contact'
     | '/enveloppes'
     | '/espace'
+    | '/guide'
     | '/mentions-legales'
     | '/objectifs'
     | '/outils'
@@ -442,6 +454,7 @@ export interface RootRouteChildren {
   ContactRoute: typeof ContactRoute
   EnveloppesRoute: typeof EnveloppesRoute
   EspaceRoute: typeof EspaceRouteWithChildren
+  GuideRoute: typeof GuideRoute
   MentionsLegalesRoute: typeof MentionsLegalesRoute
   ObjectifsRoute: typeof ObjectifsRoute
   OutilsRoute: typeof OutilsRouteWithChildren
@@ -502,6 +515,13 @@ declare module '@tanstack/react-router' {
       path: '/mentions-legales'
       fullPath: '/mentions-legales'
       preLoaderRoute: typeof MentionsLegalesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/guide': {
+      id: '/guide'
+      path: '/guide'
+      fullPath: '/guide'
+      preLoaderRoute: typeof GuideRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/espace': {
@@ -768,6 +788,7 @@ const rootRouteChildren: RootRouteChildren = {
   ContactRoute: ContactRoute,
   EnveloppesRoute: EnveloppesRoute,
   EspaceRoute: EspaceRouteWithChildren,
+  GuideRoute: GuideRoute,
   MentionsLegalesRoute: MentionsLegalesRoute,
   ObjectifsRoute: ObjectifsRoute,
   OutilsRoute: OutilsRouteWithChildren,

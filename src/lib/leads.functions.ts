@@ -14,6 +14,8 @@ const leadSchema = z.object({
   send_email: z.boolean().optional().default(false),
   send_admin_notification: z.boolean().optional().default(false),
   result_summary: z.string().max(8000).optional().nullable(),
+  download_url: z.string().trim().max(500).optional().nullable(),
+  download_label: z.string().trim().max(160).optional().nullable(),
 });
 
 export type LeadInput = z.infer<typeof leadSchema>;
