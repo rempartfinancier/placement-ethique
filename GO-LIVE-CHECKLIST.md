@@ -16,10 +16,13 @@ construit et fonctionnel.
        opérationnel** tant que cette étape n'est pas faite — ne pas communiquer
        dessus avant vérification de bout en bout (leçon du site halal, dont le
        projet Supabase s'est révélé inexistant en production).
-3. [ ] **Google Tag Manager** — créer un conteneur dédié à ce site et remplacer
-       `GTM-XXXXXXX` dans `src/components/CookieConsent.tsx`.
-4. [ ] **Brevo** (ou équivalent) — compte/clé API pour les emails de résultats de
-       simulateurs et la newsletter.
+3. [x] ~~**Google Tag Manager**~~ — conteneur dédié `GTM-MP3Z8XWH` renseigné
+       dans `src/components/CookieConsent.tsx`. Ne se charge qu'après
+       consentement explicite (le snippet `<noscript>` fourni par Google n'est
+       volontairement pas repris : il ignore le consentement).
+4. [x] ~~**Brevo**~~ — clé API renseignée, domaine `placement-ethique.fr`
+       authentifié (DKIM/domaine) dans Brevo. Emails de résultats de
+       simulateurs, notification admin et newsletter opérationnels.
 5. [x] ~~**iClosed**~~ — événement dédié « Appel découverte - Placement Éthique »
        créé (duplication de l'événement finance-halal, compte réseau
        EpargnePlurielleAJ — décision actée dans DECISIONS.md), `WIDGET_URL`
