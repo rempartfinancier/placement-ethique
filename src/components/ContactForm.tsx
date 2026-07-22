@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { saveLead } from "@/lib/leads.functions";
 import { Send, CheckCircle2, AlertCircle } from "lucide-react";
 
@@ -7,6 +7,13 @@ interface ContactFormProps {
   offerName?: string;
   buttonText?: string;
   className?: string;
+  // Pré-remplissage pour un visiteur déjà connecté (espace client) — arrive
+  // en général après le premier rendu (requête async), d'où l'effet ci-dessous
+  // plutôt qu'un simple useState initial.
+  defaultName?: string;
+  defaultEmail?: string;
+  // Appelé juste après un envoi réussi, avec les coordonnées saisies.
+  onSuccess?: (data: { name: string; email: string; phone: string }) => void;
 }
 
 export function ContactForm({
@@ -14,6 +21,9 @@ export function ContactForm({
   offerName,
   buttonText = "Envoyer ma demande",
   className = "",
+  defaultName,
+  defaultEmail,
+  onSuccess,
 }: ContactFormProps) {
   const [loading, setLoading] = useState(false);
   const [success, setSuccess] = useState(false);
@@ -25,6 +35,15 @@ export function ContactForm({
     phone: "",
     message: "",
   });
+
+  // N'écrase jamais une saisie déjà commencée par l'utilisateur.
+  useEffect(() => {
+    setFormData((prev) => ({
+      ...prev,
+      name: prev.name || defaultName || prev.name,
+      email: prev.email || defaultEmail || prev.email,
+    }));
+  }, [defaultName, defaultEmail]);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -55,6 +74,7 @@ export function ContactForm({
       }
 
       setSuccess(true);
+      onSuccess?.({ name: formData.name, email: formData.email, phone: formData.phone });
       setFormData({ name: "", email: "", phone: "", message: "" });
     } catch (err) {
       console.error(err);
@@ -65,6 +85,17 @@ export function ContactForm({
   };
 
   if (success) {
+    // Quand un onSuccess est fourni, l'appelant affiche sa propre confirmation
+    // détaillée (ex : /contact fait apparaître le calendrier de réservation
+    // en haut de page) — on évite de dupliquer un second message ici.
+    if (onSuccess) {
+      return (
+        <div className="rounded-2xl border border-border bg-background p-6 text-center text-sm text-muted-foreground animate-in fade-in">
+          <CheckCircle2 size={20} className="mx-auto mb-2" style={{ color: "var(--verifie)" }} />
+          Message transmis — voir la confirmation ci-dessus.
+        </div>
+      );
+    }
     return (
       <div
         className="rounded-2xl border p-8 text-center animate-in fade-in"

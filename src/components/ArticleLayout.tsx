@@ -263,7 +263,7 @@ export function ArticleLayout({
                 to="/contact"
                 className="inline-flex w-full items-center justify-center gap-2 rounded-xl bg-primary text-primary-foreground px-4 py-2.5 text-sm font-semibold hover:bg-primary/90 transition-all shadow-sm cursor-pointer"
               >
-                Réserver mon appel <ArrowRight size={16} />
+                Réserver un échange <ArrowRight size={16} />
               </Link>
             </div>
           </aside>

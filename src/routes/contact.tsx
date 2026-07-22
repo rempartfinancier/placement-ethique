@@ -1,8 +1,9 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
+import { createFileRoute, Link, useNavigate } from "@tanstack/react-router";
 import { SiteLayout } from "@/components/SiteLayout";
 import { PageHero } from "@/components/PageHero";
 import { IClosedWidget } from "@/components/IClosedWidget";
 import { ContactForm } from "@/components/ContactForm";
+import { useContactPrefill } from "@/lib/espace/useContactPrefill";
 import {
   ArrowRight,
   Clock,
@@ -80,6 +81,17 @@ const conseillers = [
 /* ────────────────────────────────── Route ───────────────────────────────── */
 
 export const Route = createFileRoute("/contact")({
+  // Paramètres de pré-remplissage du calendrier iClosed (cf. docs iClosed :
+  // iclosedName/iclosedEmail/iclosedPhone doivent être sur l'URL de LA PAGE,
+  // pas sur l'URL du calendrier lui-même). Posés après un envoi réussi du
+  // formulaire natif pour proposer un créneau tout de suite, préempli.
+  validateSearch: (
+    search: Record<string, unknown>,
+  ): { iclosedName?: string; iclosedEmail?: string; iclosedPhone?: string } => ({
+    iclosedName: typeof search.iclosedName === "string" ? search.iclosedName : undefined,
+    iclosedEmail: typeof search.iclosedEmail === "string" ? search.iclosedEmail : undefined,
+    iclosedPhone: typeof search.iclosedPhone === "string" ? search.iclosedPhone : undefined,
+  }),
   head: () => ({
     meta: [
       { title: "Prendre rendez-vous — premier échange offert | Placement-éthique.fr" },
@@ -121,8 +133,61 @@ export const Route = createFileRoute("/contact")({
 /* ────────────────────────────────── Page ────────────────────────────────── */
 
 function ContactPage() {
+  const search = Route.useSearch();
+  const navigate = useNavigate();
+  const prefill = useContactPrefill();
+  const rdvPret = Boolean(search.iclosedEmail);
+
+  // Une fois le message envoyé, on pose les paramètres de pré-remplissage
+  // iClosed sur l'URL AVANT que le widget ne se monte (son script externe
+  // les lit une seule fois, au chargement).
+  const handleBookingReady = (data: { name: string; email: string; phone: string }) => {
+    navigate({
+      to: "/contact",
+      search: (prev) => ({
+        ...prev,
+        iclosedName: data.name || undefined,
+        iclosedEmail: data.email || undefined,
+        iclosedPhone: data.phone || undefined,
+      }),
+      replace: true,
+    });
+    // Le calendrier s'affiche tout en haut de page (cf. plus bas) — on y
+    // ramène systématiquement le visiteur, où qu'il ait scrollé pendant la
+    // saisie, pour qu'il ne puisse pas le manquer.
+    if (typeof window !== "undefined") {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+  };
+
   return (
     <SiteLayout>
+      {rdvPret && (
+        <section className="pt-10 pb-4">
+          <div className="container-prose">
+            <div
+              className="rounded-2xl border p-6 md:p-8 shadow-[var(--shadow-elevated)] animate-in fade-in zoom-in-95 duration-300"
+              style={{
+                borderColor: "color-mix(in oklch, var(--verifie) 30%, transparent)",
+                background: "color-mix(in oklch, var(--verifie) 6%, var(--card))",
+              }}
+            >
+              <p className="eyebrow">Message reçu</p>
+              <h2 className="display-3 mt-3">
+                Pas besoin d'attendre notre rappel — choisissez votre créneau.
+              </h2>
+              <p className="mt-3 max-w-2xl leading-relaxed text-muted-foreground">
+                Votre message est bien parti. Si vous préférez fixer l'échange tout de suite plutôt
+                que d'attendre notre retour sous 48h, réservez directement ci-dessous.
+              </p>
+              <div className="mt-6">
+                <IClosedWidget height={720} />
+              </div>
+            </div>
+          </div>
+        </section>
+      )}
+
       <PageHero
         eyebrow="Prendre rendez-vous"
         title={
@@ -176,17 +241,28 @@ function ContactPage() {
         </div>
       </section>
 
-      {/* Réservation en ligne */}
-      <section className="pt-10 pb-6">
+      {/* Formulaire — canal unique de prise de rendez-vous */}
+      <section className="pt-10 pb-16">
         <div className="container-prose">
           <div className="grid md:grid-cols-12 gap-10 items-start">
-            <div className="md:col-span-4">
-              <p className="eyebrow">Réserver votre créneau</p>
-              <h2 className="display-3 mt-4">Choisissez le jour et l'heure qui vous arrangent.</h2>
+            <div className="md:col-span-5">
+              <p className="eyebrow">Planifiez votre échange</p>
+              <h2 className="display-3 mt-4">Un message, et nous nous occupons du reste.</h2>
               <p className="mt-5 text-muted-foreground leading-relaxed">
-                Vous recevez la confirmation par email, avec le lien de visioconférence. Si la
-                réservation en ligne n'est pas encore ouverte, écrivez-nous : nous vous proposons un
-                créneau sous 48 heures ouvrées.
+                Remplissez ce formulaire avec vos coordonnées et quelques mots sur votre projet.
+                Vous pourrez ensuite choisir vous-même votre créneau — ou nous vous en proposons un
+                sous 48 heures ouvrées si vous préférez attendre notre retour.
+              </p>
+              <p className="mt-4 text-muted-foreground leading-relaxed text-sm">
+                Vous pouvez aussi nous écrire directement à{" "}
+                <a href="mailto:contact@placement-ethique.fr" className="underline text-foreground">
+                  contact@placement-ethique.fr
+                </a>{" "}
+                ou nous appeler au{" "}
+                <a href="tel:+33184163791" className="underline text-foreground">
+                  01 84 16 37 91
+                </a>
+                .
               </p>
 
               <ul className="mt-8 space-y-4 text-sm">
@@ -240,40 +316,13 @@ function ContactPage() {
                 </li>
               </ul>
             </div>
-
-            <div className="md:col-span-8">
-              <IClosedWidget height={780} />
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Alternative écrite */}
-      <section className="pt-4 pb-16">
-        <div className="container-prose">
-          <div className="grid md:grid-cols-12 gap-10 items-start">
-            <div className="md:col-span-5">
-              <p className="eyebrow">Vous préférez écrire ?</p>
-              <h2 className="display-3 mt-4">Posez votre question par écrit.</h2>
-              <p className="mt-5 text-muted-foreground leading-relaxed">
-                Pas encore prêt pour un appel, ou une question précise sur un label, une enveloppe,
-                un placement ? Ce formulaire arrive directement dans notre boîte — nous vous
-                répondons sous 48 heures ouvrées, par email.
-              </p>
-              <p className="mt-4 text-muted-foreground leading-relaxed text-sm">
-                Vous pouvez aussi nous écrire directement à{" "}
-                <a href="mailto:contact@placement-ethique.fr" className="underline text-foreground">
-                  contact@placement-ethique.fr
-                </a>{" "}
-                ou nous appeler au{" "}
-                <a href="tel:+33184163791" className="underline text-foreground">
-                  01 84 16 37 91
-                </a>
-                .
-              </p>
-            </div>
-            <div className="md:col-span-7 bg-card border border-border rounded-2xl p-6 md:p-8">
-              <ContactForm sourcePage="Page Contact" />
+            <div className="md:col-span-7 bg-card border border-border shadow-[var(--shadow-subtle)] rounded-2xl p-6 md:p-8">
+              <ContactForm
+                sourcePage="Page Contact"
+                defaultName={prefill.loggedIn ? prefill.nom : undefined}
+                defaultEmail={prefill.loggedIn ? prefill.email : undefined}
+                onSuccess={handleBookingReady}
+              />
             </div>
           </div>
         </div>
@@ -396,7 +445,7 @@ function ContactPage() {
               Rien ne vous oblige à nous parler pour avancer. Nos outils gratuits — projection
               d'épargne, décodeur de labels, diagnostic — donnent des pistes sans inscription
               forcée. Quand vous voudrez confronter ces pistes à votre situation complète, le
-              calendrier ci-dessus sera toujours là.
+              formulaire ci-dessus sera toujours là.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
               <Link to="/outils" className="btn-grenat">

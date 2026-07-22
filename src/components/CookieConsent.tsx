@@ -12,10 +12,13 @@ import { Link } from "@tanstack/react-router";
 export const OUVRIR_COOKIES_EVENT = "pe-cookies-ouvrir";
 
 const STORAGE_KEY = "pe-consent-traceurs";
-// Conteneur GTM dédié à placement-ethique.fr — À CRÉER (GO-LIVE-CHECKLIST
-// item 3). Tant que l'ID est le placeholder, chargerGtm() ne fait rien :
-// aucun script tiers n'est injecté par erreur.
-const GTM_ID = "GTM-XXXXXXX";
+// Conteneur GTM dédié à placement-ethique.fr (GO-LIVE-CHECKLIST item 3,
+// résolu). Le snippet <noscript>/<iframe> fourni par Google n'est
+// délibérément pas repris : il se charge inconditionnellement (aucune
+// exécution JS requise), donc rien ne peut le faire respecter le
+// consentement — contrairement à chargerGtm() ci-dessous, qui ne s'exécute
+// qu'après acceptation explicite.
+const GTM_ID = "GTM-MP3Z8XWH";
 const VALIDITE_MS = 13 * 30 * 24 * 60 * 60 * 1000; // ≈ 13 mois (CNIL)
 
 type Choix = "accepte" | "refuse";
@@ -35,7 +38,6 @@ function lireChoix(): Choix | null {
 }
 
 function chargerGtm() {
-  if (GTM_ID === "GTM-XXXXXXX") return; // conteneur pas encore créé
   if (document.querySelector('script[src*="googletagmanager.com/gtm.js"]')) return;
   const w = window as Window & { dataLayer?: Record<string, unknown>[] };
   w.dataLayer = w.dataLayer || [];

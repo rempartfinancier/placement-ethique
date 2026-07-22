@@ -14,6 +14,8 @@ import { SiteLayout } from "@/components/SiteLayout";
 import { PageHero } from "@/components/PageHero";
 import { CTA } from "@/components/CTA";
 import { SliderField } from "@/components/SliderField";
+import { ResultsActions } from "@/components/ResultsActions";
+import type { PdfDoc } from "@/lib/pdf";
 import { eur, pct } from "@/components/simulators/format";
 
 export const Route = createFileRoute("/outils/empreinte-carbone-epargne")({
@@ -172,6 +174,33 @@ function EmpreinteCarboneePage() {
       montantNonMesuree: montantTotal * (partNonMesuree / 100),
     };
   }, [montantTotal, actionsPct, obligationsPct, immobilierPct, livretsPct, sommePct]);
+
+  const buildDoc = (): PdfDoc => ({
+    title: "Où se joue le levier sur votre épargne",
+    subtitle: `Épargne renseignée : ${eur(montantTotal)}`,
+    source: "outil-empreinte-carbone-epargne",
+    sections: [
+      {
+        heading: "Répartition par poche à levier",
+        rows: [
+          {
+            label: "Poches à fort levier ISR (actions + obligations)",
+            value: `${eur(Math.round(result.montantLevierFort))} (${pct(result.partLevierFort, 0)} %)`,
+          },
+          {
+            label: "Poche au levier « rénovation » (immobilier)",
+            value: `${eur(Math.round(result.montantLevierModere))} (${pct(result.partLevierModere, 0)} %)`,
+          },
+          {
+            label: "Poche non mesurée à ce jour (livrets, monétaire)",
+            value: `${eur(Math.round(result.montantNonMesuree))} (${pct(result.partNonMesuree, 0)} %)`,
+          },
+        ],
+      },
+    ],
+    disclaimer:
+      "Ordre de grandeur pédagogique, pas un audit : ce document ne présente aucune projection de performance financière. Tout placement en actions, obligations, immobilier ou unités de compte comporte un risque de perte en capital.",
+  });
 
   const donneesCamembert = [
     { name: "Actions & fonds diversifiés", value: actionsPct },
@@ -382,6 +411,8 @@ function EmpreinteCarboneePage() {
                     </div>
                   </div>
                 </div>
+
+                <ResultsActions source="outil-empreinte-carbone-epargne" buildDoc={buildDoc} />
               </div>
             </div>
           </div>

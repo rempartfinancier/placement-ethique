@@ -5,6 +5,8 @@ import { SiteLayout } from "@/components/SiteLayout";
 import { PageHero } from "@/components/PageHero";
 import { CTA } from "@/components/CTA";
 import { SliderField } from "@/components/SliderField";
+import { ResultsActions } from "@/components/ResultsActions";
+import type { PdfDoc } from "@/lib/pdf";
 import {
   Accordion,
   AccordionContent,
@@ -245,6 +247,30 @@ function ComparateurEcoPtzPage() {
     }
   }, [montant, duree, tauxClassique]);
 
+  const buildDoc = (): PdfDoc => ({
+    title: "Éco-PTZ ou prêt travaux classique",
+    subtitle: `${categorie.label} · ${eur(montant)} sur ${duree} ans`,
+    source: "outil-comparateur-eco-ptz",
+    sections: [
+      {
+        heading: "Économie avec l'éco-PTZ",
+        rows: [
+          { label: "Économie totale d'intérêts", value: eur(result.interetsClassique) },
+          { label: "Économie mensuelle", value: `${eur(result.economieMensuelle)}/mois` },
+          { label: "Mensualité éco-PTZ (0 %)", value: `${eur(result.mensualiteEcoPtz)}/mois` },
+          {
+            label: `Mensualité classique (${pct(tauxClassique)})`,
+            value: `${eur(result.mensualiteClassique)}/mois`,
+          },
+          { label: "Coût total éco-PTZ", value: eur(result.coutTotalEcoPtz) },
+          { label: "Coût total prêt classique", value: eur(result.coutTotalClassique) },
+        ],
+      },
+    ],
+    disclaimer:
+      "Simulation illustrative et non contractuelle, hors assurance emprunteur et hors frais de dossier, mensualité constante sur toute la durée. Un crédit vous engage et doit être remboursé : vérifiez vos capacités de remboursement avant de vous engager.",
+  });
+
   return (
     <SiteLayout>
       <PageHero
@@ -390,6 +416,8 @@ function ComparateurEcoPtzPage() {
                     </div>
                   </div>
                 </div>
+
+                <ResultsActions source="outil-comparateur-eco-ptz" buildDoc={buildDoc} />
 
                 <div className="card-paper">
                   <p className="eyebrow">Sécuriser ce financement</p>

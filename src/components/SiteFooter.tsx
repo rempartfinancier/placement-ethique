@@ -1,5 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import { OUVRIR_COOKIES_EVENT } from "./CookieConsent";
+import { NewsletterSignup } from "./NewsletterSignup";
 
 export function SiteFooter() {
   return (
@@ -23,6 +24,10 @@ export function SiteFooter() {
             valeurs — en vérifiant ce que les labels garantissent vraiment, plutôt qu'en croyant les
             brochures sur parole.
           </p>
+          <h4 className="font-display text-base mt-8 mb-1 text-[var(--grenat-clair)]">
+            La newsletter
+          </h4>
+          <NewsletterSignup />
         </div>
 
         <div>

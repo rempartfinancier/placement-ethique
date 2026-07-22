@@ -14,6 +14,8 @@ import { SiteLayout } from "@/components/SiteLayout";
 import { PageHero } from "@/components/PageHero";
 import { CTA } from "@/components/CTA";
 import { SliderField } from "@/components/SliderField";
+import { ResultsActions } from "@/components/ResultsActions";
+import type { PdfDoc } from "@/lib/pdf";
 import {
   Accordion,
   AccordionContent,
@@ -279,6 +281,36 @@ function ComparateurEnveloppesPage() {
   const meilleur = resultats.reduce((a, b) => (b.capitalNet > a.capitalNet ? b : a));
   const maxCapital = Math.max(...resultats.map((r) => r.capitalNet), 1);
 
+  const buildDoc = (): PdfDoc => ({
+    title: "Comparatif d'enveloppes fiscales",
+    subtitle: `${eur(versementInitial)} initial + ${eur(versementMensuel)}/mois sur ${dureeAnnees} ans`,
+    source: "outil-comparateur-enveloppes",
+    sections: [
+      {
+        heading: `Piste la plus avantageuse : ${meilleur.label}`,
+        rows: resultats.map((r) => ({ label: r.label, value: `${eur(r.capitalNet)} net estimé` })),
+      },
+      {
+        heading: "Détail",
+        rows: [
+          { label: "Total versé", value: eur(versementsCumules) },
+          { label: "Impôts + PS estimés — AV", value: eur(resAv.fiscal?.totalImpots ?? 0) },
+          { label: "Impôts + PS estimés — PER", value: eur(resPer.fiscal?.totalImpots ?? 0) },
+          { label: "Impôts + PS estimés — CTO", value: eur(impotCto + psCto) },
+          ...(resPer.fiscal && resPer.fiscal.economieImpotEntree > 0
+            ? [
+                {
+                  label: "+ Économie d'impôt PER à l'entrée (non capitalisée)",
+                  value: eur(resPer.fiscal.economieImpotEntree),
+                },
+              ]
+            : []),
+        ],
+      },
+    ],
+    disclaimer: `Hypothèse illustrative et non contractuelle : ${taux.toString().replace(".", ",")} %/an, TMI ${tmi} %. Les performances passées ne préjugent pas des performances futures et un placement en unités de compte comporte un risque de perte en capital. Ce classement compare le capital net à la sortie uniquement — hors économie d'impôt à l'entrée du PER, indiquée séparément.`,
+  });
+
   const alertesUniques = useMemo(() => {
     const vues = new Set<string>();
     const toutes = [...resAv.alertes, ...resPer.alertes];
@@ -533,6 +565,8 @@ function ComparateurEnveloppesPage() {
                     </div>
                   </div>
                 </div>
+
+                <ResultsActions source="outil-comparateur-enveloppes" buildDoc={buildDoc} />
 
                 {alertesUniques.length > 0 && (
                   <div className="card-paper">

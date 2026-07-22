@@ -5,6 +5,8 @@ import { SiteLayout } from "@/components/SiteLayout";
 import { PageHero } from "@/components/PageHero";
 import { CTA } from "@/components/CTA";
 import { SliderField } from "@/components/SliderField";
+import { ResultsActions } from "@/components/ResultsActions";
+import type { PdfDoc } from "@/lib/pdf";
 
 export const Route = createFileRoute("/outils/retraite")({
   head: () => ({
@@ -118,6 +120,46 @@ function RetraitePage() {
       };
     }
   }, [targetMonthly, pension, currentCapital, rate, inflation, withdrawalYears, years]);
+
+  const buildDoc = (): PdfDoc => ({
+    title: "Piste d'épargne retraite",
+    subtitle: `Revenu visé ${eur(targetMonthly)}/mois · départ à ${retireAge} ans · horizon ${years} ans`,
+    source: "simulateur-retraite",
+    sections: [
+      {
+        heading: "Piste d'épargne mensuelle",
+        rows: [
+          { label: "Effort d'épargne mensuel", value: eur(Math.round(result.monthlyEffort)) },
+          {
+            label: `Besoin net (euros de ${departYear})`,
+            value: `${eur(Math.round(result.netMonthlyAtRetirement))}/mois`,
+          },
+          {
+            label: "Soit en euros d'aujourd'hui",
+            value: `${eur(Math.round(result.netMonthlyToday))}/mois`,
+          },
+        ],
+      },
+      {
+        heading: "Capital cible",
+        rows: [
+          {
+            label: `Capital cible à ${retireAge} ans`,
+            value: eur(Math.round(result.capitalNeeded)),
+          },
+          {
+            label: "Capital actuel, une fois projeté",
+            value: eur(Math.round(result.capitalFromExisting)),
+          },
+          { label: "Horizon d'épargne", value: `${years} ans` },
+          { label: "Capital consommé vers", value: `${depletionAge} ans` },
+        ],
+        note: `Hypothèse illustrative et non contractuelle : ${pct(rate)} pendant l'épargne, ${pct(rate / 2)} pendant la retraite (allocation plus défensive), inflation ${pct(inflation)}.`,
+      },
+    ],
+    disclaimer:
+      "Cette piste est une estimation pédagogique, fondée sur des hypothèses illustratives que vous pouvez modifier librement : elle ne constitue ni un engagement ni une recommandation. Les performances passées ne préjugent pas des performances futures et un placement en unités de compte comporte un risque de perte en capital.",
+  });
 
   const inputs = (
     <div className="space-y-6">
@@ -304,6 +346,8 @@ function RetraitePage() {
                     </div>
                   </div>
                 </div>
+
+                <ResultsActions source="simulateur-retraite" buildDoc={buildDoc} />
 
                 <div className="card-paper">
                   <p className="eyebrow">Où loger cet effort ?</p>
