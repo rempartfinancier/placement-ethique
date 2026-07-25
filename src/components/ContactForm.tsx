@@ -2,6 +2,12 @@ import { useEffect, useState } from "react";
 import { saveLead } from "@/lib/leads.functions";
 import { Send, CheckCircle2, AlertCircle } from "lucide-react";
 
+declare global {
+  interface Window {
+    dataLayer?: Record<string, unknown>[];
+  }
+}
+
 interface ContactFormProps {
   sourcePage?: string;
   offerName?: string;
@@ -74,6 +80,10 @@ export function ContactForm({
       }
 
       setSuccess(true);
+      if (typeof window !== "undefined") {
+        window.dataLayer = window.dataLayer || [];
+        window.dataLayer.push({ event: "generate_lead" });
+      }
       onSuccess?.({ name: formData.name, email: formData.email, phone: formData.phone });
       setFormData({ name: "", email: "", phone: "", message: "" });
     } catch (err) {
