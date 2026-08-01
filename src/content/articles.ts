@@ -43,6 +43,12 @@ import * as patrimoineEngage from "./articles/transmettre-patrimoine-engage-fond
 import * as bilanPatrimonial from "./articles/bilan-patrimonial-investissement-ethique-rendez-vous";
 import * as metauxPrecieux from "./articles/metaux-precieux-investissement-ethique";
 import * as empreinteCarboneEpargne from "./articles/empreinte-carbone-epargne-pourquoi-mesurer";
+import * as ouPlacerArgentMontant from "./articles/ou-placer-argent-facon-ethique-montant";
+import * as fraisConseillerIndependant from "./articles/frais-conseiller-gestion-patrimoine-independant";
+import * as cgpVsConseillerBancaire from "./articles/cgp-independant-vs-conseiller-bancaire-ethique";
+import * as avisContratsCabinet from "./articles/avis-patrimoine-vie-plus-uaf-life-version-absolue";
+import * as heritageDonationInvestir from "./articles/heritage-donation-investir-valeurs";
+import * as piegesInvestissementEthique from "./articles/pieges-inconvenients-investissement-ethique";
 
 type ArticleModule = {
   meta: ArticleMeta;
@@ -83,6 +89,12 @@ const modules: ArticleModule[] = [
   bilanPatrimonial,
   metauxPrecieux,
   empreinteCarboneEpargne,
+  ouPlacerArgentMontant,
+  fraisConseillerIndependant,
+  cgpVsConseillerBancaire,
+  avisContratsCabinet,
+  heritageDonationInvestir,
+  piegesInvestissementEthique,
 ];
 
 /** Tous les articles, triés par date de publication décroissante. */

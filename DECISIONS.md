@@ -4,6 +4,31 @@ Journal des décisions non triviales prises en autonomie pendant la construction
 (cf. brief, section 11 « Protocole d'autonomie totale »). Une ligne par décision :
 quoi, pourquoi.
 
+## Extension du contenu — articles bas de funnel + routine automatique (2026-08-01)
+
+- **6 nouveaux articles ciblant les prospects prêts à placer un capital**, choisis
+  pour combler les piliers Marcus Sheridan absents du backlog initial (Coût,
+  Comparaison de canal, Avis, Problèmes/moment de vie) : `ou-placer-argent-facon-ethique-montant`,
+  `frais-conseiller-gestion-patrimoine-independant`, `cgp-independant-vs-conseiller-bancaire-ethique`,
+  `avis-patrimoine-vie-plus-uaf-life-version-absolue`, `heritage-donation-investir-valeurs`,
+  `pieges-inconvenients-investissement-ethique`.
+- **Avis nommé des deux contrats réellement distribués** (Patrimoine Vie Plus,
+  UAF Life Patrimoine Version Absolue 2) — décision assumée de nommer nos propres
+  contrats avec de vrais points de vigilance (frais au-dessus des meilleurs
+  contrats en ligne, comparaison sourcée à Linxea) plutôt que d'éviter le sujet :
+  cohérent avec le positionnement transparence radicale, et c'est une requête à
+  fort intent que des prospects sur le point de signer tapent réellement.
+- **Routine planifiée bi-hebdomadaire** (`placement-ethique-article-biweekly`,
+  mardi + vendredi 8h locale, cron `0 8 * * 2,5`) : veille de tendances ISR/ESG
+  puis rédaction d'un article, avec **PR GitHub systématique — jamais de push
+  direct sur `main`** (choix explicite de l'utilisateur, contenu financier
+  réglementé jugé trop sensible pour une publication 100 % autonome sans
+  relecture). Le prompt de la tâche réembarque l'intégralité des règles de
+  marque/anti-fabrication (le skill personnel `finance-ethique-article` décrit au
+  brief §6.2 n'existe sur aucune machine de ce parc — probablement jamais créé —
+  donc les règles sont dupliquées dans le prompt plutôt que référencées, pour que
+  la tâche fonctionne même en environnement cloud sans skills personnels).
+
 ## État final (QA)
 
 Site complet : 9 pages marketing, 33 articles, 12 outils interactifs, espace
