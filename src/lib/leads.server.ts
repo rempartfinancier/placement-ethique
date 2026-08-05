@@ -158,11 +158,18 @@ async function sendAdminNotification(input: ProcessLeadInput) {
   const brevoKey = process.env.BREVO_API_KEY;
   if (!brevoKey) return { ok: false };
   const senderEmail = process.env.PLACEMENT_ETHIQUE_SENDER || "contact@placement-ethique.fr";
-  // Pas d'adresse de conseiller nommément confirmée pour ce site : le repli
-  // pointe sur la boîte générique du cabinet, comme dans espace.server.ts —
-  // à surcharger par variable d'environnement une fois une adresse dédiée
-  // communiquée.
+  // Boîte générique du cabinet (repli via variable d'environnement si non
+  // définie), comme dans espace.server.ts.
   const adminEmail = process.env.PLACEMENT_ETHIQUE_ADMIN_EMAIL || "contact@placement-ethique.fr";
+  // Destinataire fixe supplémentaire (demande du 2026-08-05) : Alexandre
+  // Pollet, cofondateur EXP Capital et conseiller nommé de placement-ethique.fr,
+  // veut recevoir personnellement chaque notification de lead en plus de la
+  // boîte générique ci-dessus. Toujours inclus ; Set() évite un doublon si
+  // adminEmail pointait déjà vers cette même adresse.
+  const ALEXANDRE_POLLET_EMAIL = "alexandre.pollet@uptimi.fr";
+  const adminRecipients = Array.from(new Set([adminEmail, ALEXANDRE_POLLET_EMAIL])).map(
+    (email) => ({ email, name: "Admin" }),
+  );
 
   try {
     const safeMessage = input.message ? input.message.replace(/</g, "&lt;") : "Aucun message.";
@@ -195,7 +202,7 @@ async function sendAdminNotification(input: ProcessLeadInput) {
       },
       body: JSON.stringify({
         sender: { name: "Placement Éthique (Bot)", email: senderEmail },
-        to: [{ email: adminEmail, name: "Admin" }],
+        to: adminRecipients,
         subject: `Nouveau lead : ${input.name || input.email} depuis ${input.source}`,
         htmlContent: html,
       }),
@@ -267,8 +274,14 @@ export async function processLead(data: ProcessLeadInput): Promise<ProcessLeadRe
     }
 
     // ── 2. Notification admin ──
-    let adminEmailed = true;
+    // `adminEmailed` ne doit valoir true QUE si la notification a été tentée
+    // ET a réussi — jamais de défaut optimiste (cf. correctif ok:true
+    // inconditionnel plus bas : avant, ce défaut à `true` quand la
+    // notification n'était même pas tentée aurait faussé le calcul).
+    let adminAttempted = false;
+    let adminEmailed = false;
     if (data.send_admin_notification || data.send_email) {
+      adminAttempted = true;
       const adminRes = await sendAdminNotification(data);
       adminEmailed = adminRes.ok;
       if (!adminRes.ok) {
@@ -322,24 +335,57 @@ export async function processLead(data: ProcessLeadInput): Promise<ProcessLeadRe
     }
 
     // ── 3bis. CRM interne — comme le insert Supabase, entièrement optionnel ──
+    // Fire-and-forget assumé (cf. commentaire sur notifierCrmInterne
+    // ci-dessus) : jamais attendu, jamais dans le calcul de succès ci-dessous.
     void notifierCrmInterne(data);
 
-    // ── 4. Réponse — succès si Brevo OK ou email envoyé ──
-    // L'échec de l'email de notification admin ne doit jamais faire échouer
-    // le formulaire côté visiteur : le lead est déjà capturé par syncToBrevo
-    // et notifierCrmInterne (rempart-crm), indépendants de cet email. Même
-    // logique que LeadGate.submitLead, qui tolère déjà ce cas.
-    if (data.send_admin_notification && !adminEmailed) {
+    // ── 4. Réponse — CORRECTIF (2026-08-05) ──
+    // Avant ce correctif, processLead renvoyait toujours { ok: true }, même
+    // quand Brevo, l'email admin ET l'email de résultats échouaient tous les
+    // trois (bug confirmé par audit + test réel : un lead soumis ne
+    // déclenchait alors AUCUNE notification, sans que quiconque ne le sache,
+    // le visiteur voyant quand même un succès). Désormais : ok:true
+    // uniquement si AU MOINS UN canal de notification a réellement réussi
+    // parmi : synchronisation du contact Brevo (brevo.ok), email de résultats
+    // envoyé au visiteur (emailed), email de notification admin
+    // (adminEmailed). Le CRM interne et l'insert Supabase restent
+    // volontairement EXCLUS de ce calcul : ce sont des canaux fire-and-forget
+    // non attendus, annexes à Brevo (cf. leurs commentaires respectifs) — les
+    // y inclure exigerait de les attendre, changeant leur nature et ajoutant
+    // de la latence à une fonction jusqu'ici résiliente.
+    const channelSucceeded = brevo.ok || emailed || adminEmailed;
+
+    if (adminAttempted && !adminEmailed) {
       console.warn(
-        "[processLead] sendAdminNotification failed but returning ok to avoid blocking the visitor:",
+        channelSucceeded
+          ? "[processLead] sendAdminNotification failed but another channel succeeded — ok:true conservé."
+          : "[processLead] sendAdminNotification failed and no other channel succeeded either.",
       );
     }
 
     if (data.send_email && !brevo.ok) {
       console.warn(
-        "[processLead] Brevo sync failed but returning ok to avoid UX crash:",
+        "[processLead] Brevo sync failed:",
         brevo.error,
+        channelSucceeded ? "(another channel succeeded)" : "(no channel succeeded)",
       );
+    }
+
+    if (!channelSucceeded) {
+      const reasons = [
+        !brevo.ok ? `Brevo: ${brevo.error ?? "erreur inconnue"}` : null,
+        data.send_email && emailError ? emailError : null,
+        adminAttempted && !adminEmailed ? "Notification admin : échec d'envoi" : null,
+      ].filter((r): r is string => Boolean(r));
+      console.error("[processLead] Tous les canaux de notification ont échoué:", reasons);
+      return {
+        ok: false,
+        emailed: false,
+        error:
+          reasons.length > 0
+            ? `Échec de l'enregistrement du lead (${reasons.join(" ; ")}).`
+            : "Échec de l'enregistrement du lead : aucun canal de notification n'a abouti.",
+      };
     }
 
     return { ok: true, emailed };
