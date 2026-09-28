@@ -5,11 +5,11 @@ export const meta: ArticleMeta = {
   slug: "label-finansol-finance-solidaire",
   title: "Label Finansol : ce qu'il garantit, ce qu'il ne garantit pas",
   excerpt:
-    "Le label Finansol certifie un financement solidaire réel (5-10 % de l'actif ou 25 % des revenus donnés), contrôlé chaque année. Sans promesse de rendement.",
+    "Le label Finansol certifie un financement solidaire réel (5-15 % de l'actif ou 25 % des revenus donnés), contrôlé chaque année. Sans promesse de rendement.",
   readingTime: "10 min",
   category: "Labels & Greenwashing",
   date: "2026-05-20",
-  updated: "2026-07-08",
+  updated: "2026-09-28",
   tags: ["Finansol", "finance solidaire", "épargne solidaire", "fonds 90/10", "FAIR"],
   author: "Alexandre Pollet",
 };
@@ -21,7 +21,7 @@ export function Corps() {
         <p>
           <strong>En résumé :</strong> le label Finansol, créé en 1997 et porté par l'association
           FAIR, certifie deux choses précises. D'abord, que votre épargne finance réellement des
-          activités à forte utilité sociale ou environnementale — soit parce que 5 à 10 % de l'actif
+          activités à forte utilité sociale ou environnementale — soit parce que 5 à 15 % de l'actif
           est investi dans des entreprises solidaires (les fonds dits « 90/10 »), soit parce qu'au
           moins 25 % des revenus sont reversés en dons à des organismes à but non lucratif (les
           produits de partage). Ensuite, que vous recevez une information fiable sur ce que votre
@@ -96,10 +96,19 @@ export function Corps() {
       <h3>Le critère de solidarité : deux mécaniques possibles</h3>
       <ul>
         <li>
-          <strong>L'investissement solidaire</strong> : entre 5 et 10 % de l'encours du produit
+          <strong>L'investissement solidaire</strong> : entre 5 et 15 % de l'encours du produit
           finance des activités à forte utilité sociale ou environnementale — insertion par
           l'emploi, logement très social, environnement, solidarité internationale. C'est la
-          mécanique des fonds dits « 90/10 ».
+          mécanique des fonds dits « 90/10 » (parfois « 85/15 » depuis que le plafond légal est
+          passé de 10 à 15 % le 1er janvier 2025 — le{" "}
+          <a
+            href="https://www.finance-fair.org/sites/default/files/2024-11/Reglement%20du%20label%20Finansol%202025_VF1.pdf"
+            target="_blank"
+            rel="noreferrer"
+          >
+            règlement du label Finansol applicable au 1er janvier 2025
+          </a>{" "}
+          retient lui aussi 5 à 15 % pour les unités de compte et les fonds d'épargne salariale).
         </li>
         <li>
           <strong>Le partage</strong> : au moins 25 % des revenus du placement (les intérêts,
@@ -127,19 +136,41 @@ export function Corps() {
       <h2>Un fonds « solidaire » est-il investi à 100 % dans le solidaire ?</h2>
       <p>
         Non, et c'est la nuance la plus importante de cet article. Dans un fonds « 90/10 », seuls 5
-        à 10 % de l'actif financent des entreprises solidaires. Les 90 à 95 % restants sont investis
+        à 15 % de l'actif financent des entreprises solidaires. Les 85 à 95 % restants sont investis
         de façon classique — monétaire, obligations, actions selon le profil du fonds — souvent avec
         une approche ISR, mais c'est au document d'informations clés (DIC) et au règlement du fonds
-        de vous le confirmer, pas au label Finansol.
+        de vous le confirmer, pas au label Finansol. Pour comparer ces fonds aux livrets solidaires,
+        voir{" "}
+        <LienArticle slug="placement-ethique-solidaire-fonds-90-10-livrets">
+          placement éthique et solidaire : fonds 90/10 et livrets
+        </LienArticle>
+        .
       </p>
       <p>
         Pourquoi cette proportion, et pas 50 ou 100 % ? Parce que les titres solidaires sont émis
         par des entreprises non cotées, donc peu liquides : un fonds grand public doit pouvoir vous
-        rembourser à tout moment. Cette fourchette de 5 à 10 % n'est d'ailleurs pas une invention du
-        label : c'est celle que le code monétaire et financier fixe pour les fonds solidaires de
-        l'épargne salariale (article L. 214-164). Et la poche solidaire est investie dans des
-        entreprises agréées <strong>« entreprise solidaire d'utilité sociale » (ESUS)</strong>, un
-        agrément public défini à l'
+        rembourser à tout moment. Cette fourchette de 5 à 15 % n'est d'ailleurs pas une invention du
+        label : c'est celle que le code monétaire et financier fixe, depuis le 1er janvier 2025,
+        pour les fonds solidaires de l'épargne salariale (
+        <a
+          href="https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000049720154"
+          target="_blank"
+          rel="noreferrer"
+        >
+          article L. 214-164
+        </a>
+        , le plafond était de 10 % auparavant) et que le code des assurances retient pour les unités
+        de compte solidaires des contrats d'assurance vie (
+        <a
+          href="https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000049720147"
+          target="_blank"
+          rel="noreferrer"
+        >
+          article L. 131-1-2
+        </a>
+        ). Et la poche solidaire est investie dans des entreprises agréées{" "}
+        <strong>« entreprise solidaire d'utilité sociale » (ESUS)</strong>, un agrément public
+        défini à l'
         <a
           href="https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000048598324/"
           target="_blank"
@@ -188,7 +219,7 @@ export function Corps() {
               <strong>Ce qu'il certifie</strong>
             </td>
             <td>
-              Une mécanique solidaire réelle (poche 5-10 % ou partage ≥ 25 % des revenus) + la
+              Une mécanique solidaire réelle (poche 5-15 % ou partage ≥ 25 % des revenus) + la
               transparence sur ce qui est financé
             </td>
             <td>Une méthodologie de sélection ESG appliquée à l'ensemble du portefeuille</td>
@@ -201,7 +232,7 @@ export function Corps() {
             <td>
               <strong>Ce qu'il ne certifie pas</strong>
             </td>
-            <td>La qualité ESG des 90-95 % restants, le rendement, le niveau de risque</td>
+            <td>La qualité ESG des 85-95 % restants, le rendement, le niveau de risque</td>
             <td>Que le portefeuille corresponde à vos valeurs personnelles</td>
             <td>La dimension sociale ou solidaire du fonds</td>
           </tr>
@@ -275,7 +306,7 @@ export function Corps() {
             <td>
               <strong>Fonds « 90/10 »</strong>
             </td>
-            <td>5 à 10 % de l'actif investi en entreprises agréées ESUS</td>
+            <td>5 à 15 % de l'actif investi en entreprises agréées ESUS</td>
             <td>Épargne salariale (PEE, PER collectif), assurance vie, PER individuel</td>
           </tr>
           <tr>
@@ -290,8 +321,16 @@ export function Corps() {
       <p>
         Deux obligations légales vous concernent peut-être déjà sans que vous le sachiez. Depuis le
         1er janvier 2010, en application de la loi de modernisation de l'économie de 2008, tout plan
-        d'épargne entreprise doit proposer au moins un fonds solidaire : si vous avez un PEE, un
-        support solidaire y figure. Et depuis le 1er janvier 2022, en application de la{" "}
+        d'épargne entreprise doit proposer au moins un fonds solidaire, comme le rappelle{" "}
+        <a
+          href="https://www.finance-fair.org/fr/actualites/les-fonds-9010-fierte-de-la-finance-solidaire-en-france"
+          target="_blank"
+          rel="noreferrer"
+        >
+          FAIR, l'association qui porte le label
+        </a>
+        : si vous avez un PEE, un support solidaire y figure. Et depuis le 1er janvier 2022, en
+        application de la{" "}
         <a
           href="https://www.lelabelisr.fr/loi-pacte-lassurance-vie-en-soutien-de-linvestissement-socialement-responsable/"
           target="_blank"
@@ -308,7 +347,12 @@ export function Corps() {
         <LienArticle slug="per-ethique-optimiser-retraite">
           Comment optimiser sa retraite avec un PER éthique ?
         </LienArticle>{" "}
-        traite le cas du PER.
+        traite le cas du PER. Pour lire la liste de fonds de votre PEE ou de votre PER collectif,
+        voir{" "}
+        <LienArticle slug="epargne-salariale-solidaire-isr-pee-per-collectif">
+          épargne salariale ISR et solidaire : PEE et PER collectif
+        </LienArticle>
+        .
       </p>
 
       <h2>Ce que le label Finansol ne garantit pas</h2>
@@ -325,7 +369,7 @@ export function Corps() {
         </li>
         <li>
           <strong>Pas la qualité ESG de la poche non solidaire.</strong> Dans un fonds 90/10, la
-          gestion des 90-95 % restants relève de la politique du gérant — souvent ISR, parfois
+          gestion des 85-95 % restants relève de la politique du gérant — souvent ISR, parfois
           labellisée, mais c'est à vérifier séparément dans le DIC et, le cas échéant, sur la liste
           du Label ISR.
         </li>
@@ -452,7 +496,7 @@ export function Corps() {
       <h2>Un label étroit, profond — et vérifiable : à vous de jouer</h2>
       <p>
         Vous savez maintenant exactement ce que promet le tampon Finansol : une mécanique solidaire
-        réelle — 5 à 10 % d'actif investi dans des entreprises agréées ESUS, ou au moins 25 % des
+        réelle — 5 à 15 % d'actif investi dans des entreprises agréées ESUS, ou au moins 25 % des
         revenus reversés en dons — de la transparence sur ce qui est financé, et un contrôle annuel
         indépendant. C'est l'un des labels les plus précis du marché français, justement parce qu'il
         ne prétend pas tout couvrir.

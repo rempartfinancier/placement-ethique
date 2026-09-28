@@ -423,7 +423,12 @@ export function Corps() {
         architecture ouverte de l'autre, avec pour conséquence directe une gamme de fonds ISR
         souvent plus large et une spécialisation plus probable chez le second. Ni l'un ni l'autre
         n'est gratuit, et ni l'un ni l'autre n'est automatiquement le bon choix pour votre
-        situation.
+        situation. Pour passer de cette grille de lecture aux questions à poser au conseiller que
+        vous rencontrerez, voir{" "}
+        <LienArticle slug="comment-choisir-conseiller-investissement-ethique-questions">
+          comment choisir un conseiller en investissement éthique
+        </LienArticle>
+        .
       </p>
       <p>
         Ne pas se poser la question a un coût silencieux : rester par défaut sur la gamme la plus

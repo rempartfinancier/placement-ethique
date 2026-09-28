@@ -9,6 +9,7 @@ export const meta: ArticleMeta = {
   readingTime: "11 min",
   category: "Labels & Greenwashing",
   date: "2026-05-17",
+  updated: "2026-09-28",
   tags: ["greenwashing", "fonds verts", "SFDR", "ESMA", "Label ISR", "DIC"],
   author: "Alexandre Pollet",
 };
@@ -91,10 +92,10 @@ export function Corps() {
 
       <h2>Un fonds peut-il encore s'appeler « vert » sans l'être vraiment ?</h2>
       <p>
-        De moins en moins — et c'est un progrès récent. Le nom du fonds a longtemps été le vecteur
-        de greenwashing le plus efficace : la première chose que vous lisez, longtemps la moins
-        encadrée. Ce n'est plus le cas. Les orientations de l'ESMA, le régulateur européen des
-        marchés, sur{" "}
+        Beaucoup moins facilement qu'avant — et c'est un progrès récent. Le nom du fonds a longtemps
+        été le vecteur de greenwashing le plus efficace : la première chose que vous lisez,
+        longtemps la moins encadrée. Le nom est désormais encadré. Les orientations de l'ESMA, le
+        régulateur européen des marchés, sur{" "}
         <a
           href="https://www.esma.europa.eu/document/guidelines-funds-names-using-esg-or-sustainability-related-terms"
           target="_blank"
@@ -106,25 +107,50 @@ export function Corps() {
         depuis le 21 mai 2025. Le principe : un fonds qui utilise dans son nom un terme lié à
         l'environnement, au social ou à la durabilité doit consacrer{" "}
         <strong>au moins 80 % de ses investissements</strong> aux caractéristiques environnementales
-        ou sociales qu'il promeut, ou à son objectif d'investissement durable. Les fonds au
-        vocabulaire environnemental (« vert », « climat »…) doivent en outre appliquer les
-        exclusions des indices de référence « alignés sur l'Accord de Paris » — charbon, pétrole et
-        gaz au-delà de seuils stricts.
+        ou sociales qu'il promeut, ou à son objectif d'investissement durable. Les fonds dont le nom
+        contient un terme environnemental (« vert », « climat », mais aussi « ESG » ou « ISR »), «
+        impact » ou « durable » doivent en outre appliquer les exclusions des indices de référence «
+        alignés sur l'Accord de Paris » ; ceux qui emploient « transition », « social » ou «
+        gouvernance » appliquent un socle d'exclusions plus court (article 12 du règlement délégué
+        2020/1818, tel que cité par les{" "}
+        <a
+          href="https://www.esma.europa.eu/sites/default/files/2024-08/ESMA34-1592494965-657_Guidelines_on_funds_names_using_ESG_or_sustainability_related_terms_FR.pdf"
+          target="_blank"
+          rel="noreferrer"
+        >
+          orientations, points 16 à 18
+        </a>
+        ).
       </p>
       <p>
-        Faut-il en conclure qu'un nom vert est désormais une garantie ? Non, pour deux raisons.
+        Faut-il en conclure qu'un nom vert est désormais une garantie ? Non, pour trois raisons.
         D'abord, le seuil de 80 % laisse une marge, et les « caractéristiques promues » sont
         définies par le fonds lui-même — leur exigence varie fortement d'un produit à l'autre.
-        Ensuite, l'histoire récente incite à la prudence : fin 2022, plusieurs centaines de fonds
-        européens se sont reclassés d'eux-mêmes de la catégorie la plus ambitieuse de la
-        réglementation SFDR (Article 9) vers la catégorie inférieure (Article 8), d'après les
-        recensements du cabinet Morningstar — des promesses déclaratives avaient dépassé les
-        portefeuilles. Nous détaillons ce mécanisme dans{" "}
+        Ensuite, le cadre a ses limites : dans son{" "}
+        <a
+          href="https://www.esma.europa.eu/press-news/esma-news/esma-reviews-impact-guidelines-esg-or-sustainability-related-terms-fund-names"
+          target="_blank"
+          rel="noreferrer"
+        >
+          analyse d'impact du 17 décembre 2025
+        </a>
+        , l'ESMA relève que près de la moitié des fonds qui ont retiré tous les termes ESG de leur
+        nom les ont remplacés par des mots comme « scored », « screened » ou « committed », et dit
+        surveiller cette évolution. Enfin, l'histoire récente incite à la prudence : fin 2022,
+        plusieurs centaines de fonds européens se sont reclassés d'eux-mêmes de la catégorie la plus
+        ambitieuse de la réglementation SFDR (Article 9) vers la catégorie inférieure (Article 8),
+        d'après les recensements du cabinet Morningstar — des promesses déclaratives avaient dépassé
+        les portefeuilles. Nous détaillons ce mécanisme dans{" "}
         <LienArticle slug="sfdr-article-8-ou-9-ce-que-ca-garantit">
           notre analyse de ce que les Articles 8 et 9 garantissent vraiment
         </LienArticle>
         . Retenez l'essentiel : nom et classification sont des indices qui engagent de plus en plus,
-        pas des preuves qui dispensent de vérifier.
+        pas des preuves qui dispensent de vérifier. Le régime SFDR lui-même est en cours de révision
+        : voir{" "}
+        <LienArticle slug="sfdr-refonte-et-regles-esma-noms-de-fonds-ce-qui-change">
+          SFDR 2.0 et noms de fonds ESMA : ce qui change
+        </LienArticle>
+        .
       </p>
 
       <h2>Quels sont les signaux d'alerte d'un fonds « vert » douteux ?</h2>
@@ -381,7 +407,12 @@ export function Corps() {
         pour vous défendre. La réglementation a considérablement renforcé vos appuis — communication
         proportionnée exigée par l'AMF, seuils sur les noms de fonds imposés par l'ESMA,
         référentiels de labels durcis — et le reste tient en quatre réflexes : Promesse, Preuve,
-        Portefeuille, Persistance. Tout ce qu'il faut vérifier est public.
+        Portefeuille, Persistance. Tout ce qu'il faut vérifier est public. Pour un contrat
+        d'assurance vie, voir aussi{" "}
+        <LienArticle slug="que-finance-votre-assurance-vie-comment-le-savoir">
+          que finance votre assurance vie et comment le savoir
+        </LienArticle>
+        .
       </p>
       <p>
         Ne rien vérifier a un coût, lui aussi. Un fonds choisi sur son nom peut financer pendant des

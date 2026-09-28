@@ -9,6 +9,7 @@ export const meta: ArticleMeta = {
   readingTime: "11 min",
   category: "Labels & Greenwashing",
   date: "2026-05-23",
+  updated: "2026-09-28",
   tags: ["taxonomie verte", "SFDR", "finance durable", "gaz et nucléaire", "greenwashing"],
   author: "Sébastien Petrisot",
 };
@@ -414,13 +415,26 @@ export function Corps() {
         </a>
         , applicable depuis le 1er janvier 2026 : seuil de matérialité de 10 % en deçà duquel les
         entreprises sont dispensées de détailler leurs activités, formulaires allégés, vérification
-        du principe DNSH simplifiée. En parallèle, la révision du règlement SFDR proposée fin 2025
-        est en cours de négociation. À la date de publication de cet article, la direction est
-        claire : moins de granularité dans les chiffres publiés par les entreprises, mais le
-        dictionnaire lui-même — les six objectifs, les quatre conditions, les seuils techniques —
-        demeure le référentiel commun. Pour vous, l'essentiel est acquis : le mot « vert » a
-        désormais une définition publique, et elle ne disparaîtra pas avec les ajustements de
-        formulaires.
+        du principe DNSH simplifiée. En parallèle, la révision du règlement SFDR, proposée par la
+        Commission le 20 novembre 2025, est en cours de négociation : au 28 septembre 2026, le
+        Conseil a arrêté sa position (24 juin 2026) et la commission des affaires économiques du
+        Parlement a voté la sienne (10 septembre 2026), sans texte final adopté — voir{" "}
+        <a
+          href="https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=2025/0361(COD)"
+          target="_blank"
+          rel="noreferrer"
+        >
+          la fiche de procédure du Parlement
+        </a>{" "}
+        et notre article{" "}
+        <LienArticle slug="sfdr-refonte-et-regles-esma-noms-de-fonds-ce-qui-change">
+          SFDR 2.0 et noms de fonds ESMA : ce qui change
+        </LienArticle>
+        . À la date de publication de cet article, la direction est claire : moins de granularité
+        dans les chiffres publiés par les entreprises, mais le dictionnaire lui-même — les six
+        objectifs, les quatre conditions, les seuils techniques — demeure le référentiel commun.
+        Pour vous, l'essentiel est acquis : le mot « vert » a désormais une définition publique, et
+        elle ne disparaîtra pas avec les ajustements de formulaires.
       </p>
 
       <h2>Vos questions sur la taxonomie verte et votre épargne</h2>

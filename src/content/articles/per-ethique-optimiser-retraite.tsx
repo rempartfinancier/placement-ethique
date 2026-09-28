@@ -9,6 +9,7 @@ export const meta: ArticleMeta = {
   readingTime: "12 min",
   category: "Enveloppes",
   date: "2026-06-11",
+  updated: "2026-09-28",
   tags: ["PER", "retraite", "déduction fiscale", "ISR", "gestion pilotée"],
   author: "Alexandre Pollet",
 };
@@ -71,11 +72,30 @@ export function Corps() {
         >
           loi PACTE
         </a>{" "}
-        s'étend aux labels Greenfin (transition écologique) et Finansol (finance solidaire) — et la
-        grande majorité des PER individuels, souscrits sous forme assurantielle, appliquent la même
-        règle. Conséquence paradoxale : presque n'importe quel PER récent peut s'afficher «
-        responsable » en toute légalité, puisqu'il suffit de trois supports labellisés au milieu de
-        centaines d'autres pour cocher la case. Notre guide{" "}
+        s'étend aux labels Greenfin (transition écologique) et Finansol (finance solidaire). Ce
+        socle vise l'assurance vie : l'article L. 131-1-2 du{" "}
+        <a
+          href="https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000049720147"
+          target="_blank"
+          rel="noreferrer"
+        >
+          Code des assurances
+        </a>{" "}
+        exclut de son champ les contrats liés à la cessation d'activité professionnelle, et
+        l'article L. 224-3 du{" "}
+        <a
+          href="https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000048491274"
+          target="_blank"
+          rel="noreferrer"
+        >
+          Code monétaire et financier
+        </a>{" "}
+        ne cite un fonds solidaire et un fonds labellisé que pour les PER d'entreprise. Pour un PER
+        individuel, nous n'avons pas trouvé d'obligation équivalente : de nombreux contrats
+        référencent des supports labellisés, mais cela se vérifie dans les documents du contrat.
+        Conséquence paradoxale : presque n'importe quel contrat récent peut s'afficher « responsable
+        » en toute légalité, puisqu'il suffit de trois supports labellisés au milieu de centaines
+        d'autres pour cocher la case. Notre guide{" "}
         <LienArticle slug="assurance-vie-isr-guide-2026">
           choisir une assurance vie ISR en 2026
         </LienArticle>{" "}
@@ -367,9 +387,18 @@ export function Corps() {
       </h3>
       <p>
         Oui. Les produits antérieurs à octobre 2019 (PERP, Madelin notamment) sont transférables
-        vers un PER individuel, et un PER se transfère vers un autre PER : les frais de transfert
-        sont plafonnés à 1 % de l'épargne accumulée et deviennent nuls après cinq ans de détention.
-        Le transfert est souvent le premier geste concret d'une remise en cohérence : on change de
+        vers un PER individuel, et un PER se transfère vers un autre PER : entre deux PER, les frais
+        de transfert sont plafonnés à 1 % de l'épargne accumulée et deviennent nuls après cinq ans
+        de détention. Depuis un ancien produit (PERP, Madelin…) détenu depuis moins de dix ans, ils
+        peuvent atteindre 5 % (délai de transfert : quatre mois au plus), selon{" "}
+        <a
+          href="https://www.service-public.gouv.fr/particuliers/vosdroits/F34982"
+          target="_blank"
+          rel="noreferrer"
+        >
+          service-public.fr
+        </a>
+        . Le transfert est souvent le premier geste concret d'une remise en cohérence : on change de
         contrat pour changer d'univers de supports, sans repartir de zéro.
       </p>
 
@@ -423,7 +452,12 @@ export function Corps() {
         Oui, les deux se cumulent sans difficulté. Gardez simplement en tête que vos versements
         volontaires déductibles partagent le même plafond global d'épargne retraite. L'intérêt du
         PER individuel dans ce tandem : vous choisissez l'univers de supports, là où le contrat
-        collectif dépend du référencement négocié par votre employeur.
+        collectif dépend du référencement négocié par votre employeur. Pour comparer les critères
+        d'un PER (frais, gestion pilotée, transfert), voir{" "}
+        <LienArticle slug="quel-per-choisir-investir-ethique-criteres">
+          quel PER choisir pour investir de façon éthique
+        </LienArticle>
+        .
       </p>
 
       <h3>Combien verser chaque mois pour que cela change vraiment ma retraite ?</h3>

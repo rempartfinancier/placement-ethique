@@ -267,7 +267,15 @@ export function Corps() {
       <p>
         Vous n'avez pas à faire confiance sur parole : la loi organise une information précise, à
         deux niveaux distincts, et vous avez le droit de la réclamer avant de signer quoi que ce
-        soit.
+        soit. Pour la liste des questions à poser au conseiller au-delà des frais, voir{" "}
+        <LienArticle slug="comment-choisir-conseiller-investissement-ethique-questions">
+          comment choisir un conseiller en investissement éthique
+        </LienArticle>
+        ; pour situer les frais du contrat lui-même face aux moyennes publiées, voir{" "}
+        <LienArticle slug="assurance-vie-isr-frais-reels-combien-ca-coute">
+          assurance vie ISR : combien coûtent vraiment les frais ?
+        </LienArticle>
+        .
       </p>
       <ol>
         <li>

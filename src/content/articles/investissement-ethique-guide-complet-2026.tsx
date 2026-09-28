@@ -9,6 +9,7 @@ export const meta: ArticleMeta = {
   readingTime: "15 min",
   category: "Fondamentaux",
   date: "2026-04-16",
+  updated: "2026-09-28",
   tags: ["investissement éthique", "ISR", "ESG", "labels", "SFDR", "débuter"],
   author: "Alexandre Pollet",
   featured: true,
@@ -266,6 +267,17 @@ export function Corps() {
         </LienArticle>
         .
       </p>
+      <p>
+        Ce régime est en cours de révision : la Commission a proposé en novembre 2025 de le
+        remplacer par des catégories de produits, et la négociation entre les institutions
+        européennes n'était pas achevée au 28 septembre 2026. Les catégories Article 6, 8 et 9
+        s'appliquent donc toujours, et le nom d'un fonds est déjà encadré depuis 2024-2025 par les
+        orientations de l'ESMA — le détail figure dans{" "}
+        <LienArticle slug="sfdr-refonte-et-regles-esma-noms-de-fonds-ce-qui-change">
+          SFDR 2.0 et noms de fonds ESMA : ce qui change
+        </LienArticle>
+        .
+      </p>
 
       <h2>Comment repérer le greenwashing avant d'investir ?</h2>
       <p>
@@ -484,10 +496,10 @@ export function Corps() {
           mérite pas dix ans de votre épargne.
         </li>
         <li>
-          <strong>Suivre.</strong> Un fonds peut perdre son label, être reclassé SFDR ou changer de
-          stratégie. Une revue annuelle — labels toujours valides, classification inchangée,
-          portefeuille cohérent avec votre grille de l'étape 1 — suffit à garder l'alignement dans
-          la durée.
+          <strong>Suivre.</strong> Un fonds peut perdre son label, être reclassé SFDR, changer de
+          nom (règles ESMA) ou de stratégie. Une revue annuelle — labels toujours valides,
+          classification inchangée, portefeuille cohérent avec votre grille de l'étape 1 — suffit à
+          garder l'alignement dans la durée.
         </li>
       </ol>
       <p>

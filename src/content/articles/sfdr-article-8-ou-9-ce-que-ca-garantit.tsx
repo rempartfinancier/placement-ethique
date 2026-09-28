@@ -9,6 +9,7 @@ export const meta: ArticleMeta = {
   readingTime: "11 min",
   category: "Labels & Greenwashing",
   date: "2026-05-14",
+  updated: "2026-09-28",
   tags: ["SFDR", "Article 8", "Article 9", "greenwashing", "réglementation européenne"],
   author: "Sébastien Petrisot",
 };
@@ -351,7 +352,10 @@ export function Corps() {
       </p>
 
       <h2>Les règles vont-elles changer ? (noms de fonds, SFDR 2.0)</h2>
-      <p>Oui, et dans le bon sens pour l'épargnant : le cadre se durcit sur deux fronts.</p>
+      <p>
+        Oui : le cadre évolue sur deux fronts, l'un déjà applicable (les noms de fonds), l'autre
+        encore en négociation (la révision du SFDR).
+      </p>
       <h3>Les noms de fonds sont désormais encadrés</h3>
       <p>
         Depuis le 21 novembre 2024 pour les nouveaux fonds, et depuis le 21 mai 2025 pour les fonds
@@ -372,7 +376,8 @@ export function Corps() {
       </p>
       <h3>SFDR 2.0 : vers de vraies catégories de produits</h3>
       <p>
-        Surtout, la Commission européenne a présenté fin novembre 2025 une{" "}
+        Surtout, la Commission européenne a présenté en novembre 2025 (proposition du 20 novembre)
+        une{" "}
         <a
           href="https://finance.ec.europa.eu/news/commission-proposes-improvements-sfdr-2025-11-21_en"
           target="_blank"
@@ -381,14 +386,35 @@ export function Corps() {
           proposition de révision du règlement
         </a>{" "}
         qui tire les leçons de la confusion actuelle : remplacer les « Article 8 » et « Article 9 »
-        par de véritables catégories de produits assorties de critères minimaux — une catégorie «
-        durable », une catégorie « transition » et une catégorie ESG de base, avec notamment
-        l'exclusion, pour les deux premières, des entreprises développant de nouveaux projets
-        d'énergies fossiles. Au moment où nous publions cet article, ce texte est en cours de
-        négociation entre le Parlement et le Conseil : les catégories actuelles restent donc
-        applicables, et le calendrier définitif n'est pas arrêté. Si vous lisez « Article 8 » ou «
-        Article 9 » sur une fiche de fonds aujourd'hui, c'est bien le régime décrit dans cet article
-        qui s'applique.
+        par de véritables catégories de produits, facultatives et assorties de critères minimaux —
+        une catégorie « durable », une catégorie « transition » et une catégorie ESG de base —, avec
+        des exclusions par catégorie dont le traitement des énergies fossiles fait encore l'objet de
+        discussions entre institutions. Au 28 septembre 2026, le Conseil a arrêté sa position (24
+        juin 2026, selon son{" "}
+        <a
+          href="https://www.consilium.europa.eu/en/press/press-releases/2026/06/24/council-agrees-position-on-simpler-transparency-rules-for-sustainable-financial-products/"
+          target="_blank"
+          rel="noreferrer"
+        >
+          communiqué
+        </a>
+        ) et la commission des affaires économiques du Parlement a adopté son texte le 10 septembre
+        2026, selon le{" "}
+        <a
+          href="https://www.europarl.europa.eu/news/en/press-room/20260907IPR47414/"
+          target="_blank"
+          rel="noreferrer"
+        >
+          communiqué du Parlement
+        </a>
+        , mais la négociation entre les institutions n'a pas abouti : les catégories actuelles
+        restent applicables, et ni le texte final ni la date d'application ne sont arrêtés. Le
+        détail de la révision est dans{" "}
+        <LienArticle slug="sfdr-refonte-et-regles-esma-noms-de-fonds-ce-qui-change">
+          SFDR 2.0 et noms de fonds ESMA : ce qui change
+        </LienArticle>
+        . Si vous lisez « Article 8 » ou « Article 9 » sur une fiche de fonds aujourd'hui, c'est
+        bien le régime décrit dans cet article qui s'applique.
       </p>
 
       <h2>Vos questions sur les fonds Article 8 et Article 9</h2>

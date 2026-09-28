@@ -216,10 +216,14 @@ export function Corps() {
       <p>
         Le réflexe à acquérir : avant de souscrire, lire les frais dans le document d'informations
         clés (DIC) du support et dans les conditions du contrat — frais d'entrée, frais de gestion
-        annuels du contrat, frais courants du fonds. Trois couches qui s'additionnent. Un support
-        éthique aux frais excessifs reste un mauvais placement pour un petit budget, quelle que soit
-        la sincérité de sa démarche extra-financière : l'éthique ne dispense pas de l'arithmétique.
-        Et sur le rendement lui-même,{" "}
+        annuels du contrat, frais courants du fonds. Trois couches qui s'additionnent — les moyennes
+        publiées pour chacune sont détaillées dans{" "}
+        <LienArticle slug="assurance-vie-isr-frais-reels-combien-ca-coute">
+          assurance vie ISR : combien coûtent vraiment les frais ?
+        </LienArticle>
+        . Un support éthique aux frais excessifs reste un mauvais placement pour un petit budget,
+        quelle que soit la sincérité de sa démarche extra-financière : l'éthique ne dispense pas de
+        l'arithmétique. Et sur le rendement lui-même,{" "}
         <LienArticle slug="investir-ethique-performance-chiffres">
           investir éthique rapporte-t-il moins ?
         </LienArticle>{" "}

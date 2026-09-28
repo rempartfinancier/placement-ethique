@@ -31,7 +31,7 @@
 
 Score = intention d'achat + signal GSC + trou réel dans le catalogue + faisabilité vérifiable (chiffres sourçables sans fabrication) + apport à la marque « vérifier avant d'affirmer ». Type = Big 5 (C = Coût, P = Problèmes, X = Comparaisons, B = Best of/Avis, W = What is) + M = « comment nous travaillons ».
 
-### Vague 1 — 8 articles (lancée le 28/09/2026)
+### Vague 1 — 8 articles (publiée le 28/09/2026)
 
 | # | Slug | Type | Catégorie | Requêtes visées | Pourquoi |
 |---|---|---|---|---|---|
@@ -153,3 +153,4 @@ Score = intention d'achat + signal GSC + trou réel dans le catalogue + faisabil
 | Date | Action |
 |---|---|
 | 2026-09-28 | Création du backlog ; lancement de la vague 1 (8 articles) |
+| 2026-09-28 | Vague 1 rédigée (8 articles, tables de sources dans `docs/contenu-vague-1/`), relue par deux relecteurs indépendants (71 corrections), enregistrée dans le registre et publiée. Cohérence corrigée sur 13 articles existants (part solidaire 5-15 %, frais de transfert PER, SFDR daté, obligation de supports responsables dans le PER individuel). **Restent à valider par un humain :** voir `relecture_A_*`, `relecture_B_*` et `sources_article_0X.md` (sections « À VALIDER »). |

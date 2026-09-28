@@ -49,6 +49,14 @@ import * as cgpVsConseillerBancaire from "./articles/cgp-independant-vs-conseill
 import * as avisContratsCabinet from "./articles/avis-patrimoine-vie-plus-uaf-life-version-absolue";
 import * as heritageDonationInvestir from "./articles/heritage-donation-investir-valeurs";
 import * as piegesInvestissementEthique from "./articles/pieges-inconvenients-investissement-ethique";
+import * as avEthiqueOuClassique from "./articles/assurance-vie-ethique-ou-classique-differences";
+import * as quelPerChoisirEthique from "./articles/quel-per-choisir-investir-ethique-criteres";
+import * as placementEthiqueSolidaire from "./articles/placement-ethique-solidaire-fonds-90-10-livrets";
+import * as choisirConseillerEthique from "./articles/comment-choisir-conseiller-investissement-ethique-questions";
+import * as queFinanceAssuranceVie from "./articles/que-finance-votre-assurance-vie-comment-le-savoir";
+import * as avIsrFraisReels from "./articles/assurance-vie-isr-frais-reels-combien-ca-coute";
+import * as epargneSalarialeSolidaire from "./articles/epargne-salariale-solidaire-isr-pee-per-collectif";
+import * as sfdrRefonteEsma from "./articles/sfdr-refonte-et-regles-esma-noms-de-fonds-ce-qui-change";
 
 type ArticleModule = {
   meta: ArticleMeta;
@@ -95,6 +103,14 @@ const modules: ArticleModule[] = [
   avisContratsCabinet,
   heritageDonationInvestir,
   piegesInvestissementEthique,
+  avEthiqueOuClassique,
+  quelPerChoisirEthique,
+  placementEthiqueSolidaire,
+  choisirConseillerEthique,
+  queFinanceAssuranceVie,
+  avIsrFraisReels,
+  epargneSalarialeSolidaire,
+  sfdrRefonteEsma,
 ];
 
 /** Tous les articles, triés par date de publication décroissante. */

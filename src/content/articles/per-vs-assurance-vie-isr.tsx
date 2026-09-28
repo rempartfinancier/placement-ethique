@@ -9,6 +9,7 @@ export const meta: ArticleMeta = {
   readingTime: "12 min",
   category: "Enveloppes",
   date: "2026-06-07",
+  updated: "2026-09-28",
   tags: ["PER", "assurance vie", "ISR", "fiscalité", "retraite", "enveloppes"],
   author: "Sébastien Petrisot",
 };
@@ -70,9 +71,28 @@ export function Corps() {
         >
           le site officiel du Label ISR
         </a>
-        . Les PER assurantiels — la forme la plus répandue du PER, construite sur le même socle que
-        l'assurance vie — donnent accès en pratique au même type de supports labellisés, souvent
-        puisés dans le catalogue du même assureur.
+        . Le PER relève d'un régime distinct sur ce point : l'article L. 131-1-2 du{" "}
+        <a
+          href="https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000049720147"
+          target="_blank"
+          rel="noreferrer"
+        >
+          Code des assurances
+        </a>{" "}
+        exclut de son champ les contrats liés à la cessation d'activité professionnelle, et
+        l'article L. 224-3 du{" "}
+        <a
+          href="https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000048491274"
+          target="_blank"
+          rel="noreferrer"
+        >
+          Code monétaire et financier
+        </a>{" "}
+        ne cite un fonds solidaire et un fonds labellisé que pour les PER d'entreprise. Nous n'avons
+        pas trouvé d'obligation équivalente pour un PER individuel ; en pratique, les PER
+        assurantiels — la forme la plus répandue du PER — donnent souvent accès au même type de
+        supports labellisés, puisés dans le catalogue du même assureur, mais cela se vérifie dans
+        les documents du contrat.
       </p>
       <p>
         La vraie ligne de partage ne passe donc pas entre les deux enveloppes, mais entre les{" "}
@@ -206,8 +226,8 @@ export function Corps() {
               <strong>Offre responsable</strong>
             </td>
             <td>
-              Supports labellisés selon le plan ; vérifier aussi le contenu de la gestion pilotée
-              par défaut
+              Supports labellisés selon le contrat (pas d'obligation équivalente établie pour le PER
+              individuel) ; vérifier aussi le contenu de la gestion pilotée par défaut
             </td>
             <td>
               Minimum légal depuis 2022 : au moins une UC ISR, une Greenfin et une solidaire par
@@ -231,7 +251,10 @@ export function Corps() {
             <td>
               <strong>Changer d'établissement</strong>
             </td>
-            <td>Transférable : gratuit après 5 ans de détention, frais plafonnés à 1 % avant</td>
+            <td>
+              Transférable vers un autre PER : gratuit après 5 ans de détention, frais plafonnés à 1
+              % avant (jusqu'à 5 % depuis un ancien produit détenu moins de 10 ans)
+            </td>
             <td>
               Non transférable vers un autre assureur sans perdre l'antériorité fiscale (une
               transformation reste possible au sein du même assureur)
@@ -458,7 +481,16 @@ export function Corps() {
         <LienArticle slug="per-ethique-optimiser-retraite">
           comment optimiser sa retraite avec un PER éthique
         </LienArticle>{" "}
-        prolonge exactement là où celui-ci s'arrête.
+        prolonge exactement là où celui-ci s'arrête ; pour comparer les PER entre eux, voir{" "}
+        <LienArticle slug="quel-per-choisir-investir-ethique-criteres">
+          quel PER choisir pour investir de façon éthique
+        </LienArticle>
+        . Et si votre employeur propose un plan d'épargne salariale ou un PER collectif, notre
+        article{" "}
+        <LienArticle slug="epargne-salariale-solidaire-isr-pee-per-collectif">
+          épargne salariale solidaire et ISR
+        </LienArticle>{" "}
+        explique comment en lire l'offre.
       </p>
       <p>
         Et si vous préférez poser vos chiffres sur la table plutôt que de trancher seul : c'est

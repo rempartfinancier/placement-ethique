@@ -9,6 +9,7 @@ export const meta: ArticleMeta = {
   readingTime: "10 min",
   category: "Fondamentaux",
   date: "2026-05-05",
+  updated: "2026-09-28",
   tags: ["épargne solidaire", "livret de partage", "label Finansol", "Livret A", "fonds 90/10"],
   author: "Alexandre Pollet",
 };
@@ -99,8 +100,17 @@ export function Corps() {
         </li>
         <li>
           <strong>L'investissement solidaire : votre argent entre au capital.</strong> Les fonds
-          solidaires, souvent appelés « fonds 90/10 », investissent entre 5 et 10 % de leur actif
-          dans des entreprises agréées « entreprise solidaire d'utilité sociale » (ESUS) — un
+          solidaires, souvent appelés « fonds 90/10 », investissent entre 5 et 15 % de leur actif
+          (plafond relevé de 10 à 15 % le 1er janvier 2025, d'où l'appellation « 85/15 » qu'on voit
+          apparaître ; voir l'article{" "}
+          <a
+            href="https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000049720154"
+            target="_blank"
+            rel="noreferrer"
+          >
+            L. 214-164 du code monétaire et financier, pour l'épargne salariale
+          </a>
+          ) dans des entreprises agréées « entreprise solidaire d'utilité sociale » (ESUS) — un
           agrément public délivré selon des critères définis par l'État (
           <a
             href="https://www.tresor.economie.gouv.fr/banque-assurance-finance/finance-sociale-et-solidaire/agrement-esus"
@@ -239,7 +249,7 @@ export function Corps() {
             </td>
             <td>Non — risque de perte en capital</td>
             <td>Performance de marché, non garantie</td>
-            <td>5 à 10 % de l'actif investis en entreprises agréées ESUS</td>
+            <td>5 à 15 % de l'actif investis en entreprises agréées ESUS</td>
             <td>Selon l'enveloppe (épargne salariale, assurance vie…)</td>
             <td>Part solidaire réelle, agrément ESUS des cibles, DIC, frais</td>
           </tr>
@@ -440,10 +450,15 @@ export function Corps() {
 
       <h3>Puis-je perdre de l'argent avec un fonds solidaire « 90/10 » ?</h3>
       <p>
-        Oui. Environ 90 % de l'actif d'un fonds 90/10 est investi sur les marchés financiers : sa
-        valeur fluctue et le capital n'est pas garanti. La part solidaire de 5 à 10 % est elle-même
-        investie dans des entreprises non cotées, peu liquides. C'est un placement de moyen-long
-        terme, pas un substitut de livret.
+        Oui. La grande majorité de l'actif d'un fonds 90/10 (85 à 95 %) est investie sur les marchés
+        financiers : sa valeur fluctue et le capital n'est pas garanti. La part solidaire de 5 à 15
+        % est elle-même investie dans des entreprises non cotées, peu liquides. C'est un placement
+        de moyen-long terme, pas un substitut de livret. Pour comparer en détail fonds 90/10 et
+        livrets solidaires, voir{" "}
+        <LienArticle slug="placement-ethique-solidaire-fonds-90-10-livrets">
+          placement éthique et solidaire : fonds 90/10 et livrets
+        </LienArticle>
+        .
       </p>
 
       <h3>Le Livret A est-il un placement « non éthique » ?</h3>

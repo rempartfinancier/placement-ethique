@@ -64,7 +64,12 @@ export function Corps() {
         <em>fonds</em>, jamais à des contrats. Quand un distributeur parle de « contrat ISR », il
         désigne en réalité un contrat d'assurance vie classique dont l'univers d'investissement
         contient des supports labellisés ou classés durables — ce qui, on va le voir, est désormais
-        le cas de tous les contrats du marché.
+        le cas de tous les contrats du marché. Pour la comparaison de fond entre un contrat dit «
+        éthique » et un contrat classique, voir{" "}
+        <LienArticle slug="assurance-vie-ethique-ou-classique-differences">
+          assurance vie éthique ou classique : quelles différences ?
+        </LienArticle>
+        .
       </p>
       <p>
         La conséquence pratique est importante : deux contrats également « responsables » sur le
@@ -211,8 +216,13 @@ export function Corps() {
         point, notre <a href="/outils/simulateur">simulateur de projection</a> intègre les couches
         de frais dans le calcul, année par année : il vous donne des pistes chiffrées, sur
         hypothèses illustratives — les performances passées ne préjugent pas des performances
-        futures, et les unités de compte présentent un risque de perte en capital. Pour un exemple
-        de grille de frais détaillée, ligne par ligne, avec ses limites assumées, voyez notre{" "}
+        futures, et les unités de compte présentent un risque de perte en capital. Pour chiffrer
+        chaque couche de frais avec les moyennes publiées, voir{" "}
+        <LienArticle slug="assurance-vie-isr-frais-reels-combien-ca-coute">
+          assurance vie ISR : combien coûtent vraiment les frais ?
+        </LienArticle>
+        . Pour un exemple de grille de frais détaillée, ligne par ligne, avec ses limites assumées,
+        voyez notre{" "}
         <LienArticle slug="avis-patrimoine-vie-plus-uaf-life-version-absolue">
           avis sur deux contrats d'assurance vie
         </LienArticle>
@@ -280,12 +290,12 @@ export function Corps() {
       <p>
         Exactement celle de n'importe quelle assurance vie : le caractère responsable des supports
         ne change rien au régime fiscal, ni en bien ni en mal. Pour les versements effectués depuis
-        le 27 septembre 2017, les gains rachetés avant huit ans relèvent du prélèvement forfaitaire
-        unique de 30 % (impôt et prélèvements sociaux compris). Après huit ans, vous bénéficiez d'un
-        abattement annuel de 4 600 € sur les gains rachetés (9 200 € pour un couple soumis à
-        imposition commune), puis d'un taux réduit de 7,5 % jusqu'à 150 000 € de versements tous
-        contrats confondus, et de 12,8 % au-delà — auxquels s'ajoutent 17,2 % de prélèvements
-        sociaux, comme le détaille{" "}
+        le 27 septembre 2017, les gains rachetés avant huit ans relèvent en principe du prélèvement
+        forfaitaire : 30 % au total, soit 12,8 % d'impôt + 17,2 % de prélèvements sociaux. Après
+        huit ans, vous bénéficiez d'un abattement annuel de 4 600 € sur les gains rachetés (9 200 €
+        pour un couple soumis à imposition commune), puis d'un taux réduit de 7,5 % jusqu'à 150 000
+        € de versements tous contrats confondus, et de 12,8 % au-delà — auxquels s'ajoutent 17,2 %
+        de prélèvements sociaux, comme le détaille{" "}
         <a
           href="https://www.service-public.gouv.fr/particuliers/vosdroits/F22414"
           target="_blank"

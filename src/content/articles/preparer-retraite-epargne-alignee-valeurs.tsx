@@ -9,6 +9,7 @@ export const meta: ArticleMeta = {
   readingTime: "11 min",
   category: "Fiscalité",
   date: "2026-06-25",
+  updated: "2026-09-28",
   tags: ["retraite", "PER", "assurance vie", "ISR", "épargne solidaire"],
   author: "Sébastien Petrisot",
 };
@@ -284,7 +285,9 @@ export function Corps() {
         >
           le site officiel du Label ISR
         </a>
-        . Conséquence paradoxale : presque tout contrat récent peut s'afficher « responsable » en
+        . Cette obligation vise l'assurance vie : pour un PER individuel, nous n'avons pas trouvé
+        d'obligation équivalente, et la liste des supports se vérifie dans les documents du contrat.
+        Conséquence paradoxale : presque tout contrat récent peut s'afficher « responsable » en
         toute légalité. L'étiquette ne discrimine plus rien ; la vérification, si.
       </p>
       <p>
