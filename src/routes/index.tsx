@@ -24,7 +24,7 @@ import {
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Placement-éthique.fr — L'investissement éthique, sans le vernis" },
+      { title: "Placement éthique : investir sans greenwashing | Placement-éthique.fr" },
       {
         name: "description",
         content:
@@ -32,7 +32,7 @@ export const Route = createFileRoute("/")({
       },
       {
         property: "og:title",
-        content: "Placement-éthique.fr — L'investissement éthique, sans le vernis",
+        content: "Placement éthique : investir sans greenwashing | Placement-éthique.fr",
       },
       { property: "og:url", content: "https://placement-ethique.fr/" },
     ],
