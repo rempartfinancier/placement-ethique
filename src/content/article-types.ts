@@ -24,4 +24,9 @@ export type ArticleMeta = {
   imageAlt?: string;
   imageWidth?: number;
   imageHeight?: number;
+  /**
+   * FAQ de l'article (5 à 8 questions, réponses en texte brut). Source unique :
+   * alimente le JSON-LD FAQPage de la route ET le bloc affiché via <FaqArticle>.
+   */
+  faq?: { q: string; a: string }[];
 };

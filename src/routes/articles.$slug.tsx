@@ -22,6 +22,22 @@ export const Route = createFileRoute("/articles/$slug")({
       ],
       links: [{ rel: "canonical", href: `https://placement-ethique.fr/articles/${a.slug}` }],
       scripts: [
+        ...(a.faq?.length
+          ? [
+              {
+                type: "application/ld+json",
+                children: JSON.stringify({
+                  "@context": "https://schema.org",
+                  "@type": "FAQPage",
+                  mainEntity: a.faq.map(({ q, a: answer }) => ({
+                    "@type": "Question",
+                    name: q,
+                    acceptedAnswer: { "@type": "Answer", text: answer },
+                  })),
+                }),
+              },
+            ]
+          : []),
         {
           type: "application/ld+json",
           children: JSON.stringify({
