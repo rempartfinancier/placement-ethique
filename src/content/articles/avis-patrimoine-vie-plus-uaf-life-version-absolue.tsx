@@ -3,10 +3,9 @@ import { LienArticle } from "./lien";
 
 export const meta: ArticleMeta = {
   slug: "avis-patrimoine-vie-plus-uaf-life-version-absolue",
-  title:
-    "Patrimoine Vie Plus et UAF Life Patrimoine (Version Absolue 2) : ce qu'il faut savoir avant de signer",
+  title: "Patrimoine Vie Plus et Version Absolue 2 : avis et frais",
   excerpt:
-    "Ce sont les deux seuls contrats que notre cabinet distribue. Frais réels, unités de compte ISR disponibles, points de vigilance : notre avis complet, sans en cacher les limites.",
+    "Frais, fonds en euros, unités de compte ISR et limites : notre avis sur Patrimoine Vie Plus et UAF Life Version Absolue 2, les deux contrats du cabinet.",
   readingTime: "13 min",
   category: "Enveloppes",
   date: "2026-08-01",
@@ -64,9 +63,9 @@ export function Corps() {
         <strong>Patrimoine Vie Plus</strong> est un contrat d'assurance vie et de capitalisation
         multisupport, assuré par <strong>Suravenir</strong>, filiale d'assurance vie du groupe{" "}
         <strong>Crédit Mutuel Arkéa</strong>, et distribué par des conseillers en gestion de
-        patrimoine partenaires. C'est l'un des contrats les plus répandus dans le réseau des CGP
-        indépendants en France, ce qui lui donne un historique et une taille suffisants pour être
-        documenté par plusieurs comparateurs indépendants (
+        patrimoine partenaires. C'est l'un des contrats les plus répandus dans le réseau des
+        conseillers en gestion de patrimoine en France, ce qui lui donne un historique et une taille
+        suffisants pour être documenté par plusieurs comparateurs indépendants (
         <a
           href="https://www.francetransactions.com/assurance-vie/patrimoine-vie-plus.html"
           target="_blank"
@@ -193,7 +192,13 @@ export function Corps() {
         objectivement moins coûteux. Si vous cherchez un avis humain sur vos arbitrages et un suivi
         dans la durée, la comparaison change de nature. À vous de trancher selon ce que vous
         cherchez — nous préférons vous le dire plutôt que de vous laisser croire que nos contrats
-        sont les moins chers du marché, ce qu'ils ne sont pas.
+        sont les moins chers du marché, ce qu'ils ne sont pas. Le détail de la façon dont un
+        conseiller est rémunéré, et de ce que cela représente dans les frais, figure dans notre
+        article sur{" "}
+        <LienArticle slug="frais-conseiller-gestion-patrimoine-independant">
+          le coût d'un conseiller en gestion de patrimoine
+        </LienArticle>
+        .
       </p>
 
       <h2>Quelles unités de compte ISR sont disponibles ?</h2>
@@ -242,7 +247,9 @@ export function Corps() {
           celui de la liste de supports à jour que votre conseiller vous présentera
         </strong>
         , avec pour chaque fonds sélectionné son label effectif (Label ISR, Greenfin, Finansol), sa
-        classification SFDR (Article 8 ou 9) et son document d'informations clés. Notre article sur{" "}
+        classification SFDR (Article 8 ou 9) et son document d'informations clés — notre{" "}
+        <a href="/outils/decodeur-label">décodeur de labels</a> vous aide à les lire. Notre article
+        sur{" "}
         <LienArticle slug="label-isr-que-garantit-il-vraiment">
           ce que le Label ISR garantit vraiment
         </LienArticle>{" "}
@@ -333,11 +340,12 @@ export function Corps() {
         </li>
         <li>
           <strong>Nous sommes juge et partie.</strong> Nous touchons une rémunération d'apporteur
-          d'affaires sur les contrats que nous distribuons, dont ces deux-là. Nous l'écrivons noir
-          sur blanc plutôt que de le laisser dans les petites lignes : c'est la raison pour laquelle
-          cet article n'a pas vocation à remplacer un comparatif indépendant de la presse
-          spécialisée, mais à vous donner notre avis de professionnels qui les utilisent tous les
-          jours, avec leurs limites assumées.
+          d'affaires sur les contrats que nous distribuons, dont ces deux-là (le détail figure sur{" "}
+          <a href="/tarifs">notre page tarifs</a>). Nous l'écrivons noir sur blanc plutôt que de le
+          laisser dans les petites lignes : c'est la raison pour laquelle cet article n'a pas
+          vocation à remplacer un comparatif indépendant de la presse spécialisée, mais à vous
+          donner notre avis de professionnels qui les utilisent tous les jours, avec leurs limites
+          assumées.
         </li>
       </ul>
 
@@ -351,10 +359,10 @@ export function Corps() {
         serait invérifiable et probablement faux. Ce sont deux assureurs solides, adossés à des
         groupes bancaires et assurantiels de premier plan (Crédit Mutuel Arkéa, Crédit Agricole
         Assurances), avec des contrats suffisamment larges en supports pour construire une
-        allocation ISR diversifiée. Mais un cabinet de conseil indépendant en gestion de patrimoine,
-        quel qu'il soit, travaille toujours avec un nombre limité de partenaires distributeurs —
-        c'est le modèle du conseil intermédié, à distinguer du conseil en investissement financier
-        (CIF) qui n'entre pas dans le champ d'activité d'EXP Capital.
+        allocation ISR diversifiée. Mais un cabinet de conseil en gestion de patrimoine travaille en
+        pratique avec un nombre limité de partenaires distributeurs — c'est le modèle du courtage et
+        du conseil intermédié, à distinguer du conseil en investissement financier (CIF) qui n'entre
+        pas dans le champ d'activité d'EXP Capital.
       </p>
 
       <h3>EXP Capital est-il rémunéré sur ces contrats ?</h3>
@@ -388,11 +396,11 @@ export function Corps() {
       <h3>Ces contrats sont-ils plus chers qu'une assurance vie en ligne ?</h3>
       <p>
         Oui, sur les frais de gestion en unités de compte : environ 0,4 à 0,5 point de plus par an
-        que les meilleurs contrats en ligne sans conseil. Sur les frais d'entrée en revanche, la
-        grille que nous appliquons (1 % dégressif jusqu'à 0 % au-delà de 400 000 €) est comparable,
-        voire identique, à ce que proposent déjà certains contrats en ligne sans frais d'entrée. La
-        différence se joue essentiellement sur les frais de gestion annuels, cumulés sur la durée de
-        détention.
+        que les meilleurs contrats en ligne sans conseil. Sur les frais d'entrée aussi, dans une
+        moindre mesure : la grille que nous appliquons (1 % dégressif jusqu'à 0 % au-delà de 400 000
+        €) reste supérieure jusqu'à 400 000 € à celle de contrats en ligne sans frais d'entrée. Sur
+        la durée de détention, l'écart se joue toutefois surtout sur les frais de gestion annuels,
+        cumulés année après année.
       </p>
 
       <h3>Version Absolue 2 est-il utilisable en PER ?</h3>
@@ -400,8 +408,10 @@ export function Corps() {
         Oui, le socle contractuel et l'architecture de gestion de Version Absolue 2 servent de base
         au PER individuel distribué par UAF Life Patrimoine, avec un univers de supports proche de
         celui de l'assurance vie. Patrimoine Vie Plus, en revanche, n'est distribué par notre
-        cabinet qu'en assurance vie et en contrat de capitalisation, pas en PER. Si l'arbitrage
-        entre ces deux enveloppes vous intéresse au-delà du choix de l'assureur, notre article{" "}
+        cabinet qu'en assurance vie et en contrat de capitalisation, pas en PER. Pour chiffrer
+        l'effet d'un PER côté retraite, notre <a href="/outils/per-isr">outil PER ISR</a> donne des
+        pistes. Si l'arbitrage entre ces deux enveloppes vous intéresse au-delà du choix de
+        l'assureur, notre article{" "}
         <LienArticle slug="per-vs-assurance-vie-isr">
           PER ou assurance vie pour investir responsable
         </LienArticle>{" "}
@@ -410,9 +420,9 @@ export function Corps() {
 
       <h3>Dois-je signer avec l'un de ces deux contrats si je prends rendez-vous avec vous ?</h3>
       <p>
-        Non. Un premier échange avec un conseiller EXP Capital sert à faire un point sur votre
-        situation, vos objectifs et vos priorités éthiques — pas à vous orienter automatiquement
-        vers l'un de ces deux contrats. Il arrive qu'aucun des deux ne soit pertinent pour votre cas
+        Non. Un premier échange avec un conseiller EXP Capital sert à échanger sur vos objectifs et
+        vos priorités éthiques et à obtenir des pistes — pas à vous orienter automatiquement vers
+        l'un de ces deux contrats. Il arrive qu'aucun des deux ne soit pertinent pour votre cas
         (montant investi, enveloppe déjà existante, besoin de diversification d'assureur), et nous
         vous le disons dans ce cas. Le choix final de signer, avec quel contrat et pour quel
         montant, vous appartient entièrement.
@@ -446,10 +456,12 @@ export function Corps() {
         reste la référence.
       </p>
       <p>
-        Enfin, si vous voulez vérifier avec un conseiller si l'un de ces deux contrats correspond
-        réellement à votre situation — ou si une autre solution serait plus adaptée — un premier
-        échange avec Sébastien Petrisot ou Alexandre Pollet est gratuit et sans engagement. Vous en
-        ressortirez avec des chiffres qui vous concernent, pas une grille tarifaire théorique.
+        Enfin, si vous voulez{" "}
+        <a href="/cgp-investissement-responsable">échanger avec un conseiller</a> pour savoir si
+        l'un de ces deux contrats peut vous convenir — ou si une autre piste serait plus adaptée —
+        un premier échange avec Sébastien Petrisot ou Alexandre Pollet est gratuit et sans
+        engagement. Vous en ressortirez avec des pistes chiffrées qui vous concernent, pas une
+        grille tarifaire théorique.
       </p>
     </>
   );

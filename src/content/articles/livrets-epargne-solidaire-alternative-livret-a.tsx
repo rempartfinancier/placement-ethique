@@ -3,9 +3,9 @@ import { LienArticle } from "./lien";
 
 export const meta: ArticleMeta = {
   slug: "livrets-epargne-solidaire-alternative-livret-a",
-  title: "L'épargne solidaire est-elle une vraie alternative au Livret A ?",
+  title: "Épargne solidaire : une vraie alternative au Livret A ?",
   excerpt:
-    "Complément plus qu'alternative : les livrets solidaires gardent la sécurité du capital, les fonds solidaires vont plus loin. Mécanismes, fiscalité, vérifications.",
+    "Livrets solidaires, livrets de partage, fonds 90/10 : sécurité, rendement net, fiscalité et vérifications comparés au Livret A, produit par produit.",
   readingTime: "10 min",
   category: "Fondamentaux",
   date: "2026-05-05",
@@ -218,7 +218,7 @@ export function Corps() {
             <td>Don d'au moins 25 % des intérêts si labellisé Finansol</td>
             <td>
               Intérêts donnés : prélèvement libératoire réduit de 5 % + prélèvements sociaux ; le
-              don ouvre droit à réduction d'impôt ; intérêts conservés : flat tax de 30 %
+              don ouvre droit à réduction d'impôt ; intérêts conservés : PFU de 31,4 %
             </td>
             <td>Label Finansol, taux servi, part donnée, bénéficiaires des dons</td>
           </tr>
@@ -229,7 +229,7 @@ export function Corps() {
             <td>Oui — dépôt bancaire</td>
             <td>Taux fixé librement par la banque</td>
             <td>L'encours collecté finance des prêts à l'économie sociale et solidaire</td>
-            <td>Flat tax de 30 % (ou barème sur option)</td>
+            <td>PFU de 31,4 % (ou barème sur option)</td>
             <td>Part réelle de l'encours fléchée, reporting publié, label</td>
           </tr>
           <tr>
@@ -262,9 +262,10 @@ export function Corps() {
         effets se cumulent. D'abord le taux facial : celui d'un livret bancaire solidaire est fixé
         librement par l'établissement, et il est fréquemment inférieur ou comparable au taux du
         Livret A. Ensuite la fiscalité : contrairement au Livret A, exonéré, les intérêts d'un
-        livret bancaire supportent la flat tax de 30 % (impôt et prélèvements sociaux). Enfin le
-        partage lui-même : si vous donnez 25 % ou plus de vos intérêts, votre rendement conservé
-        diminue d'autant — c'est le principe, pas un défaut caché.
+        livret bancaire supportent le prélèvement forfaitaire unique (PFU) de 31,4 % depuis le 1er
+        janvier 2026 (12,8 % d'impôt et 18,6 % de prélèvements sociaux). Enfin le partage lui-même :
+        si vous donnez 25 % ou plus de vos intérêts, votre rendement conservé diminue d'autant —
+        c'est le principe, pas un défaut caché.
       </p>
       <p>
         La fiscalité du don atténue cependant l'écart. Les intérêts que vous donnez via un livret de
@@ -300,7 +301,9 @@ export function Corps() {
         ces quelques dizaines d'euros annuels, préférez-vous les consommer ou les flécher ? ». Les
         taux réglementés étant révisés périodiquement, refaites le calcul avec le taux du moment ;
         les performances passées ne préjugent pas des performances futures, et cette illustration ne
-        vaut pas projection.
+        vaut pas projection. Pour tester d'autres hypothèses, notre{" "}
+        <a href="/outils/simulateur">simulateur de projection</a> permet de faire varier le taux et
+        la durée, à titre illustratif.
       </p>
       <p>
         Pour les fonds solidaires, la comparaison de rendement avec le Livret A n'a pas de sens :
@@ -378,14 +381,27 @@ export function Corps() {
         <strong>Au-delà du matelas, la question n'est plus « livret contre livret ».</strong>{" "}
         L'argent qui dort au-delà de votre épargne de précaution a un coût d'opportunité, sur un
         livret classique comme sur un livret solidaire. C'est là que les fonds solidaires,
-        l'assurance vie en unités de compte solidaires ou l'épargne salariale — qui doit proposer au
-        moins un fonds solidaire depuis la loi de modernisation de l'économie de 2008 — prennent le
-        relais, avec un horizon plus long et un risque de perte en capital assumé. Si vous débutez
-        avec de petits montants, notre article sur{" "}
+        l'assurance vie en unités de compte solidaires (voir{" "}
+        <LienArticle slug="assurance-vie-isr-guide-2026">
+          comment choisir une assurance vie ISR
+        </LienArticle>
+        ) ou l'épargne salariale — qui doit proposer au moins un fonds solidaire depuis la loi de
+        modernisation de l'économie de 2008 — prennent le relais, avec un horizon plus long et un
+        risque de perte en capital assumé — le PER en est une déclinaison tournée vers la retraite,
+        traitée dans{" "}
+        <LienArticle slug="per-ethique-optimiser-retraite">
+          Comment optimiser sa retraite avec un PER éthique ?
+        </LienArticle>
+        . Si vous débutez avec de petits montants, notre article sur{" "}
         <LienArticle slug="investir-ethique-petit-budget">
           l'investissement éthique à petit budget
         </LienArticle>{" "}
-        montre que ce relais se prend dès quelques dizaines d'euros par mois.
+        montre que ce relais se prend dès quelques dizaines d'euros par mois. Pour un montant plus
+        important, voir{" "}
+        <LienArticle slug="ou-placer-argent-facon-ethique-montant">
+          où placer 50 000, 100 000 ou 300 000 € de façon éthique
+        </LienArticle>
+        .
       </p>
       <p>
         <strong>Et le don reste un outil à part entière.</strong> Un livret de partage — ou l'option
@@ -408,7 +424,7 @@ export function Corps() {
       <h3>Un livret solidaire rapporte-t-il forcément moins que le Livret A ?</h3>
       <p>
         Pas forcément, mais souvent, une fois la fiscalité comptée : le taux d'un livret bancaire
-        est librement fixé et ses intérêts supportent la flat tax de 30 %, alors que le Livret A est
+        est librement fixé et ses intérêts supportent le PFU de 31,4 %, alors que le Livret A est
         net d'impôt. Comparez toujours les taux nets — et, pour un livret de partage, tenez compte
         de la réduction d'impôt sur les dons, qui compense une partie de l'écart.
       </p>
@@ -484,10 +500,12 @@ export function Corps() {
         vous évitera le faux départ classique : un bon support dans la mauvaise enveloppe.
       </p>
       <p>
-        Et si vous préférez en parler de vive voix, c'est notre métier : lors d'un premier échange
-        offert, un conseiller du cabinet passe en revue avec vous votre matelas de sécurité, la part
-        de votre épargne qui peut porter du sens, et les vérifications à faire avant de souscrire —
-        sans jargon et sans engagement.
+        Et si vous préférez en parler de vive voix, c'est notre métier : vous pouvez{" "}
+        <a href="/cgp-investissement-responsable">
+          échanger avec un conseiller en investissement responsable
+        </a>{" "}
+        sur la part de votre épargne qui peut porter du sens et les vérifications à faire avant de
+        souscrire. Le premier échange est offert et sans engagement.
       </p>
     </>
   );

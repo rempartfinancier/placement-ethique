@@ -3,9 +3,9 @@ import { LienArticle } from "./lien";
 
 export const meta: ArticleMeta = {
   slug: "empreinte-carbone-epargne-pourquoi-mesurer",
-  title: "Pourquoi (et comment) mesurer l'empreinte carbone de son épargne ?",
+  title: "Empreinte carbone de l'épargne : comment la mesurer ?",
   excerpt:
-    "Votre épargne finance des tonnes de CO2 que vos gestes du quotidien ne compensent pas. Comment ce chiffre se calcule, ses limites, et comment l'estimer.",
+    "Votre épargne finance des émissions de CO2 que vos gestes du quotidien ne compensent pas. Comment ce chiffre se calcule, ses limites, et comment l'estimer.",
   readingTime: "10 min",
   category: "Conseil",
   date: "2026-07-07",
@@ -24,9 +24,10 @@ export function Corps() {
           attention parce qu'il peut peser bien plus lourd que votre empreinte personnelle du
           quotidien : une banque ou un fonds finance des activités entières, pas seulement vos
           propres trajets. Il se calcule au moyen de l'intensité carbone (en tonnes de CO2 par
-          million d'euros investis), un indicateur que les grands acteurs financiers doivent
-          désormais publier par obligation réglementaire — mais qui reste rarement accessible
-          simplement à l'épargnant individuel, d'où l'intérêt d'une méthode pour le réclamer.
+          million d'euros de chiffre d'affaires), un indicateur que les grands acteurs financiers
+          doivent désormais publier par obligation réglementaire — mais qui reste rarement
+          accessible simplement à l'épargnant individuel, d'où l'intérêt d'une méthode pour le
+          réclamer.
         </p>
       </div>
 
@@ -109,18 +110,23 @@ export function Corps() {
         10 — un exemple purement illustratif. L'<strong>intensité carbone</strong> (souvent désignée
         WACI, pour <em>weighted average carbon intensity</em>) rapporte plutôt les émissions de
         chaque entreprise à son chiffre d'affaires, pondérées par son poids dans le fonds, et
-        s'exprime en tonnes de CO2 par million d'euros investis (tCO2e/M€) — ce qui permet de
-        comparer des fonds de tailles différentes.
+        s'exprime en tonnes de CO2 par million d'euros de chiffre d'affaires (tCO2e/M€) — ce qui
+        permet de comparer des fonds de tailles différentes.
       </p>
       <p>
         Ces calculs reposent sur trois périmètres, ou «&nbsp;scopes&nbsp;» : les émissions directes
         d'une entreprise (scope 1), ses émissions indirectes liées à l'énergie achetée (scope 2), et
         l'ensemble de sa chaîne de valeur en amont et en aval (scope 3) — généralement le plus lourd
         et le plus difficile à mesurer, ce qui explique pourquoi de nombreux calculs s'en tiennent
-        encore aux scopes 1 et 2, au risque d'une image incomplète. Ce n'est plus un exercice
-        réservé aux think tanks environnementaux : le règlement européen SFDR impose désormais aux
-        acteurs des marchés financiers de publier les émissions par scope (PAI 1) et l'empreinte
-        carbone de leurs investissements (PAI 2) — un cadre détaillé dans notre article sur{" "}
+        encore aux scopes 1 et 2, au risque d'une image incomplète. Pour savoir quelles activités
+        peuvent être qualifiées de durables, un autre référentiel s'applique :{" "}
+        <LienArticle slug="taxonomie-verte-europeenne-epargne">
+          la taxonomie verte européenne
+        </LienArticle>
+        . Ce n'est plus un exercice réservé aux think tanks environnementaux : le règlement européen
+        SFDR impose désormais aux acteurs des marchés financiers de publier les émissions par scope
+        (PAI 1) et l'empreinte carbone de leurs investissements (PAI 2) — un cadre détaillé dans
+        notre article sur{" "}
         <LienArticle slug="sfdr-article-8-ou-9-ce-que-ca-garantit">
           ce que garantissent vraiment les classifications Article 8 et 9
         </LienArticle>
@@ -170,7 +176,11 @@ export function Corps() {
           <strong>Signal d'alerte :</strong> méfiez-vous d'un calculateur qui affiche un chiffre
           d'empreinte carbone unique sans jamais préciser sa méthodologie (quels scopes, quelle
           source, quelle date). Un chiffre sans méthode documentée ne se vérifie pas — il se croit
-          sur parole.
+          sur parole. Notre{" "}
+          <LienArticle slug="reperer-greenwashing-fonds-vert-methode">
+            méthode pour repérer le greenwashing d'un fonds « vert »
+          </LienArticle>{" "}
+          détaille les autres signaux d'alerte.
         </p>
       </div>
 
@@ -266,14 +276,15 @@ export function Corps() {
       <p>
         À retenir : l'empreinte carbone n'est ni universellement mesurée, ni universellement
         pertinente selon le support. Elle est la plus exploitable sur les fonds Article 8 ou 9 et
-        sur les obligations vertes — c'est là que la donnée existe vraiment.
+        sur les{" "}
+        <LienArticle slug="obligations-vertes-vs-obligations-classiques">
+          obligations vertes (et ce qui les distingue des obligations classiques)
+        </LienArticle>{" "}
+        — c'est là que la donnée existe vraiment.
       </p>
 
       <h2>Comment mesurer, en pratique, l'empreinte carbone de votre propre épargne ?</h2>
-      <p>
-        Voici la méthode que nous suivons pour aborder ce sujet avec un épargnant — quatre étapes, à
-        appliquer dans cet ordre :
-      </p>
+      <p>Voici une méthode en quatre étapes, à appliquer dans cet ordre :</p>
       <ol>
         <li>
           <strong>Cartographier.</strong> Listez, contrat par contrat, ce que vous détenez
@@ -296,8 +307,12 @@ export function Corps() {
         </li>
         <li>
           <strong>Corriger.</strong> Si l'écart vous semble significatif, l'arbitrage se joue ligne
-          par ligne — remplacer une unité de compte non filtrée par un équivalent Article 8 ou 9,
-          pas nécessairement tout vendre d'un coup. Chaque arbitrage a des conséquences fiscales
+          par ligne — remplacer une unité de compte non filtrée par un équivalent Article 8 ou 9
+          (voir{" "}
+          <LienArticle slug="assurance-vie-isr-guide-2026">
+            comment choisir une assurance vie ISR
+          </LienArticle>
+          ), pas nécessairement tout vendre d'un coup. Chaque arbitrage a des conséquences fiscales
           propres à votre situation, à examiner avant d'agir.
         </li>
       </ol>
@@ -431,8 +446,10 @@ export function Corps() {
       <p>
         Et si vous préférez faire cet exercice de cartographie accompagné — relire vos contrats,
         obtenir les bons documents, situer votre allocation face à ce critère —, c'est notre métier
-        : lors d'un premier échange offert, un conseiller du cabinet passe en revue votre épargne
-        avec vous, documents à l'appui, sans jargon et sans engagement.
+        : lors d'un premier échange offert,{" "}
+        <a href="/cgp-investissement-responsable">un conseiller du cabinet</a> peut vous aider à
+        obtenir des pistes de lecture de vos contrats, documents à l'appui, sans jargon et sans
+        engagement.
       </p>
     </>
   );

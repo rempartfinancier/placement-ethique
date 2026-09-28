@@ -3,9 +3,9 @@ import { LienArticle } from "./lien";
 
 export const meta: ArticleMeta = {
   slug: "dispositifs-fiscaux-demarche-ethique",
-  title: "Quels dispositifs fiscaux sont compatibles avec une démarche éthique ?",
+  title: "Défiscalisation éthique : quels dispositifs en 2026 ?",
   excerpt:
-    "Éco-PTZ, Denormandie, Girardin : trois dispositifs où l'avantage fiscal rémunère un impact vérifiable. Chiffres 2026 vérifiés et méthode de tri incluse.",
+    "Éco-PTZ, Denormandie, Girardin : trois dispositifs où l'avantage fiscal rémunère un impact vérifiable, et une méthode en trois filtres pour les trier.",
   readingTime: "11 min",
   category: "Fiscalité",
   date: "2026-06-23",
@@ -88,8 +88,13 @@ export function Corps() {
         déduction des versements sur un plan d'épargne retraite, qui récompense un comportement
         (épargner longtemps pour sa retraite) plutôt qu'un produit. Nous avons détaillé son
         maniement dans{" "}
-        <LienArticle slug="per-ethique-optimiser-retraite">notre guide du PER éthique</LienArticle>.
-        Voyons maintenant les trois dispositifs qui fléchent l'argent vers l'économie réelle.
+        <LienArticle slug="per-ethique-optimiser-retraite">notre guide du PER éthique</LienArticle>{" "}
+        — comme celle des dons aux associations, qui ouvrent droit à une réduction d'impôt et que
+        nous abordons dans{" "}
+        <LienArticle slug="donation-transmission-coherence-valeurs">
+          notre article sur la donation et la transmission
+        </LienArticle>
+        . Voyons maintenant les trois dispositifs qui fléchent l'argent vers l'économie réelle.
       </p>
 
       <h2>
@@ -209,7 +214,14 @@ export function Corps() {
         années après, alors que votre apport, lui, est déjà perdu. Le choix du monteur (historique,
         garanties dites « de bonne fin fiscale », qualité du suivi des exploitants) n'est pas un
         détail : c'est l'essentiel de la décision. Un rendement fiscal affiché élevé signale souvent
-        un montage moins sécurisé — là comme ailleurs, le rendement rémunère le risque.
+        un montage moins sécurisé — là comme ailleurs, le rendement rémunère le risque. Par
+        transparence : le cabinet peut être rémunéré par une commission intégrée à ce type de
+        montage, comme sur d'autres produits (voir <a href="/tarifs">notre page tarifs</a>). Sur les
+        pièges à repérer plus largement, notre article{" "}
+        <LienArticle slug="pieges-inconvenients-investissement-ethique">
+          les pièges et inconvénients de l'investissement éthique
+        </LienArticle>{" "}
+        pose les bons réflexes.
       </p>
       <p>
         Dernier paramètre, souvent découvert trop tard : le plafonnement global des niches fiscales.
@@ -310,8 +322,7 @@ export function Corps() {
 
       <h3>Le Pinel existe-t-il encore en 2026 ?</h3>
       <p>
-        Non. Le dispositif Pinel a pris fin le 31 décembre 2024 et n'a pas été remplacé par un
-        équivalent dans le neuf, comme le confirme{" "}
+        Non. Le dispositif Pinel a pris fin le 31 décembre 2024, comme le confirme{" "}
         <a
           href="https://www.economie.gouv.fr/particuliers/gerer-mon-argent/beneficier-daides-et-de-reductions-dimpots/investissement-locatif-tout-savoir-sur-la-reduction-dimpot-pinel"
           target="_blank"
@@ -319,9 +330,11 @@ export function Corps() {
         >
           economie.gouv.fr
         </a>
-        . Les investissements réalisés avant cette date conservent leur avantage. Pour un
-        investissement locatif défiscalisant aujourd'hui, la voie ouverte est le Denormandie dans
-        l'ancien rénové, jusqu'à fin 2027.
+        . Les investissements réalisés avant cette date conservent leur avantage. Un nouveau «
+        statut du bailleur privé » (dispositif dit Jeanbrun), créé par la loi de finances pour 2026,
+        lui a succédé avec une logique différente — un amortissement du bien plutôt qu'une réduction
+        d'impôt — et ses propres conditions, à vérifier avant tout engagement. Dans l'ancien rénové,
+        le Denormandie reste ouvert jusqu'à fin 2027.
       </p>
 
       <h3>Peut-on cumuler l'éco-PTZ avec MaPrimeRénov' ?</h3>
@@ -401,7 +414,8 @@ export function Corps() {
         <LienArticle slug="investissement-ethique-guide-complet-2026">
           guide complet de l'investissement éthique
         </LienArticle>{" "}
-        remet la fiscalité à sa juste place — un accélérateur, pas un point de départ. Si c'est
+        remet la fiscalité à sa juste place — un accélérateur, pas un point de départ, et notre page{" "}
+        <a href="/placement-ethique">placement éthique</a> en donne la vue d'ensemble. Si c'est
         l'immobilier rénové qui vous attire,{" "}
         <LienArticle slug="investissement-immobilier-responsable-commencer">
           notre guide pour commencer un investissement immobilier responsable
@@ -409,11 +423,11 @@ export function Corps() {
         déroule les étapes avant même la question fiscale.
       </p>
       <p>
-        Et si vous préférez trier ces dispositifs accompagné, c'est notre métier : lors d'un premier
-        échange offert, un conseiller du cabinet passe en revue avec vous votre dernier avis
-        d'imposition — plafonds disponibles, avantages déjà consommés — et les dispositifs qui
-        méritent réellement d'être creusés dans votre cas. Documents à l'appui, sans jargon et sans
-        engagement.
+        Et si vous préférez trier ces dispositifs accompagné, c'est notre métier : vous pouvez{" "}
+        <a href="/cgp-investissement-responsable">échanger avec un conseiller du cabinet</a> lors
+        d'un premier échange offert, pour obtenir des pistes sur les dispositifs qui méritent
+        réellement d'être creusés (plafonds disponibles, avantages déjà consommés). Documents à
+        l'appui, sans jargon et sans engagement.
       </p>
     </>
   );

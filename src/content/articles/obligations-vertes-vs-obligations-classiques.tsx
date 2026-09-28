@@ -3,7 +3,7 @@ import { LienArticle } from "./lien";
 
 export const meta: ArticleMeta = {
   slug: "obligations-vertes-vs-obligations-classiques",
-  title: "Obligations vertes ou obligations classiques : quelles différences réelles ?",
+  title: "Obligation verte vs classique : les différences réelles",
   excerpt:
     "Même risque de crédit, rendement très proche : la vraie différence d'une obligation verte tient au fléchage vérifiable des fonds levés — et à son contrôle.",
   readingTime: "11 min",
@@ -339,7 +339,11 @@ export function Corps() {
           <strong>Le signal d'alerte le plus simple :</strong> une obligation ou un fonds « vert »
           qui ne publie pas de rapport d'allocation des fonds — ou dont le rapport reste introuvable
           — ne vous offre précisément pas la seule chose qui le distingue d'un produit classique. Le
-          reporting n'est pas un bonus : c'est le produit.
+          reporting n'est pas un bonus : c'est le produit. Notre{" "}
+          <LienArticle slug="reperer-greenwashing-fonds-vert-methode">
+            méthode pour repérer le greenwashing d'un fonds
+          </LienArticle>{" "}
+          généralise ce contrôle à tout fonds « vert ».
         </p>
       </div>
 
@@ -348,8 +352,9 @@ export function Corps() {
         En pratique, un particulier accède rarement aux obligations vertes en direct : les émissions
         s'adressent d'abord aux investisseurs institutionnels, souvent par coupures élevées. La voie
         normale passe par un <strong>fonds ou un ETF d'obligations vertes</strong>, logé dans une
-        assurance vie, un PER ou un compte-titres. Avant de souscrire, nous vous suggérons la
-        méthode des <strong>3 C — Cadre, Contenu, Coût</strong> :
+        assurance vie, un PER ou un compte-titres (voir aussi{" "}
+        <a href="/placements">notre panorama des placements responsables</a>). Avant de souscrire,
+        nous vous suggérons la méthode des <strong>3 C — Cadre, Contenu, Coût</strong> :
       </p>
       <ol>
         <li>
@@ -357,7 +362,11 @@ export function Corps() {
           titre de « vert » : Green Bond Principles, standard EuGB, titres alignés taxonomie ? Le
           fonds est-il labellisé (le label Greenfin, notamment, est conçu pour les fonds finançant
           la transition) et comment est-il classé au sens du règlement SFDR ? Ces tampons ne disent
-          pas tout, mais leur absence totale, sur ce segment précis, interroge. Notre{" "}
+          pas tout (voir{" "}
+          <LienArticle slug="label-isr-que-garantit-il-vraiment">
+            ce que le Label ISR garantit vraiment
+          </LienArticle>
+          ), mais leur absence totale, sur ce segment précis, interroge. Notre{" "}
           <a href="/outils/decodeur-label">décodeur de labels</a> résume ce que chacun garantit — il
           vous donne des pistes de lecture, la vérification finale restant le document officiel du
           fonds.
@@ -372,7 +381,12 @@ export function Corps() {
           <strong>Le Coût.</strong> Comparez les frais courants du fonds au rendement obligataire
           attendu. Sur un placement obligataire, dont le rendement est par nature plus modeste que
           celui des actions, chaque dixième de point de frais pèse proportionnellement lourd —
-          souvent plus que le greenium lui-même. Notre{" "}
+          souvent plus que le greenium lui-même. Si vous hésitez entre un fonds et un ETF, notre
+          guide{" "}
+          <LienArticle slug="etf-isr-debutants">
+            pour choisir un ETF ISR quand on débute
+          </LienArticle>{" "}
+          détaille ce qui distingue les deux. Notre{" "}
           <a href="/outils/simulateur">simulateur d'épargne</a> permet de mesurer l'effet des frais
           année par année, à titre d'hypothèse illustrative.
         </li>
@@ -478,10 +492,14 @@ export function Corps() {
         fait le tri dans les études contradictoires.
       </p>
       <p>
-        Enfin, si vous préférez examiner tout cela accompagné — quelle part obligataire dans votre
+        Enfin, si vous préférez en parler avec un conseiller — quelle part obligataire dans votre
         allocation, quels fonds verts dans votre contrat, quels documents leur demander —, c'est
-        notre métier : lors d'un premier échange offert, un conseiller du cabinet passe en revue vos
-        supports actuels avec vous, documents à l'appui, sans jargon et sans engagement.
+        notre métier : le premier échange est offert, documents à l'appui, sans jargon et sans
+        engagement. Découvrez{" "}
+        <a href="/cgp-investissement-responsable">
+          comment le cabinet accompagne les épargnants en investissement responsable
+        </a>
+        .
       </p>
     </>
   );

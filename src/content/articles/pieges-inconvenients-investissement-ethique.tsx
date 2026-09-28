@@ -3,9 +3,9 @@ import { LienArticle } from "./lien";
 
 export const meta: ArticleMeta = {
   slug: "pieges-inconvenients-investissement-ethique",
-  title: "Investissement éthique : les pièges et inconvénients à connaître avant de se lancer",
+  title: "Investissement éthique : 6 pièges et inconvénients à éviter",
   excerpt:
-    "Univers réduit, frais de niche, exclusion confondue avec impact, SFDR mal compris : six pièges réels de l'investissement éthique, nommés honnêtement plutôt que cachés.",
+    "Label mal compris, univers réduit, frais de niche, exclusion confondue avec impact, SFDR : 6 pièges de l'investissement éthique, et comment les éviter.",
   readingTime: "13 min",
   category: "Fondamentaux",
   date: "2026-08-01",
@@ -71,8 +71,11 @@ export function Corps() {
         <em>méthodologie</em>, pas sur un résultat qui correspondrait à vos valeurs personnelles.
         Deux fonds labellisés peuvent détenir des portefeuilles très différents, et un fonds
         labellisé peut encore, légalement, détenir des entreprises du secteur pétrogazier tant
-        qu'elles restent sous les seuils du référentiel. Nous détaillons précisément ce que le Label
-        ISR garantit et ce qu'il laisse entièrement à votre charge dans{" "}
+        qu'elles restent sous les seuils du référentiel. L'autre label public, Greenfin, obéit à une
+        autre logique : voir{" "}
+        <LienArticle slug="label-greenfin-vs-label-isr">Greenfin ou Label ISR</LienArticle>. Nous
+        détaillons précisément ce que le Label ISR garantit et ce qu'il laisse entièrement à votre
+        charge dans{" "}
         <LienArticle slug="label-isr-que-garantit-il-vraiment">notre analyse dédiée</LienArticle>.
       </p>
       <p>
@@ -195,8 +198,11 @@ export function Corps() {
         en général », comparez-le à un autre véhicule visant le même univers. Si un fonds thématique
         actif vous plaît pour sa conviction, vérifiez d'abord qu'un ETF ou un fonds indiciel ISR
         plus large ne répond pas déjà en grande partie à votre objectif, à un coût sensiblement
-        inférieur. Notre <a href="/outils/simulateur">simulateur d'épargne</a> permet de chiffrer ce
-        que 0,5 ou 1 point de frais supplémentaire coûte réellement sur vingt ans.
+        inférieur (notre guide{" "}
+        <LienArticle slug="etf-isr-debutants">pour choisir un ETF ISR quand on débute</LienArticle>{" "}
+        explique comment les comparer). Notre <a href="/outils/simulateur">simulateur d'épargne</a>{" "}
+        permet de chiffrer ce que 0,5 ou 1 point de frais supplémentaire coûte réellement sur vingt
+        ans.
       </p>
 
       <h2>Piège n°4 : la confusion entre exclusion et impact réel</h2>
@@ -206,7 +212,11 @@ export function Corps() {
         une thématique durable — l'eau, l'alimentation, la biodiversité — tout en n'ayant, comme
         seul engagement mesurable, l'exclusion d'une partie des émetteurs les moins bien notés d'un
         point de vue ESG. Exclure les plus mauvais élèves n'équivaut pourtant pas à financer une
-        activité qui répond au problème que le nom du fonds évoque.
+        activité qui répond au problème que le nom du fonds évoque — la différence entre{" "}
+        <LienArticle slug="engagement-actionnarial-vs-exclusion">
+          exclusion et engagement actionnarial
+        </LienArticle>{" "}
+        est développée dans notre article dédié.
       </p>
       <p>
         Ce mécanisme n'est pas une hypothèse : l'étude de l'AMF sur les fonds thématiques durables,
@@ -311,9 +321,8 @@ export function Corps() {
         l'étape « Persistance » de notre{" "}
         <LienArticle slug="reperer-greenwashing-fonds-vert-methode">méthode 4P</LienArticle> : le
         label figure-t-il toujours sur la liste officielle, la classification SFDR a-t-elle changé,
-        le reporting périodique confirme-t-il les indicateurs annoncés à l'origine ? C'est
-        précisément le type de suivi qu'un rendez-vous annuel avec un conseiller permet de
-        systématiser, plutôt que de compter sur votre seule vigilance.
+        le reporting périodique confirme-t-il les indicateurs annoncés à l'origine ? Fixer une date
+        annuelle dans votre agenda suffit à installer ce réflexe.
       </p>
 
       <h2>Vos questions sur les pièges de l'investissement éthique</h2>
@@ -402,9 +411,14 @@ export function Corps() {
       </p>
       <p>
         Et si vous préférez appliquer cette grille de lecture à vos placements actuels avec un
-        regard extérieur, c'est notre métier : lors d'un premier échange offert, un conseiller du
-        cabinet passe en revue avec vous ces six pièges sur vos supports existants — documents
-        ouverts à l'écran, sans jargon et sans engagement.
+        regard extérieur, c'est notre métier : lors d'un premier échange offert, vous pouvez
+        échanger avec un conseiller du cabinet sur ces six points de vigilance appliqués à vos
+        supports existants — documents ouverts à l'écran, sans jargon et sans engagement. Sur la
+        façon dont un conseiller est rémunéré, voir{" "}
+        <LienArticle slug="frais-conseiller-gestion-patrimoine-independant">
+          combien coûte un conseiller en gestion de patrimoine
+        </LienArticle>
+        , et découvrez <a href="/cgp-investissement-responsable">l'accompagnement du cabinet</a>.
       </p>
     </>
   );

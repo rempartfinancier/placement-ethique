@@ -3,9 +3,9 @@ import { LienArticle } from "./lien";
 
 export const meta: ArticleMeta = {
   slug: "label-finansol-finance-solidaire",
-  title: "Label Finansol : que garantit-il vraiment à votre épargne solidaire ?",
+  title: "Label Finansol : ce qu'il garantit, ce qu'il ne garantit pas",
   excerpt:
-    "Le label Finansol certifie qu'un produit finance réellement des activités solidaires, sous contrôle annuel indépendant — sans promesse de rendement ni de risque zéro.",
+    "Le label Finansol certifie un financement solidaire réel (5-10 % de l'actif ou 25 % des revenus donnés), contrôlé chaque année. Sans promesse de rendement.",
   readingTime: "10 min",
   category: "Labels & Greenwashing",
   date: "2026-05-20",
@@ -302,7 +302,13 @@ export function Corps() {
         , tout contrat d'assurance vie multisupport doit référencer au moins une unité de compte
         solidaire, une unité de compte labellisée ISR et une unité de compte labellisée Greenfin.
         Votre contrat actuel en contient donc très probablement une — reste à vérifier laquelle, et
-        si elle mérite votre épargne.
+        si elle mérite votre épargne. Notre guide pour{" "}
+        <LienArticle slug="assurance-vie-isr-guide-2026">choisir une assurance vie ISR</LienArticle>{" "}
+        aide à comparer ces gammes, et{" "}
+        <LienArticle slug="per-ethique-optimiser-retraite">
+          Comment optimiser sa retraite avec un PER éthique ?
+        </LienArticle>{" "}
+        traite le cas du PER.
       </p>
 
       <h2>Ce que le label Finansol ne garantit pas</h2>
@@ -364,7 +370,12 @@ export function Corps() {
         Pour situer rapidement Finansol parmi les autres tampons que vous croisez, notre{" "}
         <a href="/outils/decodeur-label">décodeur de labels</a> résume gratuitement ce que chaque
         label français garantit et où le vérifier — il vous donne des pistes de lecture, la
-        vérification finale restant toujours le document officiel du produit.
+        vérification finale restant toujours le document officiel du produit. Pour transposer ce
+        réflexe aux produits qui se disent « verts » sans label, voir notre{" "}
+        <LienArticle slug="reperer-greenwashing-fonds-vert-methode">
+          méthode pour repérer le greenwashing d'un fonds
+        </LienArticle>
+        .
       </p>
 
       <h2>Vos questions sur le label Finansol et la finance solidaire</h2>
@@ -466,10 +477,13 @@ export function Corps() {
         l'enveloppe à la sélection des supports.
       </p>
       <p>
-        Et si vous préférez vérifier à deux ce que contient déjà votre épargne — et où une dimension
-        solidaire aurait du sens dans votre patrimoine — c'est précisément notre métier : lors d'un
-        premier échange offert, un conseiller du cabinet passe en revue vos placements actuels avec
-        vous, documents à l'appui, sans jargon et sans engagement.
+        Et si vous préférez en parler à deux, c'est précisément notre métier : vous pouvez{" "}
+        <a href="/cgp-investissement-responsable">
+          échanger avec un conseiller en investissement responsable
+        </a>{" "}
+        sur la place d'une dimension solidaire dans votre patrimoine. Le premier échange est offert
+        et sans engagement : vous en repartez avec des pistes à vérifier dans les documents
+        officiels.
       </p>
     </>
   );

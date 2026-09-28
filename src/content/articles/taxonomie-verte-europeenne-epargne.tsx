@@ -3,9 +3,9 @@ import { LienArticle } from "./lien";
 
 export const meta: ArticleMeta = {
   slug: "taxonomie-verte-europeenne-epargne",
-  title: "Taxonomie verte européenne : qu'est-ce que ça change vraiment pour votre épargne ?",
+  title: "Taxonomie verte européenne : ce qui change pour l'épargne",
   excerpt:
-    "La taxonomie verte n'est pas un label : c'est le dictionnaire européen des activités durables. Ce qu'elle change déjà pour votre épargne — et ses angles morts.",
+    "La taxonomie verte n'est pas un label : c'est le dictionnaire européen des activités durables. Ce qu'elle change pour votre épargne, et ses angles morts.",
   readingTime: "11 min",
   category: "Labels & Greenwashing",
   date: "2026-05-23",
@@ -44,7 +44,12 @@ export function Corps() {
         le plus structurant de la finance durable européenne : c'est lui qui décide de ce que le mot
         « vert » veut dire, et tous les autres étages — classification SFDR, labels, obligations
         vertes — s'appuient dessus ou s'en démarquent. Mais c'est aussi un texte dont la promesse
-        est régulièrement survendue par les uns et caricaturée par les autres.
+        est régulièrement survendue par les uns et caricaturée par les autres. Pour replacer ce
+        texte dans la démarche d'ensemble, voir{" "}
+        <LienArticle slug="investissement-ethique-guide-complet-2026">
+          notre guide complet de l'investissement éthique
+        </LienArticle>
+        .
       </p>
       <p>
         Dans cet article : ce que la taxonomie est exactement (et ce qu'elle n'est pas), pourquoi le
@@ -83,7 +88,7 @@ export function Corps() {
       </p>
       <div className="callout">
         <p>
-          <strong>Le point qui évite 90 % des malentendus :</strong> la taxonomie classe des{" "}
+          <strong>Le point qui évite l'essentiel des malentendus :</strong> la taxonomie classe des{" "}
           <em>activités</em>, pas des entreprises ni des fonds. Une entreprise n'est jamais «
           alignée » en bloc : elle a un pourcentage de chiffre d'affaires (et d'investissements)
           aligné. Un fonds agrège ensuite ces pourcentages au prorata de son portefeuille. C'est ce
@@ -140,7 +145,11 @@ export function Corps() {
         <LienArticle slug="sfdr-article-8-ou-9-ce-que-ca-garantit">
           ce que les catégories Article 8 et Article 9 garantissent vraiment
         </LienArticle>{" "}
-        — les deux lectures se complètent.
+        — les deux lectures se complètent. Côté labels, voir{" "}
+        <LienArticle slug="label-isr-que-garantit-il-vraiment">
+          ce que le Label ISR garantit vraiment
+        </LienArticle>
+        .
       </p>
 
       <h2>Pourquoi le gaz et le nucléaire sont-ils classés « verts » par la taxonomie ?</h2>
@@ -214,7 +223,11 @@ export function Corps() {
         pour tous — et non par la méthodologie maison d'une société de gestion. Comme tout support
         en unités de compte, un fonds aligné sur la taxonomie reste exposé à un risque de perte en
         capital : le chiffre mesure le caractère environnemental des activités financées, pas la
-        solidité du placement.
+        solidité du placement. Pour le choix du contrat lui-même, voir{" "}
+        <LienArticle slug="assurance-vie-isr-guide-2026">
+          comment choisir une assurance vie ISR en 2026
+        </LienArticle>
+        .
       </p>
       <h3>2. Une question nouvelle chez votre conseiller</h3>
       <p>
@@ -232,7 +245,9 @@ export function Corps() {
         que le dispositif restait mal compris et que la très grande majorité des clients n'exprimait
         aucune préférence détaillée — les deux superviseurs ont publié fin 2025 une approche commune
         pour le simplifier. C'est pourtant un droit utile : une préférence exprimée engage le
-        distributeur à en tenir compte dans ce qu'il vous propose.
+        distributeur à en tenir compte dans ce qu'il vous propose. Pour clarifier vos propres
+        préférences avant de répondre, notre{" "}
+        <a href="/outils/profil-investisseur">outil profil investisseur</a> peut vous aider.
       </p>
       <h3>3. Un label européen pour les obligations vertes</h3>
       <p>
@@ -495,10 +510,13 @@ export function Corps() {
         tampon — taxonomie, SFDR, Label ISR, Greenfin, Finansol — à sa juste place.
       </p>
       <p>
-        Et si vous préférez faire ces lectures accompagné, c'est notre métier : lors d'un premier
-        échange offert, un conseiller du cabinet passe en revue avec vous les annexes SFDR et
-        l'alignement taxonomie de vos supports actuels — documents à l'appui, sans jargon et sans
-        engagement.
+        Et si vous préférez aborder ces lectures à deux, vous pouvez{" "}
+        <a href="/cgp-investissement-responsable">
+          échanger avec un conseiller en gestion de patrimoine spécialisé en investissement
+          responsable
+        </a>{" "}
+        lors d'un premier échange offert, pour obtenir des pistes sur la lecture des annexes SFDR et
+        de l'alignement taxonomie, sans jargon et sans engagement.
       </p>
     </>
   );

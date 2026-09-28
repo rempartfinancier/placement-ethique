@@ -3,9 +3,9 @@ import { LienArticle } from "./lien";
 
 export const meta: ArticleMeta = {
   slug: "per-ethique-optimiser-retraite",
-  title: "Comment optimiser sa retraite avec un PER éthique ?",
+  title: "PER éthique : comment optimiser sa retraite ?",
   excerpt:
-    "Déduction à l'entrée, supports réellement responsables, sortie préparée : les trois leviers d'un PER éthique — plafonds 2026 vérifiés et méthode de contrôle incluse.",
+    "Déduction fiscale à l'entrée, supports vraiment responsables, sortie préparée : les 3 leviers d'un PER éthique, avec une méthode de contrôle.",
   readingTime: "12 min",
   category: "Enveloppes",
   date: "2026-06-11",
@@ -75,7 +75,11 @@ export function Corps() {
         grande majorité des PER individuels, souscrits sous forme assurantielle, appliquent la même
         règle. Conséquence paradoxale : presque n'importe quel PER récent peut s'afficher «
         responsable » en toute légalité, puisqu'il suffit de trois supports labellisés au milieu de
-        centaines d'autres pour cocher la case.
+        centaines d'autres pour cocher la case. Notre guide{" "}
+        <LienArticle slug="assurance-vie-isr-guide-2026">
+          choisir une assurance vie ISR en 2026
+        </LienArticle>{" "}
+        détaille les critères qui séparent une offre profonde d'un simple minimum légal.
       </p>
       <div className="callout">
         <p>
@@ -203,7 +207,12 @@ export function Corps() {
         l'entrée et à la sortie —, notre <a href="/outils/simulateur">simulateur de projection</a>{" "}
         déroule le calcul année par année, frais et fiscalité compris. Ses résultats reposent sur
         des hypothèses illustratives : les performances passées ne préjugent pas des performances
-        futures, et les unités de compte présentent un risque de perte en capital.
+        futures, et les unités de compte présentent un risque de perte en capital. Pour situer le
+        PER face au PEA et au compte-titres, voir{" "}
+        <LienArticle slug="quelle-enveloppe-investissement-ethique">
+          notre comparatif des enveloppes
+        </LienArticle>
+        .
       </p>
 
       <h2>Comment vérifier que les supports de votre PER sont vraiment responsables ?</h2>
@@ -424,7 +433,12 @@ export function Corps() {
         règle robuste : la régularité bat le montant, parce qu'elle capte les plafonds fiscaux
         chaque année et lisse les points d'entrée sur les marchés. Notre{" "}
         <a href="/outils/retraite">outil retraite</a> vous donne un ordre de grandeur en quelques
-        minutes — des pistes, à affiner ensuite avec votre situation réelle.
+        minutes — des pistes, à affiner ensuite avec votre situation réelle. Pour construire un plan
+        complet, de l'estimation de votre pension aux enveloppes à remplir, voir{" "}
+        <LienArticle slug="preparer-retraite-epargne-alignee-valeurs">
+          comment préparer sa retraite avec une épargne alignée sur vos valeurs
+        </LienArticle>
+        .
       </p>
 
       <h2>Le temps long est votre meilleur allié — fiscalement et éthiquement</h2>
@@ -451,10 +465,11 @@ export function Corps() {
       </p>
       <p>
         Et si vous préférez faire ces vérifications accompagné, c'est notre métier : lors d'un
-        premier échange offert, un conseiller du cabinet passe en revue avec vous votre plafond
-        d'épargne retraite disponible — il figure sur votre dernier avis d'imposition — et la liste
-        réelle des supports de votre contrat actuel. Documents à l'appui, sans jargon et sans
-        engagement.
+        premier échange offert, vous pouvez échanger avec un conseiller du cabinet sur votre plafond
+        d'épargne retraite disponible — il figure sur votre dernier avis d'imposition — et sur la
+        liste réelle des supports de votre contrat actuel. Documents à l'appui, sans jargon et sans
+        engagement. Découvrez{" "}
+        <a href="/cgp-investissement-responsable">l'accompagnement du cabinet</a>.
       </p>
     </>
   );

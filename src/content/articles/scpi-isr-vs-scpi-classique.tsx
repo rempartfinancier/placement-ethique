@@ -5,7 +5,7 @@ export const meta: ArticleMeta = {
   slug: "scpi-isr-vs-scpi-classique",
   title: "SCPI ISR ou SCPI classique : quelles différences réelles ?",
   excerpt:
-    "Le Label ISR certifie une méthodologie auditée et un plan d'amélioration des immeubles — pas des bâtiments « verts », ni un rendement ou des frais différents.",
+    "Le Label ISR certifie une méthode auditée, pas des immeubles « verts » : ce qui change vraiment entre SCPI ISR et SCPI classique, et ce qui ne change pas.",
   readingTime: "11 min",
   category: "Enveloppes",
   date: "2026-06-19",
@@ -165,7 +165,12 @@ export function Corps() {
         000 m² et plus une réduction de leur consommation d'énergie finale d'au moins 40 % en 2030,
         50 % en 2040 et 60 % en 2050 par rapport à une année de référence postérieure à 2009, avec
         déclaration annuelle des consommations sur la plateforme OPERAT. Les bureaux et commerces
-        d'une SCPI classique y sont soumis exactement comme ceux d'une SCPI ISR.
+        d'une SCPI classique y sont soumis exactement comme ceux d'une SCPI ISR. Pour une vue
+        d'ensemble de ce chantier, voir{" "}
+        <LienArticle slug="investissement-immobilier-responsable-commencer">
+          par où commencer un investissement immobilier responsable
+        </LienArticle>
+        .
       </p>
       <p>
         La seconde est financière : les sociétés de gestion de SCPI relèvent du règlement européen
@@ -285,7 +290,11 @@ export function Corps() {
         </a>
         , l'association professionnelle du secteur. L'enseignement est là : les écarts entre
         catégories, et entre SCPI d'une même catégorie, sont bien plus déterminants pour votre
-        rendement que la présence ou l'absence du label.
+        rendement que la présence ou l'absence du label. La question dépasse d'ailleurs l'immobilier
+        : voir{" "}
+        <LienArticle slug="investir-ethique-performance-chiffres">
+          investir éthique rapporte-t-il moins ?
+        </LienArticle>
       </p>
       <p>
         Il n'existe pas, à ce jour, d'étude de référence robuste comparant la performance des SCPI
@@ -411,7 +420,12 @@ export function Corps() {
         Oui, si votre contrat la référence en unité de compte. Les conditions diffèrent alors de
         l'achat en direct : frais d'entrée propres au contrat, part des loyers effectivement
         reversée, délais de jouissance — autant de points à vérifier dans la documentation du
-        contrat avant de comparer les deux voies d'accès.
+        contrat avant de comparer les deux voies d'accès. Pour situer cet arbitrage parmi les autres
+        enveloppes, voir{" "}
+        <LienArticle slug="quelle-enveloppe-investissement-ethique">
+          quelle enveloppe choisir pour investir éthique
+        </LienArticle>
+        .
       </p>
 
       <h3>SCPI ISR, SCPI « verte », SCPI « à impact » : est-ce la même chose ?</h3>
@@ -427,7 +441,12 @@ export function Corps() {
         Non. Les risques fondamentaux — perte en capital, liquidité limitée, vacance locative,
         baisse des loyers — sont identiques, et le label n'en réduit aucun. À long terme, un
         patrimoine aligné sur la trajectoire énergétique réglementaire peut réduire le risque
-        d'obsolescence des actifs, mais c'est une hypothèse de gestion, pas une garantie.
+        d'obsolescence des actifs, mais c'est une hypothèse de gestion, pas une garantie. Pour un
+        tour d'horizon des limites de l'ISR en général, voir{" "}
+        <LienArticle slug="pieges-inconvenients-investissement-ethique">
+          les pièges et inconvénients de l'investissement éthique
+        </LienArticle>
+        .
       </p>
 
       <h2>La vraie différence n'est pas le logo — c'est la trajectoire documentée</h2>
@@ -460,10 +479,11 @@ export function Corps() {
         pèse les deux véhicules sans parti pris.
       </p>
       <p>
-        Enfin, si vous préférez faire cet examen à deux : c'est notre métier. Lors d'un premier
-        échange offert, un conseiller du cabinet parcourt avec vous les rapports ESG, les documents
-        d'informations clés et les trajectoires des SCPI que vous envisagez — documents à l'appui,
-        sans jargon et sans engagement.
+        Enfin, si vous préférez aborder ces documents à deux, vous pouvez échanger avec un
+        conseiller du cabinet lors d'un premier échange offert, pour obtenir des pistes sur la
+        lecture des rapports ESG et des documents d'informations clés, sans jargon et sans
+        engagement. Le cadre d'ensemble de la démarche est posé sur notre page{" "}
+        <a href="/placement-ethique">placement éthique</a>.
       </p>
     </>
   );

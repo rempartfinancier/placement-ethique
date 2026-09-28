@@ -3,9 +3,9 @@ import { LienArticle } from "./lien";
 
 export const meta: ArticleMeta = {
   slug: "assurance-vie-luxembourgeoise-investissement-responsable",
-  title: "Assurance vie luxembourgeoise : quel intérêt réel pour l'investissement responsable ?",
+  title: "Assurance vie luxembourgeoise : atouts et limites pour l'ISR",
   excerpt:
-    "Sécurité, prestige… et éthique ? L'intérêt réel du contrat luxembourgeois pour investir responsable tient au sur-mesure et à l'architecture ouverte — sous conditions.",
+    "Triangle de sécurité, fonds dédié, architecture ouverte : ce que l'assurance vie luxembourgeoise apporte vraiment à l'investissement responsable.",
   readingTime: "12 min",
   category: "Enveloppes",
   date: "2026-06-05",
@@ -154,8 +154,9 @@ export function Corps() {
         <a href="https://luxflag.org/label/esg-label/" target="_blank" rel="noreferrer">
           LuxFLAG
         </a>
-        , dont les labels ESG obéissent à leur propre référentiel — comme pour le Label ISR
-        français, un label indique où regarder, il ne dispense pas de vérifier. Notre{" "}
+        , dont les labels ESG obéissent à leur propre référentiel — comme pour le{" "}
+        <LienArticle slug="label-isr-que-garantit-il-vraiment">Label ISR français</LienArticle>, un
+        label indique où regarder, il ne dispense pas de vérifier. Notre{" "}
         <a href="/outils/decodeur-label">décodeur de labels</a> vous aide à situer chaque tampon.
       </p>
 
@@ -167,7 +168,10 @@ export function Corps() {
         qu'attend un investisseur responsable exigeant : exclusions sectorielles ou normatives sur
         mesure (énergies fossiles, armement, tabac, non-respect de conventions internationales…),
         univers restreint à des fonds labellisés, intégration de votre propre hiérarchie de critères
-        ESG.
+        ESG. Avant de rédiger ces critères, il vaut mieux avoir tranché entre exclusion et
+        engagement : notre article{" "}
+        <LienArticle slug="engagement-actionnarial-vs-exclusion">exclure ou engager</LienArticle>{" "}
+        compare les deux stratégies.
       </p>
       <p>
         La différence est structurelle : dans une liste d'unités de compte, vous choisissez parmi
@@ -266,8 +270,13 @@ export function Corps() {
       <p>
         Attention enfin à ne pas confondre seuils réglementaires et pratique commerciale : les
         assureurs fixent leurs propres tickets d'entrée, souvent supérieurs aux minima de la
-        circulaire — à vérifier compagnie par compagnie. En dessous de ces ordres de grandeur, un
-        bon contrat français fait l'essentiel du travail pour une épargne responsable : notre{" "}
+        circulaire — à vérifier compagnie par compagnie. Pour situer votre propre montant, notre
+        article{" "}
+        <LienArticle slug="ou-placer-argent-facon-ethique-montant">
+          où placer 50 000, 100 000 ou 300 000 € de façon éthique
+        </LienArticle>{" "}
+        raisonne palier par palier. En dessous de ces ordres de grandeur, un bon contrat français
+        fait l'essentiel du travail pour une épargne responsable : notre{" "}
         <LienArticle slug="assurance-vie-isr-guide-2026">
           guide du choix d'une assurance vie ISR en 2026
         </LienArticle>{" "}
@@ -290,7 +299,11 @@ export function Corps() {
         : abattement annuel de 4 600 € sur les gains rachetés (9 200 € pour un couple soumis à
         imposition commune), imposition à 7,5 % pour la fraction des primes n'excédant pas 150 000 €
         et 12,8 % au-delà, plus les prélèvements sociaux de 17,2 %. La fiscalité applicable au décès
-        suit également les règles françaises.
+        suit également les règles françaises — pour la partie succession et legs, notre article sur{" "}
+        <LienArticle slug="transmettre-patrimoine-engage-fonds-partage">
+          la transmission d'un patrimoine engagé
+        </LienArticle>{" "}
+        détaille le cadre.
       </p>
       <p>
         Le contrat luxembourgeois ajoute même une obligation : tout contrat souscrit hors de France
@@ -511,9 +524,11 @@ export function Corps() {
         <a href="/outils/comparateur-enveloppes">comparateur d'enveloppes</a>.
       </p>
       <p>
-        Et si votre situation se prête à la question luxembourgeoise — montants, exclusions à
-        contractualiser, comparaison des frais —, c'est exactement le type d'analyse que nous menons
-        lors d'un premier échange offert : documents à l'appui, sans jargon et sans engagement.
+        Et si la question luxembourgeoise vous concerne — montants, exclusions à contractualiser,
+        comparaison des frais —, vous pouvez{" "}
+        <a href="/cgp-investissement-responsable">échanger avec un conseiller du cabinet</a> lors
+        d'un premier échange offert, pour obtenir des pistes : documents à l'appui, sans jargon et
+        sans engagement.
       </p>
     </>
   );

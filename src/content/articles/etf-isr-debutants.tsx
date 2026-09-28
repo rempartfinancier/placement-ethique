@@ -3,7 +3,7 @@ import { LienArticle } from "./lien";
 
 export const meta: ArticleMeta = {
   slug: "etf-isr-debutants",
-  title: "Comment choisir un ETF ISR quand on débute ? La méthode en quatre documents",
+  title: "ETF ISR pour débutants : choisir en quatre documents",
   excerpt:
     "Le vrai choix d'un ETF ISR se joue dans l'indice qu'il réplique, pas dans son nom. La méthode en quatre documents pour vérifier avant d'acheter.",
   readingTime: "11 min",
@@ -92,7 +92,12 @@ export function Corps() {
         chaque secteur, les entreprises les mieux notées ESG — y compris dans des secteurs que vous
         pensiez peut-être exclus). Une compagnie pétrolière bien notée sur ses pratiques peut ainsi
         figurer dans un indice best-in-class large : ce n'est pas une anomalie, c'est un choix
-        méthodologique documenté. À vous de savoir s'il vous convient.
+        méthodologique documenté. À vous de savoir s'il vous convient — et de mesurer ce que change
+        chaque logique, comme le détaille notre article sur{" "}
+        <LienArticle slug="engagement-actionnarial-vs-exclusion">
+          l'exclusion et l'engagement actionnarial
+        </LienArticle>
+        .
       </p>
       <p>
         Voici les quatre familles que vous croiserez le plus souvent, du filtre le plus léger au
@@ -270,7 +275,9 @@ export function Corps() {
           <tr>
             <td>Compte-titres (CTO)</td>
             <td>Le plus large : tout ETF européen (UCITS) y est accessible</td>
-            <td>Gains imposés au fil des cessions (prélèvement forfaitaire unique ou barème)</td>
+            <td>
+              Gains imposés au fil des cessions (prélèvement forfaitaire unique de 31,4 % ou barème)
+            </td>
             <td>Aucun avantage fiscal : la discipline d'épargne repose sur vous</td>
           </tr>
         </tbody>
@@ -287,7 +294,15 @@ export function Corps() {
         </a>
         . En assurance vie, vérifiez la liste exacte des unités de compte avant d'ouvrir un contrat
         : c'est elle, et non la plaquette, qui dit si vous pourrez réellement construire une
-        allocation responsable.
+        allocation responsable (voir{" "}
+        <LienArticle slug="assurance-vie-isr-guide-2026">
+          comment choisir une assurance vie ISR
+        </LienArticle>{" "}
+        et, pour arbitrer entre enveloppes,{" "}
+        <LienArticle slug="quelle-enveloppe-investissement-ethique">
+          quelle enveloppe choisir pour investir éthique
+        </LienArticle>
+        ).
       </p>
       <div className="callout">
         <p>
@@ -349,7 +364,10 @@ export function Corps() {
           nous avons consacré un article entier à l'investissement éthique avec un petit budget
         </LienArticle>
         , si c'est votre situation. L'important est moins le montant de départ que la régularité et
-        l'horizon : un placement en actions se juge sur des années, pas sur des semaines.
+        l'horizon : un placement en actions se juge sur des années, pas sur des semaines. Pour
+        visualiser l'effet des frais sur vingt ans, notre{" "}
+        <a href="/outils/simulateur">simulateur d'épargne</a> fait le calcul avec des hypothèses
+        illustratives.
       </p>
 
       <h2>Vos questions sur les ETF ISR</h2>
@@ -426,10 +444,11 @@ export function Corps() {
         pistes sur la part d'actions cohérente avec votre horizon.
       </p>
       <p>
-        Et si vous préférez ne pas faire cette lecture seul, c'est précisément le métier de notre
-        cabinet : vérifier les documents avant de vous orienter, et vous expliquer ce que nous y
-        trouvons. Le premier échange est offert — venez avec le nom de l'ETF qui vous intrigue, nous
-        le décortiquerons ensemble, méthodologie et inventaire à l'appui.
+        Et si vous préférez ne pas faire cette lecture seul, c'est précisément le métier de{" "}
+        <a href="/cgp-investissement-responsable">notre cabinet</a> : vérifier les documents avec
+        vous et vous expliquer ce que nous y trouvons. Le premier échange est offert — venez avec le
+        nom de l'ETF qui vous intrigue, nous le décortiquerons ensemble, méthodologie et inventaire
+        à l'appui.
       </p>
     </>
   );

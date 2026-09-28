@@ -3,9 +3,9 @@ import { LienArticle } from "./lien";
 
 export const meta: ArticleMeta = {
   slug: "scpi-isr-environnementales-panorama",
-  title: "Quelles SCPI ISR ou environnementales existent en France ? Le panorama 2026",
+  title: "SCPI ISR : familles, liste officielle et méthode (2026)",
   excerpt:
-    "Label ISR immobilier, SFDR, thématiques vertes ou sociales : la cartographie des familles de SCPI responsables — et la méthode pour bâtir votre propre liste.",
+    "Label ISR immobilier, SFDR, thématiques vertes ou sociales : les familles de SCPI responsables, la liste officielle et une méthode pour choisir.",
   readingTime: "11 min",
   category: "Enveloppes",
   date: "2026-06-17",
@@ -48,7 +48,12 @@ export function Corps() {
         Dans ce panorama : ce que « SCPI ISR » veut dire précisément, la taille réelle de l'offre
         labellisée, les quatre familles de SCPI responsables et leurs points de vigilance, ce que
         garantissent (et ne garantissent pas) le label ISR immobilier et la classification SFDR,
-        puis notre méthode pour construire votre propre liste courte — documents à l'appui.
+        puis notre méthode pour construire votre propre liste courte — documents à l'appui. Pour
+        situer la pierre-papier dans une démarche d'ensemble, voir{" "}
+        <LienArticle slug="investissement-immobilier-responsable-commencer">
+          par où commencer un investissement immobilier responsable
+        </LienArticle>
+        .
       </p>
 
       <h2>Une SCPI « ISR » ou « environnementale », qu'est-ce que c'est exactement ?</h2>
@@ -223,10 +228,10 @@ export function Corps() {
         >
           le ministère de la Transition écologique
         </a>
-        . L'essentiel des immeubles de 2050 existant déjà, la valeur environnementale de la
-        pierre-papier se joue largement dans la rénovation de l'existant. D'où un débat légitime
-        entre deux lectures : acheter du neuf certifié donne un parc immédiatement exemplaire, mais
-        ne transforme rien ; améliorer de l'ancien a une additionnalité potentiellement plus forte —
+        . L'essentiel du parc de 2050 existant déjà, la valeur environnementale de la pierre-papier
+        se joue largement dans la rénovation de l'existant. D'où un débat légitime entre deux
+        lectures : acheter du neuf certifié donne un parc immédiatement exemplaire, mais ne
+        transforme rien ; améliorer de l'ancien a une additionnalité potentiellement plus forte —
         c'est la rénovation qui n'aurait peut-être pas eu lieu sans le fonds — au prix d'un parc
         temporairement moins performant. Aucune des deux approches n'est « la vraie » : notre grille
         de lecture, c'est qu'une trajectoire ne vaut que documentée — plan chiffré, échéances,
@@ -250,7 +255,11 @@ export function Corps() {
         transparence extra-financière : Article 8 pour ceux qui promeuvent des caractéristiques
         environnementales ou sociales, Article 9 pour ceux qui poursuivent un objectif
         d'investissement durable. C'est une auto-déclaration encadrée, pas un audit externe de la
-        réalité du portefeuille.
+        réalité du portefeuille. Nous détaillons ce que ces catégories garantissent dans{" "}
+        <LienArticle slug="sfdr-article-8-ou-9-ce-que-ca-garantit">
+          Article 8 ou 9 : ce que la classification SFDR garantit vraiment
+        </LienArticle>
+        .
       </p>
       <table>
         <thead>
@@ -316,9 +325,10 @@ export function Corps() {
         </li>
         <li>
           <strong>Le mur des conditions.</strong> Statuts et document d'informations clés : frais de
-          souscription (souvent proches de 10 % du montant investi — à vérifier pour chaque SCPI),
-          frais de gestion annuels, délai de jouissance, mécanisme de retrait des parts. Une
-          démarche ESG remarquable ne compense pas des conditions financières défavorables.
+          souscription (souvent de l'ordre de 12 % du montant investi — à vérifier pour chaque
+          SCPI), frais de gestion annuels, délai de jouissance, mécanisme de retrait des parts. Une
+          démarche ESG remarquable ne compense pas des conditions financières défavorables. La page{" "}
+          <a href="/tarifs">tarifs</a> détaille comment le cabinet est rémunéré sur les SCPI.
         </li>
         <li>
           <strong>Le mur du suivi.</strong> Le label est attribué pour une durée limitée et la
@@ -384,7 +394,8 @@ export function Corps() {
         la clé la fiscalité de l'assurance vie et une liquidité généralement organisée par
         l'assureur — mais aussi les frais du contrat qui s'ajoutent, et parfois des loyers
         partiellement reversés. L'arbitrage direct/assurance vie mérite un calcul à part entière :
-        notre guide sur{" "}
+        notre <a href="/outils/comparateur-enveloppes">comparateur d'enveloppes</a> et notre guide
+        sur{" "}
         <LienArticle slug="assurance-vie-isr-guide-2026">
           le choix d'une assurance vie ISR
         </LienArticle>{" "}
@@ -438,10 +449,13 @@ export function Corps() {
         filtrez la liste officielle.
       </p>
       <p>
-        Et si vous préférez mener cette vérification accompagné, c'est notre métier : lors d'un
-        premier échange offert, un conseiller du cabinet passe en revue avec vous votre présélection
-        de SCPI — rapport annuel, rapport ESG et conditions de souscription à l'appui — pour en
-        dégager des pistes claires, sans jargon et sans engagement.
+        Et si vous préférez mener cette vérification accompagné, vous pouvez{" "}
+        <a href="/cgp-investissement-responsable">
+          échanger avec un conseiller en gestion de patrimoine spécialisé en investissement
+          responsable
+        </a>{" "}
+        lors d'un premier échange offert, pour obtenir des pistes claires sur la lecture des
+        rapports ESG et des conditions de souscription, sans jargon et sans engagement.
       </p>
     </>
   );

@@ -3,7 +3,7 @@ import { LienArticle } from "./lien";
 
 export const meta: ArticleMeta = {
   slug: "label-isr-que-garantit-il-vraiment",
-  title: "Le Label ISR garantit-il qu'un fonds est vraiment éthique ?",
+  title: "Label ISR : garantit-il qu'un fonds est vraiment éthique ?",
   excerpt:
     "Non : le Label ISR certifie une méthodologie auditée, pas une éthique. Ce que le référentiel 2024 exclut désormais — et ce qu'il ne promet toujours pas.",
   readingTime: "11 min",
@@ -195,7 +195,11 @@ export function Corps() {
         exigeants parmi les labels généralistes européens — et durcir davantage aurait réduit
         l'univers investissable au point de marginaliser le label. Les deux raisonnements se
         tiennent ; le débat porte en réalité sur ce qu'on attend d'un label généraliste : écarter le
-        pire, ou ne retenir que l'exemplaire.
+        pire, ou ne retenir que l'exemplaire. Il rejoint celui que nous détaillons dans{" "}
+        <LienArticle slug="engagement-actionnarial-vs-exclusion">
+          « Exclure ou engager : quelle stratégie change vraiment les choses ? »
+        </LienArticle>
+        .
       </p>
       <p>
         Un fait donne la mesure du changement : au 1er janvier 2025, à l'issue de la période de
@@ -304,8 +308,8 @@ export function Corps() {
             </td>
             <td>Label public environnemental</td>
             <td>
-              Financement d'activités de la transition écologique, avec exclusion des énergies
-              fossiles et du nucléaire
+              Financement d'activités de la transition écologique, avec exclusion de la chaîne des
+              énergies fossiles (nucléaire éligible depuis 2024)
             </td>
             <td>Univers plus étroit ; ne couvre pas le volet social</td>
           </tr>
@@ -383,7 +387,11 @@ export function Corps() {
         Pour la première étape, notre <a href="/outils/decodeur-label">décodeur de labels</a> résume
         gratuitement ce que chaque label français garantit, ce qu'il ne garantit pas et où le
         vérifier. Il vous donne des pistes de lecture — la vérification finale reste toujours le
-        document officiel du fonds.
+        document officiel du fonds. Pour savoir quels fonds labellisés votre contrat propose, voir{" "}
+        <LienArticle slug="assurance-vie-isr-guide-2026">
+          comment choisir une assurance vie ISR
+        </LienArticle>
+        .
       </p>
 
       <h2>Vos questions sur le Label ISR</h2>
@@ -438,7 +446,11 @@ export function Corps() {
         OPCI figurent sur la liste officielle. Les exigences y sont adaptées à la nature de l'actif
         : elles portent notamment sur la stratégie d'amélioration ESG du patrimoine immobilier et
         l'engagement avec les locataires et gestionnaires, plutôt que sur une politique de vote en
-        assemblée générale.
+        assemblée générale. Pour comparer une SCPI labellisée à une SCPI classique, voir{" "}
+        <LienArticle slug="scpi-isr-vs-scpi-classique">
+          SCPI ISR ou SCPI classique : les différences réelles
+        </LienArticle>
+        .
       </p>
 
       <h3>Label ISR ou fonds « Article 9 » : lequel est le plus exigeant ?</h3>
@@ -463,7 +475,9 @@ export function Corps() {
         Vous avez maintenant la réponse complète. Le Label ISR ne certifie pas qu'un fonds est
         éthique : il certifie une méthodologie auditée, considérablement renforcée par la réforme.
         C'est un vrai filtre de sérieux, qui écarte le pire et documente le reste. Utilisé pour ce
-        qu'il est — un point de départ, jamais une conclusion —, il vous rend un service réel.
+        qu'il est — un point de départ, jamais une conclusion —, il vous rend un service réel. Pour
+        replacer le label dans l'ensemble des choix d'épargne, voir notre{" "}
+        <a href="/placement-ethique">page de référence sur le placement éthique</a>.
       </p>
       <p>
         L'ignorer a un coût, mais mal le comprendre aussi. Choisir un fonds sur la seule foi du
@@ -482,10 +496,12 @@ export function Corps() {
         inscription, la fiche de lecture de chaque label français.
       </p>
       <p>
-        Enfin, si vous préférez faire cette vérification à deux, c'est notre métier : lors d'un
-        premier échange offert, un conseiller du cabinet passe en revue avec vous ce que contiennent
-        réellement vos placements actuels — labels vérifiés sur les listes officielles, documents à
-        l'appui, sans jargon et sans engagement.
+        Enfin, si vous préférez faire cette vérification à deux, c'est notre métier : vous pouvez{" "}
+        <a href="/cgp-investissement-responsable">
+          échanger avec un conseiller en investissement responsable
+        </a>{" "}
+        sur les labels et les inventaires de vos placements actuels. Le premier échange est offert
+        et sans engagement : vous en repartez avec des pistes à vérifier sur les listes officielles.
       </p>
     </>
   );

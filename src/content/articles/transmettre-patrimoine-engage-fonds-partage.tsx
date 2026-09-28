@@ -3,9 +3,9 @@ import { LienArticle } from "./lien";
 
 export const meta: ArticleMeta = {
   slug: "transmettre-patrimoine-engage-fonds-partage",
-  title: "Transmettre un patrimoine engagé : succession, legs et fonds de partage",
+  title: "Léguer à une association : quotité, fiscalité, alternatives",
   excerpt:
-    "Réserve héréditaire, quotité disponible, legs à une association, clause bénéficiaire, fonds de partage : ce que le droit permet réellement de transmettre à une cause.",
+    "Réserve héréditaire, quotité disponible, legs, clause bénéficiaire, fonds de partage : ce que le droit permet réellement de transmettre à une cause.",
   readingTime: "10 min",
   category: "Transmission",
   date: "2026-07-01",
@@ -236,7 +236,12 @@ export function Corps() {
         épargne reste investie normalement, mais au moins 25 % de son rendement est reversé en dons
         à des organismes d&rsquo;intérêt général, pendant que le capital vous appartient toujours.
         C&rsquo;est un outil vivant, pas un outil de succession — et c&rsquo;est précisément là
-        qu&rsquo;il faut être honnête sur ses limites.
+        qu&rsquo;il faut être honnête sur ses limites. Sur l&rsquo;épargne solidaire au sens large,
+        voir{" "}
+        <LienArticle slug="livrets-epargne-solidaire-alternative-livret-a">
+          l&rsquo;épargne solidaire comme alternative au Livret A
+        </LienArticle>
+        .
       </p>
       <p>
         Si ce fonds est logé dans une assurance vie, rappelons ce que nous avons établi dans notre
@@ -253,7 +258,16 @@ export function Corps() {
       <p>
         Aucun outil juridique ne peut en revanche obliger un héritier majeur à réinvestir un capital
         reçu dans un fonds de partage après votre décès. La continuité de la démarche solidaire, à
-        ce stade, tient à la pédagogie que vous aurez transmise — pas à une clause.
+        ce stade, tient à la pédagogie que vous aurez transmise — pas à une clause. Sur ce terrain,
+        voir{" "}
+        <LienArticle slug="assurance-vie-enfants-transmettre-valeurs">
+          ouvrir une assurance vie à ses enfants pour transmettre aussi ses valeurs
+        </LienArticle>{" "}
+        et{" "}
+        <LienArticle slug="heritage-donation-investir-valeurs">
+          comment investir un héritage ou une donation reçue en cohérence avec ses valeurs
+        </LienArticle>
+        .
       </p>
 
       <h2>
@@ -314,7 +328,11 @@ export function Corps() {
         <LienArticle slug="assurance-vie-isr-guide-2026">
           guide de l&rsquo;assurance vie ISR
         </LienArticle>{" "}
-        détaille le choix du contrat et des supports en amont de cette question.
+        détaille le choix du contrat et des supports en amont de cette question. Si vous détenez
+        aussi un PER, sa clause bénéficiaire obéit à d&rsquo;autres règles :{" "}
+        <LienArticle slug="per-protection-familiale">
+          le PER protège-t-il votre famille au-delà de l&rsquo;avantage fiscal ?
+        </LienArticle>
       </p>
 
       <h2>Comment structurer une transmission engagée en 5 étapes ?</h2>
@@ -443,10 +461,14 @@ export function Corps() {
         décrit ce à quoi ressemble un premier échange sur ces questions.
       </p>
       <p>
-        Et si vous préférez poser votre situation sur la table — quotité disponible, statut des
-        organismes envisagés, articulation avec votre contrat d&rsquo;assurance vie —, un conseiller
-        du cabinet passe régulièrement en revue ces sujets lors d&rsquo;un premier échange offert :
-        des pistes concrètes, à valider ensuite avec votre notaire pour la rédaction des actes.
+        Et si vous préférez aborder ces questions à deux, vous pouvez{" "}
+        <a href="/cgp-investissement-responsable">
+          échanger avec un conseiller en gestion de patrimoine spécialisé en investissement
+          responsable
+        </a>{" "}
+        lors d&rsquo;un premier échange offert : des pistes sur la quotité disponible, le statut des
+        organismes envisagés et l&rsquo;articulation avec votre contrat d&rsquo;assurance vie, à
+        valider ensuite avec votre notaire pour la rédaction des actes.
       </p>
     </>
   );

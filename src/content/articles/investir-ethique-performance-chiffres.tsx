@@ -3,9 +3,9 @@ import { LienArticle } from "./lien";
 
 export const meta: ArticleMeta = {
   slug: "investir-ethique-performance-chiffres",
-  title: "Investir éthique rapporte-t-il moins ? Ce que disent vraiment les chiffres",
+  title: "Investir éthique rapporte-t-il moins ? Les chiffres ESMA",
   excerpt:
-    "Méta-études académiques et données officielles ESMA ne montrent aucune pénalité structurelle de rendement — mais pas de prime garantie non plus. Les chiffres, sourcés.",
+    "Études académiques et données ESMA : pas de pénalité structurelle de rendement pour les fonds ESG, mais pas de prime garantie non plus. Chiffres sourcés.",
   readingTime: "11 min",
   category: "Performance",
   date: "2026-05-26",
@@ -218,13 +218,16 @@ export function Corps() {
         Lecture honnête de ce tableau : sur la classe d'actifs qui pèse le plus dans une épargne de
         long terme — les actions —, les fonds ESG font légèrement mieux que l'ensemble du marché sur
         cinq ans, avec des frais courants légèrement inférieurs. Sur l'obligataire, les mixtes et
-        les ETF actions, ils sont légèrement derrière. Aucune catégorie ne montre l'effondrement que
-        prédit le cliché, ni la surperformance que promettent certaines plaquettes. Précisions de
-        méthode : la colonne « ensemble des fonds » inclut les fonds ESG eux-mêmes, et la définition
-        « ESG » retenue par l'ESMA s'appuie sur les attributs de durabilité de Morningstar. Surtout,
-        ces chiffres décrivent une période passée précise : ils ne préjugent pas des performances
-        futures, et tout placement en fonds — éthique ou non — présente un risque de perte en
-        capital.
+        les ETF actions, ils sont légèrement derrière (pour le segment obligataire, voir{" "}
+        <LienArticle slug="obligations-vertes-vs-obligations-classiques">
+          obligations vertes ou classiques : les différences réelles
+        </LienArticle>
+        ). Aucune catégorie ne montre l'effondrement que prédit le cliché, ni la surperformance que
+        promettent certaines plaquettes. Précisions de méthode : la colonne « ensemble des fonds »
+        inclut les fonds ESG eux-mêmes, et la définition « ESG » retenue par l'ESMA s'appuie sur les
+        attributs de durabilité de Morningstar. Surtout, ces chiffres décrivent une période passée
+        précise : ils ne préjugent pas des performances futures, et tout placement en fonds —
+        éthique ou non — présente un risque de perte en capital.
       </p>
 
       <h2>Pourquoi les fonds éthiques font-ils moins bien certaines années ?</h2>
@@ -284,25 +287,32 @@ export function Corps() {
         courants des fonds ESG sont en moyenne <strong>inférieurs ou comparables</strong> à ceux de
         leurs équivalents classiques — c'était encore le cas sur les données 2024, comme le montre
         le tableau ci-dessus, avec des exceptions à connaître (les ETF actions ESG et les fonds
-        mixtes ESG de l'échantillon ressortent légèrement au-dessus). Le « surcoût de l'éthique »
-        que l'on vous oppose parfois n'est pas confirmé par les chiffres européens.
+        mixtes ESG de l'échantillon ressortent légèrement au-dessus ; sur les ETF, voir{" "}
+        <LienArticle slug="etf-isr-debutants">
+          comment choisir un ETF ISR quand on débute
+        </LienArticle>
+        ). Le « surcoût de l'éthique » que l'on vous oppose parfois n'est pas confirmé par les
+        chiffres européens.
       </p>
       <p>
         En revanche, ce qui ampute réellement un rendement final, ce sont les frais
         <em> empilés</em> : frais d'entrée, frais de gestion du fonds, frais de l'enveloppe
-        (assurance vie, PER, compte-titres) qui s'additionnent année après année. Un écart de 0,5
-        point de frais annuels pèse, sur vingt ans, du même ordre que les écarts de performance
-        mesurés ci-dessus entre fonds ESG et non ESG — à la différence près que les frais, eux, sont
-        certains et connus d'avance. C'est un calcul que vous pouvez faire vous-même : notre{" "}
+        (assurance vie, PER, compte-titres — pour l'assurance vie, voir{" "}
+        <LienArticle slug="assurance-vie-isr-guide-2026">
+          comment choisir une assurance vie ISR
+        </LienArticle>
+        ) qui s'additionnent année après année. Un écart de 0,5 point de frais annuels pèse, sur
+        vingt ans, du même ordre que les écarts de performance mesurés ci-dessus entre fonds ESG et
+        non ESG — à la différence près que les frais, eux, sont certains et connus d'avance. C'est
+        un calcul que vous pouvez faire vous-même : notre{" "}
         <a href="/outils/simulateur">simulateur d'épargne</a> projette votre effort d'épargne avec
         les frais réels, ligne par ligne, et vous montre ce que chaque strate coûte à l'arrivée.
       </p>
 
       <h2>Comment comparer honnêtement la performance d'un fonds éthique ?</h2>
       <p>
-        Voici la règle que nous appliquons en rendez-vous, facile à retenir : la règle des{" "}
-        <strong>« quatre mêmes »</strong>. Une comparaison de performance n'a de sens que si elle se
-        fait à conditions identiques.
+        Voici une règle facile à retenir : la règle des <strong>« quatre mêmes »</strong>. Une
+        comparaison de performance n'a de sens que si elle se fait à conditions identiques.
       </p>
       <ol>
         <li>
@@ -428,7 +438,11 @@ export function Corps() {
       <p>
         La suite logique de cette lecture : une fois la question du rendement dégonflée, le vrai
         risque de l'investissement éthique redevient visible — acheter un produit qui ne tient pas
-        ses promesses extra-financières. Notre{" "}
+        ses promesses extra-financières (voir aussi{" "}
+        <LienArticle slug="pieges-inconvenients-investissement-ethique">
+          les pièges et inconvénients de l'investissement éthique
+        </LienArticle>
+        ). Notre{" "}
         <LienArticle slug="reperer-greenwashing-fonds-vert-methode">
           méthode pour repérer le greenwashing d'un fonds « vert »
         </LienArticle>{" "}
@@ -439,9 +453,9 @@ export function Corps() {
       </p>
       <p>
         Enfin, si vous préférez mener cet examen accompagné, c'est notre métier : lors d'un premier
-        échange offert, un conseiller du cabinet passe en revue avec vous les performances, les
-        indices de référence et les frais réels de vos supports actuels — documents à l'appui, sans
-        jargon et sans engagement.
+        échange offert, <a href="/cgp-investissement-responsable">un conseiller du cabinet</a> peut
+        vous aider à obtenir des pistes de lecture des performances, des indices de référence et des
+        frais réels de vos supports actuels — documents à l'appui, sans jargon et sans engagement.
       </p>
     </>
   );

@@ -3,9 +3,9 @@ import { LienArticle } from "./lien";
 
 export const meta: ArticleMeta = {
   slug: "reperer-greenwashing-fonds-vert-methode",
-  title: "Comment savoir si un fonds « vert » est du greenwashing ? La méthode 4P",
+  title: "Comment savoir si un fonds « vert » est du greenwashing ?",
   excerpt:
-    "Le greenwashing se repère dans les documents réglementaires, pas dans la brochure : la méthode 4P — Promesse, Preuve, Portefeuille, Persistance — pas à pas.",
+    "Le greenwashing se repère dans les documents réglementaires, pas dans la brochure : la méthode 4P — Promesse, Preuve, Portefeuille, Persistance.",
   readingTime: "11 min",
   category: "Labels & Greenwashing",
   date: "2026-05-17",
@@ -81,7 +81,12 @@ export function Corps() {
         Une nuance d'honnêteté s'impose : le greenwashing caractérisé, sanctionnable, est une chose
         ; la zone grise du marketing en est une autre, bien plus vaste. La plupart des fonds
         décevants ne mentent pas — ils laissent entendre. C'est exactement pour cela qu'une méthode
-        de lecture vaut mieux qu'un procès d'intention : elle fonctionne dans les deux cas.
+        de lecture vaut mieux qu'un procès d'intention : elle fonctionne dans les deux cas. Le
+        greenwashing n'est d'ailleurs qu'un des{" "}
+        <LienArticle slug="pieges-inconvenients-investissement-ethique">
+          pièges et inconvénients de l'investissement éthique
+        </LienArticle>{" "}
+        qu'il vaut mieux connaître avant de se lancer.
       </p>
 
       <h2>Un fonds peut-il encore s'appeler « vert » sans l'être vraiment ?</h2>
@@ -220,9 +225,8 @@ export function Corps() {
 
       <h2>La méthode 4P : comment vérifier un fonds vert, étape par étape ?</h2>
       <p>
-        Voici la méthode complète que nous appliquons nous-mêmes avant d'inscrire un fonds dans nos
-        pistes. Elle prolonge le triptyque Promesse → Preuve → Portefeuille que nous avons introduit
-        dans{" "}
+        Voici la méthode complète que nous vous proposons d'appliquer avant de retenir un fonds.
+        Elle prolonge le triptyque Promesse → Preuve → Portefeuille que nous avons introduit dans{" "}
         <LienArticle slug="isr-esg-impact-investing-differences">
           notre décodage des termes ISR, ESG et impact investing
         </LienArticle>{" "}
@@ -262,7 +266,12 @@ export function Corps() {
           publiés par la société de gestion. Regardez au minimum les dix premières lignes et les
           principaux secteurs : correspondent-ils à ce que la promesse vous a laissé imaginer ?
           Croisez avec la politique d'exclusion annoncée — si une activité censément exclue apparaît
-          dans les lignes, vous avez votre réponse.
+          dans les lignes, vous avez votre réponse. Exclusion et engagement actionnarial sont deux
+          stratégies différentes, que{" "}
+          <LienArticle slug="engagement-actionnarial-vs-exclusion">
+            notre comparatif exclusion ou engagement
+          </LienArticle>{" "}
+          décrit en détail.
         </li>
         <li>
           <strong>Persistance — contrôler la tenue dans le temps.</strong> Un fonds peut être
@@ -350,7 +359,11 @@ export function Corps() {
         l'indice répliqué : c'est donc la méthodologie de l'indice qu'il faut lire (critères
         d'inclusion, seuils d'exclusion, fréquence de révision), et elle est publiée par le
         fournisseur d'indice. La méthode 4P s'applique de la même façon, simplement à un document
-        différent.
+        différent. Pour choisir le véhicule lui-même, voir{" "}
+        <LienArticle slug="etf-isr-debutants">
+          comment choisir un ETF ISR quand on débute
+        </LienArticle>
+        .
       </p>
 
       <h3>Que faire si je découvre que mon fonds actuel ne correspond pas à sa promesse ?</h3>
@@ -384,13 +397,18 @@ export function Corps() {
         replace cette vérification dans la démarche d'ensemble, du choix de l'enveloppe à la
         sélection des supports — c'est le bon point d'entrée si vous construisez votre stratégie. Et
         notre <a href="/outils/decodeur-label">décodeur de labels</a> vous donne, gratuitement, la
-        fiche de lecture de chaque label français pour accélérer l'étape « Preuve ».
+        fiche de lecture de chaque label français pour accélérer l'étape « Preuve ». Le cadre
+        d'ensemble de la démarche est posé sur notre page{" "}
+        <a href="/placement-ethique">placement éthique</a>.
       </p>
       <p>
-        Et si vous préférez mener cette enquête à deux, c'est notre quotidien : lors d'un premier
-        échange offert, un conseiller du cabinet passe vos fonds actuels au crible de cette méthode
-        avec vous — documents ouverts à l'écran, écarts constatés ensemble, sans jargon et sans
-        engagement.
+        Et si vous préférez aborder ces documents à deux, vous pouvez{" "}
+        <a href="/cgp-investissement-responsable">
+          échanger avec un conseiller en gestion de patrimoine spécialisé en investissement
+          responsable
+        </a>{" "}
+        lors d'un premier échange offert : pour comprendre comment lire un DIC, une annexe SFDR ou
+        un inventaire, et obtenir des pistes, sans jargon et sans engagement.
       </p>
     </>
   );

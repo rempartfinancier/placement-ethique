@@ -3,9 +3,9 @@ import { LienArticle } from "./lien";
 
 export const meta: ArticleMeta = {
   slug: "per-vs-assurance-vie-isr",
-  title: "PER ou assurance vie pour investir responsable : comment choisir ?",
+  title: "PER ou assurance vie ISR : comment choisir ?",
   excerpt:
-    "Les deux enveloppes donnent accès aux mêmes supports labellisés, ou presque. Le vrai choix se joue sur l'impôt, la disponibilité de l'épargne et la transmission.",
+    "Mêmes supports labellisés, ou presque : le choix entre PER et assurance vie ISR se joue sur l'impôt, la disponibilité de l'épargne et la transmission.",
   readingTime: "12 min",
   category: "Enveloppes",
   date: "2026-06-07",
@@ -52,7 +52,8 @@ export function Corps() {
         Dans cet article : ce que chaque enveloppe offre réellement côté investissement responsable,
         les différences fiscales — chiffres vérifiés et sourcés —, un tableau comparatif pensé pour
         votre décision, et notre méthode en trois questions. Avec, à la clé, une réponse souvent
-        plus confortable que le duel annoncé.
+        plus confortable que le duel annoncé. Retrouvez aussi{" "}
+        <a href="/enveloppes">toutes les enveloppes expliquées une à une</a>.
       </p>
 
       <h2>L'offre responsable est-elle meilleure en assurance vie ou en PER ?</h2>
@@ -78,7 +79,11 @@ export function Corps() {
         <em>contrats</em> : d'un contrat à l'autre, l'offre labellisée va du strict minimum légal —
         une unité de compte par catégorie, ce qui n'est pas une gamme — à plusieurs dizaines de
         fonds. Avant de choisir une enveloppe, demandez la liste complète des supports et comptez ce
-        qui est réellement labellisé.
+        qui est réellement labellisé. Certains épargnants regardent aussi du côté de{" "}
+        <LienArticle slug="assurance-vie-luxembourgeoise-investissement-responsable">
+          l'assurance vie luxembourgeoise
+        </LienArticle>{" "}
+        pour élargir la gamme.
       </p>
       <p>
         Un point de vigilance propre au PER : la loi Pacte a fait de la{" "}
@@ -227,7 +232,10 @@ export function Corps() {
               <strong>Changer d'établissement</strong>
             </td>
             <td>Transférable : gratuit après 5 ans de détention, frais plafonnés à 1 % avant</td>
-            <td>Non transférable d'un assureur à l'autre sans perdre l'antériorité fiscale</td>
+            <td>
+              Non transférable vers un autre assureur sans perdre l'antériorité fiscale (une
+              transformation reste possible au sein du même assureur)
+            </td>
           </tr>
           <tr>
             <td>
@@ -241,7 +249,12 @@ export function Corps() {
       <p>
         Lisez ce tableau comme une carte, pas comme un podium : chaque ligne est un arbitrage, et la
         « meilleure » colonne dépend de la ligne qui compte le plus pour vous. Les trois lignes
-        décisives, pour la plupart des lecteurs : l'entrée, la disponibilité, la transmission.
+        décisives, pour la plupart des lecteurs : l'entrée, la disponibilité, la transmission. Pour
+        situer aussi le PEA et le compte-titres, voir{" "}
+        <LienArticle slug="quelle-enveloppe-investissement-ethique">
+          notre comparatif des quatre enveloppes
+        </LienArticle>
+        .
       </p>
 
       <h2>Pouvez-vous récupérer votre argent avant la retraite ?</h2>
@@ -428,7 +441,11 @@ export function Corps() {
         Attendre a, en revanche, un coût bien réel : chaque année qui passe sans décision est un
         plafond de déduction partiellement perdu, une année de moins au compteur des huit ans de
         l'assurance vie — et douze mois de plus pendant lesquels votre épargne finance ce que vous
-        n'avez pas choisi.
+        n'avez pas choisi. Pour raisonner par montant, voir{" "}
+        <LienArticle slug="ou-placer-argent-facon-ethique-montant">
+          où placer 50 000, 100 000 ou 300 000 € de façon éthique
+        </LienArticle>
+        .
       </p>
       <p>
         Pour la suite logique de cette lecture : si votre profil penche vers la souplesse, notre
@@ -445,9 +462,10 @@ export function Corps() {
       </p>
       <p>
         Et si vous préférez poser vos chiffres sur la table plutôt que de trancher seul : c'est
-        notre métier. Lors d'un premier échange offert, un conseiller du cabinet passe en revue avec
-        vous votre imposition, votre horizon et vos clauses bénéficiaires — documents à l'appui,
-        sans jargon et sans engagement.
+        notre métier. Lors d'un premier échange offert, vous pouvez échanger avec un conseiller du
+        cabinet sur votre imposition, votre horizon et vos clauses bénéficiaires — documents à
+        l'appui, sans jargon et sans engagement. Découvrez{" "}
+        <a href="/cgp-investissement-responsable">l'accompagnement du cabinet</a>.
       </p>
     </>
   );

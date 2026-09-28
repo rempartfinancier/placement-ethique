@@ -3,9 +3,9 @@ import { LienArticle } from "./lien";
 
 export const meta: ArticleMeta = {
   slug: "label-greenfin-vs-label-isr",
-  title: "Label Greenfin ou Label ISR : lequel choisir pour votre épargne ?",
+  title: "Label Greenfin vs Label ISR : différences et choix",
   excerpt:
-    "Deux labels publics, deux promesses : le Label ISR certifie une méthodologie ESG globale, Greenfin un portefeuille qui finance la transition, fossiles exclus.",
+    "Label ISR ou Greenfin ? L'un certifie une méthode ESG globale, l'autre un portefeuille finançant la transition, fossiles exclus. Comparatif pour choisir.",
   readingTime: "11 min",
   category: "Labels & Greenwashing",
   date: "2026-05-11",
@@ -93,11 +93,15 @@ export function Corps() {
       </p>
       <p>
         Le périmètre du Label ISR est large : fonds actions, obligataires, monétaires, et même fonds
-        immobiliers (SCPI, OPCI), qui disposent de leur propre déclinaison du référentiel. C'est sa
-        force — vous trouverez des fonds labellisés ISR dans pratiquement tous les contrats — et sa
-        limite : un label aussi répandu certifie une méthode, pas un contenu. Deux fonds labellisés
-        peuvent avoir des portefeuilles très différents, et un fonds labellisé peut détenir des
-        entreprises qui vous surprendront. Nous avons consacré une analyse entière à cette nuance :{" "}
+        immobiliers (SCPI, OPCI), qui disposent de leur propre déclinaison du référentiel — voir{" "}
+        <LienArticle slug="scpi-isr-vs-scpi-classique">
+          SCPI ISR ou SCPI classique : les différences réelles
+        </LienArticle>
+        . C'est sa force — vous trouverez des fonds labellisés ISR dans pratiquement tous les
+        contrats — et sa limite : un label aussi répandu certifie une méthode, pas un contenu. Deux
+        fonds labellisés peuvent avoir des portefeuilles très différents, et un fonds labellisé peut
+        détenir des entreprises qui vous surprendront. Nous avons consacré une analyse entière à
+        cette nuance :{" "}
         <LienArticle slug="label-isr-que-garantit-il-vraiment">
           ce que le Label ISR garantit vraiment — et ce qu'il ne garantit pas
         </LienArticle>{" "}
@@ -256,12 +260,13 @@ export function Corps() {
       <p>
         Greenfin applique l'exclusion la plus radicale du paysage français : l'ensemble de la chaîne
         de valeur — exploration, production, transformation, transport du pétrole, du charbon et du
-        gaz — est incompatible avec le label. Le Label ISR, depuis sa version 2025, exclut le
-        charbon et les hydrocarbures non conventionnels au-delà de seuils stricts, ainsi que les
-        entreprises lançant de nouveaux projets d'hydrocarbures ; mais il n'interdit pas toute
-        exposition au secteur de l'énergie. En clair : « zéro fossile » est une promesse Greenfin,
-        pas une promesse Label ISR. Si c'est votre ligne rouge, vous savez quel tampon chercher — et
-        l'inventaire du fonds reste la vérification finale.
+        gaz — est incompatible avec le label. Le Label ISR, depuis son référentiel V3 (mars 2024,
+        généralisé au 1er janvier 2025), exclut le charbon et les hydrocarbures non conventionnels
+        au-delà de seuils stricts, ainsi que les entreprises lançant de nouveaux projets
+        d'hydrocarbures ; mais il n'interdit pas toute exposition au secteur de l'énergie. En clair
+        : « zéro fossile » est une promesse Greenfin, pas une promesse Label ISR. Si c'est votre
+        ligne rouge, vous savez quel tampon chercher — et l'inventaire du fonds reste la
+        vérification finale.
       </p>
       <h3>Sur le nucléaire</h3>
       <p>
@@ -323,13 +328,21 @@ export function Corps() {
         </a>
         . Le minimum légal reste un minimum — une unité de compte par catégorie, ce n'est pas une
         gamme — mais il garantit que la comparaison de cet article a une traduction concrète dans
-        votre contrat.
+        votre contrat. Pour comparer les gammes, voir{" "}
+        <LienArticle slug="assurance-vie-isr-guide-2026">
+          comment choisir une assurance vie ISR
+        </LienArticle>
+        .
       </p>
       <p>
         Notre grille de lecture, assumée : un label est un point de départ, jamais une conclusion.
         Il vous épargne l'analyse de centaines de fonds en présélectionnant ceux qui respectent un
         référentiel public audité — c'est précieux. Mais aucun tampon ne remplace la lecture de ce
-        que le fonds détient réellement.
+        que le fonds détient réellement. Côté européen,{" "}
+        <LienArticle slug="sfdr-article-8-ou-9-ce-que-ca-garantit">
+          ce que les Articles 8 et 9 garantissent vraiment
+        </LienArticle>{" "}
+        complète cette grille.
       </p>
 
       <h2>Comment vérifier qu'un fonds porte vraiment l'un de ces labels ?</h2>
@@ -474,12 +487,17 @@ export function Corps() {
         transforme la vigilance de cet article en réflexes de détection — indispensable pour les
         fonds qui se disent verts <em>sans</em> label. Et notre{" "}
         <a href="/outils/decodeur-label">décodeur de labels</a> vous donne, en quelques minutes, la
-        fiche de lecture de chaque tampon du marché.
+        fiche de lecture de chaque tampon du marché. La vue d'ensemble est sur notre{" "}
+        <a href="/placement-ethique">page de référence sur le placement éthique</a>.
       </p>
       <p>
-        Enfin, si vous préférez faire ce tri à deux : c'est notre métier. Lors d'un premier échange
-        offert, un conseiller du cabinet passe en revue avec vous les labels et les inventaires de
-        vos placements actuels — documents à l'appui, sans jargon et sans engagement.
+        Enfin, si vous préférez faire ce tri à deux : c'est notre métier. Vous pouvez{" "}
+        <a href="/cgp-investissement-responsable">
+          échanger avec un conseiller en investissement responsable
+        </a>{" "}
+        sur les labels et les inventaires de vos placements actuels. Le premier échange est offert
+        et sans engagement : vous en repartez avec des pistes à vérifier dans les documents
+        officiels.
       </p>
     </>
   );

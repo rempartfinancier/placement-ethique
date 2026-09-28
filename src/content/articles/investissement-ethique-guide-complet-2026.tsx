@@ -3,9 +3,9 @@ import { LienArticle } from "./lien";
 
 export const meta: ArticleMeta = {
   slug: "investissement-ethique-guide-complet-2026",
-  title: "Investissement éthique : le guide complet pour bien commencer en 2026",
+  title: "Investissement éthique : guide complet pour débuter (2026)",
   excerpt:
-    "Définir vos exclusions, décoder les labels et la classification SFDR, choisir la bonne enveloppe : la méthode pas à pas pour investir éthique sans greenwashing.",
+    "Exclusions, labels ISR, Greenfin, Finansol, SFDR, enveloppes : la méthode pas à pas pour investir éthique en 2026 sans tomber dans le greenwashing.",
   readingTime: "15 min",
   category: "Fondamentaux",
   date: "2026-04-16",
@@ -55,7 +55,9 @@ export function Corps() {
         vous saurez ce que recouvrent exactement les termes ISR, ESG et impact, ce que les labels et
         la réglementation garantissent vraiment, comment repérer un produit trop beau pour être
         vert, quelle enveloppe fiscale choisir, et dans quel ordre avancer. Chaque affirmation
-        vérifiable est sourcée — c'est la règle de la maison.
+        vérifiable est sourcée — c'est la règle de la maison. Il s'inscrit dans notre{" "}
+        <a href="/placement-ethique">page de référence sur le placement éthique</a>, qui donne la
+        vue d'ensemble du sujet : ici, vous avez la méthode pas à pas.
       </p>
 
       <h2>Qu'est-ce que l'investissement éthique, concrètement ?</h2>
@@ -257,7 +259,12 @@ export function Corps() {
         Morningstar, quand il est apparu que leurs portefeuilles ne soutenaient pas le niveau
         d'exigence déclaré. La classification SFDR est donc un signal utile — un fonds Article 9
         s'engage sur un objectif durable et doit en rendre compte dans des annexes réglementaires
-        précises — mais elle se vérifie, elle ne se croit pas sur parole.
+        précises — mais elle se vérifie, elle ne se croit pas sur parole. Pour le détail article par
+        article, lisez{" "}
+        <LienArticle slug="sfdr-article-8-ou-9-ce-que-ca-garantit">
+          ce que les Articles 8 et 9 garantissent vraiment
+        </LienArticle>
+        .
       </p>
 
       <h2>Comment repérer le greenwashing avant d'investir ?</h2>
@@ -299,7 +306,11 @@ export function Corps() {
         Pour vous entraîner sans risque, notre{" "}
         <a href="/outils/decodeur-label">décodeur de labels</a> passe en revue ce que chaque tampon
         garantit, ce qu'il ne garantit pas, et où vérifier qu'un fonds le détient réellement —
-        l'outil donne des pistes de vérification, pas des verdicts.
+        l'outil donne des pistes de vérification, pas des verdicts. Pour aller plus loin, notre{" "}
+        <LienArticle slug="reperer-greenwashing-fonds-vert-methode">
+          méthode pour repérer le greenwashing d'un fonds « vert »
+        </LienArticle>{" "}
+        détaille les signaux d'alerte un par un.
       </p>
 
       <h2>Investir éthique rapporte-t-il moins ?</h2>
@@ -344,7 +355,12 @@ export function Corps() {
           labellisée Greenfin et une solidaire
         </a>
         . C'est un plancher réglementaire, pas un gage de qualité de l'offre — certains contrats
-        s'arrêtent au minimum légal, d'autres référencent des dizaines de supports labellisés.
+        s'arrêtent au minimum légal, d'autres référencent des dizaines de supports labellisés. Notre
+        guide pour{" "}
+        <LienArticle slug="assurance-vie-isr-guide-2026">
+          choisir une assurance vie ISR en 2026
+        </LienArticle>{" "}
+        montre comment comparer ces gammes.
       </p>
       <table>
         <thead>
@@ -486,7 +502,11 @@ export function Corps() {
         Oui. La plupart des contrats d'assurance vie s'ouvrent avec quelques centaines d'euros, et
         les versements programmés se paramètrent souvent à partir de quelques dizaines d'euros par
         mois. Le montant compte moins que la régularité et la durée : commencer petit et tôt vaut
-        mieux qu'attendre d'avoir « assez ».
+        mieux qu'attendre d'avoir « assez ». Notre article sur{" "}
+        <LienArticle slug="investir-ethique-petit-budget">
+          l'investissement éthique avec un petit budget
+        </LienArticle>{" "}
+        développe cette question.
       </p>
       <h3>Le Livret A est-il un placement éthique ?</h3>
       <p>
@@ -558,11 +578,13 @@ export function Corps() {
         premières vérifications en quelques minutes.
       </p>
       <p>
-        Enfin, si vous préférez avancer accompagné : c'est notre métier. Notre cabinet applique à
-        chaque placement la méthode décrite ici — vérifier les documents réglementaires, expliquer
-        ce que les labels garantissent, suivre dans la durée. Le premier échange avec un conseiller
-        est offert et sans engagement : vous en repartez avec des pistes concrètes et, surtout, la
-        méthode pour les vérifier vous-même.
+        Enfin, si vous préférez avancer accompagné : c'est notre métier. Vous pouvez{" "}
+        <a href="/cgp-investissement-responsable">
+          prendre rendez-vous pour échanger avec un conseiller en investissement responsable
+        </a>{" "}
+        : nous partons de la méthode décrite ici — vérifier les documents réglementaires, expliquer
+        ce que les labels garantissent, suivre dans la durée. Le premier échange est offert et sans
+        engagement : vous en repartez avec des pistes à vérifier vous-même.
       </p>
     </>
   );

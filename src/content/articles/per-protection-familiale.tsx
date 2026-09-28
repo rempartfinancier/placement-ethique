@@ -3,9 +3,9 @@ import { LienArticle } from "./lien";
 
 export const meta: ArticleMeta = {
   slug: "per-protection-familiale",
-  title: "Le PER protège-t-il votre famille au-delà de l'avantage fiscal ?",
+  title: "PER et décès : fiscalité et protection de vos proches",
   excerpt:
-    "Clause bénéficiaire, règle des 70 ans au décès, déblocage en cas d'accident de la vie, réversion : ce que le PER protège vraiment — et les réglages décisifs.",
+    "Clause bénéficiaire, règle des 70 ans, déblocage en cas d'accident de la vie, réversion : ce que le PER assurantiel protège pour votre famille.",
   readingTime: "11 min",
   category: "Enveloppes",
   date: "2026-06-09",
@@ -255,11 +255,16 @@ export function Corps() {
         <p>
           <strong>Hypothèse illustrative</strong> (hors autres contrats du défunt et hors situations
           particulières) : un PER de 160 000 € transmis à deux enfants à parts égales. Décès à 67
-          ans : chaque enfant reçoit 80 000 €, sous l'abattement de 152 500 € — aucun prélèvement.
-          Décès à 74 ans avec la même épargne : après l'abattement global de 30 500 €, ce sont 129
-          500 € qui rejoignent l'assiette des droits de succession, taxés ensuite selon les
-          abattements et le barème applicables au lien de parenté. Même contrat, même montant :
-          seule la date du décès a changé.
+          ans : chaque enfant reçoit 80 000 €, sous l'abattement de 152 500 € — aucun prélèvement,
+          et l'abattement de 100 000 € par enfant sur la succession reste intact. Décès à 74 ans
+          avec la même épargne : après l'abattement global de 30 500 €, ce sont 129 500 € qui
+          rejoignent l'assiette des droits de succession, soit 64 750 € par enfant. Dans ce cas
+          précis, cette somme reste sous l'abattement de 100 000 € par enfant en ligne directe — pas
+          de droits, tant que cet abattement n'a pas déjà été utilisé par ailleurs (autres biens
+          transmis, donations récentes). Mais elle en consomme une part, alors que l'abattement de
+          152 500 € en aurait laissé le bénéfice intact. Même contrat, même montant : seule la date
+          du décès a changé — et l'effet est bien plus lourd pour un bénéficiaire moins bien abattu
+          (neveu, nièce, tiers).
         </p>
       </div>
       <p>
@@ -267,7 +272,11 @@ export function Corps() {
         avant 70 ans reste structurellement mieux placée que le PER — et un distributeur qui
         présente le PER comme un outil de transmission universel passe cette règle sous silence.
         Pour protéger votre <em>conjoint</em>, en revanche, la différence s'efface : il est exonéré
-        dans les deux enveloppes. Nous avons consacré un comparatif complet à ce choix dans{" "}
+        dans les deux enveloppes. Pour la logique propre à l'assurance vie, voir{" "}
+        <LienArticle slug="assurance-vie-enfants-transmettre-valeurs">
+          ouvrir une assurance vie à ses enfants
+        </LienArticle>
+        . Nous avons consacré un comparatif complet à ce choix dans{" "}
         <LienArticle slug="per-vs-assurance-vie-isr">
           PER ou assurance vie pour investir responsable
         </LienArticle>
@@ -357,7 +366,9 @@ export function Corps() {
         <LienArticle slug="retraite-capital-ou-rente-per-ethique">
           capital ou rente à la sortie d'un PER : que choisir ?
         </LienArticle>
-        , car il engage à la fois votre retraite et ce que vous laisserez.
+        , car il engage à la fois votre retraite et ce que vous laisserez. Pour estimer l'écart de
+        revenus à combler à la retraite, l'<a href="/outils/retraite">outil retraite</a> donne un
+        ordre de grandeur.
       </p>
 
       <h2>Un PER investi en supports ISR protège-t-il aussi bien votre famille ?</h2>
@@ -383,7 +394,11 @@ export function Corps() {
         <LienArticle slug="per-ethique-optimiser-retraite">
           comment optimiser sa retraite avec un PER éthique
         </LienArticle>{" "}
-        prend le relais.
+        prend le relais. Et pour la dimension transmission, voir{" "}
+        <LienArticle slug="transmettre-patrimoine-engage-fonds-partage">
+          transmettre un patrimoine engagé
+        </LienArticle>
+        .
       </p>
 
       <h2>Les quatre réglages qui font d'un PER un outil de protection familiale</h2>
@@ -507,9 +522,10 @@ export function Corps() {
       </p>
       <p>
         Enfin, si vous préférez vérifier tout cela à deux, c'est notre métier : lors d'un premier
-        échange offert, un conseiller du cabinet passe en revue avec vous la forme de votre PER,
-        votre clause bénéficiaire et vos options de sortie — documents à l'appui, sans jargon et
-        sans engagement.
+        échange offert, vous pouvez échanger avec un conseiller du cabinet sur la forme de votre
+        PER, votre clause bénéficiaire et vos options de sortie — documents à l'appui, sans jargon
+        et sans engagement. Découvrez{" "}
+        <a href="/cgp-investissement-responsable">l'accompagnement du cabinet</a>.
       </p>
     </>
   );

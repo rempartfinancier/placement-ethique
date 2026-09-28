@@ -3,10 +3,9 @@ import { LienArticle } from "./lien";
 
 export const meta: ArticleMeta = {
   slug: "foncieres-cotees-scpi-immobilier-durable-bourse",
-  title:
-    "Peut-on investir dans l'immobilier durable en bourse ? Foncières cotées, ETF et SCPI démêlés",
+  title: "Immobilier en bourse : foncières cotées, ETF ou SCPI ?",
   excerpt:
-    "Oui — via les foncières cotées (SIIC) et les ETF immobiliers. Les SCPI, elles, ne sont pas cotées. Ce que « durable » garantit vraiment pour chaque véhicule.",
+    "Oui, via les foncières cotées (SIIC) et les ETF immobiliers ; les SCPI, non cotées, sont un autre univers. Ce que « durable » garantit vraiment.",
   readingTime: "11 min",
   category: "Fondamentaux",
   date: "2026-04-28",
@@ -114,7 +113,11 @@ export function Corps() {
         Pour être complet, il existe un véhicule hybride, l'OPCI — non coté lui aussi, mais conçu
         pour des retraits plus rapides. La réponse à la question de départ est donc claire :
         l'immobilier durable <em>en bourse</em>, c'est foncières cotées et ETF ; la SCPI en est le
-        cousin hors bourse.
+        cousin hors bourse (voir le{" "}
+        <LienArticle slug="scpi-isr-environnementales-panorama">
+          panorama des SCPI ISR et environnementales
+        </LienArticle>
+        ).
       </p>
 
       <h2>Qu'est-ce qui rend un immeuble — ou un fonds immobilier — « durable » ?</h2>
@@ -176,7 +179,11 @@ export function Corps() {
         </LienArticle>{" "}
         mérite d'être compris avant d'y adosser sa confiance. Ces fonds relèvent aussi, comme les
         fonds financiers, de la classification européenne SFDR (Article 6, 8 ou 9), déclarative elle
-        aussi.
+        aussi. La{" "}
+        <LienArticle slug="taxonomie-verte-europeenne-epargne">
+          taxonomie verte européenne
+        </LienArticle>
+        , elle, définit ce qu'une activité économique peut qualifier de « durable ».
       </p>
       <p>
         Les foncières cotées, elles, sont des sociétés : elles ne portent pas de label de fonds,
@@ -262,7 +269,12 @@ export function Corps() {
         <LienArticle slug="scpi-isr-vs-scpi-classique">
           notre comparatif SCPI ISR contre SCPI classique
         </LienArticle>{" "}
-        prolonge exactement cette colonne du tableau.
+        prolonge exactement cette colonne du tableau. Pour loger ces véhicules dans un contrat, voir{" "}
+        <LienArticle slug="assurance-vie-isr-guide-2026">
+          comment choisir une assurance vie ISR
+        </LienArticle>
+        ; pour situer chaque enveloppe (assurance vie, PER, PEA, compte-titres), la page{" "}
+        <a href="/enveloppes">enveloppes d'investissement</a> les compare.
       </p>
 
       <h2>Comment vérifier qu'un véhicule immobilier est vraiment durable ?</h2>
@@ -408,10 +420,10 @@ export function Corps() {
         tampon au crible avec le <a href="/outils/decodeur-label">décodeur de labels</a>.
       </p>
       <p>
-        Et si vous hésitez encore entre la nervosité du coté et la lenteur du non coté, c'est une
-        conversation que nous avons chaque semaine au cabinet : venez avec le nom de la foncière, de
-        l'ETF ou de la SCPI qui vous intrigue, nous lirons ensemble son rapport, sa trajectoire et
-        ses preuves. Le premier échange est offert.
+        Et si vous hésitez encore entre la nervosité du coté et la lenteur du non coté, vous pouvez
+        échanger avec <a href="/cgp-investissement-responsable">un conseiller du cabinet</a> : venez
+        avec le nom de la foncière, de l'ETF ou de la SCPI qui vous intrigue, nous lirons ensemble
+        son rapport, sa trajectoire et ses preuves. Le premier échange est offert.
       </p>
     </>
   );

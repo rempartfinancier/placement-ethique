@@ -3,9 +3,9 @@ import { LienArticle } from "./lien";
 
 export const meta: ArticleMeta = {
   slug: "engagement-actionnarial-vs-exclusion",
-  title: "Exclure ou engager : quelle stratégie ISR change vraiment les choses ?",
+  title: "Exclusion ou engagement ISR : quelle stratégie choisir ?",
   excerpt:
-    "Vendre une action ne coupe pas ses financements ; voter en assemblée peut faire bouger l'entreprise. Exclusion et engagement au banc d'essai, preuves à l'appui.",
+    "Vendre une action ne coupe pas ses financements ; voter en assemblée peut faire bouger l'entreprise. Exclusion et engagement comparés, preuves à l'appui.",
   readingTime: "12 min",
   category: "Performance",
   date: "2026-06-01",
@@ -73,7 +73,10 @@ export function Corps() {
         <strong>exclusion normative</strong> (des entreprises écartées pour violation de normes
         internationales : Pacte mondial des Nations unies, conventions interdisant les mines
         antipersonnel ou les armes à sous-munitions). La quasi-totalité des fonds ISR pratique au
-        moins une forme d'exclusion — toute la question est celle de l'étendue et des seuils.
+        moins une forme d'exclusion — toute la question est celle de l'étendue et des seuils, comme
+        le montrent{" "}
+        <LienArticle slug="etf-isr-debutants">les grandes familles d'indices d'ETF ISR</LienArticle>
+        .
       </p>
 
       <h3>L'engagement actionnarial : rester pour peser</h3>
@@ -120,8 +123,12 @@ export function Corps() {
         <strong> partiellement démontré</strong> : l'effet existe surtout pour les entreprises
         petites, jeunes ou dépendantes de financements nouveaux, et reste faible pour les grandes
         capitalisations, dont les titres trouvent immédiatement preneur. Le canal le plus tangible
-        est le <strong>marché primaire</strong> : refuser de souscrire à une émission d'obligations,
-        à une augmentation de capital ou à un crédit bancaire prive, lui, l'entreprise d'argent
+        est le <strong>marché primaire</strong> : refuser de souscrire à une émission d'obligations
+        (y compris{" "}
+        <LienArticle slug="obligations-vertes-vs-obligations-classiques">
+          des obligations vertes
+        </LienArticle>
+        ), à une augmentation de capital ou à un crédit bancaire prive, lui, l'entreprise d'argent
         frais.
       </p>
       <p>
@@ -308,9 +315,12 @@ export function Corps() {
         La leçon réglementaire rejoint la leçon académique : le cadre converge vers un
         <strong> plancher d'exclusions</strong> pour les activités jugées incompatibles avec la
         transition, <strong>plus</strong> une exigence de transparence sur l'engagement et le vote.
-        La classification européenne SFDR, elle, n'impose ni l'un ni l'autre — elle oblige seulement
-        à documenter ce que le fonds déclare faire, ce qui en fait un outil de vérification plus
-        qu'un arbitre du débat.
+        La classification européenne{" "}
+        <LienArticle slug="sfdr-article-8-ou-9-ce-que-ca-garantit">
+          SFDR et ses Articles 8 et 9
+        </LienArticle>
+        , elle, n'impose ni l'un ni l'autre — elle oblige seulement à documenter ce que le fonds
+        déclare faire, ce qui en fait un outil de vérification plus qu'un arbitre du débat.
       </p>
 
       <h2>Et la performance : exclure coûte-t-il du rendement ?</h2>
@@ -372,7 +382,12 @@ export function Corps() {
         Pour situer les tampons que vous croiserez en chemin — Label ISR, Greenfin, Finansol,
         classification SFDR — notre <a href="/outils/decodeur-label">décodeur de labels</a> résume
         gratuitement ce que chacun garantit et où le vérifier. Il vous donne des pistes de lecture ;
-        la référence reste toujours le document officiel du fonds.
+        la référence reste toujours le document officiel du fonds. Pour estimer ce que détient votre
+        épargne côté climat, l'
+        <a href="/outils/empreinte-carbone-epargne">
+          outil d'estimation de l'empreinte carbone de l'épargne
+        </a>{" "}
+        donne un ordre de grandeur illustratif.
       </p>
 
       <h2>Vos questions sur l'exclusion et l'engagement actionnarial</h2>
@@ -468,9 +483,10 @@ export function Corps() {
       </p>
       <p>
         Si vous préférez faire cet exercice accompagné, c'est notre métier : lors d'un premier
-        échange offert, un conseiller du cabinet passe en revue avec vous les politiques
-        d'exclusion, d'engagement et de vote des supports que vous détenez déjà — documents à
-        l'appui, sans jargon et sans engagement de votre part.
+        échange offert, <a href="/cgp-investissement-responsable">un conseiller du cabinet</a> peut
+        vous aider à obtenir des pistes de lecture des politiques d'exclusion, d'engagement et de
+        vote des supports que vous détenez déjà — documents à l'appui, sans jargon et sans
+        engagement de votre part.
       </p>
     </>
   );

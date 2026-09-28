@@ -3,9 +3,9 @@ import { LienArticle } from "./lien";
 
 export const meta: ArticleMeta = {
   slug: "heritage-donation-investir-valeurs",
-  title: "Héritage ou donation reçue : comment l'investir en cohérence avec vos valeurs",
+  title: "Héritage ou donation : où le placer selon vos valeurs ?",
   excerpt:
-    "Vous venez de recevoir un héritage ou une donation. Pas d'urgence à tout placer : sécurisez d'abord, réfléchissez ensuite, puis choisissez des enveloppes cohérentes avec vos valeurs.",
+    "Héritage ou donation reçue : sécurisez d'abord, décidez ensuite. Les enveloppes cohérentes avec vos valeurs, sans précipitation ni pression.",
   readingTime: "11 min",
   category: "Transmission",
   date: "2026-08-01",
@@ -128,10 +128,14 @@ export function Corps() {
 
       <h2>Quelles enveloppes pour un capital reçu en une fois ?</h2>
       <p>
-        Une fois la réflexion posée et le tempo choisi, reste la question des supports. Un versement
-        unique important ne se traite pas tout à fait comme une épargne mensuelle : la répartition
-        entre enveloppes compte davantage, car vous n&rsquo;avez pas la possibilité de lisser
-        l&rsquo;entrée sur les marchés au fil des mois, sauf à le décider volontairement.
+        Une fois la réflexion posée et le tempo choisi, reste la question des supports (pour
+        comparer les enveloppes dans leur ensemble, voir{" "}
+        <LienArticle slug="quelle-enveloppe-investissement-ethique">
+          quelle enveloppe choisir pour investir éthique
+        </LienArticle>
+        ). Un versement unique important ne se traite pas tout à fait comme une épargne mensuelle :
+        la répartition entre enveloppes compte davantage, car vous n&rsquo;avez pas la possibilité
+        de lisser l&rsquo;entrée sur les marchés au fil des mois, sauf à le décider volontairement.
       </p>
       <p>
         <strong>L&rsquo;assurance vie ISR</strong> reste, pour la plupart des situations, le point
@@ -154,7 +158,11 @@ export function Corps() {
         versements retraite, avec un avantage fiscal à l&rsquo;entrée qui peut être significatif
         selon votre tranche d&rsquo;imposition. Ce n&rsquo;est en revanche pas le bon support pour
         la totalité du capital si vous êtes loin de la retraite ou si vous pourriez avoir besoin de
-        liquidités.
+        liquidités. Pour approfondir,{" "}
+        <LienArticle slug="per-ethique-optimiser-retraite">
+          comment optimiser sa retraite avec un PER éthique
+        </LienArticle>{" "}
+        détaille les points d&rsquo;attention.
       </p>
       <p>
         <strong>Les SCPI ISR</strong> peuvent constituer une brique intéressante pour une fraction
@@ -162,7 +170,11 @@ export function Corps() {
         l&rsquo;immobilier professionnel sans les contraintes de gestion d&rsquo;un bien détenu en
         direct. Elles se prêtent bien à un capital reçu en une fois car l&rsquo;achat se fait en un
         versement, mais elles immobilisent l&rsquo;épargne sur le moyen-long terme et ne remplacent
-        pas la poche de sécurité évoquée plus haut.
+        pas la poche de sécurité évoquée plus haut (voir{" "}
+        <LienArticle slug="scpi-isr-environnementales-panorama">
+          quelles SCPI ISR et environnementales existent en France
+        </LienArticle>
+        ).
       </p>
       <p>
         Entre ces trois enveloppes, l&rsquo;arbitrage dépend moins du montant reçu que de votre
@@ -173,7 +185,10 @@ export function Corps() {
         <LienArticle slug="ou-placer-argent-facon-ethique-montant">
           où placer son argent de façon éthique selon le montant disponible
         </LienArticle>{" "}
-        donne des pistes de répartition indicatives, à ajuster ensuite à votre situation.
+        donne des pistes de répartition indicatives, à ajuster ensuite à votre situation ; pour
+        situer votre tolérance au risque, le{" "}
+        <a href="/outils/profil-investisseur">test de profil investisseur</a> donne lui aussi des
+        pistes.
       </p>
       <p>
         Nous ne détaillons volontairement pas ici la fiscalité de la succession ou de la donation
@@ -282,9 +297,10 @@ export function Corps() {
         <LienArticle slug="bilan-patrimonial-investissement-ethique-rendez-vous">
           bilan patrimonial gratuit
         </LienArticle>
-        : un premier échange sans engagement avec un conseiller du cabinet, pour poser votre
-        situation à plat, sans pression de calendrier — que la somme soit encore sur votre compte
-        depuis une semaine ou depuis un an.
+        : un premier échange sans engagement avec{" "}
+        <a href="/cgp-investissement-responsable">un conseiller du cabinet</a>, pour échanger sur
+        votre projet et obtenir des pistes, sans pression de calendrier — que la somme soit encore
+        sur votre compte depuis une semaine ou depuis un an.
       </p>
     </>
   );

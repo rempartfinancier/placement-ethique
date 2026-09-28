@@ -3,10 +3,9 @@ import { LienArticle } from "./lien";
 
 export const meta: ArticleMeta = {
   slug: "assurance-vie-enfants-transmettre-valeurs",
-  title:
-    "Ouvrir une assurance vie à ses enfants : comment transmettre un capital — et vos valeurs ?",
+  title: "Assurance vie enfant mineur : ouvrir, donner, transmettre",
   excerpt:
-    "Oui, votre enfant peut avoir son assurance vie dès la naissance : qui signe, comment donner sans droits, et comment choisir des supports alignés sur vos valeurs.",
+    "Qui signe, comment donner sans droits, quel cadre après 18 ans : ouvrir une assurance vie à votre enfant, sur des supports alignés sur vos valeurs.",
   readingTime: "10 min",
   category: "Enveloppes",
   date: "2026-06-15",
@@ -205,8 +204,8 @@ export function Corps() {
 
       <h2>Le pacte adjoint : comment garder un cadre après ses 18 ans ?</h2>
       <p>
-        C'est l'objection que nous entendons le plus souvent : « à 18 ans, il pourra tout dépenser
-        d'un coup ». Juridiquement, c'est exact — à sa majorité, votre enfant obtient la libre
+        C'est l'une des objections les plus courantes : « à 18 ans, il pourra tout dépenser d'un
+        coup ». Juridiquement, c'est exact — à sa majorité, votre enfant obtient la libre
         disposition de son contrat. Le droit offre cependant un garde-fou : le pacte adjoint, un
         document écrit qui accompagne le don manuel et en fixe le mode d'emploi.
       </p>
@@ -319,8 +318,10 @@ export function Corps() {
         Les deux, pour des rôles différents. Le Livret A offre une épargne garantie, liquide et
         défiscalisée — mais plafonnée et sans choix de ce qu'elle finance. L'assurance vie apporte
         l'horizon long, le choix des supports et le cadre fiscal après huit ans, avec un risque de
-        perte en capital sur les unités de compte. Si la dimension « utilité de l'épargne » vous
-        parle, notre analyse{" "}
+        perte en capital sur les unités de compte. Pour comparer ces deux enveloppes (et d'autres)
+        point par point, notre <a href="/outils/comparateur-enveloppes">comparateur d'enveloppes</a>{" "}
+        fait le tour de la question. Si la dimension « utilité de l'épargne » vous parle, notre
+        analyse{" "}
         <LienArticle slug="livrets-epargne-solidaire-alternative-livret-a">
           des livrets et de l'épargne solidaire face au Livret A
         </LienArticle>{" "}
@@ -342,7 +343,13 @@ export function Corps() {
         — à condition d'accepter leur risque de perte en capital et de sécuriser progressivement
         l'allocation à l'approche du besoin (les études, par exemple). Le caractère ISR d'un support
         ne change ni son niveau de risque intrinsèque ni sa fiscalité : il change ce que l'épargne
-        finance. Vérifiez-le support par support, documents réglementaires à l'appui.
+        finance. Vérifiez-le support par support, documents réglementaires à l'appui — notre{" "}
+        <a href="/outils/decodeur-label">décodeur de labels</a> indique où les trouver, label par
+        label. Pour poser le vocabulaire de base avant de choisir, notre{" "}
+        <LienArticle slug="investissement-ethique-guide-complet-2026">
+          guide complet de l'investissement éthique
+        </LienArticle>{" "}
+        reste le point de départ.
       </p>
 
       <h2>Un capital qui lui parlera de vous</h2>
@@ -371,10 +378,10 @@ export function Corps() {
       </p>
       <p>
         Et si vous préférez structurer tout cela accompagné — choix du contrat, calibrage des dons,
-        opportunité d'un pacte adjoint selon vos montants — c'est notre métier : lors d'un premier
-        échange offert, un conseiller du cabinet passe en revue avec vous le contrat, les dons déjà
-        réalisés et l'opportunité d'un pacte adjoint — documents à l'appui, sans jargon et sans
-        engagement.
+        opportunité d'un pacte adjoint selon vos montants — c'est notre métier : vous pouvez{" "}
+        <a href="/cgp-investissement-responsable">échanger avec un conseiller du cabinet</a> lors
+        d'un premier échange offert, pour obtenir des pistes sur le contrat, le calibrage des dons
+        et l'opportunité d'un pacte adjoint — sans jargon et sans engagement.
       </p>
     </>
   );

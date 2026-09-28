@@ -3,9 +3,9 @@ import { LienArticle } from "./lien";
 
 export const meta: ArticleMeta = {
   slug: "investir-ethique-petit-budget",
-  title: "Peut-on investir éthique avec un petit budget ? Oui — voici comment commencer",
+  title: "Investir éthique avec un petit budget : comment commencer ?",
   excerpt:
-    "Oui, dès quelques dizaines d'euros par mois : assurance vie ISR, épargne solidaire, ETF. Le vrai sujet n'est pas le montant, mais les frais et la régularité.",
+    "Oui, dès quelques dizaines d'euros par mois : assurance vie ISR, épargne solidaire, ETF. Le vrai sujet : les frais et la régularité, pas le montant.",
   readingTime: "9 min",
   category: "Fondamentaux",
   date: "2026-05-02",
@@ -182,7 +182,11 @@ export function Corps() {
         >
           finance-fair.org
         </a>
-        ) — garantit la réalité de ce fléchage. Nous avons examiné en détail{" "}
+        ) — garantit la réalité de ce fléchage (voir{" "}
+        <LienArticle slug="label-finansol-finance-solidaire">
+          ce que garantit le label Finansol
+        </LienArticle>
+        ). Nous avons examiné en détail{" "}
         <LienArticle slug="livrets-epargne-solidaire-alternative-livret-a">
           si l'épargne solidaire est une vraie alternative au Livret A
         </LienArticle>{" "}
@@ -215,6 +219,11 @@ export function Corps() {
         annuels du contrat, frais courants du fonds. Trois couches qui s'additionnent. Un support
         éthique aux frais excessifs reste un mauvais placement pour un petit budget, quelle que soit
         la sincérité de sa démarche extra-financière : l'éthique ne dispense pas de l'arithmétique.
+        Et sur le rendement lui-même,{" "}
+        <LienArticle slug="investir-ethique-performance-chiffres">
+          investir éthique rapporte-t-il moins ?
+        </LienArticle>{" "}
+        répond chiffres officiels à l'appui.
       </p>
 
       <h2>Pourquoi la régularité compte-t-elle plus que le montant de départ ?</h2>
@@ -258,7 +267,9 @@ export function Corps() {
           <LienArticle slug="quelle-enveloppe-investissement-ethique">
             enveloppes pour investir éthique
           </LienArticle>{" "}
-          vous aide à trancher selon votre situation.
+          vous aide à trancher selon votre situation ; le{" "}
+          <a href="/outils/profil-investisseur">test de profil investisseur</a> donne des pistes sur
+          votre tolérance au risque.
         </li>
         <li>
           <strong>Programmer.</strong> Mettez en place un versement automatique dès le lendemain du
@@ -394,16 +405,21 @@ export function Corps() {
           guide complet de l'investissement éthique
         </LienArticle>{" "}
         déroule toute la démarche — enveloppes, labels, supports — et transformera votre premier
-        versement en stratégie d'ensemble. Et pour passer du principe aux ordres de grandeur, notre{" "}
+        versement en stratégie d'ensemble. Quand votre capacité d'épargne grandira,{" "}
+        <LienArticle slug="ou-placer-argent-facon-ethique-montant">
+          où placer 50 000, 100 000 ou 300 000 € de façon éthique
+        </LienArticle>{" "}
+        prendra le relais. Et pour passer du principe aux ordres de grandeur, notre{" "}
         <a href="/outils/simulateur">simulateur de projection</a> vous montre, hypothèses
         illustratives à l'appui, ce que votre effort d'épargne mensuel pourrait représenter sur
         votre horizon.
       </p>
       <p>
         Et si vous préférez valider votre plan de départ de vive voix, c'est notre métier : lors
-        d'un premier échange offert, un conseiller du cabinet passe en revue avec vous votre
-        capacité d'épargne, les enveloppes adaptées à votre horizon et les points à vérifier — sans
-        minimum requis, sans jargon et sans engagement.
+        d'un premier échange offert,{" "}
+        <a href="/cgp-investissement-responsable">un conseiller du cabinet</a> peut vous aider à
+        obtenir des pistes sur votre plan de départ (enveloppes adaptées à votre horizon, points à
+        vérifier) — sans jargon et sans engagement.
       </p>
     </>
   );

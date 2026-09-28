@@ -3,9 +3,9 @@ import { LienArticle } from "./lien";
 
 export const meta: ArticleMeta = {
   slug: "quelle-enveloppe-investissement-ethique",
-  title: "Assurance vie, PER, PEA ou compte-titres : quelle enveloppe pour investir éthique ?",
+  title: "Assurance vie, PER, PEA, CTO : quelle enveloppe éthique ?",
   excerpt:
-    "Aucune enveloppe n'est éthique en soi : elle décide de l'univers ISR accessible, des frais et de la fiscalité. Comparatif assurance vie, PER, PEA, compte-titres.",
+    "Aucune enveloppe n'est éthique en soi : elle fixe l'univers ISR accessible, les frais et la fiscalité. Comparatif assurance vie, PER, PEA et compte-titres.",
   readingTime: "11 min",
   category: "Enveloppes",
   date: "2026-06-13",
@@ -130,7 +130,11 @@ export function Corps() {
         : l'achat de la résidence principale. À l'échéance, vous sortez en capital, en rente, ou en
         mélange des deux. Côté responsable, l'univers dépend entièrement du plan : la profondeur de
         la liste de supports labellisés se vérifie avant la signature, exactement comme pour une
-        assurance vie.
+        assurance vie (voir{" "}
+        <LienArticle slug="per-ethique-optimiser-retraite">
+          comment optimiser sa retraite avec un PER éthique
+        </LienArticle>
+        ).
       </p>
 
       <h3>Le PEA : la moins chère, mais la plus contrainte</h3>
@@ -251,8 +255,9 @@ export function Corps() {
       <p>
         D'abord, une actualité qui change les ordres de grandeur : depuis le 1ᵉʳ janvier 2026, la
         hausse de la CSG a porté les prélèvements sociaux sur les revenus du capital de 17,2 % à
-        18,6 %, et le prélèvement forfaitaire unique (PFU) de 30 % à <strong>31,4 %</strong> (12,8 %
-        d'impôt sur le revenu + 18,6 % de prélèvements sociaux), comme l'indique{" "}
+        18,6 % (l'assurance vie et les contrats de capitalisation restent à 17,2 %), et le
+        prélèvement forfaitaire unique (PFU) de 30 % à <strong>31,4 %</strong> (12,8 % d'impôt sur
+        le revenu + 18,6 % de prélèvements sociaux) pour les autres enveloppes, comme l'indique{" "}
         <a
           href="https://entreprendre.service-public.gouv.fr/actualites/A18796"
           target="_blank"
@@ -343,7 +348,9 @@ export function Corps() {
           dont vous pourriez avoir besoin avant la retraite : le PER est éliminé. Horizon inférieur
           à cinq ans : les enveloppes investies en actions ou en unités de compte exposent votre
           capital à un risque de perte au pire moment — la question de l'enveloppe passe après celle
-          de la prudence.
+          de la prudence. Pour situer votre horizon et votre tolérance au risque, notre{" "}
+          <a href="/outils/profil-investisseur">outil profil investisseur</a> donne quelques
+          premières pistes.
         </li>
         <li>
           <strong>Vérifiez l'univers responsable réellement accessible.</strong> Demandez la liste
@@ -355,10 +362,12 @@ export function Corps() {
         <li>
           <strong>Empilez les frais.</strong> Frais sur versement et de gestion annuels en assurance
           vie et PER, courtage et droits de garde en PEA et CTO, frais courants des fonds partout :
-          c'est le cumul qui compte. Notre <a href="/outils/simulateur">simulateur de projection</a>{" "}
-          intègre ces couches année par année et vous donne des pistes chiffrées — sur hypothèses
-          illustratives : les performances passées ne préjugent pas des performances futures, et les
-          supports en unités de compte ou en titres vifs présentent un risque de perte en capital.
+          c'est le cumul qui compte (les frais pratiqués par le cabinet sont détaillés sur{" "}
+          <a href="/tarifs">la page tarifs</a>). Notre{" "}
+          <a href="/outils/simulateur">simulateur de projection</a> intègre ces couches année par
+          année et vous donne des pistes chiffrées — sur hypothèses illustratives : les performances
+          passées ne préjugent pas des performances futures, et les supports en unités de compte ou
+          en titres vifs présentent un risque de perte en capital.
         </li>
         <li>
           <strong>Combinez plutôt que trancher.</strong> Les enveloppes ne sont pas rivales : une
@@ -391,7 +400,12 @@ export function Corps() {
         Aucune enveloppe n'impose de minimum légal ; chaque contrat ou courtier fixe son ticket
         d'entrée, souvent de quelques dizaines à quelques centaines d'euros. Une assurance vie avec
         versements programmés ou un compte-titres chez un courtier sobre en frais permettent de
-        démarrer petit — l'essentiel étant que les frais fixes ne dévorent pas les petits montants.
+        démarrer petit — l'essentiel étant que les frais fixes ne dévorent pas les petits montants
+        (voir{" "}
+        <LienArticle slug="investir-ethique-petit-budget">
+          investir éthique avec un petit budget
+        </LienArticle>
+        ).
       </p>
 
       <h3>Le Livret A ou le LDDS sont-ils des enveloppes « éthiques » ?</h3>
@@ -462,8 +476,10 @@ export function Corps() {
       </p>
       <p>
         Et si vous préférez trancher accompagné, c'est notre métier : lors d'un premier échange
-        offert, un conseiller du cabinet passe en revue avec vous votre horizon, vos enveloppes déjà
-        ouvertes et ce qu'elles permettent — documents à l'appui, sans jargon et sans engagement.
+        offert, vous pouvez échanger avec un conseiller du cabinet sur votre horizon, vos enveloppes
+        déjà ouvertes et ce qu'elles permettent — documents à l'appui, sans jargon et sans
+        engagement. Découvrez{" "}
+        <a href="/cgp-investissement-responsable">l'accompagnement du cabinet</a>.
       </p>
     </>
   );

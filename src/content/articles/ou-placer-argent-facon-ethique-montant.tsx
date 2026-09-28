@@ -3,9 +3,9 @@ import { LienArticle } from "./lien";
 
 export const meta: ArticleMeta = {
   slug: "ou-placer-argent-facon-ethique-montant",
-  title: "Où placer 50 000, 100 000 ou 300 000 € de façon éthique en 2026 ?",
+  title: "Où placer 100 000 € de façon éthique ? Repères par palier",
   excerpt:
-    "La bonne réponse dépend du montant ET de l'horizon, jamais du seul chiffre. Enveloppes, seuils de frais et erreurs à éviter, palier par palier.",
+    "Où placer 50 000, 100 000 ou 300 000 € de façon éthique ? La réponse dépend du montant ET de l'horizon : enveloppes, frais et erreurs à éviter.",
   readingTime: "13 min",
   category: "Enveloppes",
   date: "2026-08-01",
@@ -25,9 +25,9 @@ export function Corps() {
           l'épargne de précaution passe avant tout placement, l'assurance vie responsable sert de
           socle disponible, le PER n'a d'intérêt que si vous êtes imposé et pouvez immobiliser
           l'argent jusqu'à la retraite, et la SCPI ISR diversifie vers l'immobilier à partir d'un
-          montant qui justifie ses frais d'entrée. Au-delà de 200 000 € puis de 400 000 €, des
-          seuils de frais d'entrée changent mécaniquement le calcul sur l'assurance vie et le PER.
-          Aucune répartition chiffrée de cet article n'est une recommandation : ce sont des repères
+          montant qui justifie ses frais d'entrée. Selon les distributeurs, des frais d'entrée
+          dégressifs par palier peuvent changer le calcul sur l'assurance vie et le PER. Aucune
+          répartition chiffrée de cet article n'est une recommandation : ce sont des repères
           génériques, à affiner avec un conseiller après un bilan patrimonial.
         </p>
       </div>
@@ -86,7 +86,9 @@ export function Corps() {
           assurance vie, PER, PEA ou compte-titres : quelle enveloppe pour investir éthique
         </LienArticle>{" "}
         détaille ce que chaque enveloppe permet réellement — cet article s'appuie dessus pour
-        raisonner par palier de capital.
+        raisonner par palier de capital. Pour situer d'abord votre horizon et votre tolérance au
+        risque, notre <a href="/outils/profil-investisseur">outil profil investisseur</a> donne
+        quelques premières pistes.
       </p>
 
       <h2>Où placer 50 000 € de façon éthique en 2026 ?</h2>
@@ -158,7 +160,9 @@ export function Corps() {
         assurance vie responsable pour conserver de la souplesse, une part dimensionnée sur votre
         plafond de déduction en PER si votre imposition le justifie, et une poche SCPI ISR si la
         diversification immobilière correspond à votre projet. Encore une fois, ce n'est pas une
-        répartition à copier : c'est un point de départ pour votre propre réflexion.
+        répartition à copier : c'est un point de départ pour votre propre réflexion. Notre page d'
+        <a href="/outils/portefeuilles-types">exemples de portefeuilles types</a> montre, à titre
+        purement illustratif, à quoi peut ressembler une répartition diversifiée.
       </p>
 
       <h2>Où placer 300 000 € ou plus de façon éthique en 2026 ?</h2>
@@ -169,27 +173,32 @@ export function Corps() {
         d'entrée commencent à peser réellement sur le résultat net.
       </p>
       <p>
-        Sur l'assurance vie et le PER, les frais d'entrée sont très généralement dégressifs par
-        palier de versement — une pratique répandue chez les distributeurs qui négocient des
-        conditions avec les assureurs. Notre propre grille l'illustre : 1,00 % jusqu'à 200 000 €,
-        0,50 % de 200 000 € à 400 000 €, puis 0 % au-delà. Sur un versement de 300 000 €, la tranche
-        entre 200 000 € et 300 000 € coûte donc deux fois moins cher en frais d'entrée que la
-        tranche en dessous — un écart significatif en valeur absolue. Ce mécanisme n'est pas propre
-        à un cabinet en particulier : interrogez systématiquement la grille de frais d'entrée de
-        votre interlocuteur au-delà de 200 000 €, elle est presque toujours négociable à ce niveau.
+        Sur l'assurance vie et le PER, les frais d'entrée, quand il y en a (de nombreux contrats en
+        ligne n'en prélèvent aucun), sont parfois dégressifs par palier de versement selon le
+        distributeur. À titre purement illustratif, avec une grille de 1,00 % jusqu'à 200 000 €,
+        0,50 % de 200 000 € à 400 000 €, puis 0 % au-delà : sur un versement de 300 000 €, la
+        tranche entre 200 000 € et 300 000 € coûte deux fois moins cher en frais d'entrée que la
+        tranche en dessous — un écart significatif en valeur absolue. Les seuils et les taux varient
+        d'un distributeur à l'autre : interrogez systématiquement la grille de frais d'entrée de
+        votre interlocuteur au-delà de 200 000 € et comparez-la (les frais pratiqués par le cabinet
+        sont détaillés sur <a href="/tarifs">la page tarifs</a>).
       </p>
       <p>
         Sur la SCPI, le raisonnement est différent : les frais d'entrée totaux (environ 12 %) sont
         fixés par la société de gestion et identiques quel que soit le distributeur — mais un
-        montant investi plus élevé peut déclencher un cashback partiel proposé par certains cabinets
-        au-delà d'un seuil d'investissement (100 000 € chez nous, à titre d'exemple), ce qui réduit
-        le coût net de la ligne.
+        montant investi plus élevé peut déclencher un cashback partiel proposé par certains
+        distributeurs au-delà d'un seuil d'investissement, à vérifier auprès de chacun, ce qui
+        réduit le coût net de la ligne.
       </p>
       <p>
         Un repère générique à ce palier : une répartition sur plusieurs enveloppes (assurance vie,
         PER si pertinent fiscalement, SCPI ISR, éventuellement un compte-titres ou un PEA), avec un
         dimensionnement de chaque ligne qui tient compte des seuils de frais et de la fiscalité de
-        sortie. Les écarts de profondeur d'offre entre contrats, détaillés dans notre guide{" "}
+        sortie. Pour diversifier aussi le pays de l'assureur, voir{" "}
+        <LienArticle slug="assurance-vie-luxembourgeoise-investissement-responsable">
+          l'assurance vie luxembourgeoise
+        </LienArticle>
+        . Les écarts de profondeur d'offre entre contrats, détaillés dans notre guide{" "}
         <LienArticle slug="assurance-vie-isr-guide-2026">
           choisir une assurance vie ISR en 2026
         </LienArticle>
@@ -248,8 +257,8 @@ export function Corps() {
               Répartition entre assurance vie, PER, SCPI ISR et éventuellement compte-titres ou PEA
             </td>
             <td>
-              Les seuils de frais d'entrée (souvent autour de 200 000 € et 400 000 €) réduisent le
-              coût des tranches supérieures — à vérifier systématiquement
+              Certaines grilles de frais d'entrée sont dégressives par palier (seuils variables
+              selon les distributeurs) — à vérifier systématiquement
             </td>
           </tr>
         </tbody>
@@ -433,8 +442,8 @@ export function Corps() {
         Rappel des points clés : constituez d'abord votre épargne de précaution ; l'assurance vie
         responsable sert de socle disponible à la plupart des paliers ; le PER ne se justifie que si
         vous êtes imposé et pouvez immobiliser l'argent jusqu'à la retraite ; la SCPI ISR diversifie
-        vers l'immobilier à partir d'un montant qui amortit ses frais d'entrée ; et au-delà de 200
-        000 € puis de 400 000 €, les seuils de frais d'entrée méritent une vérification
+        vers l'immobilier à partir d'un montant qui amortit ses frais d'entrée ; et si votre
+        distributeur applique des frais d'entrée dégressifs, leurs seuils méritent une vérification
         systématique.
       </p>
       <p>
@@ -450,9 +459,9 @@ export function Corps() {
       <p>
         Et si vous préférez construire cette répartition avec un regard extérieur plutôt que seul
         face à un tableur : c'est notre métier. Lors d'un premier échange offert et sans engagement,
-        un conseiller du cabinet passe en revue avec vous votre capital, votre horizon et vos
-        exigences extra-financières, et vous restitue par écrit les pistes envisageables — documents
-        à l'appui, sans jargon.
+        vous pouvez échanger avec un conseiller du cabinet sur votre capital, votre horizon et vos
+        exigences extra-financières, et obtenir des pistes — documents à l'appui, sans jargon.
+        Découvrez <a href="/cgp-investissement-responsable">l'accompagnement du cabinet</a>.
       </p>
     </>
   );

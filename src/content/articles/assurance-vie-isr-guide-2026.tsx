@@ -3,9 +3,9 @@ import { LienArticle } from "./lien";
 
 export const meta: ArticleMeta = {
   slug: "assurance-vie-isr-guide-2026",
-  title: "Assurance vie ISR : comment choisir un contrat vraiment responsable en 2026 ?",
+  title: "Assurance vie ISR : comment choisir un contrat en 2026",
   excerpt:
-    "Tous les contrats affichent des supports « responsables » depuis la loi Pacte. Univers réel, frais, fonds en euros : les critères vérifiables pour choisir.",
+    "Depuis la loi Pacte, tous les contrats affichent des supports responsables. Univers, frais, fonds en euros : les critères vérifiables pour bien choisir.",
   readingTime: "12 min",
   category: "Enveloppes",
   date: "2026-06-03",
@@ -46,10 +46,15 @@ export function Corps() {
       <p>
         Reposons les bases : une assurance vie est une <strong>enveloppe</strong> — un cadre fiscal
         et successoral dans lequel vous logez des supports d'investissement. « ISR » (investissement
-        socialement responsable) qualifie les supports, pas l'enveloppe. Dans ce guide : ce que la
-        loi garantit déjà dans tous les contrats, les critères qui séparent vraiment deux contrats
-        en 2026, le poids des frais, le cas particulier du fonds en euros, notre méthode de
-        vérification avant signature, et la fiscalité applicable.
+        socialement responsable) qualifie les supports, pas l'enveloppe — le vocabulaire complet est
+        posé dans notre{" "}
+        <LienArticle slug="investissement-ethique-guide-complet-2026">
+          guide de l'investissement éthique
+        </LienArticle>
+        , et la vue d'ensemble sur notre page <a href="/placement-ethique">placement éthique</a>.
+        Dans ce guide : ce que la loi garantit déjà dans tous les contrats, les critères qui
+        séparent vraiment deux contrats en 2026, le poids des frais, le cas particulier du fonds en
+        euros, notre méthode de vérification avant signature, et la fiscalité applicable.
       </p>
 
       <h2>Une « assurance vie ISR », ça existe vraiment ?</h2>
@@ -206,7 +211,12 @@ export function Corps() {
         point, notre <a href="/outils/simulateur">simulateur de projection</a> intègre les couches
         de frais dans le calcul, année par année : il vous donne des pistes chiffrées, sur
         hypothèses illustratives — les performances passées ne préjugent pas des performances
-        futures, et les unités de compte présentent un risque de perte en capital.
+        futures, et les unités de compte présentent un risque de perte en capital. Pour un exemple
+        de grille de frais détaillée, ligne par ligne, avec ses limites assumées, voyez notre{" "}
+        <LienArticle slug="avis-patrimoine-vie-plus-uaf-life-version-absolue">
+          avis sur deux contrats d'assurance vie
+        </LienArticle>
+        .
       </p>
 
       <h2>Le fonds en euros d'un contrat responsable est-il responsable, lui aussi ?</h2>
@@ -357,7 +367,8 @@ export function Corps() {
         <LienArticle slug="per-vs-assurance-vie-isr">
           PER ou assurance vie pour investir responsable
         </LienArticle>
-        .
+        , et notre <a href="/outils/per-isr">outil PER ISR</a> vous donne des pistes chiffrées côté
+        retraite.
       </p>
 
       <h2>Choisissez votre contrat sur pièces, pas sur l'étiquette</h2>
@@ -382,10 +393,11 @@ export function Corps() {
         de supports du contrat que vous envisagez.
       </p>
       <p>
-        Et si vous préférez mener cette vérification accompagné, c'est notre métier : lors d'un
-        premier échange offert, un conseiller du cabinet passe en revue avec vous votre contrat
-        actuel ou celui que vous envisagez — annexe de frais, liste des supports, documents
-        réglementaires à l'appui — sans jargon et sans engagement.
+        Et si vous préférez mener cette vérification accompagné, c'est notre métier : vous pouvez{" "}
+        <a href="/cgp-investissement-responsable">échanger avec un conseiller du cabinet</a> lors
+        d'un premier échange offert, pour obtenir des pistes sur votre contrat actuel ou celui que
+        vous envisagez — annexe de frais, liste des supports, documents réglementaires à l'appui —
+        sans jargon et sans engagement.
       </p>
     </>
   );

@@ -3,10 +3,9 @@ import { LienArticle } from "./lien";
 
 export const meta: ArticleMeta = {
   slug: "bilan-patrimonial-investissement-ethique-rendez-vous",
-  title:
-    "Bilan patrimonial : à quoi ressemble un vrai rendez-vous de conseil en investissement éthique ?",
+  title: "Bilan patrimonial éthique : le déroulé du 1er rendez-vous",
   excerpt:
-    "Durée, questions posées, documents à préparer, préférences de durabilité, signaux d'alerte : le déroulé réel d'un premier rendez-vous patrimonial, sans mystère.",
+    "Durée, questions posées, documents à préparer, préférences de durabilité, signaux d'alerte : le déroulé réel d'un premier bilan patrimonial éthique.",
   readingTime: "9 min",
   category: "Conseil",
   date: "2026-07-03",
@@ -161,12 +160,16 @@ export function Corps() {
           l'ADEME
         </a>
         . Le questionnaire doit vous permettre d'exprimer, par exemple, si vous souhaitez qu'une
-        part de vos placements soit alignée sur la taxonomie verte européenne, investie en «
-        investissements durables » au sens du règlement SFDR, ou tienne compte des principales
-        incidences négatives — les impacts défavorables d'un investissement sur l'environnement ou
-        la société. Ces trois axes sont techniques : le professionnel doit vous les expliquer, pas
-        vous les faire cocher à l'aveugle. Un questionnaire de durabilité expédié en trente secondes
-        est un signal en soi.
+        part de vos placements soit alignée sur la{" "}
+        <LienArticle slug="taxonomie-verte-europeenne-epargne">
+          taxonomie verte européenne
+        </LienArticle>
+        , investie en « investissements durables » au sens du{" "}
+        <LienArticle slug="sfdr-article-8-ou-9-ce-que-ca-garantit">règlement SFDR</LienArticle>, ou
+        tienne compte des principales incidences négatives — les impacts défavorables d'un
+        investissement sur l'environnement ou la société. Ces trois axes sont techniques : le
+        professionnel doit vous les expliquer, pas vous les faire cocher à l'aveugle. Un
+        questionnaire de durabilité expédié en trente secondes est un signal en soi.
       </p>
       <h3>La charge de la preuve change de camp</h3>
       <p>
@@ -267,7 +270,8 @@ export function Corps() {
         professionnel doit pouvoir vous dire qui le paie, combien et sur quel produit — avant que
         vous ne signiez quoi que ce soit. Une grille de rémunération que le cabinet refuse de
         détailler, ou qui ne se découvre qu'après la souscription, est en elle-même une raison
-        suffisante de continuer à comparer.
+        suffisante de continuer à comparer. Chez nous, cette grille est détaillée sur{" "}
+        <a href="/tarifs">notre page tarifs</a>.
       </p>
 
       <h2>Quelles questions poser — et quels signaux doivent vous alerter ?</h2>
@@ -350,8 +354,8 @@ export function Corps() {
       <h3>Combien de temps dure un premier rendez-vous ?</h3>
       <p>
         Comptez une heure environ, davantage si votre situation comporte de l'immobilier locatif,
-        une entreprise ou une succession en cours. Le temps se répartit grossièrement en deux tiers
-        d'écoute et de cartographie, un tiers de pistes et de pédagogie.
+        une entreprise ou une succession en cours. L'essentiel du temps va à l'écoute et à la
+        cartographie, le reste aux pistes et à la pédagogie.
       </p>
 
       <h3>Dois-je parler des contrats que je détiens ailleurs ?</h3>
@@ -364,18 +368,19 @@ export function Corps() {
 
       <h3>Vais-je être jugé si mon épargne actuelle finance des secteurs que je désapprouve ?</h3>
       <p>
-        Non — c'est le point de départ de la plupart des rendez-vous, pas une faute. La
-        quasi-totalité des épargnants découvre en rendez-vous ce que contiennent réellement leurs
-        supports « par défaut ». Le bilan sert exactement à cela : constater l'écart, puis le
-        réduire à votre rythme.
+        Non — c'est le point de départ de la plupart des rendez-vous, pas une faute. Beaucoup
+        d'épargnants découvrent en rendez-vous ce que contiennent réellement leurs supports « par
+        défaut ». Le bilan sert exactement à cela : constater l'écart, puis le réduire à votre
+        rythme.
       </p>
 
       <h3>Que deviennent les informations que je confie ?</h3>
       <p>
         Elles sont couvertes par la confidentialité professionnelle et par la réglementation sur les
-        données personnelles : vous pouvez demander comment elles sont stockées, qui y accède et
-        comment les faire effacer. Un cabinet sérieux répond à ces questions aussi simplement qu'à
-        une question de fiscalité.
+        données personnelles (voir <a href="/confidentialite">notre politique de confidentialité</a>
+        ) : vous pouvez demander comment elles sont stockées, qui y accède et comment les faire
+        effacer. Un cabinet sérieux répond à ces questions aussi simplement qu'à une question de
+        fiscalité.
       </p>
 
       <h3>Le rendez-vous peut-il se faire à distance ?</h3>
@@ -413,10 +418,11 @@ export function Corps() {
         compte-titres.
       </p>
       <p>
-        Et si vous souhaitez mettre ce déroulé à l'épreuve, c'est notre métier : le premier échange
-        avec un conseiller du cabinet est offert, sans engagement. Vous savez désormais exactement
-        quelles questions nous poser — y compris sur notre propre rémunération, dont la grille est
-        publiée en clair.
+        Et si vous souhaitez mettre ce déroulé à l'épreuve, c'est notre métier : vous pouvez{" "}
+        <a href="/cgp-investissement-responsable">échanger avec un conseiller du cabinet</a>, le
+        premier échange est offert, sans engagement. Vous savez désormais exactement quelles
+        questions nous poser — y compris sur notre propre rémunération, dont la grille est publiée
+        en clair.
       </p>
     </>
   );

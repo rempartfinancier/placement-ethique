@@ -3,9 +3,9 @@ import { LienArticle } from "./lien";
 
 export const meta: ArticleMeta = {
   slug: "preparer-retraite-epargne-alignee-valeurs",
-  title: "Comment préparer sa retraite avec une épargne alignée sur vos valeurs ?",
+  title: "Préparer sa retraite avec une épargne éthique en 5 étapes",
   excerpt:
-    "Chiffrer l'écart de revenus, choisir vos enveloppes dans le bon ordre, vérifier chaque support sur pièces : la méthode des 5 C d'une retraite alignée sur vos valeurs.",
+    "Chiffrer l'écart de revenus, ordonner vos enveloppes, vérifier vos supports sur pièces : la méthode des 5 C pour une épargne retraite éthique.",
   readingTime: "11 min",
   category: "Fiscalité",
   date: "2026-06-25",
@@ -97,7 +97,9 @@ export function Corps() {
           vous provisionnez. Notre <a href="/outils/retraite">outil retraite</a> traduit cet écart
           en effort d'épargne mensuel — des pistes fondées sur des hypothèses illustratives, à
           affiner ensuite : les performances passées ne préjugent pas des performances futures, et
-          les supports en unités de compte présentent un risque de perte en capital.
+          les supports en unités de compte présentent un risque de perte en capital. Vous
+          retrouverez aussi les grands leviers par objectif sur notre page{" "}
+          <a href="/objectifs">objectifs d'épargne</a>.
         </li>
       </ul>
 
@@ -186,7 +188,12 @@ export function Corps() {
         <LienArticle slug="quelle-enveloppe-investissement-ethique">
           quelle enveloppe choisir pour investir éthique ?
         </LienArticle>{" "}
-        passe chacune d'elles au crible : c'est le bon détour avant d'ouvrir quoi que ce soit.
+        passe chacune d'elles au crible : c'est le bon détour avant d'ouvrir quoi que ce soit. Pour
+        la ligne immobilière du tableau, voir{" "}
+        <LienArticle slug="scpi-isr-environnementales-panorama">
+          le panorama des SCPI ISR et environnementales
+        </LienArticle>
+        .
       </p>
 
       <h2>PER d'abord ou assurance vie d'abord : dans quel ordre verser ?</h2>
@@ -369,7 +376,12 @@ export function Corps() {
         Non — et ce n'est pas leur rôle. Les livrets réglementés sont votre épargne de précaution :
         disponibles, garantis, plafonnés. Sur un horizon de vingt-cinq ans, ils ne sont dimensionnés
         ni en plafond ni en rendement pour combler un écart de pension. La bonne articulation : les
-        livrets d'abord, comme socle de sécurité, puis les enveloppes longues pour le reste.
+        livrets d'abord, comme socle de sécurité, puis les enveloppes longues pour le reste — et, si
+        vous souhaitez flécher aussi votre épargne de précaution, voir{" "}
+        <LienArticle slug="livrets-epargne-solidaire-alternative-livret-a">
+          l'épargne solidaire comme alternative au Livret A
+        </LienArticle>
+        .
       </p>
 
       <h3>Puis-je préparer ma retraite de façon responsable avec 100 € par mois ?</h3>
@@ -377,7 +389,12 @@ export function Corps() {
         Oui. La plupart des contrats d'assurance vie et des PER acceptent des versements programmés
         modestes, et l'essentiel se joue dans la durée : cent euros mensuels pendant vingt-cinq ans
         représentent un capital versé conséquent, avant même tout rendement. La cadence compte plus
-        que le montant de départ — on augmente le versement quand les revenus augmentent.
+        que le montant de départ — on augmente le versement quand les revenus augmentent. Si votre
+        budget est serré, voir{" "}
+        <LienArticle slug="investir-ethique-petit-budget">
+          comment investir éthique avec un petit budget
+        </LienArticle>
+        .
       </p>
 
       <h3>Mon épargne salariale compte-t-elle dans cette stratégie ?</h3>
@@ -426,10 +443,11 @@ export function Corps() {
       </p>
       <p>
         Et si vous préférez dérouler la méthode accompagné, c'est notre métier : lors d'un premier
-        échange offert, un conseiller du cabinet passe en revue avec vous votre estimation de
+        échange offert, vous pouvez échanger avec un conseiller du cabinet sur votre estimation de
         pension, votre plafond d'épargne retraite disponible — il figure sur votre dernier avis
         d'imposition — et la liste réelle des supports de vos contrats actuels. Documents à l'appui,
-        sans jargon et sans engagement.
+        sans jargon et sans engagement. Découvrez{" "}
+        <a href="/cgp-investissement-responsable">l'accompagnement du cabinet</a>.
       </p>
     </>
   );

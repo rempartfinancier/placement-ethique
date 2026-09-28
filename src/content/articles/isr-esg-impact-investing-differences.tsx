@@ -3,9 +3,9 @@ import { LienArticle } from "./lien";
 
 export const meta: ArticleMeta = {
   slug: "isr-esg-impact-investing-differences",
-  title: "ISR, ESG, impact investing : quelles différences réelles pour votre épargne ?",
+  title: "Différence ISR, ESG et impact investing : guide clair",
   excerpt:
-    "ESG : une grille d'analyse. ISR : une démarche de gestion. Impact investing : un effet mesurable revendiqué. Trois niveaux d'exigence à ne pas confondre.",
+    "ISR, ESG ou impact ? L'ESG est une grille d'analyse, l'ISR une démarche de gestion, l'impact un effet mesurable. Le tableau pour ne plus les confondre.",
   readingTime: "10 min",
   category: "Fondamentaux",
   date: "2026-04-20",
@@ -46,7 +46,9 @@ export function Corps() {
         Dans cet article : une définition précise de chaque terme, un tableau comparatif pensé pour
         votre décision, leur correspondance avec la classification européenne SFDR (les fameux «
         Article 8 » et « Article 9 »), et une méthode en trois temps pour vérifier vous-même ce que
-        fait réellement un fonds — sans croire personne sur parole, pas même nous.
+        fait réellement un fonds — sans croire personne sur parole, pas même nous. Pour la vue
+        d'ensemble, voir notre{" "}
+        <a href="/placement-ethique">page de référence sur le placement éthique</a>.
       </p>
 
       <h2>ESG : que veulent dire ces trois lettres, concrètement ?</h2>
@@ -104,7 +106,11 @@ export function Corps() {
         </li>
         <li>
           l'<strong>engagement actionnarial</strong> : rester actionnaire pour peser sur les
-          pratiques de l'entreprise, par le dialogue et le vote en assemblée générale.
+          pratiques de l'entreprise, par le dialogue et le vote en assemblée générale — voir{" "}
+          <LienArticle slug="engagement-actionnarial-vs-exclusion">
+            exclure ou engager : quelle stratégie change vraiment les choses ?
+          </LienArticle>
+          .
         </li>
       </ul>
       <p>
@@ -178,9 +184,12 @@ export function Corps() {
       <p>
         Dans l'épargne française grand public, l'impact prend surtout trois formes : les fonds
         solidaires (souvent dits « 90/10 », dont une fraction du portefeuille finance directement
-        des entreprises solidaires agréées), les obligations vertes (green bonds) qui financent des
-        projets environnementaux identifiés, et une génération récente de fonds cotés « à impact »
-        dont l'exigence varie fortement d'un produit à l'autre.
+        des entreprises solidaires agréées), les{" "}
+        <LienArticle slug="obligations-vertes-vs-obligations-classiques">
+          obligations vertes (green bonds)
+        </LienArticle>{" "}
+        qui financent des projets environnementaux identifiés, et une génération récente de fonds
+        cotés « à impact » dont l'exigence varie fortement d'un produit à l'autre.
       </p>
 
       <h2>ESG, ISR, impact : le tableau comparatif pour vous y retrouver</h2>
@@ -357,7 +366,12 @@ export function Corps() {
         fonds à impact visent des rendements très variables par conception : certains recherchent le
         taux de marché, d'autres — les fonds solidaires notamment — assument un rendement financier
         plus modeste en contrepartie d'un impact social direct. L'important est que cet arbitrage
-        soit annoncé dans la documentation du fonds.
+        soit annoncé dans la documentation du fonds. Sur la performance des fonds responsables en
+        général, voir{" "}
+        <LienArticle slug="investir-ethique-performance-chiffres">
+          ce que disent les chiffres
+        </LienArticle>
+        .
       </p>
 
       <h3>Peut-on faire de l'impact investing dans une assurance vie ?</h3>
@@ -411,10 +425,13 @@ export function Corps() {
         transforme les notions de cet article en réflexes de détection concrets.
       </p>
       <p>
-        Et si vous préférez faire cette vérification à deux, c'est précisément notre métier : lors
-        d'un premier échange offert, un conseiller du cabinet passe en revue avec vous ce que
-        contiennent réellement vos placements actuels — vocabulaire décodé, documents à l'appui,
-        sans jargon et sans engagement.
+        Et si vous préférez faire cette vérification à deux, c'est précisément notre métier : vous
+        pouvez{" "}
+        <a href="/cgp-investissement-responsable">
+          échanger avec un conseiller en investissement responsable
+        </a>
+        . Le premier échange est offert et sans engagement : vocabulaire décodé, documents à
+        l'appui, vous repartez avec des pistes à vérifier.
       </p>
     </>
   );

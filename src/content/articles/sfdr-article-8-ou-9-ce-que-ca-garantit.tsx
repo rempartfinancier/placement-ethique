@@ -3,9 +3,9 @@ import { LienArticle } from "./lien";
 
 export const meta: ArticleMeta = {
   slug: "sfdr-article-8-ou-9-ce-que-ca-garantit",
-  title: "Article 8 ou Article 9 : ce que la classification SFDR garantit vraiment",
+  title: "Article 8 ou 9 SFDR : ce que la classification garantit",
   excerpt:
-    "Article 8 et Article 9 ne sont pas des labels : la classification SFDR est déclarative. Ce qu'elle oblige à publier, ce qu'elle ne garantit pas, comment la lire.",
+    "Article 8 et 9 ne sont pas des labels : la classification SFDR est déclarative. Ce qu'elle oblige à publier, ce qu'elle ne garantit pas, comment la lire.",
   readingTime: "11 min",
   category: "Labels & Greenwashing",
   date: "2026-05-14",
@@ -203,7 +203,12 @@ export function Corps() {
         <LienArticle slug="isr-esg-impact-investing-differences">
           ISR, ESG, impact investing : quelles différences réelles ?
         </LienArticle>{" "}
-        ; la classification SFDR s'y superpose, elle ne les remplace pas.
+        ; la classification SFDR s'y superpose, elle ne les remplace pas. Sur la différence entre
+        exclusion et engagement, notre comparatif{" "}
+        <LienArticle slug="engagement-actionnarial-vs-exclusion">
+          exclure ou engager : quelle stratégie ISR change vraiment les choses
+        </LienArticle>{" "}
+        détaille les arguments de chaque camp.
       </p>
 
       <h2>Pourquoi 307 fonds ont-ils été déclassés d'Article 9 fin 2022 ?</h2>
@@ -401,7 +406,12 @@ export function Corps() {
         Dans l'annexe précontractuelle SFDR jointe au prospectus du fonds, disponible sur le site de
         la société de gestion — et généralement reprise sur la fiche du fonds chez votre
         distributeur ou votre assureur. Si vous ne la trouvez pas, demandez-la : sa communication
-        fait partie des obligations d'information du producteur.
+        fait partie des obligations d'information du producteur. Pour les fonds logés dans un
+        contrat, voir aussi{" "}
+        <LienArticle slug="assurance-vie-isr-guide-2026">
+          comment choisir une assurance vie ISR en 2026
+        </LienArticle>
+        .
       </p>
 
       <h3>Un fonds Article 8 peut-il investir dans les énergies fossiles ?</h3>
@@ -444,7 +454,10 @@ export function Corps() {
         générale. Ce qui est certain, c'est que la classification SFDR ne dit rien de la performance
         : elle décrit des obligations de transparence, pas un profil de rendement. Comme tout
         placement en unités de compte, un fonds Article 8 ou 9 présente un risque de perte en
-        capital.
+        capital. Pour le débat de fond, voir{" "}
+        <LienArticle slug="investir-ethique-performance-chiffres">
+          investir éthique rapporte-t-il moins ?
+        </LienArticle>
       </p>
 
       <h3>Un fonds peut-il changer de catégorie SFDR ?</h3>
@@ -483,9 +496,13 @@ export function Corps() {
         place.
       </p>
       <p>
-        Et si vous préférez faire ces lectures accompagné, c'est notre métier : lors d'un premier
-        échange offert, un conseiller du cabinet passe en revue avec vous les annexes SFDR et les
-        inventaires de vos supports actuels — documents à l'appui, sans jargon et sans engagement.
+        Et si vous préférez aborder ces lectures à deux, vous pouvez{" "}
+        <a href="/cgp-investissement-responsable">
+          échanger avec un conseiller en gestion de patrimoine spécialisé en investissement
+          responsable
+        </a>{" "}
+        lors d'un premier échange offert, pour obtenir des pistes sur la lecture des annexes SFDR et
+        des inventaires, sans jargon et sans engagement.
       </p>
     </>
   );

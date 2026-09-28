@@ -3,9 +3,9 @@ import { LienArticle } from "./lien";
 
 export const meta: ArticleMeta = {
   slug: "retraite-capital-ou-rente-per-ethique",
-  title: "PER à la retraite : sortir en capital ou en rente viagère ?",
+  title: "PER : sortie en capital ou en rente ? Fiscalité 2026",
   excerpt:
-    "Rente garantie à vie mais capital aliéné, ou capital conservé mais risque de longévité : fiscalité et critères concrets pour arbitrer votre sortie de PER.",
+    "Capital fractionné ou rente viagère : fiscalité 2026, transmission, risque de longévité, alignement. Les critères pour arbitrer votre sortie de PER.",
   readingTime: "11 min",
   category: "Fiscalité",
   date: "2026-06-27",
@@ -279,7 +279,8 @@ export function Corps() {
         <li>
           <strong>Fiscalité — quel scénario laisse le plus dans votre poche ?</strong> Comparez un
           fractionnement sur cinq, huit ou dix ans à une rente, avec vos tranches réelles. Notre{" "}
-          <a href="/outils/retraite">outil retraite</a> et notre{" "}
+          <a href="/outils/retraite">outil retraite</a>, notre{" "}
+          <a href="/outils/per-isr">simulateur PER ISR</a> et notre{" "}
           <a href="/outils/simulateur">simulateur de projection</a> vous donnent des pistes
           chiffrées, frais et fiscalité inclus — sur des hypothèses illustratives : les performances
           passées ne préjugent pas des performances futures, et l'épargne investie en unités de
@@ -335,7 +336,12 @@ export function Corps() {
         <LienArticle slug="per-protection-familiale">
           le PER protège-t-il votre famille au-delà de l'avantage fiscal ?
         </LienArticle>{" "}
-        est le complément direct de cette question.
+        est le complément direct de cette question. Et pour flécher ce qui reste vers une cause,
+        voir{" "}
+        <LienArticle slug="transmettre-patrimoine-engage-fonds-partage">
+          transmettre un patrimoine engagé
+        </LienArticle>
+        .
       </p>
 
       <h3>La sortie fractionnée s'étale sur combien d'années ?</h3>
@@ -352,7 +358,11 @@ export function Corps() {
         pas consommé rapidement peut alimenter une assurance vie investie en supports labellisés, de
         l'épargne solidaire ou un projet immobilier responsable. Gardez en tête que ce
         réinvestissement rouvre des frais d'entrée et un nouveau cadre fiscal — à intégrer au calcul
-        global avant de sortir.
+        global avant de sortir. Pour comparer les enveloppes d'accueil, voir{" "}
+        <LienArticle slug="per-vs-assurance-vie-isr">
+          PER ou assurance vie pour investir responsable
+        </LienArticle>
+        .
       </p>
 
       <h3>La rente est-elle revalorisée avec l'inflation ?</h3>
@@ -392,11 +402,15 @@ export function Corps() {
         prend le sujet par le grand angle.
       </p>
       <p>
-        Et si vous préférez poser vos chiffres sur la table plutôt que d'arbitrer seul : c'est notre
-        métier. Lors d'un premier échange offert, un conseiller du cabinet passe en revue avec vous
-        vos scénarios de sortie — rythme de fractionnement, opportunité d'une rente, clause
-        bénéficiaire et destination du capital — documents à l'appui, sans jargon et sans
-        engagement.
+        Et si vous préférez ne pas arbitrer seul, vous pouvez{" "}
+        <a href="/cgp-investissement-responsable">
+          échanger avec un conseiller en gestion de patrimoine spécialisé en investissement
+          responsable
+        </a>{" "}
+        lors d'un premier échange offert, pour obtenir des pistes sur le rythme de fractionnement,
+        la place éventuelle d'une rente, la clause bénéficiaire et la destination du capital, sans
+        jargon et sans engagement. La grille de frais du cabinet, PER compris, est détaillée sur{" "}
+        <a href="/tarifs">la page tarifs</a>.
       </p>
     </>
   );

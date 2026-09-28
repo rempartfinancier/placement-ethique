@@ -3,9 +3,9 @@ import { LienArticle } from "./lien";
 
 export const meta: ArticleMeta = {
   slug: "donation-transmission-coherence-valeurs",
-  title: "Comment donner et transmettre un patrimoine en cohérence avec vos valeurs ?",
+  title: "Transmettre son patrimoine selon ses valeurs : les outils",
   excerpt:
-    "Abattements vérifiés, pacte adjoint, clause bénéficiaire, dons aux associations : les outils pour transmettre vos valeurs, pas seulement un montant.",
+    "Abattements, pacte adjoint, clause bénéficiaire, legs aux associations : les outils pour transmettre vos valeurs, et pas seulement un capital.",
   readingTime: "11 min",
   category: "Transmission",
   date: "2026-06-29",
@@ -110,7 +110,12 @@ export function Corps() {
         . Les deux dispositifs se cumulent : un parent de moins de 80 ans peut ainsi transmettre 131
         865 € à un enfant majeur sans droits sur une période de quinze ans. Les cadeaux
         d&rsquo;occasion — le présent d&rsquo;usage, proportionné à vos moyens et lié à un événement
-        — restent quant à eux hors de tout ce décompte.
+        — restent quant à eux hors de tout ce décompte. Et si vous êtes plutôt du côté de celui qui
+        reçoit, notre article sur{" "}
+        <LienArticle slug="heritage-donation-investir-valeurs">
+          l&rsquo;héritage ou la donation reçue
+        </LienArticle>{" "}
+        prend le sujet à l&rsquo;envers.
       </p>
       <div className="callout">
         <p>
@@ -128,8 +133,11 @@ export function Corps() {
         peut être accompagné d&rsquo;un <strong>pacte adjoint</strong>, document écrit qui en fixe
         le mode d&rsquo;emploi. Sa <strong>clause de remploi</strong> impose que les sommes soient
         investies sur un support déterminé — par exemple un contrat d&rsquo;assurance vie dont vous
-        avez validé l&rsquo;univers de supports responsables. Sa{" "}
-        <strong>clause d&rsquo;inaliénabilité temporaire</strong> interdit d&rsquo;en disposer
+        avez validé l&rsquo;univers de supports responsables (voir{" "}
+        <LienArticle slug="quelle-enveloppe-investissement-ethique">
+          quelle enveloppe choisir pour investir éthique
+        </LienArticle>
+        ). Sa <strong>clause d&rsquo;inaliénabilité temporaire</strong> interdit d&rsquo;en disposer
         librement jusqu&rsquo;à un âge que vous fixez, à condition de rester limitée dans le temps
         et justifiée par un intérêt sérieux et légitime.
       </p>
@@ -338,8 +346,13 @@ export function Corps() {
           <strong>Raconter.</strong> Lisez un relevé annuel avec vos enfants, montrez ce que finance
           un support, décodez un label ensemble — notre{" "}
           <a href="/outils/decodeur-label">décodeur de labels</a> est conçu pour servir de support à
-          exactement cette conversation. Une lettre d&rsquo;intention, jointe au dossier,
-          transmettra l&rsquo;esprit là où les actes transmettent la lettre.
+          exactement cette conversation, et notre{" "}
+          <a href="/outils/empreinte-carbone-epargne">
+            outil d&rsquo;empreinte carbone de l&rsquo;épargne
+          </a>{" "}
+          donne un ordre de grandeur pédagogique de ce que finance une épargne. Une lettre
+          d&rsquo;intention, jointe au dossier, transmettra l&rsquo;esprit là où les actes
+          transmettent la lettre.
         </li>
       </ol>
 
@@ -438,11 +451,11 @@ export function Corps() {
         détaille legs, fonds de partage et succession solidaire.
       </p>
       <p>
-        Et si vous préférez poser votre situation sur la table — abattements déjà consommés, clauses
-        à relire, part associative à structurer —, c&rsquo;est un travail que nous faisons
-        régulièrement avec les familles : lors d&rsquo;un premier échange offert, un conseiller du
-        cabinet passe en revue l&rsquo;existant et vous donne des pistes concrètes, à valider
-        ensuite avec votre notaire pour la rédaction des actes.
+        Et si vous préférez en parler à voix haute — abattements déjà consommés, clauses à relire,
+        part associative à structurer —, vous pouvez{" "}
+        <a href="/cgp-investissement-responsable">échanger avec un conseiller du cabinet</a> lors
+        d&rsquo;un premier échange offert, pour obtenir des pistes concrètes, à valider ensuite avec
+        votre notaire pour la rédaction des actes.
       </p>
     </>
   );

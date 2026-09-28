@@ -3,7 +3,7 @@ import { LienArticle } from "./lien";
 
 export const meta: ArticleMeta = {
   slug: "metaux-precieux-investissement-ethique",
-  title: "L'or et les métaux précieux ont-ils leur place dans un patrimoine éthique ?",
+  title: "Or éthique : peut-on investir dans l'or responsable ?",
   excerpt:
     "Un lingot ne finance rien, mais son extraction pèse lourd. Formes d'exposition, certifications réelles, fiscalité : la réponse complète, sans vernis.",
   readingTime: "11 min",
@@ -237,10 +237,14 @@ export function Corps() {
       <h2>Existe-t-il un « or éthique » certifié ?</h2>
       <p>
         Des dispositifs existent, réels et vérifiables — mais aucun ne fait ce que fait un label de
-        fonds responsable, et c'est la première chose à comprendre : le Label ISR ou le label
-        Greenfin certifient des <em>fonds d'investissement</em> selon un référentiel public ; un
-        métal, un lingot ou un ETC n'entrent pas dans leur champ. Quiconque vous vend de l'« or
-        labellisé ISR » emploie donc un vocabulaire qui n'existe pas. Voici ce qui existe vraiment.
+        fonds responsable, et c'est la première chose à comprendre : le Label ISR (
+        <LienArticle slug="label-isr-que-garantit-il-vraiment">
+          ce qu'il garantit vraiment
+        </LienArticle>
+        ) ou le label Greenfin certifient des <em>fonds d'investissement</em> selon un référentiel
+        public ; un métal, un lingot ou un ETC n'entrent pas dans leur champ. Quiconque vous vend de
+        l'« or labellisé ISR » emploie donc un vocabulaire qui n'existe pas. Voici ce qui existe
+        vraiment.
       </p>
       <h3>Les certifications d'extraction : Fairmined et l'or équitable</h3>
       <p>
@@ -305,6 +309,10 @@ export function Corps() {
           un fonds « vert » trop beau pour être vrai : nous les détaillons dans{" "}
           <LienArticle slug="reperer-greenwashing-fonds-vert-methode">
             notre méthode pour repérer le greenwashing
+          </LienArticle>
+          . Pour les limites de l'investissement éthique en général, voir{" "}
+          <LienArticle slug="pieges-inconvenients-investissement-ethique">
+            les pièges et inconvénients à connaître
           </LienArticle>
           .
         </p>
@@ -446,7 +454,12 @@ export function Corps() {
         d'investissement : il n'entre ni dans la classification produits du règlement SFDR (Article
         6, 8 ou 9), ni dans le champ des labels de fonds. Les seuls éléments extra-financiers à
         examiner sont ceux que l'émetteur documente lui-même — notamment l'origine des lingots
-        détenus en garantie, à vérifier dans sa documentation officielle.
+        détenus en garantie, à vérifier dans sa documentation officielle. Pour comprendre ce que
+        recouvrent ces classifications, voir{" "}
+        <LienArticle slug="sfdr-article-8-ou-9-ce-que-ca-garantit">
+          ce que les Articles 8 et 9 garantissent vraiment
+        </LienArticle>
+        .
       </p>
 
       <h3>Peut-on loger de l'or dans une assurance vie ou un PEA ?</h3>
@@ -454,7 +467,11 @@ export function Corps() {
         L'or physique, non — il se détient en direct, hors enveloppe. Les ETC adossés aux métaux
         relèvent en pratique du compte-titres. Les fonds d'actions de sociétés minières peuvent,
         selon les contrats, être référencés en assurance vie — la disponibilité se vérifie contrat
-        par contrat, dans la liste officielle des supports.
+        par contrat, dans la liste officielle des supports. Pour comparer les contrats, voir{" "}
+        <LienArticle slug="assurance-vie-isr-guide-2026">
+          comment choisir une assurance vie ISR
+        </LienArticle>
+        .
       </p>
 
       <h3>L'argent, le platine ou le palladium posent-ils les mêmes questions que l'or ?</h3>
@@ -497,10 +514,14 @@ export function Corps() {
         enveloppes fiscales.
       </p>
       <p>
-        Et si vous préférez examiner la question accompagné — quelle part de métaux précieux dans
-        votre situation, quel support, quelles preuves de traçabilité exiger de votre vendeur —,
-        c'est notre métier : lors d'un premier échange offert, un conseiller du cabinet passe en
-        revue votre allocation avec vous, documents à l'appui, sans jargon et sans engagement.
+        Et si vous préférez avancer accompagné — quelle part de métaux précieux dans votre
+        allocation, quel support, quelles preuves de traçabilité exiger de votre vendeur —, vous
+        pouvez{" "}
+        <a href="/cgp-investissement-responsable">
+          échanger avec un conseiller en investissement responsable
+        </a>
+        . Le premier échange est offert et sans engagement : vous en repartez avec des pistes à
+        vérifier.
       </p>
     </>
   );

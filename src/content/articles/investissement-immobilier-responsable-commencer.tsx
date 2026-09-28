@@ -3,9 +3,9 @@ import { LienArticle } from "./lien";
 
 export const meta: ArticleMeta = {
   slug: "investissement-immobilier-responsable-commencer",
-  title: "Par où commencer un investissement immobilier responsable ? Trois voies, une méthode",
+  title: "Investissement immobilier responsable : par où commencer ?",
   excerpt:
-    "Pierre-papier ISR, immobilier coté ou achat à rénover : la voie dépend de votre budget, de votre temps et de votre horizon. La méthode pour choisir — et tout vérifier.",
+    "SCPI ISR, foncières cotées ou achat à rénover : la voie dépend de votre budget, de votre temps et de votre horizon. La méthode pour choisir et vérifier.",
   readingTime: "12 min",
   category: "Enveloppes",
   date: "2026-06-21",
@@ -196,11 +196,14 @@ export function Corps() {
       <p>
         Notez enfin que la question de l'enveloppe se pose en parallèle : des parts de SCPI peuvent
         se détenir en direct ou en unités de compte d'une assurance vie, avec dans ce second cas la
-        fiscalité de l'enveloppe mais des frais de contrat qui s'ajoutent. Notre{" "}
-        <a href="/outils/comparateur-enveloppes">comparateur d'enveloppes</a> vous donne des pistes
-        pour situer cet arbitrage dans votre situation. Et rien n'oblige à choisir une voie pour
-        toujours : beaucoup de patrimoines commencent par la pierre-papier, puis ajoutent un projet
-        direct quand le budget et le temps le permettent.
+        fiscalité de l'enveloppe mais des frais de contrat qui s'ajoutent — voir{" "}
+        <LienArticle slug="quelle-enveloppe-investissement-ethique">
+          quelle enveloppe choisir pour investir éthique
+        </LienArticle>
+        . Notre <a href="/outils/comparateur-enveloppes">comparateur d'enveloppes</a> vous donne des
+        pistes pour situer cet arbitrage dans votre situation. Et rien n'oblige à choisir une voie
+        pour toujours : beaucoup de patrimoines commencent par la pierre-papier, puis ajoutent un
+        projet direct quand le budget et le temps le permettent.
       </p>
 
       <h2>Rénover un logement énergivore, est-ce vraiment un investissement responsable ?</h2>
@@ -293,8 +296,11 @@ export function Corps() {
         l'énergivore pour le rénover (logique d'amélioration). Un fonds labellisé détenant des
         immeubles mal classés n'est pas nécessairement une tromperie — c'est parfois le signe de la
         stratégie la plus exigeante. Ce que le label garantit précisément, et ce qu'il ne garantit
-        pas, mérite un article entier ; et si vous hésitez entre une SCPI labellisée et une
-        classique,{" "}
+        pas, fait l'objet de notre article{" "}
+        <LienArticle slug="label-isr-que-garantit-il-vraiment">
+          Le Label ISR garantit-il qu'un fonds est éthique ?
+        </LienArticle>{" "}
+        ; et si vous hésitez entre une SCPI labellisée et une classique,{" "}
         <LienArticle slug="scpi-isr-vs-scpi-classique">
           notre comparatif SCPI ISR contre SCPI classique
         </LienArticle>{" "}
@@ -303,7 +309,11 @@ export function Corps() {
       <p>
         S'ajoute la classification européenne SFDR : Article 6, 8 ou 9 selon le degré d'ambition
         déclaré. Déclaratif, justement — c'est un cadre de transparence, pas une certification
-        d'impact. Trois documents publics permettent d'aller au fond :
+        d'impact (voir{" "}
+        <LienArticle slug="sfdr-article-8-ou-9-ce-que-ca-garantit">
+          ce que les Articles 8 et 9 garantissent vraiment
+        </LienArticle>
+        ). Trois documents publics permettent d'aller au fond :
       </p>
       <ul>
         <li>
@@ -419,7 +429,9 @@ export function Corps() {
         Oui, beaucoup de contrats référencent des SCPI ou fonds immobiliers en unités de compte.
         Vous bénéficiez alors de la fiscalité de l'enveloppe et d'une revente organisée par
         l'assureur, mais les frais du contrat s'ajoutent à ceux du fonds — un arbitrage à poser
-        contrat en main.
+        contrat en main. Notre guide pour{" "}
+        <LienArticle slug="assurance-vie-isr-guide-2026">choisir une assurance vie ISR</LienArticle>{" "}
+        détaille les critères de comparaison des contrats.
       </p>
       <h3>Le crowdfunding immobilier est-il un investissement responsable ?</h3>
       <p>
@@ -453,10 +465,14 @@ export function Corps() {
         <a href="/outils/decodeur-label">décodeur de labels</a>.
       </p>
       <p>
-        Et si vous hésitez encore entre les trois voies, c'est très exactement la conversation que
-        nous avons chaque semaine au cabinet : venez avec votre budget, votre horizon et vos
-        exigences — nous poserons ensemble le cadrage et lirons les documents des options qui vous
-        tentent. Le premier échange est offert.
+        Et si vous hésitez encore entre les trois voies, c'est le type de conversation que nous
+        avons volontiers au cabinet : vous pouvez{" "}
+        <a href="/cgp-investissement-responsable">
+          prendre rendez-vous avec un conseiller en investissement responsable
+        </a>
+        , avec votre budget, votre horizon et vos exigences. Le premier échange est offert et sans
+        engagement ; vous en repartez avec des pistes à vérifier dans les documents des options qui
+        vous tentent.
       </p>
     </>
   );

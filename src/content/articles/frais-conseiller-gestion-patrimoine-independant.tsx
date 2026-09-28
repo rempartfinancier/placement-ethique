@@ -3,9 +3,9 @@ import { LienArticle } from "./lien";
 
 export const meta: ArticleMeta = {
   slug: "frais-conseiller-gestion-patrimoine-independant",
-  title: "Combien coûte un conseiller en gestion de patrimoine indépendant ?",
+  title: "Combien coûte un CGP ? Honoraires, rétrocessions, frais",
   excerpt:
-    "Un CGP facture rarement des honoraires directs : il est payé par rétrocessions, intégrées aux frais du produit. Voici comment ça marche, chiffres et sources à l'appui.",
+    "Un CGP est rarement payé en honoraires : il est rémunéré par des rétrocessions intégrées aux frais du produit. Comment ça marche, chiffres à l'appui.",
   readingTime: "12 min",
   category: "Conseil",
   date: "2026-08-01",
@@ -87,8 +87,12 @@ export function Corps() {
         — ils rémunèrent la tenue du contrat par l'assureur et, pour une part rétrocédée, le suivi
         continu du conseiller. Sur les supports logés dans le contrat (fonds, ETF), une troisième
         couche existe : les frais courants du support lui-même, qui peuvent aussi générer une
-        rétrocession selon le mode de gestion du fonds — nous y revenons plus loin, car c'est
-        précisément là que se pose la question de l'investissement éthique.
+        rétrocession selon le mode de gestion du fonds (pour choisir un contrat, voir{" "}
+        <LienArticle slug="assurance-vie-isr-guide-2026">
+          notre guide de l'assurance vie ISR
+        </LienArticle>
+        ) — nous y revenons plus loin, car c'est précisément là que se pose la question de
+        l'investissement éthique.
       </p>
       <p>
         Le document réglementaire qui vous donne le coût total agrégé d'un support est le{" "}
@@ -157,7 +161,11 @@ export function Corps() {
         modèle et plus de 90 % du second — beaucoup de cabinets, dont le nôtre, combinent en réalité
         les deux : rétrocessions par défaut pour l'accompagnement standard, honoraires ponctuels sur
         devis pour des missions spécifiques (audit patrimonial complexe, stratégie de transmission)
-        à la demande du client.
+        à la demande du client. Pour la comparaison avec un conseiller de banque, voir{" "}
+        <LienArticle slug="cgp-independant-vs-conseiller-bancaire-ethique">
+          CGP ou conseiller bancaire : qui choisir pour investir de façon éthique
+        </LienArticle>
+        .
       </p>
 
       <h2>Exemple concret : ce que ça donne en chiffres chez nous</h2>
@@ -165,7 +173,12 @@ export function Corps() {
         Les principes abstraits ne remplacent pas des chiffres. Voici, à titre d'exemple documenté —
         pas comme la norme du marché, chaque cabinet fixant sa propre grille dans les limites
         autorisées par ses partenaires — la grille appliquée par notre cabinet, EXP Capital, publiée
-        en intégralité sur notre <a href="/tarifs">page dédiée à notre rémunération</a>.
+        en intégralité sur notre <a href="/tarifs">page dédiée à notre rémunération</a>. Le détail
+        des deux contrats d'assurance vie concernés figure dans notre{" "}
+        <LienArticle slug="avis-patrimoine-vie-plus-uaf-life-version-absolue">
+          avis sur les contrats Patrimoine Vie Plus et Version Absolue 2
+        </LienArticle>
+        .
       </p>
       <table>
         <thead>
@@ -268,8 +281,7 @@ export function Corps() {
             article L.541-8-1 du code monétaire et financier
           </a>{" "}
           impose de communiquer en temps utile les modalités de rémunération et la tarification des
-          prestations. Pour les intermédiaires en assurance — le statut sous lequel opère notre
-          cabinet pour l'assurance vie et le PER —, c'est l'
+          prestations. Pour les intermédiaires en assurance, c'est l'
           <a
             href="https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000036920566/"
             target="_blank"
@@ -300,8 +312,7 @@ export function Corps() {
           : conseiller en investissements financiers (CIF), intermédiaire en assurance (IAS,
           courtier ou agent), intermédiaire en opérations de banque (IOBSP). Chaque statut relève
           d'un régime d'obligations légèrement différent — notre cabinet, EXP Capital (ORIAS n°
-          25005915), n'est pas immatriculé CIF, et son activité relève des textes sur
-          l'intermédiation en assurance et en opérations de banque.
+          25005915, à vérifier sur orias.fr), n'est pas CIF.
         </li>
         <li>
           <strong>La réclamation, en dernier recours.</strong> Si un doute persiste sur une
@@ -312,9 +323,9 @@ export function Corps() {
         </li>
       </ol>
 
-      <h2>Vos questions sur les frais d'un CGP indépendant</h2>
+      <h2>Vos questions sur les frais d'un CGP</h2>
 
-      <h3>Un CGP peut-il vous recommander un produit parce qu'il est mieux rémunéré dessus ?</h3>
+      <h3>Un CGP peut-il vous orienter vers un produit parce qu'il est mieux rémunéré dessus ?</h3>
       <p>
         Oui, c'est un risque réel, et il vaut mieux le dire sans détour que de le nier. Le modèle
         rétrocession crée un lien mécanique entre la souscription d'une solution et la rémunération
@@ -332,8 +343,7 @@ export function Corps() {
       <p>
         Aucune facture n'est émise, et aucune rémunération n'est générée si vous ne donnez pas suite
         — dans ce sens, oui, c'est sans contrepartie financière. Cela n'en fait pas un échange dénué
-        d'intérêt commercial pour le cabinet : une majorité de premiers échanges débouchant, à
-        terme, sur un accompagnement rémunéré, c'est un investissement de temps assumé de notre
+        d'intérêt commercial pour le cabinet : c'est un investissement de temps assumé de notre
         part, pas un acte philanthropique.
       </p>
 
@@ -356,8 +366,7 @@ export function Corps() {
         en assurance, courtier ou agent) distribue des contrats d'assurance vie et de PER
         assurantiel, sous supervision de l'ACPR. L'IOBSP intervient sur les opérations de banque et
         de crédit. EXP Capital, la structure sous laquelle nous exerçons, est immatriculée à l'ORIAS
-        (n° 25005915, vérifiable sur orias.fr) au titre de l'intermédiation en assurance et en
-        opérations de banque — pas au titre de CIF.
+        (n° 25005915, vérifiable sur orias.fr) ; elle n'est pas CIF.
       </p>
 
       <h3>
@@ -429,10 +438,15 @@ export function Corps() {
       <p>
         Enfin, si vous souhaitez vérifier point par point ce qu'un cabinet peut toucher sur votre
         propre situation, la totalité de notre grille — chiffrée, solution par solution — est
-        publiée sur notre <a href="/tarifs">page dédiée à notre rémunération</a>. Et si vous
-        préférez poser vos questions directement, un premier échange avec l'un de nos conseillers
-        est offert et sans engagement : vous pouvez le demander via notre{" "}
-        <a href="/contact">page de contact</a>.
+        publiée sur notre <a href="/tarifs">page dédiée à notre rémunération</a>. Vos autres
+        questions sur nos pratiques trouvent leur réponse dans la page{" "}
+        <a href="/questions">questions fréquentes</a>. Et si vous préférez les poser directement, un
+        premier échange avec l'un de nos conseillers est offert et sans engagement : vous pouvez le
+        demander via notre <a href="/contact">page de contact</a>, et en savoir plus sur{" "}
+        <a href="/cgp-investissement-responsable">
+          l'accompagnement du cabinet en investissement responsable
+        </a>
+        .
       </p>
     </>
   );
