@@ -83,6 +83,14 @@ export function SiteHeader() {
               }`}
             >
               <Link
+                to="/placement-ethique"
+                onClick={() => setPlacementsOpen(false)}
+                className="block rounded-lg px-3 py-2 text-sm text-foreground/80 hover:bg-muted hover:text-foreground transition-colors"
+                activeProps={{ className: "bg-muted text-foreground font-semibold" }}
+              >
+                Le guide du placement éthique
+              </Link>
+              <Link
                 to="/placements"
                 onClick={() => setPlacementsOpen(false)}
                 className="block rounded-lg px-3 py-2 text-sm text-foreground/80 hover:bg-muted hover:text-foreground transition-colors"
@@ -193,6 +201,13 @@ export function SiteHeader() {
               </button>
               {mobilePlacementsOpen && (
                 <div className="pl-4 pb-2 flex flex-col gap-1">
+                  <Link
+                    to="/placement-ethique"
+                    onClick={() => setOpen(false)}
+                    className="py-2 text-sm text-foreground/75"
+                  >
+                    Le guide du placement éthique
+                  </Link>
                   <Link
                     to="/placements"
                     onClick={() => setOpen(false)}

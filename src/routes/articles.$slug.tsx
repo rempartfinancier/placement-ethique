@@ -45,6 +45,33 @@ export const Route = createFileRoute("/articles/$slug")({
             },
           }),
         },
+        {
+          type: "application/ld+json",
+          children: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            itemListElement: [
+              {
+                "@type": "ListItem",
+                position: 1,
+                name: "Accueil",
+                item: "https://placement-ethique.fr/",
+              },
+              {
+                "@type": "ListItem",
+                position: 2,
+                name: "Articles",
+                item: "https://placement-ethique.fr/articles",
+              },
+              {
+                "@type": "ListItem",
+                position: 3,
+                name: a.title,
+                item: `https://placement-ethique.fr/articles/${a.slug}`,
+              },
+            ],
+          }),
+        },
       ],
     };
   },
@@ -76,6 +103,7 @@ function ArticlePage() {
   const Content = articleContent[article.slug];
   return (
     <ArticleLayout
+      slug={article.slug}
       category={article.category}
       title={article.title}
       readingTime={article.readingTime}

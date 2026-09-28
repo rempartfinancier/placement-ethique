@@ -176,6 +176,23 @@ function HomePage() {
               Explorer nos outils gratuits
             </Link>
           </div>
+          <p
+            className="mt-5 text-sm fade-up"
+            style={{ color: "color-mix(in oklch, white 75%, transparent)" }}
+          >
+            Nouveau sur le sujet ?{" "}
+            <Link to="/placement-ethique" className="underline underline-offset-4 hover:text-white">
+              Lisez le guide du placement éthique
+            </Link>{" "}
+            ou découvrez{" "}
+            <Link
+              to="/cgp-investissement-responsable"
+              className="underline underline-offset-4 hover:text-white"
+            >
+              comment travaille un CGP en investissement responsable
+            </Link>
+            .
+          </p>
           <div className="mt-12 flex flex-wrap items-center gap-x-8 gap-y-3 text-sm text-white/65 fade-up">
             <span className="inline-flex items-center gap-2">
               <Landmark size={15} aria-hidden /> EXP Capital — ORIAS n° 25005915

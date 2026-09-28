@@ -34,8 +34,18 @@ export function SiteFooter() {
           <h4 className="font-display text-base mb-4 text-[var(--grenat-clair)]">Explorer</h4>
           <ul className="space-y-2.5 text-sm text-white/75">
             <li>
+              <Link to="/placement-ethique" className="hover:text-white">
+                Placement éthique : le guide
+              </Link>
+            </li>
+            <li>
               <Link to="/placements" className="hover:text-white">
                 Placements responsables
+              </Link>
+            </li>
+            <li>
+              <Link to="/cgp-investissement-responsable" className="hover:text-white">
+                Un CGP en investissement responsable
               </Link>
             </li>
             <li>

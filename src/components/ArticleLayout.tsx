@@ -3,9 +3,11 @@ import { useState, useEffect } from "react";
 import { Link } from "@tanstack/react-router";
 import { SiteLayout } from "@/components/SiteLayout";
 import { CTA } from "@/components/CTA";
-import { ArrowLeft, Clock, ArrowRight, ChevronDown, ChevronUp } from "lucide-react";
+import { ArrowRight, ChevronDown, ChevronUp, ChevronRight, Clock } from "lucide-react";
+import { getRelatedArticles } from "@/content/related";
 
 export function ArticleLayout({
+  slug,
   category,
   title,
   readingTime,
@@ -14,6 +16,7 @@ export function ArticleLayout({
   author = "Alexandre Pollet",
   children,
 }: {
+  slug?: string;
   category: string;
   title: string;
   readingTime: string;
@@ -22,6 +25,7 @@ export function ArticleLayout({
   author?: string;
   children: ReactNode;
 }) {
+  const related = slug ? getRelatedArticles(slug) : [];
   const [headings, setHeadings] = useState<{ id: string; text: string }[]>([]);
   const [activeId, setActiveId] = useState<string>("");
   const [isMobileTocOpen, setIsMobileTocOpen] = useState(false);
@@ -108,12 +112,20 @@ export function ArticleLayout({
         }}
       >
         <div className="container-prose max-w-5xl">
-          <Link
-            to="/articles"
-            className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors"
+          <nav
+            aria-label="Fil d'Ariane"
+            className="flex flex-wrap items-center gap-1.5 text-sm text-muted-foreground"
           >
-            <ArrowLeft size={14} /> Tous les articles
-          </Link>
+            <Link to="/" className="hover:text-foreground transition-colors">
+              Accueil
+            </Link>
+            <ChevronRight size={14} aria-hidden />
+            <Link to="/articles" className="hover:text-foreground transition-colors">
+              Articles
+            </Link>
+            <ChevronRight size={14} aria-hidden />
+            <span className="text-foreground/70">{category}</span>
+          </nav>
           <div className="mt-8">
             <span className="eyebrow px-3 py-1 rounded-full border border-[color-mix(in_oklch,var(--grenat)_30%,transparent)] bg-[color-mix(in_oklch,var(--grenat)_8%,transparent)] text-xs">
               {category}
@@ -193,6 +205,45 @@ export function ArticleLayout({
             )}
 
             <div className="prose-article max-w-3xl">{children}</div>
+
+            {/* Maillage automatique : articles proches + pages pilier/service.
+                Rendu côté serveur, donc crawlable même si le corps de l'article
+                ne renvoie pas vers ses voisins. */}
+            {related.length > 0 && (
+              <aside className="mt-14 max-w-3xl" aria-labelledby="a-lire-ensuite">
+                <h2 id="a-lire-ensuite" className="font-display text-2xl font-semibold">
+                  À lire ensuite
+                </h2>
+                <ul className="mt-5 grid gap-4 sm:grid-cols-2">
+                  {related.map((r) => (
+                    <li key={r.slug}>
+                      <Link
+                        to="/articles/$slug"
+                        params={{ slug: r.slug }}
+                        className="card-paper block h-full"
+                      >
+                        <span className="eyebrow text-xs">{r.category}</span>
+                        <span className="mt-2 block font-display text-lg leading-snug">
+                          {r.title}
+                        </span>
+                        <span className="mt-2 inline-flex items-center gap-1 text-sm text-muted-foreground">
+                          <Clock size={13} /> {r.readingTime}
+                        </span>
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+                <p className="mt-6 text-sm text-muted-foreground leading-relaxed">
+                  Vue d'ensemble :{" "}
+                  <Link to="/placement-ethique">le guide du placement éthique</Link>. Une question
+                  sur la démarche d'un cabinet spécialisé :{" "}
+                  <Link to="/cgp-investissement-responsable">
+                    comment travaille un CGP en investissement responsable
+                  </Link>
+                  .
+                </p>
+              </aside>
+            )}
           </article>
 
           {/* Sidebar sticky pour écrans larges */}

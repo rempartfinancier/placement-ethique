@@ -13,6 +13,7 @@ import { Route as TarifsRouteImport } from './routes/tarifs'
 import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
 import { Route as QuestionsRouteImport } from './routes/questions'
 import { Route as PlacementsRouteImport } from './routes/placements'
+import { Route as PlacementEthiqueRouteImport } from './routes/placement-ethique'
 import { Route as OutilsRouteImport } from './routes/outils'
 import { Route as ObjectifsRouteImport } from './routes/objectifs'
 import { Route as MentionsLegalesRouteImport } from './routes/mentions-legales'
@@ -21,6 +22,7 @@ import { Route as EspaceRouteImport } from './routes/espace'
 import { Route as EnveloppesRouteImport } from './routes/enveloppes'
 import { Route as ContactRouteImport } from './routes/contact'
 import { Route as ConfidentialiteRouteImport } from './routes/confidentialite'
+import { Route as CgpInvestissementResponsableRouteImport } from './routes/cgp-investissement-responsable'
 import { Route as ArticlesRouteImport } from './routes/articles'
 import { Route as AProposRouteImport } from './routes/a-propos'
 import { Route as IndexRouteImport } from './routes/index'
@@ -65,6 +67,11 @@ const PlacementsRoute = PlacementsRouteImport.update({
   path: '/placements',
   getParentRoute: () => rootRouteImport,
 } as any)
+const PlacementEthiqueRoute = PlacementEthiqueRouteImport.update({
+  id: '/placement-ethique',
+  path: '/placement-ethique',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const OutilsRoute = OutilsRouteImport.update({
   id: '/outils',
   path: '/outils',
@@ -105,6 +112,12 @@ const ConfidentialiteRoute = ConfidentialiteRouteImport.update({
   path: '/confidentialite',
   getParentRoute: () => rootRouteImport,
 } as any)
+const CgpInvestissementResponsableRoute =
+  CgpInvestissementResponsableRouteImport.update({
+    id: '/cgp-investissement-responsable',
+    path: '/cgp-investissement-responsable',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 const ArticlesRoute = ArticlesRouteImport.update({
   id: '/articles',
   path: '/articles',
@@ -230,6 +243,7 @@ export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/a-propos': typeof AProposRoute
   '/articles': typeof ArticlesRouteWithChildren
+  '/cgp-investissement-responsable': typeof CgpInvestissementResponsableRoute
   '/confidentialite': typeof ConfidentialiteRoute
   '/contact': typeof ContactRoute
   '/enveloppes': typeof EnveloppesRoute
@@ -238,6 +252,7 @@ export interface FileRoutesByFullPath {
   '/mentions-legales': typeof MentionsLegalesRoute
   '/objectifs': typeof ObjectifsRoute
   '/outils': typeof OutilsRouteWithChildren
+  '/placement-ethique': typeof PlacementEthiqueRoute
   '/placements': typeof PlacementsRoute
   '/questions': typeof QuestionsRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
@@ -266,12 +281,14 @@ export interface FileRoutesByFullPath {
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/a-propos': typeof AProposRoute
+  '/cgp-investissement-responsable': typeof CgpInvestissementResponsableRoute
   '/confidentialite': typeof ConfidentialiteRoute
   '/contact': typeof ContactRoute
   '/enveloppes': typeof EnveloppesRoute
   '/guide': typeof GuideRoute
   '/mentions-legales': typeof MentionsLegalesRoute
   '/objectifs': typeof ObjectifsRoute
+  '/placement-ethique': typeof PlacementEthiqueRoute
   '/placements': typeof PlacementsRoute
   '/questions': typeof QuestionsRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
@@ -302,6 +319,7 @@ export interface FileRoutesById {
   '/': typeof IndexRoute
   '/a-propos': typeof AProposRoute
   '/articles': typeof ArticlesRouteWithChildren
+  '/cgp-investissement-responsable': typeof CgpInvestissementResponsableRoute
   '/confidentialite': typeof ConfidentialiteRoute
   '/contact': typeof ContactRoute
   '/enveloppes': typeof EnveloppesRoute
@@ -310,6 +328,7 @@ export interface FileRoutesById {
   '/mentions-legales': typeof MentionsLegalesRoute
   '/objectifs': typeof ObjectifsRoute
   '/outils': typeof OutilsRouteWithChildren
+  '/placement-ethique': typeof PlacementEthiqueRoute
   '/placements': typeof PlacementsRoute
   '/questions': typeof QuestionsRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
@@ -341,6 +360,7 @@ export interface FileRouteTypes {
     | '/'
     | '/a-propos'
     | '/articles'
+    | '/cgp-investissement-responsable'
     | '/confidentialite'
     | '/contact'
     | '/enveloppes'
@@ -349,6 +369,7 @@ export interface FileRouteTypes {
     | '/mentions-legales'
     | '/objectifs'
     | '/outils'
+    | '/placement-ethique'
     | '/placements'
     | '/questions'
     | '/sitemap.xml'
@@ -377,12 +398,14 @@ export interface FileRouteTypes {
   to:
     | '/'
     | '/a-propos'
+    | '/cgp-investissement-responsable'
     | '/confidentialite'
     | '/contact'
     | '/enveloppes'
     | '/guide'
     | '/mentions-legales'
     | '/objectifs'
+    | '/placement-ethique'
     | '/placements'
     | '/questions'
     | '/sitemap.xml'
@@ -412,6 +435,7 @@ export interface FileRouteTypes {
     | '/'
     | '/a-propos'
     | '/articles'
+    | '/cgp-investissement-responsable'
     | '/confidentialite'
     | '/contact'
     | '/enveloppes'
@@ -420,6 +444,7 @@ export interface FileRouteTypes {
     | '/mentions-legales'
     | '/objectifs'
     | '/outils'
+    | '/placement-ethique'
     | '/placements'
     | '/questions'
     | '/sitemap.xml'
@@ -450,6 +475,7 @@ export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   AProposRoute: typeof AProposRoute
   ArticlesRoute: typeof ArticlesRouteWithChildren
+  CgpInvestissementResponsableRoute: typeof CgpInvestissementResponsableRoute
   ConfidentialiteRoute: typeof ConfidentialiteRoute
   ContactRoute: typeof ContactRoute
   EnveloppesRoute: typeof EnveloppesRoute
@@ -458,6 +484,7 @@ export interface RootRouteChildren {
   MentionsLegalesRoute: typeof MentionsLegalesRoute
   ObjectifsRoute: typeof ObjectifsRoute
   OutilsRoute: typeof OutilsRouteWithChildren
+  PlacementEthiqueRoute: typeof PlacementEthiqueRoute
   PlacementsRoute: typeof PlacementsRoute
   QuestionsRoute: typeof QuestionsRoute
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
@@ -494,6 +521,13 @@ declare module '@tanstack/react-router' {
       path: '/placements'
       fullPath: '/placements'
       preLoaderRoute: typeof PlacementsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/placement-ethique': {
+      id: '/placement-ethique'
+      path: '/placement-ethique'
+      fullPath: '/placement-ethique'
+      preLoaderRoute: typeof PlacementEthiqueRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/outils': {
@@ -550,6 +584,13 @@ declare module '@tanstack/react-router' {
       path: '/confidentialite'
       fullPath: '/confidentialite'
       preLoaderRoute: typeof ConfidentialiteRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/cgp-investissement-responsable': {
+      id: '/cgp-investissement-responsable'
+      path: '/cgp-investissement-responsable'
+      fullPath: '/cgp-investissement-responsable'
+      preLoaderRoute: typeof CgpInvestissementResponsableRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/articles': {
@@ -784,6 +825,7 @@ const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AProposRoute: AProposRoute,
   ArticlesRoute: ArticlesRouteWithChildren,
+  CgpInvestissementResponsableRoute: CgpInvestissementResponsableRoute,
   ConfidentialiteRoute: ConfidentialiteRoute,
   ContactRoute: ContactRoute,
   EnveloppesRoute: EnveloppesRoute,
@@ -792,6 +834,7 @@ const rootRouteChildren: RootRouteChildren = {
   MentionsLegalesRoute: MentionsLegalesRoute,
   ObjectifsRoute: ObjectifsRoute,
   OutilsRoute: OutilsRouteWithChildren,
+  PlacementEthiqueRoute: PlacementEthiqueRoute,
   PlacementsRoute: PlacementsRoute,
   QuestionsRoute: QuestionsRoute,
   SitemapDotxmlRoute: SitemapDotxmlRoute,
