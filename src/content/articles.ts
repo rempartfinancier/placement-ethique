@@ -57,6 +57,7 @@ import * as queFinanceAssuranceVie from "./articles/que-finance-votre-assurance-
 import * as avIsrFraisReels from "./articles/assurance-vie-isr-frais-reels-combien-ca-coute";
 import * as epargneSalarialeSolidaire from "./articles/epargne-salariale-solidaire-isr-pee-per-collectif";
 import * as sfdrRefonteEsma from "./articles/sfdr-refonte-et-regles-esma-noms-de-fonds-ce-qui-change";
+import * as labelIsrImmobilierReforme from "./articles/label-isr-immobilier-reforme-2026-ce-qui-change-scpi";
 
 type ArticleModule = {
   meta: ArticleMeta;
@@ -111,6 +112,7 @@ const modules: ArticleModule[] = [
   avIsrFraisReels,
   epargneSalarialeSolidaire,
   sfdrRefonteEsma,
+  labelIsrImmobilierReforme,
 ];
 
 /** Tous les articles, triés par date de publication décroissante. */
