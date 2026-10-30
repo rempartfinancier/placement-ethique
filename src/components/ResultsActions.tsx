@@ -1,8 +1,7 @@
 import { useState, useEffect } from "react";
-import { useServerFn } from "@tanstack/react-start";
 import { Download, Mail, Loader2, CheckCircle2 } from "lucide-react";
 import { downloadPdf, summarizeForEmail, type PdfDoc } from "@/lib/pdf";
-import { saveLead } from "@/lib/leads.functions";
+import { saveLeadFiable } from "@/lib/leads.client";
 import { getStoredLeadEmail } from "@/components/LeadGate";
 
 type Props = {
@@ -19,7 +18,7 @@ export function ResultsActions({ source, buildDoc }: Props) {
   const [busy, setBusy] = useState<"download" | "email" | null>(null);
   const [done, setDone] = useState<"download" | "email" | null>(null);
   const [error, setError] = useState<string | null>(null);
-  const submit = useServerFn(saveLead);
+  const submit = saveLeadFiable;
 
   // Préremplit avec l'email déjà fourni sur un autre outil (LeadGate).
   useEffect(() => {

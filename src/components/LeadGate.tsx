@@ -1,3 +1,4 @@
+import { fiable } from "@/lib/envoi-fiable";
 import { useState, useEffect, useRef } from "react";
 import { Mail, ArrowRight, ShieldCheck, CheckCircle2, AlertTriangle } from "lucide-react";
 
@@ -39,7 +40,7 @@ function markGatePassed(email?: string) {
   }
 }
 
-async function submitLead(
+async function submitLeadBrut(
   email: string,
   source: string,
   payload?: Record<string, unknown>,
@@ -63,6 +64,21 @@ async function submitLead(
   } catch {
     return { ok: false, emailed: false };
   }
+}
+
+const submitLeadFiable = fiable(
+  "lead-gate",
+  (o: {
+    data: { email: string; source: string; payload?: Record<string, unknown>; sendEmail: boolean };
+  }) => submitLeadBrut(o.data.email, o.data.source, o.data.payload, o.data.sendEmail),
+);
+function submitLead(
+  email: string,
+  source: string,
+  payload?: Record<string, unknown>,
+  sendEmail = true,
+) {
+  return submitLeadFiable({ data: { email, source, payload, sendEmail } });
 }
 
 export function LeadGate({ source, payload, onSuccess }: LeadGateProps) {

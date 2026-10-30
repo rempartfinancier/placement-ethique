@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { ArrowRight, CheckCircle2 } from "lucide-react";
-import { saveLead } from "@/lib/leads.functions";
+import { saveLeadFiable as saveLead } from "@/lib/leads.client";
 
 export function NewsletterSignup() {
   const [email, setEmail] = useState("");

@@ -222,39 +222,59 @@ async function sendAdminNotification(input: ProcessLeadInput) {
 // avalée et loguée si le CRM est indisponible ou si INGEST_TOKEN manque.
 const CRM_INGEST_URL = "https://rempart-crm.vercel.app/api/ingest/lead";
 
-async function notifierCrmInterne(input: ProcessLeadInput) {
+async function notifierCrmInterne(
+  input: ProcessLeadInput,
+): Promise<{ ok: boolean; error?: string }> {
   const token = process.env.INGEST_TOKEN;
-  if (!token) return;
-  try {
-    let prenom: string | undefined;
-    let nom: string | undefined;
-    if (input.name) {
-      const parts = input.name.split(" ");
-      prenom = parts[0];
-      if (parts.length > 1) nom = parts.slice(1).join(" ");
-    }
-    const res = await fetch(CRM_INGEST_URL, {
-      method: "POST",
-      headers: { "Content-Type": "application/json", Authorization: `Bearer ${token}` },
-      body: JSON.stringify({
-        sourceSite: "placement-ethique",
-        email: input.email,
-        prenom,
-        nom,
-        telephone: input.phone || undefined,
-        message: input.message || undefined,
-      }),
-    });
-    if (!res.ok) {
-      console.error(
-        "[notifierCrmInterne] CRM interne a refusé le lead:",
-        res.status,
-        await res.text(),
-      );
-    }
-  } catch (e) {
-    console.error("[notifierCrmInterne] Erreur notification CRM interne:", e);
+  if (!token) {
+    console.error("[notifierCrmInterne] INGEST_TOKEN absent : lead NON transmis au CRM.");
+    return { ok: false, error: "INGEST_TOKEN absent" };
   }
+  let prenom: string | undefined;
+  let nom: string | undefined;
+  if (input.name) {
+    const parts = input.name.split(" ");
+    prenom = parts[0];
+    if (parts.length > 1) nom = parts.slice(1).join(" ");
+  }
+  const message =
+    [
+      input.message,
+      input.offer_name ? `Offre : ${input.offer_name}` : null,
+      input.payload && Object.keys(input.payload).length
+        ? `Détail : ${JSON.stringify(input.payload).slice(0, 3000)}`
+        : null,
+    ]
+      .filter(Boolean)
+      .join("\n") || undefined;
+  let lastError = "";
+  // 3 tentatives (5xx / réseau) ; un 4xx est définitif, inutile de rejouer.
+  for (let essai = 1; essai <= 3; essai++) {
+    try {
+      const res = await fetch(CRM_INGEST_URL, {
+        method: "POST",
+        headers: { "Content-Type": "application/json", Authorization: `Bearer ${token}` },
+        body: JSON.stringify({
+          sourceSite: "placement-ethique",
+          email: input.email,
+          prenom,
+          nom,
+          telephone: input.phone || undefined,
+          message,
+        }),
+        signal: AbortSignal.timeout(8000),
+      });
+      if (res.ok) return { ok: true };
+      lastError = `CRM ${res.status}: ${(await res.text()).slice(0, 200)}`;
+      console.error("[notifierCrmInterne] refus CRM:", lastError);
+      if (res.status >= 400 && res.status < 500 && res.status !== 429) break;
+    } catch (e) {
+      lastError = e instanceof Error ? e.message : String(e);
+      console.error(`[notifierCrmInterne] essai ${essai} en échec:`, lastError);
+    }
+    if (essai < 3) await new Promise((r) => setTimeout(r, 400 * essai));
+  }
+  return { ok: false, error: lastError };
 }
 
 export async function processLead(data: ProcessLeadInput): Promise<ProcessLeadResult> {
@@ -305,26 +325,17 @@ export async function processLead(data: ProcessLeadInput): Promise<ProcessLeadRe
           message: data.message,
           offer_name: data.offer_name,
         };
-        supabase
-          .from("leads")
-          .insert({
-            email: data.email,
-            name: data.name ?? null,
-            source: data.source,
-            payload: combinedPayload,
-            newsletter_opt_in: data.newsletter_opt_in ?? false,
-            synced_to_brevo: brevo.ok,
-            brevo_error:
-              (brevo.ok ? null : brevo.error?.slice(0, 500)) || emailError?.slice(0, 500) || null,
-          })
-          .then(
-            ({ error }) => {
-              if (error) console.error("[processLead] Supabase insert error:", error);
-            },
-            (err: unknown) => {
-              console.error("[processLead] Supabase exception:", err);
-            },
-          );
+        const { error: insertError } = await supabase.from("leads").insert({
+          email: data.email,
+          name: data.name ?? null,
+          source: data.source,
+          payload: combinedPayload,
+          newsletter_opt_in: data.newsletter_opt_in ?? false,
+          synced_to_brevo: brevo.ok,
+          brevo_error:
+            (brevo.ok ? null : brevo.error?.slice(0, 500)) || emailError?.slice(0, 500) || null,
+        });
+        if (insertError) console.error("[processLead] Supabase insert error:", insertError);
       } catch (supabaseErr) {
         console.warn("[processLead] Supabase unavailable, skipping insert:", supabaseErr);
       }
@@ -335,9 +346,10 @@ export async function processLead(data: ProcessLeadInput): Promise<ProcessLeadRe
     }
 
     // ── 3bis. CRM interne — comme le insert Supabase, entièrement optionnel ──
-    // Fire-and-forget assumé (cf. commentaire sur notifierCrmInterne
-    // ci-dessus) : jamais attendu, jamais dans le calcul de succès ci-dessous.
-    void notifierCrmInterne(data);
+    // Attendu (3 tentatives) : sur Vercel, une promesse non attendue est
+    // coupée dès la réponse envoyée, donc le lead se perdait. Compte comme
+    // canal de succès.
+    const crm = await notifierCrmInterne(data);
 
     // ── 4. Réponse — CORRECTIF (2026-08-05) ──
     // Avant ce correctif, processLead renvoyait toujours { ok: true }, même
@@ -353,7 +365,7 @@ export async function processLead(data: ProcessLeadInput): Promise<ProcessLeadRe
     // non attendus, annexes à Brevo (cf. leurs commentaires respectifs) — les
     // y inclure exigerait de les attendre, changeant leur nature et ajoutant
     // de la latence à une fonction jusqu'ici résiliente.
-    const channelSucceeded = brevo.ok || emailed || adminEmailed;
+    const channelSucceeded = brevo.ok || emailed || adminEmailed || crm.ok;
 
     if (adminAttempted && !adminEmailed) {
       console.warn(
@@ -373,6 +385,7 @@ export async function processLead(data: ProcessLeadInput): Promise<ProcessLeadRe
 
     if (!channelSucceeded) {
       const reasons = [
+        !crm.ok ? `CRM: ${crm.error ?? "erreur inconnue"}` : null,
         !brevo.ok ? `Brevo: ${brevo.error ?? "erreur inconnue"}` : null,
         data.send_email && emailError ? emailError : null,
         adminAttempted && !adminEmailed ? "Notification admin : échec d'envoi" : null,

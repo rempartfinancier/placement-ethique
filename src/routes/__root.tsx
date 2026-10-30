@@ -11,6 +11,9 @@ import { useEffect, type ReactNode } from "react";
 
 import appCss from "../styles.css?url";
 import { reportLovableError } from "../lib/lovable-error-reporting";
+import { rejouerEnvoisEnAttente } from "../lib/envoi-fiable";
+import "../lib/leads.client";
+import "../components/LeadGate";
 import { CookieConsent } from "../components/CookieConsent";
 
 function NotFoundComponent() {
@@ -156,6 +159,18 @@ function RootShell({ children }: { children: ReactNode }) {
 
 function RootComponent() {
   const { queryClient } = Route.useRouteContext();
+
+  // Rejeu des envois restés en attente (réseau coupé, onglet fermé en plein envoi).
+  useEffect(() => {
+    void rejouerEnvoisEnAttente();
+    const onOnline = () => void rejouerEnvoisEnAttente();
+    window.addEventListener("online", onOnline);
+    const timer = window.setInterval(() => void rejouerEnvoisEnAttente(), 60_000);
+    return () => {
+      window.removeEventListener("online", onOnline);
+      window.clearInterval(timer);
+    };
+  }, []);
 
   return (
     <QueryClientProvider client={queryClient}>

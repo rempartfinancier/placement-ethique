@@ -1,7 +1,6 @@
 import { useState } from "react";
-import { useServerFn } from "@tanstack/react-start";
 import { Download, ArrowRight, Loader2, CheckCircle2 } from "lucide-react";
-import { saveLead } from "@/lib/leads.functions";
+import { saveLeadFiable } from "@/lib/leads.client";
 
 // Formulaire de capture dédié au lead magnet PDF « Diagnostic contrat ISR ».
 // Se greffe sur le pipeline de leads existant (saveLead → processLead dans
@@ -27,7 +26,7 @@ export function LeadMagnetForm({
 }: LeadMagnetFormProps) {
   const [email, setEmail] = useState("");
   const [status, setStatus] = useState<"form" | "sending" | "sent" | "failed">("form");
-  const submit = useServerFn(saveLead);
+  const submit = saveLeadFiable;
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
