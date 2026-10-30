@@ -88,6 +88,9 @@ export function LeadMagnetForm({
         <input
           id="lead-magnet-email"
           type="email"
+          inputMode="email"
+          autoComplete="email"
+          autoCapitalize="none"
           required
           value={email}
           onChange={(e) => setEmail(e.target.value)}

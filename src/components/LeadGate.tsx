@@ -197,6 +197,9 @@ export function LeadGate({ source, payload, onSuccess }: LeadGateProps) {
             <input
               id="lead-email"
               type="email"
+              inputMode="email"
+              autoComplete="email"
+              autoCapitalize="none"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               placeholder="votre.email@exemple.com"

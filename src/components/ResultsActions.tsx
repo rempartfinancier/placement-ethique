@@ -127,6 +127,9 @@ export function ResultsActions({ source, buildDoc }: Props) {
         />
         <input
           type="email"
+          inputMode="email"
+          autoComplete="email"
+          autoCapitalize="none"
           aria-label="Adresse email"
           placeholder="votre@email.fr"
           value={email}

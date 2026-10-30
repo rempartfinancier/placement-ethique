@@ -53,7 +53,7 @@ export function ContactForm({
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (!formData.email || !formData.email.includes("@")) {
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email.trim())) {
       setError("Veuillez saisir une adresse email valide.");
       return;
     }
@@ -148,6 +148,7 @@ export function ContactForm({
           <input
             id="name"
             type="text"
+            autoComplete="name"
             value={formData.name}
             onChange={(e) => setFormData((p) => ({ ...p, name: e.target.value }))}
             required
@@ -163,6 +164,9 @@ export function ContactForm({
           <input
             id="email"
             type="email"
+            inputMode="email"
+            autoComplete="email"
+            autoCapitalize="none"
             value={formData.email}
             onChange={(e) => setFormData((p) => ({ ...p, email: e.target.value }))}
             required
@@ -179,6 +183,8 @@ export function ContactForm({
         <input
           id="phone"
           type="tel"
+          inputMode="tel"
+          autoComplete="tel"
           value={formData.phone}
           onChange={(e) => setFormData((p) => ({ ...p, phone: e.target.value }))}
           className="w-full rounded-xl border border-input bg-background px-4 py-3 text-sm text-foreground focus:border-[var(--grenat)] focus:outline-none focus:ring-1 focus:ring-[var(--grenat)] transition-colors"

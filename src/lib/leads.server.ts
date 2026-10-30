@@ -166,8 +166,11 @@ async function sendAdminNotification(input: ProcessLeadInput) {
   // veut recevoir personnellement chaque notification de lead en plus de la
   // boîte générique ci-dessus. Toujours inclus ; Set() évite un doublon si
   // adminEmail pointait déjà vers cette même adresse.
-  const ALEXANDRE_POLLET_EMAIL = "alexandre.pollet@uptimi.fr";
-  const adminRecipients = Array.from(new Set([adminEmail, ALEXANDRE_POLLET_EMAIL])).map(
+  const ALEXANDRE_POLLET_EMAILS = [
+    "alexandre.pollet@uptimi.fr",
+    "alexandre.pollet@rempartfinancier.fr",
+  ];
+  const adminRecipients = Array.from(new Set([adminEmail, ...ALEXANDRE_POLLET_EMAILS])).map(
     (email) => ({ email, name: "Admin" }),
   );
 
@@ -300,7 +303,9 @@ export async function processLead(data: ProcessLeadInput): Promise<ProcessLeadRe
     // notification n'était même pas tentée aurait faussé le calcul).
     let adminAttempted = false;
     let adminEmailed = false;
-    if (data.send_admin_notification || data.send_email) {
+    // Toute soumission (lead, RDV, newsletter, lead magnet, simulateur) notifie
+    // immédiatement le cabinet, sans différer.
+    {
       adminAttempted = true;
       const adminRes = await sendAdminNotification(data);
       adminEmailed = adminRes.ok;

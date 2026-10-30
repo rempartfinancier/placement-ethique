@@ -8,7 +8,7 @@ export function NewsletterSignup() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (!/.+@.+\..+/.test(email)) return;
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.trim())) return;
     setStatus("loading");
     try {
       const res = await saveLead({
@@ -44,6 +44,9 @@ export function NewsletterSignup() {
         <input
           id="footer-newsletter-email"
           type="email"
+          inputMode="email"
+          autoComplete="email"
+          autoCapitalize="none"
           required
           value={email}
           onChange={(e) => setEmail(e.target.value)}
