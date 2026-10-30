@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { Download, Mail, Loader2, CheckCircle2 } from "lucide-react";
 import { downloadPdf, summarizeForEmail, type PdfDoc } from "@/lib/pdf";
-import { saveLeadFiable } from "@/lib/leads.client";
+import { saveLeadFiable } from "@/lib/leads-fiable";
 import { getStoredLeadEmail } from "@/components/LeadGate";
 
 type Props = {

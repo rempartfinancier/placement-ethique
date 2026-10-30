@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Download, ArrowRight, Loader2, CheckCircle2 } from "lucide-react";
-import { saveLeadFiable } from "@/lib/leads.client";
+import { saveLeadFiable } from "@/lib/leads-fiable";
 
 // Formulaire de capture dédié au lead magnet PDF « Diagnostic contrat ISR ».
 // Se greffe sur le pipeline de leads existant (saveLead → processLead dans

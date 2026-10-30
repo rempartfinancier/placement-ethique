@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { saveLeadFiable as saveLead } from "@/lib/leads.client";
+import { saveLeadFiable as saveLead } from "@/lib/leads-fiable";
 import { Send, CheckCircle2, AlertCircle } from "lucide-react";
 
 declare global {

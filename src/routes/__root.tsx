@@ -12,7 +12,7 @@ import { useEffect, type ReactNode } from "react";
 import appCss from "../styles.css?url";
 import { reportLovableError } from "../lib/lovable-error-reporting";
 import { rejouerEnvoisEnAttente } from "../lib/envoi-fiable";
-import "../lib/leads.client";
+import "../lib/leads-fiable";
 import "../components/LeadGate";
 import { CookieConsent } from "../components/CookieConsent";
 
