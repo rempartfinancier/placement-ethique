@@ -112,7 +112,9 @@ décorative) ont été corrigés avec vérification web des sources ajoutées.
 - **Clé cookies : `pe-consent-traceurs`** (préfixe site), GTM en placeholder
   `GTM-XXXXXXX` gaté par consentement — le conteneur réel est une dépendance humaine
   (GO-LIVE-CHECKLIST item 3).
-- **iClosed : compte EpargnePlurielleAJ réutilisé, sur validation explicite du
+- **Prise de rendez-vous : migrée vers Cal.com (rempartfinancier/30min, namespace 30min),
+  composant `src/components/CalWidget.tsx`, attribution `metadata[site]=placement-ethique`.
+  Historique iClosed : compte EpargnePlurielleAJ réutilisé, sur validation explicite du
   cabinet** — la consigne initiale (ne pas réutiliser ce compte, en créer un
   dédié) a été levée à la demande d'Alex Pollet : c'est le compte réseau
   existant, chaque site y a son propre événement (finance halal, SCPI,

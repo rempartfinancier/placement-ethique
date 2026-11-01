@@ -166,7 +166,7 @@ function ConfidentialitePage() {
                 résultats, newsletter et notifications ;
               </li>
               <li>
-                <strong className="text-foreground">iClosed</strong> — prise de rendez-vous en ligne
+                <strong className="text-foreground">Cal.com</strong> — prise de rendez-vous en ligne
                 (données que vous saisissez dans le calendrier) ;
               </li>
               <li>

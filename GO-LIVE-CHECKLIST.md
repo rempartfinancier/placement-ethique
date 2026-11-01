@@ -23,10 +23,10 @@ construit et fonctionnel.
 4. [x] ~~**Brevo**~~ — clé API renseignée, domaine `placement-ethique.fr`
        authentifié (DKIM/domaine) dans Brevo. Emails de résultats de
        simulateurs, notification admin et newsletter opérationnels.
-5. [x] ~~**iClosed**~~ — événement dédié « Appel découverte - Placement Éthique »
+5. [x] ~~**Prise de rendez-vous**~~ — migrée vers Cal.com (rempartfinancier/30min, `src/components/CalWidget.tsx`) ; historique iClosed : — événement dédié « Appel découverte - Placement Éthique »
        créé (duplication de l'événement finance-halal, compte réseau
        EpargnePlurielleAJ — décision actée dans DECISIONS.md), `WIDGET_URL`
-       renseigné dans `src/components/IClosedWidget.tsx`.
+       renseigné dans l'ancien widget.
 6. [ ] **Boîte email** `contact@placement-ethique.fr` fonctionnelle.
 7. [ ] **Téléphone** — décider : mutualiser la ligne du réseau ou ligne dédiée,
        puis l'ajouter dans SiteFooter, /contact et /mentions-legales.
