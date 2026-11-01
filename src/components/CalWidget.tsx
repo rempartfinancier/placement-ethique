@@ -66,21 +66,21 @@ export function CalWidget({
         calLink: ${JSON.stringify(calLink)},
       });
       Cal.ns["${CAL_NAMESPACE}"]("ui", {"hideEventTypeDetails": false, "layout": "month_view"});
+      Cal.ns["${CAL_NAMESPACE}"]("on", {action: "bookingSuccessful", callback: function () { window.dispatchEvent(new CustomEvent("cal:bookingSuccessful")); }});
     `;
     document.body.appendChild(script);
 
     // Cal.com poste ce message sur window une fois la réservation confirmée
     // (protocole documenté @calcom/embed-core, équivalent du
     // "calendly.event_scheduled" utilisé précédemment avec Calendly).
-    function onCalMessage(event: MessageEvent) {
-      if (event.data?.type !== "CAL:bookingSuccessful") return;
+    function onCalBooked() {
       onBookingSuccessful?.();
     }
-    window.addEventListener("message", onCalMessage);
+    window.addEventListener("cal:bookingSuccessful", onCalBooked);
 
     return () => {
       script.remove();
-      window.removeEventListener("message", onCalMessage);
+      window.removeEventListener("cal:bookingSuccessful", onCalBooked);
     };
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
