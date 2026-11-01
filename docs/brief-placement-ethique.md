@@ -726,7 +726,7 @@ consentement dédié uniquement. Durées de conservation : 3 ans pour les
 prospects après dernier contact, 5 ans minimum après la fin de relation pour les
 dossiers ayant conduit à souscription (obligations d'intermédiaire financier).
 Sous-traitants à citer si le stack est repris à l'identique : Supabase (UE),
-Brevo (emails), iClosed (prise de rendez-vous), Vercel (hébergement), Google Tag
+Brevo (emails), Cal.com (prise de rendez-vous), Vercel (hébergement), Google Tag
 Manager (mesure d'audience). Clause obligatoire : aucune décision entièrement
 automatisée (art. 22 RGPD) — les simulateurs sont indicatifs, toute proposition
 est formalisée par un conseiller après échange de vive voix.
@@ -800,7 +800,7 @@ clairement ce qui reste dans un fichier `GO-LIVE-CHECKLIST.md` à la racine :
    fonctionne avant vérification.
 3. **Conteneur Google Tag Manager** dédié à ce site (nouvel ID GTM-XXXXXXX).
 4. **Compte Brevo** (ou équivalent) pour l'envoi d'emails transactionnels/newsletter.
-5. **Compte/sous-compte iClosed** (ou équivalent) pour la prise de rendez-vous —
+5. **Compte Cal.com** (ou équivalent) pour la prise de rendez-vous —
    générer un lien de réservation dédié à ce site (ne pas réutiliser tel quel
    l'URL `EpargnePlurielleAJ` de la référence, qui pointe vers un autre compte du
    réseau).

@@ -92,7 +92,7 @@ import { SiteLayout } from "@/components/SiteLayout";   // header+footer, wrappe
 import { PageHero } from "@/components/PageHero";        // { eyebrow, title (ReactNode), lead, children? }
 import { CTA } from "@/components/CTA";                  // { eyebrow?, title?, text? } — section CTA fin de page
 import { ArticleLayout } from "@/components/ArticleLayout"; // pages articles uniquement
-import { IClosedWidget } from "@/components/IClosedWidget"; // prise de RDV (repli email intégré)
+import { CalWidget } from "@/components/CalWidget"; // prise de RDV Cal.com (rempartfinancier/30min)
 import { SliderField } from "@/components/SliderField";  // curseur numérique des simulateurs
 ```
 

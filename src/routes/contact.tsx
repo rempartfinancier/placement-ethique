@@ -1,7 +1,8 @@
-import { createFileRoute, Link, useNavigate } from "@tanstack/react-router";
+import { useState } from "react";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import { SiteLayout } from "@/components/SiteLayout";
 import { PageHero } from "@/components/PageHero";
-import { IClosedWidget } from "@/components/IClosedWidget";
+import { CalWidget } from "@/components/CalWidget";
 import { ContactForm } from "@/components/ContactForm";
 import { useContactPrefill } from "@/lib/espace/useContactPrefill";
 import {
@@ -81,17 +82,6 @@ const conseillers = [
 /* ────────────────────────────────── Route ───────────────────────────────── */
 
 export const Route = createFileRoute("/contact")({
-  // Paramètres de pré-remplissage du calendrier iClosed (cf. docs iClosed :
-  // iclosedName/iclosedEmail/iclosedPhone doivent être sur l'URL de LA PAGE,
-  // pas sur l'URL du calendrier lui-même). Posés après un envoi réussi du
-  // formulaire natif pour proposer un créneau tout de suite, préempli.
-  validateSearch: (
-    search: Record<string, unknown>,
-  ): { iclosedName?: string; iclosedEmail?: string; iclosedPhone?: string } => ({
-    iclosedName: typeof search.iclosedName === "string" ? search.iclosedName : undefined,
-    iclosedEmail: typeof search.iclosedEmail === "string" ? search.iclosedEmail : undefined,
-    iclosedPhone: typeof search.iclosedPhone === "string" ? search.iclosedPhone : undefined,
-  }),
   head: () => ({
     meta: [
       { title: "Prendre rendez-vous — premier échange offert | Placement-éthique.fr" },
@@ -133,25 +123,15 @@ export const Route = createFileRoute("/contact")({
 /* ────────────────────────────────── Page ────────────────────────────────── */
 
 function ContactPage() {
-  const search = Route.useSearch();
-  const navigate = useNavigate();
   const prefill = useContactPrefill();
-  const rdvPret = Boolean(search.iclosedEmail);
+  // Coordonnées saisies dans le formulaire : transmises au calendrier Cal.com
+  // en props (jamais dans l'URL, pour ne pas exposer de données personnelles).
+  const [rdv, setRdv] = useState<{ name: string; email: string; phone: string } | null>(null);
+  const rdvPret = Boolean(rdv);
 
-  // Une fois le message envoyé, on pose les paramètres de pré-remplissage
-  // iClosed sur l'URL AVANT que le widget ne se monte (son script externe
-  // les lit une seule fois, au chargement).
+  // Une fois le message envoyé, on affiche le calendrier pré-rempli.
   const handleBookingReady = (data: { name: string; email: string; phone: string }) => {
-    navigate({
-      to: "/contact",
-      search: (prev) => ({
-        ...prev,
-        iclosedName: data.name || undefined,
-        iclosedEmail: data.email || undefined,
-        iclosedPhone: data.phone || undefined,
-      }),
-      replace: true,
-    });
+    setRdv(data);
     // Le calendrier s'affiche tout en haut de page (cf. plus bas) — on y
     // ramène systématiquement le visiteur, où qu'il ait scrollé pendant la
     // saisie, pour qu'il ne puisse pas le manquer.
@@ -181,7 +161,25 @@ function ContactPage() {
                 que d'attendre notre retour sous 48h, réservez directement ci-dessous.
               </p>
               <div className="mt-6">
-                <IClosedWidget height={720} />
+                <CalWidget
+                  containerId="cal-contact"
+                  minHeight={720}
+                  name={rdv?.name}
+                  email={rdv?.email}
+                  phone={rdv?.phone}
+                  onBookingSuccessful={() => {
+                    const w = window as Window & { dataLayer?: Record<string, unknown>[] };
+                    w.dataLayer = w.dataLayer || [];
+                    w.dataLayer.push({ event: "generate_lead", lead_source: "cal_booking" });
+                  }}
+                />
+                <p className="mt-3 text-sm text-muted-foreground">
+                  Le calendrier ne s'affiche pas ? Appelez-nous au{" "}
+                  <a href="tel:+33184163791" className="underline text-foreground">
+                    01 84 16 37 91
+                  </a>
+                  .
+                </p>
               </div>
             </div>
           </div>
