@@ -305,7 +305,12 @@ export async function processLead(data: ProcessLeadInput): Promise<ProcessLeadRe
     let adminEmailed = false;
     // Toute soumission (lead, RDV, newsletter, lead magnet, simulateur) notifie
     // immédiatement le cabinet, sans différer.
-    {
+    if (data.source === "sonde") {
+      // Test synthétique du CRM (toutes les 30 min) : pas de mail au cabinet,
+      // sinon une notification « Nouveau lead » toutes les 30 minutes.
+      adminAttempted = true;
+      adminEmailed = true;
+    } else {
       adminAttempted = true;
       const adminRes = await sendAdminNotification(data);
       adminEmailed = adminRes.ok;
