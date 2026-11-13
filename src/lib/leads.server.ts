@@ -7,6 +7,8 @@
 // (handler de server function ou handler de route serveur). Aucun accès à
 // process.env au niveau module.
 
+import { estSpam } from "./antispam";
+
 export interface ProcessLeadInput {
   email: string;
   name?: string | null;
@@ -281,6 +283,10 @@ async function notifierCrmInterne(
 }
 
 export async function processLead(data: ProcessLeadInput): Promise<ProcessLeadResult> {
+  if (estSpam(data)) {
+    console.warn("[processLead] lead rejeté (anti-spam):", data.email);
+    return { ok: true, emailed: false };
+  }
   try {
     // ── 1. Brevo CRM sync (priorité — fonctionne sans Supabase) ──
     const brevo = await syncToBrevo(data);
