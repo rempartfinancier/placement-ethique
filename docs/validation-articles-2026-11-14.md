@@ -106,3 +106,62 @@ Branche `content/articles-2026-11-14`. Rien n'est poussé ni fusionné : relectu
 ### Visuels suggérés
 
 - Arbre « oui / non, puis a, b, c » ; entonnoir montrant l'offre qui se réduit à chaque critère ; schéma des 4 temps de l'adaptation ; barres de l'exemple (moyenne 26 % contre seuils 20 % et 40 %).
+
+---
+
+## Assurance vie ISR : gestion pilotée ou gestion libre ?
+
+- **Slug** : `gestion-pilotee-ou-gestion-libre-assurance-vie-isr` · catégorie Enveloppes · date 2026-11-14 (brief n° 4 du scan, backlog #10 ; slug différent de celui du backlog pour mettre la requête en tête)
+- **Auteur affiché : Sébastien Petrisot — à confirmer par l'éditeur.** Alternance du site suivie (l'article précédent de cette branche est signé Alexandre Pollet) ; répartition portée à 25 / 25.
+- **Fichiers** : `src/content/articles/gestion-pilotee-ou-gestion-libre-assurance-vie-isr.tsx` (créé) ; `src/content/articles.ts` (import + entrée) ; `src/content/articles/assurance-vie-isr-guide-2026.tsx` (1 paragraphe de lien ajouté à la fin du H3 « La gestion pilotée « ISR » est-elle une bonne idée ? », reste inchangé)
+- **Longueur** : environ 3 300 mots de corps (tableaux compris, même méthode de comptage que les deux articles précédents, qui donnent 2 900 et 3 000) + 7 questions de FAQ (`meta.faq`, environ 600 mots) ; 9 H2 ; 6 tableaux (profils légaux ; comparatif ; grille fictive ; frais moyens ; exemple chiffré ; profils de lecteur), 5 questions numérotées, 4 erreurs
+- **Validations** : prettier OK, eslint OK, build OK, slugs `LienArticle` OK, rendu SSR vérifié (3 blocs JSON-LD, 9 H2 d'article, lien entrant présent). `tsc --noEmit` : seule l'erreur préexistante `src/lib/antispam.test.ts`. `src/routeTree.gen.ts` régénéré par le build puis restauré, non commité.
+- **Contraintes du brief respectées** : assurance vie uniquement (PER renvoyé vers `quel-per-choisir-investir-ethique-criteres`) ; aucun mandat, contrat, assureur ni fonds nommé ; ni « CIF » ni « ORIAS » ; aucune grille ni avantage du cabinet dans le corps ; aucune conclusion sur la performance (un H2 dit explicitement qu'il n'y a pas de réponse générale).
+
+### Sources officielles (consultées le 14 novembre 2026)
+
+| Organisme | Document | URL | Ce qu'il établit |
+|---|---|---|---|
+| Banque de France / CCSF | Rapport 2026 de l'Observatoire des produits d'épargne financière (mis en ligne le 25/06/2026, mis à jour le 14/10/2026), PDF lu : chapitre 2, tableaux T1, T5 et T8 | https://www.banque-france.fr/fr/publications-et-statistiques/publications/rapport-annuel-2026-de-lobservatoire-des-produits-depargne-financiere-opef | Frais 2025 (source ACPR) sur les UC : versement 0,54 % (libre) / 0,65 % (autres modes) ; gestion du contrat 0,79 % / 1,08 % ; arbitrage 0,13 % / 0,00 % ; « autres modes » = pilotée, pilotée profilée, déléguée, sous mandat ; coûts récurrents des fonds (France Assureurs) : 1,60 % ensemble, 1,80 % fonds actions, 0,29 % ETF actions ; définitions des modes de gestion ; dénominations « peu standardisées » ; tableau des 3 profils |
+| Service-public | Assurance vie : fonctionnement (fiche F15274, vérifiée le 25/09/2026) | https://www.service-public.gouv.fr/particuliers/vosdroits/F15274 | Définition de la gestion libre et de la gestion pilotée ; profils prudent / équilibré / dynamique (50, 30, 20 % de supports à faible risque ; 30, 20, 10 % au-delà de 10 ans ; 4 % et 8 % de non coté) |
+| Légifrance | Code des assurances, article L. 132-27-3 (en vigueur depuis le 24/10/2024) | https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000048244710 | Définition de l'arbitrage et du mandat d'arbitrage ; mandataires autorisés (assureurs et intermédiaires) ; délégation à un prestataire de services d'investissement |
+| Légifrance | Code des assurances, article L. 132-27-4 | https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000048244714 | Mandat écrit ; profil « cohérent avec les exigences et les besoins du mandant », motivé par écrit ; vérification périodique ; information sur les arbitrages au moins une fois par an |
+| Légifrance | Code des assurances, article D. 133-1 (décret n° 2024-572 du 21/06/2024) | https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000049771471 | Mentions de la convention (identité, liens financiers, délégataire, profil, rémunération) ; relevé annuel (supports, performance, dates d'arbitrage, frais) ; résiliation à tout moment sans indemnité, effet sous 3 mois au plus |
+| Légifrance | Code des assurances, article L. 132-5-4 | https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000049736233 | Profils d'allocation proposés dans les contrats en UC, mis en œuvre par mandat d'arbitrage ; changement de profil sans frais |
+| Légifrance | Arrêté du 1er juillet 2024 instaurant une gestion pilotée profilée (contrats de capitalisation et certains contrats d'assurance vie) | https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000049888609 | Qualification prudent / équilibré / dynamique (article A. 132-5-4) |
+| Label ISR (site officiel) | Présentation du label | https://www.lelabelisr.fr/label-isr/ | Label attribué à des fonds (actions, obligations), fonds immobiliers depuis 2020, mandats de type institutionnel ; rien sur les contrats d'assurance vie ni sur la gestion pilotée |
+| AMF | Position-recommandation DOC-2012-19, version du 26/03/2026 (lue, non citée dans l'article) | https://www.amf-france.org/sites/institutionnel/files/private/2026-03/doc-2012-19_fr18_0.pdf | Le mandat d'arbitrage relève depuis le 24/10/2024 des articles L. 132-27-3 et L. 132-27-4 et est juridiquement distinct de la gestion de portefeuille pour compte de tiers |
+
+### Chiffres et règles à faire confirmer par un humain
+
+1. **Articles de Légifrance lus par un outil de résumé**, pas en texte intégral (L. 132-27-3, L. 132-27-4, D. 133-1, L. 132-5-4) ; l'arrêté du 1er juillet 2024 (JORFTEXT000049888609) n'a pas été ouvert : son contenu est établi par service-public et par le tableau T1 de l'Observatoire. À recouper, en particulier : « seuls un assureur ou un intermédiaire d'assurance peuvent être mandataires », « résiliation à tout moment sans indemnité, effet sous trois mois au plus », « modifier sans frais son profil d'allocation ».
+2. **« Les contrats comportant des unités de compte doivent proposer des profils d'allocation »** (L. 132-5-4) : périmètre exact (contrats concernés, exceptions) à vérifier ; l'article L. 132-27-4 exclut certains contrats (PER de groupe, plan d'épargne avenir climat, article 83).
+3. **0,79 % en gestion libre** : valeur du tableau T5 du rapport ; la synthèse du même rapport (« Ce qu'il faut retenir ») écrit 0,80 %. L'article retient 0,79 %, comme `assurance-vie-isr-frais-reels-combien-ca-coute`.
+4. **Frais d'arbitrage en gestion déléguée « 0,00 % »** : valeur du tableau T5 pour l'assurance vie ; le rapport parle de frais « en principe pas facturés mais intégrés ». L'article écrit « en principe non facturés ».
+5. **Exemple chiffré** (script) : 50 000 €, 4 % brut, fonds à 1,60 %, 15 ans. Gestion libre : 50 000 × (1 − 0,54 %) × 1,0161^15 = 63 192 € ; pilotée moyenne : 50 000 × (1 − 0,65 %) × 1,0132^15 = 60 474 € ; écart ≈ 2 719 € (4,3 %) ; 8 ans ≈ 1 338 € ; 25 ans ≈ 5 189 € ; arbitrage annuel de 10 % à 0,13 % ≈ −123 €. La 3e ligne (supplément de 0,70 point, soit 1,49 % : 56 905 €, écart ≈ 6 287 €, 9,9 %) est une HYPOTHÈSE inventée, signalée comme telle. Rendement net faible (1,61 % et 1,32 %) : conséquence du choix d'un brut de 4 %, repris de l'article sur les frais.
+6. **Grille fictive** (35 / 25 / 20 / 10 / 5 / 5) : entièrement inventée, signalée comme telle. Résultats : 55 % (Article 8 ou 9), 35 % (labellisés sur le total), 35/65 = 54 % (labellisés sur les UC). L'association « fonds labellisé ISR = Article 8, Greenfin = Article 9 » est une hypothèse d'illustration.
+7. **« Le relevé annuel liste les supports, pas leur part labellisée »** : déduit de la liste de D. 133-1, qui ne mentionne pas les labels.
+8. **« Aucun texte n'impose une part de fonds labellisés dans une gestion pilotée dite ISR »** (corps et FAQ) : affirmation négative, fondée sur l'absence de critère de durabilité dans les profils légaux et sur le périmètre du Label ISR ; les règles ESMA sur les noms de fonds visent les fonds, pas les profils de gestion. À valider.
+9. **Indicateur de risque « au plus de 2 sur 7 »** : le rapport écrit « inférieur ou égal à 2 » ; l'échelle de 1 à 7 est celle du DIC (non revérifiée aujourd'hui).
+10. **Périodicité de la vérification du profil** : non chiffrée dans l'article (des sources secondaires évoquent 4 ans, arrêté non lu).
+11. **Fiscalité** : l'article se limite à « les arbitrages à l'intérieur du contrat ne déclenchent pas d'impôt », renvoyé vers `passer-epargne-isr-fiscalite-par-enveloppe` (voir ses points à confirmer).
+
+### Affirmations sensibles à relire
+
+- Le mot **« mandat »** (mandat d'arbitrage, gestion sous mandat) est utilisé comme terme légal du produit, jamais pour qualifier le cabinet ; le guide du site l'interdit pour le statut du cabinet. À valider.
+- « Le professionnel vous oriente vers un profil […] » : paraphrase de l'obligation légale de conseil (L. 132-27-4), décrite comme règle générale et non comme service du cabinet.
+- « Une gestion libre jamais suivie n'est pas plus "éthique" qu'une gestion pilotée vérifiée » et « notre grille de lecture, assumée et discutable » : jugements éditoriaux, alignés sur celui de l'article PER.
+- « C'est ce qui explique qu'une société de gestion apparaisse souvent derrière le nom commercial d'une gestion pilotée » : généralisation non chiffrée.
+- Coût de l'inaction : « une gestion dont un tiers seulement, ou moins, correspond à ce que vous pensiez financer » renvoie à la grille fictive (35 %), pas à une statistique.
+- Tableau « pour quel épargnant » : situations générales, avec la phrase « il ne remplace pas l'examen de votre contrat et de vos objectifs ».
+- Conclusion : « échanger avec un conseiller du cabinet » (formule du squelette ; aucune durée, aucun statut).
+- `readingTime` : « 17 min » (environ 3 900 mots FAQ comprise, à 230 mots par minute).
+
+### Liens internes
+
+- Sortants : `quel-per-choisir-investir-ethique-criteres`, `label-isr-que-garantit-il-vraiment`, `que-finance-votre-assurance-vie-comment-le-savoir`, `sfdr-article-8-ou-9-ce-que-ca-garantit`, `assurance-vie-isr-frais-reels-combien-ca-coute`, `questionnaire-durabilite-assurance-vie-comment-repondre`, `passer-epargne-isr-fiscalite-par-enveloppe`, `assurance-vie-isr-guide-2026`, `/outils/decodeur-label`, `/cgp-investissement-responsable`, `/tarifs`
+- Entrant ajouté : `assurance-vie-isr-guide-2026`. À envisager : `assurance-vie-isr-frais-reels-combien-ca-coute` (ligne « mode de gestion » de la checklist), `quel-per-choisir-investir-ethique-criteres` (H2 « Gestion pilotée ou gestion libre pour un PER responsable ? »).
+
+### Visuels suggérés
+
+- Barres empilées de la grille fictive avec les trois façons de compter (55 %, 35 %, 54 %) ; courbe de l'écart de capital à 8, 15 et 25 ans ; schéma « qui décide » (épargnant, mandataire, délégataire, assureur).

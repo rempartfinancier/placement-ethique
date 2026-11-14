@@ -358,6 +358,13 @@ export function Corps() {
         responsable » sans critères écrits est un slogan ; un mandat documenté est une option
         légitime si vous ne souhaitez pas gérer vous-même.
       </p>
+      <p>
+        Pour comparer les deux modes sur les frais et sur la part réellement labellisée, voyez{" "}
+        <LienArticle slug="gestion-pilotee-ou-gestion-libre-assurance-vie-isr">
+          gestion pilotée ou gestion libre en assurance vie ISR
+        </LienArticle>
+        .
+      </p>
 
       <h3>Comment vérifier qu'un support de mon contrat est vraiment ISR ?</h3>
       <p>

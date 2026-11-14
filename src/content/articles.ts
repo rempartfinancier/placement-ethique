@@ -59,6 +59,7 @@ import * as epargneSalarialeSolidaire from "./articles/epargne-salariale-solidai
 import * as sfdrRefonteEsma from "./articles/sfdr-refonte-et-regles-esma-noms-de-fonds-ce-qui-change";
 import * as passerEpargneIsrFiscalite from "./articles/passer-epargne-isr-fiscalite-par-enveloppe";
 import * as questionnaireDurabilite from "./articles/questionnaire-durabilite-assurance-vie-comment-repondre";
+import * as gestionPiloteeOuLibre from "./articles/gestion-pilotee-ou-gestion-libre-assurance-vie-isr";
 
 type ArticleModule = {
   meta: ArticleMeta;
@@ -115,6 +116,7 @@ const modules: ArticleModule[] = [
   sfdrRefonteEsma,
   passerEpargneIsrFiscalite,
   questionnaireDurabilite,
+  gestionPiloteeOuLibre,
 ];
 
 /** Tous les articles, triés par date de publication décroissante. */
