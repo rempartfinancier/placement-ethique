@@ -154,3 +154,4 @@ Score = intention d'achat + signal GSC + trou réel dans le catalogue + faisabil
 |---|---|
 | 2026-09-28 | Création du backlog ; lancement de la vague 1 (8 articles) |
 | 2026-09-28 | Vague 1 rédigée (8 articles, tables de sources dans `docs/contenu-vague-1/`), relue par deux relecteurs indépendants (71 corrections), enregistrée dans le registre et publiée. Cohérence corrigée sur 13 articles existants (part solidaire 5-15 %, frais de transfert PER, SFDR daté, obligation de supports responsables dans le PER individuel). **Restent à valider par un humain :** voir `relecture_A_*`, `relecture_B_*` et `sources_article_0X.md` (sections « À VALIDER »). |
+| 2026-11-14 | Article `passer-epargne-isr-fiscalite-par-enveloppe` rédigé (branche `content/articles-2026-11-14`, non poussée). Points à valider par un humain : `docs/validation-articles-2026-11-14.md`. |

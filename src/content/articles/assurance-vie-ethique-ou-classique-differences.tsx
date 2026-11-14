@@ -499,6 +499,14 @@ export function Corps() {
         Arbitrer » suffit souvent. Refaites ensuite le calcul de Camille avec vos propres chiffres :
         c'est la seule façon de mesurer ce que l'écart vaut pour vous.
       </p>
+      <p>
+        Pour le coût fiscal exact de chaque porte, et pour le compte-titres, le PEA et le PER, la
+        suite logique est{" "}
+        <LienArticle slug="passer-epargne-isr-fiscalite-par-enveloppe">
+          passer son épargne à l'ISR : quelle fiscalité par enveloppe
+        </LienArticle>
+        , avec un tableau « action, effet fiscal » et un exemple chiffré.
+      </p>
 
       <h2>Vos questions sur l'assurance vie éthique et classique</h2>
       <FaqArticle items={meta.faq!} />
