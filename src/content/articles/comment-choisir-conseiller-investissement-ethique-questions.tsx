@@ -367,7 +367,11 @@ export function Corps() {
         <LienArticle slug="bilan-patrimonial-investissement-ethique-rendez-vous">
           le déroulé d'un premier rendez-vous de bilan patrimonial
         </LienArticle>{" "}
-        montre cet échange en pratique.
+        montre cet échange en pratique. Et pour préparer vos propres réponses,{" "}
+        <LienArticle slug="questionnaire-durabilite-assurance-vie-comment-repondre">
+          comment répondre au questionnaire de durabilité
+        </LienArticle>{" "}
+        détaille ce que chaque réponse change dans l'offre qui vous est proposée.
       </p>
 
       <h2>Comment lire la rémunération d'un conseiller, en euros et sur votre durée ?</h2>

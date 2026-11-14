@@ -58,6 +58,7 @@ import * as avIsrFraisReels from "./articles/assurance-vie-isr-frais-reels-combi
 import * as epargneSalarialeSolidaire from "./articles/epargne-salariale-solidaire-isr-pee-per-collectif";
 import * as sfdrRefonteEsma from "./articles/sfdr-refonte-et-regles-esma-noms-de-fonds-ce-qui-change";
 import * as passerEpargneIsrFiscalite from "./articles/passer-epargne-isr-fiscalite-par-enveloppe";
+import * as questionnaireDurabilite from "./articles/questionnaire-durabilite-assurance-vie-comment-repondre";
 
 type ArticleModule = {
   meta: ArticleMeta;
@@ -113,6 +114,7 @@ const modules: ArticleModule[] = [
   epargneSalarialeSolidaire,
   sfdrRefonteEsma,
   passerEpargneIsrFiscalite,
+  questionnaireDurabilite,
 ];
 
 /** Tous les articles, triés par date de publication décroissante. */
