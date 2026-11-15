@@ -23,7 +23,7 @@ export const meta: ArticleMeta = {
     },
     {
       q: "Puis-je transférer mon assurance vie chez un autre assureur ?",
-      a: "Pas avec maintien de l'antériorité fiscale. À la date de rédaction (14 novembre 2026), la transformation sans conséquence fiscale n'est prévue qu'auprès du même organisme assureur. Changer d'assureur suppose de racheter le contrat puis d'en souscrire un autre : les gains rachetés sont imposés et le nouveau contrat démarre son propre décompte de huit ans.",
+      a: "Pas avec maintien de l'antériorité fiscale. À la date de rédaction (14 novembre 2026), la transformation sans conséquence fiscale n'est prévue qu'auprès de la même entreprise d'assurance (article 125-0 A du code général des impôts). Changer d'assureur suppose de racheter le contrat puis d'en souscrire un autre : les gains rachetés sont imposés et le nouveau contrat démarre son propre décompte de huit ans.",
     },
     {
       q: "Vendre mes fonds sur un compte-titres pour acheter des fonds ISR, est-ce imposable ?",
@@ -307,9 +307,10 @@ export function Corps() {
           </strong>
           <ul>
             <li>
-              Oui : l'arbitrage suffit. Aucun impôt, ancienneté intacte. Tout contrat comportant des
-              unités de compte doit d'ailleurs référencer au moins une unité de compte labellisée
-              ISR, une labellisée Greenfin et une solidaire.
+              Oui : l'arbitrage suffit. Aucun impôt, ancienneté intacte. Le code des assurances
+              (article L. 131-1-2) impose d'ailleurs aux contrats comportant des unités de compte de
+              référencer au moins une unité de compte pour chaque label reconnu par l'État, dont le
+              Label ISR et le label Greenfin, ainsi qu'une unité de compte solidaire.
             </li>
             <li>Non, ou trop peu : passez à la question 3.</li>
           </ul>
@@ -372,12 +373,23 @@ export function Corps() {
       <h2>Peut-on transférer son assurance vie chez un autre assureur ?</h2>
       <p>
         Non, pas en conservant l'antériorité fiscale : à la date de rédaction (14 novembre 2026),
-        aucun texte ne prévoit le transfert d'un contrat d'assurance vie d'un assureur à un autre
-        sans dénouement fiscal.
+        aucun texte en vigueur ne permet à l'épargnant de transférer son contrat d'assurance vie
+        chez un autre assureur sans les conséquences fiscales d'un dénouement.
       </p>
       <p>
-        La doctrine fiscale est explicite sur le périmètre : le contrat ne peut être transformé «
-        qu'auprès du même organisme assureur », en un contrat de même nature (
+        L'
+        <a
+          href="https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000044989424"
+          target="_blank"
+          rel="noreferrer"
+        >
+          article 125-0 A du code général des impôts
+        </a>{" "}
+        (I, 2°, version en vigueur depuis le 1er janvier 2022) réserve la transformation sans
+        dénouement fiscal à un avenant ou à la souscription d'un nouveau contrat « auprès de la même
+        entreprise d'assurance ». La doctrine fiscale est tout aussi explicite sur le périmètre : le
+        contrat ne peut être transformé « qu'auprès du même organisme assureur », en un contrat de
+        même nature (
         <a
           href="https://bofip.impots.gouv.fr/doctrine/pgp/9312-PGP"
           target="_blank"
@@ -594,7 +606,7 @@ export function Corps() {
         <li>
           <strong>Clôturer un contrat ancien pour « passer à l'éthique ».</strong> C'est renoncer à
           l'abattement annuel et au taux de 7,5 % pour le futur contrat pendant huit ans, alors que
-          tout contrat en unités de compte référence déjà des supports labellisés.
+          les contrats en unités de compte doivent déjà référencer des supports labellisés.
         </li>
         <li>
           <strong>Croire que l'antériorité se transfère d'un assureur à l'autre.</strong> Elle ne se
