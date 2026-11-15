@@ -168,6 +168,58 @@ Branche `content/articles-2026-11-14`. Rien n'est poussé ni fusionné : relectu
 
 ---
 
+## ETF ISR ou fonds ISR actif : lequel choisir ?
+
+- **Slug** : `etf-isr-ou-fonds-isr-actif-lequel-choisir` · catégorie Fondamentaux · auteur Alexandre Pollet · date 2026-11-15 (date réelle de rédaction ; les trois articles précédents sont datés du 14)
+- **Auteur** : alternance du site (25 Pollet / 25 Petrisot avant cet article ; séquence de la série : Petrisot, Pollet, Petrisot, Pollet). **À confirmer par l'éditeur.**
+- **Fichiers** : `src/content/articles/etf-isr-ou-fonds-isr-actif-lequel-choisir.tsx` (créé) ; `src/content/articles.ts` (import + entrée) ; `src/content/articles/etf-isr-debutants.tsx` et `src/content/articles/pieges-inconvenients-investissement-ethique.tsx` (une phrase de lien entrant chacun, reste inchangé)
+- **Longueur** : environ 3 900 mots de corps, tableaux compris (au-dessus de la cible de 3 200) + 7 questions de FAQ (`meta.faq`, environ 620 mots) ; 4 tableaux (7 critères, frais AMF / ESMA, exemple chiffré, PAB / CTB), 1 arbre de décision en 5 questions, 5 erreurs fréquentes, 10 H2
+- **Sujet fusionné** : le backlog #14 (indices PAB et CTB) est traité dans le H2 « Indices PAB et CTB : que garantit un ETF aligné sur l'accord de Paris ? » ; pas d'article séparé à prévoir.
+- **Validations** : prettier OK, eslint OK, `bun run build` OK, slugs `LienArticle` OK. `tsc --noEmit` : seule l'erreur préexistante `src/lib/antispam.test.ts`. Rendu SSR non contrôlé par curl (gabarit inchangé). `src/routeTree.gen.ts` modifié par le build : non commité.
+
+### Sources officielles (consultées le 15 novembre 2026)
+
+| Organisme | Document | URL | Ce qu'il établit |
+|---|---|---|---|
+| AMF | Lettre de l'Observatoire de l'épargne n° 65, avril 2026 (PDF lu intégralement) | https://www.amf-france.org/sites/institutionnel/files/private/2026-04/loe-65_1.pdf | Fonds français ouverts au public, données Six Financial Information, 6 010 fonds à fin mars 2026, moyennes non pondérées, hors coûts de transaction : ETF actions 0,33 % en 2025 (0,36 % en 2024) ; fonds actions indiciels non cotés 0,75 % ; fonds actions actifs 1,37 % frais courants + commissions de surperformance (1,47 % en 2024). Courtage janvier 2026, ordre de 1 000 € : 0,65 % banques de réseau (compte-titres), 0,45 % banques et courtiers en ligne, 0,15 % néo-brokers. Commission de souscription sur fonds externes : 0,58 % en moyenne pour 5 000 € (18 banques). Obligation d'informer sur coûts du produit, du service et rétrocessions |
+| AMF | Communiqué du 27 avril 2026 | https://www.amf-france.org/fr/actualites-publications/actualites/les-frais-des-placements-financiers-continuent-de-baisser-en-particulier-ceux-des-fonds | Date de publication et périmètre de la Lettre n° 65 |
+| ESMA | Market Report « Costs and Performance of EU Retail Investment Products 2025 », 3 mars 2026 (ESMA50-1949966494-4065, PDF lu : tableaux MR-CP.14, MR-CP.25, MR-CP.26) | https://www.esma.europa.eu/sites/default/files/2026-03/ESMA50-1949966494-4065_Market_Report_-_Costs_and_Performance_of_EU_Retail_Investment_Products.pdf | OPCVM UE, 2024. Frais récurrents actions à 1 an : actifs 1,28 %, indiciels non cotés 0,22 %, ETF 0,21 %. Performance nette actions 2024 : 17,0 % / 21,3 % / 21,4 % ; sur 10 ans (2015-2024) : 7,6 % / 9,3 % / 9,3 %. Obligations 2024 : 7,2 % / 6,3 % / 5,7 %. ESG contre non ESG (particuliers) : actions non cotées 1,2 % contre 1,4 % de frais, 16,4 % contre 17,7 % en 2024, 8,3 % contre 8,0 % sur 5 ans ; ETF actions 0,2 % contre 0,2 %, 19,6 % contre 21,9 % en 2024, 9,5 % contre 10,6 % sur 5 ans |
+| ESMA | Communiqué du 3 mars 2026 | https://www.esma.europa.eu/press-news/esma-news/new-investment-funds-drive-reduction-costs-investors | Date et titre du rapport ; fonds ESG moins coûteux, en retrait en 2024 |
+| Union européenne | Règlement délégué (UE) 2020/1818 du 17 juillet 2020 (texte français lu via l'Office des publications ; EUR-Lex inaccessible à l'outil) | https://eur-lex.europa.eu/legal-content/FR/TXT/?uri=CELEX%3A32020R1818 | Art. 3 (exposition aux secteurs NACE A à H et L au moins équivalente à l'univers) ; art. 7 (au moins 7 % par an en moyenne) ; art. 9 (CTB : au moins 30 %) ; art. 10 (CTB : exclusions a à c au plus tard le 31/12/2022) ; art. 11 (PAB : au moins 50 %) ; art. 12 (exclusions a à g : 1 % charbon, 10 % combustibles liquides, 50 % gaz, 50 % électricité > 100 g CO2e/kWh) |
+| Commission européenne | Page « EU labels for benchmarks (climate, ESG) » | https://finance.ec.europa.eu/sustainable-finance/disclosures/eu-labels-benchmarks-climate-esg-and-benchmarks-esg-disclosures_en | Création des deux catégories par le règlement (UE) 2019/2089 du 27 novembre 2019 |
+| ESMA | Orientations sur les noms de fonds (ESMA34-1592494965-657), points 16 à 18 (version anglaise lue ; lien de l'article vers la version française déjà utilisée par le site) | https://www.esma.europa.eu/sites/default/files/2024-08/ESMA34-1592494965-657_Guidelines_on_funds_names_using_ESG_or_sustainability_related_terms_FR.pdf | Seuil de 80 % ; exclusions de l'article 12(1) a à c (termes transition, social, gouvernance) ou a à g (termes environnementaux, impact, durabilité) ; application 3 mois après publication, 6 mois de plus pour les fonds existants |
+
+### Chiffres et règles à faire confirmer par un humain
+
+1. **Exemple chiffré** (vérifié par script ; formule : 20 000 × [(1 + r) × (1 − frais)]^10) : à 5 % avant frais, 32 578 € sans frais ; 31 519 € (ETF, 0,33 %) ; 30 215 € (indiciel non coté, 0,75 %) ; 28 380 € (actif, 1,37 %) ; écart ETF / actif 3 139 € ; 2 589 € à 3 %, 3 790 € à 7 % ; surperformance brute nécessaire au fonds actif pour égaler l'ETF : 1,11 point par an. Le taux de 5 % est une convention de calcul (annoncée comme telle), pas une hypothèse de marché sourcée : à valider ou remplacer.
+2. **Frais AMF appliqués à l'ISR** : la Lettre n° 65 ne distingue pas les fonds ISR. L'article le dit et s'appuie sur l'ESMA pour l'ISR (1,2 % contre 0,2 %). Les 1,37 % incluent les commissions de surperformance, les 0,33 % et 0,75 % sont des frais courants : comparaison reprise telle que l'AMF la présente.
+3. **Colonne « ESMA, fonds ESG seuls »** : la catégorie « non-ETF » de l'ESMA mêle fonds actifs et fonds indiciels non cotés (précisé dans le tableau). Définition ESG = « sustainable investment » de Morningstar.
+4. **Dates d'application des orientations ESMA sur les noms** (21 novembre 2024, puis 21 mai 2025 pour les fonds existants) : reprises des articles existants du site et d'un rapport ESMA cité par la recherche ; seul le mécanisme « 3 mois + 6 mois » a été lu dans le texte. « ESG » et « ISR » assimilés à des termes environnementaux : repris de l'article `reperer-greenwashing-fonds-vert-methode` et du rapport final ESMA (non relu ligne à ligne aujourd'hui).
+5. **Date d'application du règlement délégué 2020/1818** (23 décembre 2020) : non citée dans l'article.
+6. **Plafond PEA de 0,50 % sur les frais de transaction** : présent dans la Lettre AMF, non cité dans l'article.
+
+### Affirmations sensibles à relire
+
+- **Performance** : l'article ne conclut pas ; il juxtapose des résultats ESMA de sens opposés et ajoute « Notre grille de lecture, qui n'engage que nous » (les frais sont certains, la performance ne l'est pas). À relire au regard de la règle « ne jamais conclure sur la performance ».
+- « Une partie des frais d'un fonds actif peut être reversée à l'intermédiaire (rétrocession) ; un ETF n'en verse en principe pas » : pratique de marché connue, non sourcée par un texte ; suivie d'un renvoi neutre vers `/tarifs` (« la rémunération du cabinet qui édite ce site est décrite sur la page tarifs »).
+- « La liste complète des lignes [d'un fonds actif] est publiée moins souvent » et « la composition [d'un ETF] publiée par l'émetteur » : généralités de marché, non sourcées.
+- Réplication synthétique « utilisée notamment par des ETF éligibles au PEA qui suivent un indice mondial » et conséquence sur le vote : généralité non sourcée, formulée prudemment.
+- « Les sociétés de gestion publient une politique d'engagement actionnarial et un rapport de vote » : présenté comme les documents où chercher la preuve, sans citer le texte (code monétaire et financier) : à sourcer si souhaité.
+- Limites du PAB (« la décarbonation est celle de l'indice », « pas un indice éthique complet ») : analyse déduite du texte, non d'une source tierce.
+- Application de l'arbre de décision à la situation type (« ce qui le conduit vers l'ETF ») : illustration, avec la mention « ne vaut pas pour une autre situation que la sienne ».
+- Conclusion : « échanger avec un conseiller du cabinet » (formule du squelette de la recette). Ni « CIF » ni « ORIAS » ; aucun ETF, fonds, société de gestion ni fournisseur d'indice nommé (Six Financial Information et Morningstar ne sont cités que comme sources de données des régulateurs).
+
+### Liens internes
+
+- Sortants : `etf-isr-debutants` (×2), `pieges-inconvenients-investissement-ethique`, `assurance-vie-isr-frais-reels-combien-ca-coute`, `investir-ethique-performance-chiffres`, `sfdr-refonte-et-regles-esma-noms-de-fonds-ce-qui-change`, `engagement-actionnarial-vs-exclusion`, `label-isr-que-garantit-il-vraiment`, `passer-epargne-isr-fiscalite-par-enveloppe`, `/outils/simulateur`, `/outils/decodeur-label`, `/tarifs` (×2), `/cgp-investissement-responsable`
+- Entrants ajoutés : `etf-isr-debutants` (H2 « Combien coûte un ETF ISR… ») et `pieges-inconvenients-investissement-ethique` (paragraphe « Comment l'éviter » du piège sur les frais). À envisager : `investir-ethique-performance-chiffres`, `gestion-pilotee-ou-gestion-libre-assurance-vie-isr`, et la PR #2 (PEA ISR) une fois fusionnée.
+
+### Visuels suggérés
+
+- Graphique en barres des quatre capitaux finaux de l'exemple (sans frais, ETF, indiciel non coté, actif) ; schéma de l'arbre de décision en 5 questions ; infographie « PAB contre CTB » (30 % / 50 %, 7 % par an, exclusions).
+
+---
+
 # Relecture 2026-11-15 (relecteur indépendant)
 
 ## Relecture 2026-11-15 — Passer son épargne en ISR : quelle fiscalité par enveloppe ?

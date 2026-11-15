@@ -60,6 +60,7 @@ import * as sfdrRefonteEsma from "./articles/sfdr-refonte-et-regles-esma-noms-de
 import * as passerEpargneIsrFiscalite from "./articles/passer-epargne-isr-fiscalite-par-enveloppe";
 import * as questionnaireDurabilite from "./articles/questionnaire-durabilite-assurance-vie-comment-repondre";
 import * as gestionPiloteeOuLibre from "./articles/gestion-pilotee-ou-gestion-libre-assurance-vie-isr";
+import * as etfIsrOuFondsActif from "./articles/etf-isr-ou-fonds-isr-actif-lequel-choisir";
 
 type ArticleModule = {
   meta: ArticleMeta;
@@ -117,6 +118,7 @@ const modules: ArticleModule[] = [
   passerEpargneIsrFiscalite,
   questionnaireDurabilite,
   gestionPiloteeOuLibre,
+  etfIsrOuFondsActif,
 ];
 
 /** Tous les articles, triés par date de publication décroissante. */

@@ -202,7 +202,11 @@ export function Corps() {
         <LienArticle slug="etf-isr-debutants">pour choisir un ETF ISR quand on débute</LienArticle>{" "}
         explique comment les comparer). Notre <a href="/outils/simulateur">simulateur d'épargne</a>{" "}
         permet de chiffrer ce que 0,5 ou 1 point de frais supplémentaire coûte réellement sur vingt
-        ans.
+        ans. Pour savoir ce que cet écart de frais finance, ou non,{" "}
+        <LienArticle slug="etf-isr-ou-fonds-isr-actif-lequel-choisir">
+          notre comparatif entre ETF ISR et fonds ISR actif
+        </LienArticle>{" "}
+        reprend la question critère par critère.
       </p>
 
       <h2>Piège n°4 : la confusion entre exclusion et impact réel</h2>

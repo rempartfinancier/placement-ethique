@@ -354,7 +354,12 @@ export function Corps() {
         comparable, même si les versions filtrées ESG sont souvent un peu plus chères que l'indice
         brut équivalent. Sur des décennies, cet écart de frais pèse davantage que bien des
         subtilités de méthodologie — c'est l'une des raisons pour lesquelles les ETF sont une porte
-        d'entrée sérieuse vers l'investissement responsable.
+        d'entrée sérieuse vers l'investissement responsable. Si vous hésitez encore avec un fonds
+        géré par une équipe,{" "}
+        <LienArticle slug="etf-isr-ou-fonds-isr-actif-lequel-choisir">
+          notre comparatif entre ETF ISR et fonds ISR actif
+        </LienArticle>{" "}
+        chiffre cet écart sur dix ans et détaille ce qu'il achète.
       </p>
       <p>
         Côté ticket d'entrée, une part d'ETF se négocie souvent pour quelques dizaines ou centaines
