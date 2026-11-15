@@ -165,3 +165,64 @@ Branche `content/articles-2026-11-14`. Rien n'est poussé ni fusionné : relectu
 ### Visuels suggérés
 
 - Barres empilées de la grille fictive avec les trois façons de compter (55 %, 35 %, 54 %) ; courbe de l'écart de capital à 8, 15 et 25 ans ; schéma « qui décide » (épargnant, mandataire, délégataire, assureur).
+
+---
+
+# Relecture 2026-11-15 (relecteur indépendant)
+
+## Relecture 2026-11-15 — Passer son épargne en ISR : quelle fiscalité par enveloppe ?
+
+**Vérifié (sources primaires, consultées le 15/11/2026)**
+- Art. 125-0 A, I, 2° du CGI (Légifrance, LEGIARTI000044989424, en vigueur depuis le 01/01/2022) : transformation par avenant ou nouveau contrat « auprès de la même entreprise d'assurance », sans conséquences fiscales d'un dénouement. Point 1 levé.
+- BOFiP BOI-RPPM-RCM-30-10-20-20 (30/06/2022) § 340, 347, 360 : confirmés.
+- Prélèvements sociaux 2026 (F2329, vérifiée le 30/06/2026) : 18,6 % cas général, 17,2 % assurance vie ; PEA au cas général. Point 4 levé.
+- Art. L. 131-1-2 du code des assurances (en vigueur depuis le 01/01/2025) : au moins une UC pour chaque label reconnu par l'État + UC solidaire. Point 8 levé (reformulé).
+- Calculs de l'exemple (A 6 280 €, C 4 595 €, D 6 000 €, rachat partiel 890 €) : recalculés, exacts.
+
+**Corrigé (avant → après)**
+- « aucun texte ne prévoit le transfert… » → « aucun texte en vigueur ne permet à l'épargnant de transférer… sans les conséquences fiscales d'un dénouement » + citation et lien de l'art. 125-0 A du CGI (corps et FAQ).
+- « Tout contrat comportant des UC doit référencer une UC ISR, une Greenfin et une solidaire » → formulation calée sur L. 131-1-2 (« pour chaque label reconnu par l'État, dont ISR et Greenfin, ainsi qu'une UC solidaire ») ; erreur n° 1 alignée (« doivent déjà référencer »).
+
+**Reste à confirmer par l'éditeur**
+- PLF 2027 (non voté) : son article 6 durcirait les conditions du régime de l'assurance vie pour les primes versées depuis le 01/10/2026 (presse spécialisée, non lu dans le texte) ; un amendement sur la transférabilité inter-assureurs a été évoqué, adoption non confirmée. L'encadré « loi de finances 2027 non votée » couvre le risque ; revérifier avant publication.
+- Taux du PEA en cas de retrait : volontairement non chiffrés (non ajoutés faute de lecture BOFiP dédiée).
+- Points 6 et 7 de la liste initiale inchangés (raisonnements non textuels, formulés prudemment).
+
+## Relecture 2026-11-15 — Questionnaire de durabilité : comment y répondre ?
+
+**Vérifié**
+- Règlement délégué (UE) 2021/1253 : applicable aux PSI depuis le 2 août 2022, pour le conseil en investissement et la gestion de portefeuille (AMF, page « Exigences en matière de durabilité dans la distribution d'instruments financiers », 12/08/2022). EUR-Lex non lu ; seconde source officielle AMF. Point 1 levé pour la date et le périmètre.
+- Art. L. 522-5 du code des assurances (en vigueur depuis le 24/10/2024) : avant toute souscription d'un contrat de l'art. L. 522-1, le distributeur « conseille un contrat » cohérent avec les exigences et besoins « y compris ceux concernant ses éventuelles préférences en matière de durabilité ».
+- Révision SFDR : aucune trace d'accord politique au 15/11/2026 (mandat du Parlement en octobre 2026, trilogues ouverts ; sources de cabinets, aucune annonce du Conseil ou du Parlement trouvée). « Non adoptée » reste exact.
+- Exemple (26 %, 41 %, 60 % → 80 % d'UC) : recalculé, exact ; pourcentages inventés bien signalés comme tels dans l'encadré.
+
+**Corrigé (avant → après)**
+- « la règle est la même dès lors qu'un conseil vous est fourni » (incomplet pour l'assurance vie) → « …la règle est la même. Pour l'assurance vie, le droit français impose ce conseil avant toute souscription (art. L. 522-5, préférences de durabilité comprises) ; pour les instruments financiers, dès lors qu'un conseil en investissement ou une gestion de portefeuille vous est fourni » + lien Légifrance.
+
+**Reste à confirmer par l'éditeur**
+- Révision SFDR : revérifier le jour de la publication (accord possible fin 2026).
+- Points 2, 7 et 8 de la liste initiale inchangés.
+
+## Relecture 2026-11-15 — Assurance vie ISR : gestion pilotée ou gestion libre ?
+
+**Vérifié**
+- Rapport OPEF 2026 (PDF lu) : tableau T5 = 0,79 % (libre) / 1,08 % (autres modes) en 2025 ; versement 0,54 / 0,65 ; arbitrage 0,13 / 0,00 ; T8 = 1,60 % ensemble, 1,80 % actions ; ETF actions 0,29 %. La synthèse « Ce qu'il faut retenir » arrondit à 0,80 % : l'article garde 0,79 % (tableau), cohérent avec l'article frais. Point 3 tranché.
+- Arrêté du 1er juillet 2024 (JORF du 06/07/2024, ouvert) : planchers 50/30/20 % (30/20/10 % au-delà de 10 ans), 4 % et 8 % des versements, aucune mention de label ni de durabilité ; seuils appréciés au moins une fois par semestre.
+- L. 132-27-3 (seuls intermédiaires et entreprises d'assurance mandataires), L. 132-27-4, D. 133-1 (résiliation à tout moment, sans indemnité, effet sous trois mois au plus), L. 132-5-4 (profils, changement sans frais ; contrats souscrits depuis le 24/10/2024 ; aucune mention de label) : confirmés. Point 1 levé.
+- L. 131-1-2 : obligation de référencement de supports labellisés au niveau du contrat, rien sur les profils.
+- Exemple chiffré (63 192 / 60 474 / 56 905 € ; écarts 1 338 / 2 719 / 5 189 €) : recalculé, exact. Grille fictive signalée comme telle.
+- « Mandat » : employé uniquement comme terme légal (mandat d'arbitrage, L. 132-27-3), jamais pour le cabinet : conforme.
+
+**Corrigé (avant → après)**
+- « aucun texte ne l'impose » / « rien ne l'y oblige » / « aucun seuil légal » (déduction) → affirmation sourcée : les profils légaux (L. 132-5-4, arrêté du 01/07/2024) fixent des planchers de risque, pas de part de fonds labellisés ; L. 131-1-2 vise la gamme du contrat (corps et FAQ).
+- « depuis le 24 octobre 2024, les contrats comportant des UC doivent proposer des profils » → « les contrats… souscrits depuis le 24 octobre 2024 » ; « modifier sans frais votre profil » limité aux contrats soumis à L. 132-5-4.
+- « Un profil prudent en contient [du fonds en euros] au moins 30 à 50 % » → « contient au moins 30 à 50 % de supports à faible risque, souvent logés en grande partie sur le fonds en euros ».
+
+**Reste à confirmer par l'éditeur**
+- Indicateur de risque « au plus 2 sur 7 » : l'arrêté renvoie à l'arrêté du 7 août 2019 (non lu) ; repris de l'OPEF.
+- Points 2, 7 et 10 de la liste initiale inchangés.
+
+## Transversal
+- Auteurs : alternance Petrisot / Pollet / Petrisot (non modifiée) — à confirmer par l'éditeur.
+- Aucun « CIF », « ORIAS », « Épargne Plurielle », « Uptimi », « Calendly », « TODO » ou « À CONFIRMER » dans les trois articles ; slugs `LienArticle` tous existants.
+- Validations après corrections : prettier + eslint OK sur les trois fichiers, `bun run build` OK, `tsc --noEmit` : seule l'erreur préexistante `src/lib/antispam.test.ts`. `src/routeTree.gen.ts` modifié par le build, non commité.
