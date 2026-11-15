@@ -23,7 +23,7 @@ export const meta: ArticleMeta = {
     },
     {
       q: "Une gestion pilotée « ISR » est-elle investie à 100 % dans des fonds labellisés ?",
-      a: "Pas nécessairement, et aucun texte ne l'impose. Le Label ISR s'attribue à des fonds, pas à un contrat d'assurance vie ni à un profil de gestion. Une gestion présentée comme « responsable » peut donc contenir un fonds en euros, des fonds non labellisés et une poche d'actifs non cotés. Le seul moyen de le savoir est de demander la grille d'allocation ligne par ligne et de compter la part de fonds labellisés.",
+      a: "Pas nécessairement. Les règles du code des assurances sur les profils de gestion pilotée (article L. 132-5-4 et arrêté du 1er juillet 2024) fixent des planchers de risque, pas de part minimale de fonds labellisés ; l'obligation de référencer des supports labellisés (article L. 131-1-2) vise la gamme du contrat. Le Label ISR s'attribue à des fonds, pas à un contrat d'assurance vie ni à un profil de gestion. Une gestion présentée comme « responsable » peut donc contenir un fonds en euros, des fonds non labellisés et une poche d'actifs non cotés. Le seul moyen de le savoir est de demander la grille d'allocation ligne par ligne et de compter la part de fonds labellisés.",
     },
     {
       q: "Peut-on passer de la gestion pilotée à la gestion libre en cours de contrat ?",
@@ -147,9 +147,9 @@ export function Corps() {
           profil.
         </li>
         <li>
-          <strong>Gestion pilotée profilée.</strong> C'est la version encadrée par la loi : depuis
-          le 24 octobre 2024, les contrats comportant des unités de compte doivent proposer des
-          profils d'allocation mis en œuvre par un mandat d'arbitrage (
+          <strong>Gestion pilotée profilée.</strong> C'est la version encadrée par la loi : les
+          contrats comportant des unités de compte souscrits depuis le 24 octobre 2024 doivent
+          proposer des profils d'allocation mis en œuvre par un mandat d'arbitrage (
           <a
             href="https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000049736233"
             target="_blank"
@@ -298,7 +298,9 @@ export function Corps() {
 
       <h2>Une gestion pilotée « ISR » est-elle vraiment investie en ISR ?</h2>
       <p>
-        Pas forcément, et rien ne l'y oblige : le Label ISR s'attribue à des fonds, pas à un contrat
+        Pas forcément : les profils légaux de gestion pilotée (article L. 132-5-4 du code des
+        assurances et arrêté du 1er juillet 2024) fixent des planchers de risque, pas de part
+        minimale de fonds labellisés, et le Label ISR s'attribue à des fonds, pas à un contrat
         d'assurance vie ni à un profil de gestion. La part réellement labellisée d'une gestion
         pilotée « responsable » se calcule, elle ne se lit pas sur la plaquette.
       </p>
@@ -311,7 +313,9 @@ export function Corps() {
         fonds immobiliers depuis 2020 et à des mandats de type institutionnel. Un épargnant y accède
         par les fonds logés dans son contrat. Autrement dit, quand une gestion pilotée se présente
         comme « ISR », « durable » ou « responsable », ce qualificatif est une dénomination
-        commerciale : il ne renvoie à aucun seuil légal de fonds labellisés. Ce que garantit le
+        commerciale : il ne renvoie à aucun seuil de fonds labellisés fixé par ces textes.
+        L'obligation de référencer des supports labellisés (article L. 131-1-2 du code des
+        assurances) vise la gamme du contrat, pas la composition d'un profil. Ce que garantit le
         label lui-même, et ce qu'il ne garantit pas, est détaillé dans{" "}
         <LienArticle slug="label-isr-que-garantit-il-vraiment">
           notre analyse du Label ISR
@@ -321,10 +325,10 @@ export function Corps() {
       <p>Trois raisons structurelles font baisser la part d'ISR d'une grille pilotée.</p>
       <ul>
         <li>
-          <strong>Le fonds en euros.</strong> Un profil prudent en contient au moins 30 à 50 %, sous
-          forme de supports à faible risque. Or le fonds en euros est investi dans l'actif général
-          de l'assureur, qui ne porte pas de label de fonds. Sa composition se lit ailleurs, comme
-          nous l'expliquons dans{" "}
+          <strong>Le fonds en euros.</strong> Un profil prudent contient au moins 30 à 50 % de
+          supports à faible risque, souvent logés en grande partie sur le fonds en euros. Or le
+          fonds en euros est investi dans l'actif général de l'assureur, qui ne porte pas de label
+          de fonds. Sa composition se lit ailleurs, comme nous l'expliquons dans{" "}
           <LienArticle slug="que-finance-votre-assurance-vie-comment-le-savoir">
             que finance votre assurance vie
           </LienArticle>
@@ -716,12 +720,12 @@ export function Corps() {
         contrat et de vos objectifs.
       </p>
       <p>
-        Le choix n'est pas définitif. Vous pouvez modifier sans frais votre profil d'allocation
-        (article L. 132-5-4 du code des assurances) et résilier le mandat pour revenir en gestion
-        libre. Certains contrats permettent aussi de panacher les deux modes sur des compartiments
-        distincts : cela se vérifie dans les conditions générales. Et comme ces mouvements se font à
-        l'intérieur du contrat, ils ne déclenchent pas d'impôt, ce que nous détaillons enveloppe par
-        enveloppe dans{" "}
+        Le choix n'est pas définitif. Dans les contrats soumis à l'article L. 132-5-4 du code des
+        assurances, vous pouvez modifier sans frais votre profil d'allocation ; vous pouvez aussi
+        résilier le mandat pour revenir en gestion libre. Certains contrats permettent aussi de
+        panacher les deux modes sur des compartiments distincts : cela se vérifie dans les
+        conditions générales. Et comme ces mouvements se font à l'intérieur du contrat, ils ne
+        déclenchent pas d'impôt, ce que nous détaillons enveloppe par enveloppe dans{" "}
         <LienArticle slug="passer-epargne-isr-fiscalite-par-enveloppe">
           passer son épargne en ISR : quelle fiscalité
         </LienArticle>
