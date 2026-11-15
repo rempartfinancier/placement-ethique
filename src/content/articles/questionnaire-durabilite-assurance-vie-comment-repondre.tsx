@@ -115,7 +115,19 @@ export function Corps() {
         </a>{" "}
         (cadre MiFID II). Les deux donnent la même définition, les deux sont applicables depuis le 2
         août 2022. Que vous passiez par une banque, un assureur, un courtier en ligne ou un cabinet
-        de gestion de patrimoine, la règle est la même dès lors qu'un conseil vous est fourni.
+        de gestion de patrimoine, la règle est la même. Pour l'assurance vie, le droit français va
+        jusqu'à imposer ce conseil avant toute souscription : selon l'
+        <a
+          href="https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000048252377"
+          target="_blank"
+          rel="noreferrer"
+        >
+          article L. 522-5 du code des assurances
+        </a>
+        , le distributeur conseille un contrat cohérent avec vos exigences et vos besoins, « y
+        compris ceux concernant [vos] éventuelles préférences en matière de durabilité ». Pour les
+        instruments financiers, l'obligation s'applique dès lors qu'un conseil en investissement ou
+        une gestion de portefeuille vous est fourni.
       </p>
       <p>Trois points de cadrage évitent la plupart des malentendus.</p>
       <ul>
