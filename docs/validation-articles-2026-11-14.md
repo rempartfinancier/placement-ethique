@@ -278,3 +278,33 @@ Branche `content/articles-2026-11-14`. Rien n'est poussé ni fusionné : relectu
 - Auteurs : alternance Petrisot / Pollet / Petrisot (non modifiée) — à confirmer par l'éditeur.
 - Aucun « CIF », « ORIAS », « Épargne Plurielle », « Uptimi », « Calendly », « TODO » ou « À CONFIRMER » dans les trois articles ; slugs `LienArticle` tous existants.
 - Validations après corrections : prettier + eslint OK sur les trois fichiers, `bun run build` OK, `tsc --noEmit` : seule l'erreur préexistante `src/lib/antispam.test.ts`. `src/routeTree.gen.ts` modifié par le build, non commité.
+
+## Relecture 2026-11-15 — ETF ISR ou fonds ISR actif
+
+**Vérifié**
+- Exemple chiffré recalculé par script (20 000 × [(1 + r)(1 − frais)]^10) : 32 578 / 31 519 / 30 215 / 28 380 € ; écart 3 139 € ; 2 589 € à 3 % ; 3 790 € à 7 % ; surperformance requise 1,107 point. Exact. Le taux de 5 % reste une convention de calcul, désormais dite telle dès le chapeau du H2.
+- AMF, Lettre n° 65 (PDF lu) : 0,33 % (0,36 % en 2024), 0,75 %, 1,37 % frais totaux avec surperformance (1,47 % en 2024), 6 010 fonds, moyennes non pondérées hors coûts de transaction ; courtage 1 000 € : 0,65 % (banques de réseau, compte-titres), 0,45 % / 0,15 % (en ligne / néo-brokers, Paris) ; commission de souscription 0,58 % pour 5 000 € (18 banques) ; information sur coûts du service, du produit et rétrocessions, en % et en euros. Tous exacts.
+- ESMA, rapport du 3 mars 2026 (PDF lu) : MR-CP.14 (1,28 / 0,22 / 0,21 % ; 17,0 / 21,3 / 21,4 % ; 10 ans 7,6 / 9,3 / 9,3 % ; obligations 7,2 / 6,3 / 5,7 % ; investisseurs particuliers et institutionnels) ; MR-CP.25-26 (particuliers : 1,2 / 1,4 % ; 16,4 / 17,7 % ; ETF 0,2 / 0,2 % ; 19,6 / 21,9 % ; 5 ans 8,3 / 8,0 % et 9,5 / 10,6 %) ; définition ESG Morningstar. Tous exacts.
+- Orientations ESMA34-1592494965-657 (version FR lue) : points 4 à 6 (application 3 mois après publication, +6 mois pour les fonds existants), 15 à 18 (seuil 80 % ; exclusions art. 12(1) a-c ou a-g). Communiqué ESMA du 21/08/2024 : application le 21/11/2024, fonds existants au 21/05/2025. Dates confirmées.
+- Règlement délégué (UE) 2020/1818 : art. 3, 7(1) (7 % par an), 9 (30 %), 10(2) (exclusions a-c au 31/12/2022), 11 (50 %), 12(1) a-g (1 % charbon, 10 % combustibles liquides, 50 % gaz, 50 % électricité > 100 g CO2e/kWh) confirmés sur le texte anglais (version retenue au Royaume-Uni, legislation.gov.uk, libellé identique hors « UK » / nomenclature) ; EUR-Lex inaccessible à l'outil.
+- Paragraphe « Notre grille de lecture » : aucune conclusion sur la performance, aucune accusation nommée, aucun avantage du cabinet. Conservé.
+- Aucun ETF, fonds, société de gestion ni fournisseur d'indice nommé ; aucun « CIF », « ORIAS », « Épargne Plurielle », « Uptimi », « Calendly », « TODO » ; « recommandation » non employé ; vouvoiement. Liens entrants (`etf-isr-debutants`, `pieges-inconvenients-investissement-ethique`) et entrée `articles.ts` corrects.
+
+**Corrigé (avant → après)**
+- Résumé : « Ce point d'écart est la seule différence certaine : […] les données du régulateur européen ne désignent aucun gagnant durable » (inexact : l'ESMA montre un retard moyen des fonds actions actifs sur 1 et 10 ans) → l'écart de frais est connu d'avance ; les moyennes du régulateur varient selon la classe d'actifs et la période et ne préjugent pas de l'avenir.
+- Chapeau frais : « 1,2 % contre 0,2 % sur les fonds actions ESG » → précision : fonds ESG non cotés, gestion active et indicielle confondues (MR-CP.25 ne distingue pas les actifs).
+- Chapeau exemple : « dans l'hypothèse centrale » → « performance de 5 % retenue par convention de calcul, et non comme prévision » ; « ne dépend pas beaucoup de l'hypothèse » → « varie avec l'hypothèse sans changer d'ordre de grandeur ».
+- Explication ESMA du retard ESG : « moins performants que le marché américain » → « moins performants que les zones Amérique et Asie au second semestre » (texte du rapport).
+- Noms de fonds : « terme environnemental (y compris « ESG » ou « ISR ») » → catégorie qui, selon les orientations (point 15), « peut inclure » ces abréviations ; ajout de la date du 21/11/2024 pour les fonds nouveaux.
+- Erreur fréquente « seuls PAB et CTB renvoient à des seuils réglementaires » (faux depuis 2025 : « ESG », « SRI », « Climate » déclenchent les orientations ESMA) → PAB et CTB seuls à renvoyer à un cahier des charges d'indice fixé par règlement, les autres termes déclenchant les exclusions des orientations ESMA.
+- Rétrocessions : « un ETF n'en verse en principe pas » (non sourcé) → supprimé ; l'obligation d'information est attribuée à l'AMF (Lettre n° 65).
+- Réplication synthétique : « montage utilisé notamment par des ETF éligibles au PEA qui suivent un indice mondial » (non sourcé, et éligibilité de ces ETF discutée en 2026 entre la DGT et la place) → supprimé, mécanisme décrit de façon générique.
+- Tableau critère 3 : « composition publiée par l'émetteur » / « liste complète publiée moins souvent » (généralités) → « composition que de nombreux émetteurs mettent en ligne » / « fréquence de publication variable selon les fonds ». « Sans intervention humaine » → « sans choix discrétionnaire du gérant ».
+- Engagement : « rapport annuel de vote » non sourcé → politique d'engagement et compte rendu annuel décrivant l'exercice des droits de vote, publiés en application des articles L. 533-22 et R. 533-16 du code monétaire et financier (articles cités par la synthèse AMF des contrôles SPOT de juillet 2025 ; texte Légifrance non ouvert).
+
+**Reste à confirmer par l'éditeur**
+- Auteur affiché Alexandre Pollet (26 Pollet / 25 Petrisot après cet article ; alternance de la série respectée) et date du 15/11 : non modifiés.
+- Taux conventionnel de 5 % : à valider ou remplacer.
+- Articles L. 533-22 et R. 533-16 CMF : à relire sur Légifrance (notamment l'éventuelle faculté de ne pas publier en s'expliquant).
+- Mention « Par transparence, la rémunération du cabinet […] page tarifs » dans le corps (puce rétrocessions) : neutre, conservée ; à retirer si l'éditeur veut un corps sans aucune référence au cabinet.
+- Validations : prettier + eslint OK, `bun run build` OK, `tsc --noEmit` : seule l'erreur préexistante `src/lib/antispam.test.ts` ; `src/routeTree.gen.ts` restauré.

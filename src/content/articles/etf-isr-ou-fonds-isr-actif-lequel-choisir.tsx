@@ -53,10 +53,11 @@ export function Corps() {
           coût faible ; un fonds ISR actif applique le jugement d'une équipe pour un coût plus
           élevé. En 2025, les frais annuels moyens étaient de 0,33 % pour les ETF actions et de 1,37
           % pour les fonds actions gérés activement, commissions de surperformance comprises (AMF,
-          Lettre de l'Observatoire de l'épargne n° 65, avril 2026). Ce point d'écart est la seule
-          différence certaine : sur la performance, les données du régulateur européen ne désignent
-          aucun gagnant durable. Le choix dépend donc de ce que vous voulez pouvoir vérifier et de
-          ce que vous acceptez de payer. Sources officielles consultées le 15 novembre 2026.
+          Lettre de l'Observatoire de l'épargne n° 65, avril 2026). Cet écart de frais est connu
+          d'avance ; la performance, elle, ne l'est pas : les moyennes publiées par le régulateur
+          européen varient selon la classe d'actifs et la période, et ne préjugent pas de l'avenir.
+          Le choix dépend donc de ce que vous voulez pouvoir vérifier et de ce que vous acceptez de
+          payer. Sources officielles consultées le 15 novembre 2026.
         </p>
       </div>
 
@@ -99,10 +100,10 @@ export function Corps() {
         L'ETF ISR part d'un indice classique et lui applique des règles mécaniques : exclure
         certains secteurs, ne garder que les entreprises les mieux notées, réduire l'intensité
         carbone. Ces règles sont publiées par le fournisseur d'indice, et la composition du fonds en
-        découle sans intervention humaine entre deux révisions de l'indice. Deux ETF portant le même
-        mot dans leur nom peuvent donc détenir des portefeuilles très différents si leurs indices ne
-        filtrent pas de la même façon, un point que nous détaillons, pour ceux qui découvrent le
-        sujet, dans{" "}
+        découle, sans choix discrétionnaire du gérant entre deux révisions de l'indice. Deux ETF
+        portant le même mot dans leur nom peuvent donc détenir des portefeuilles très différents si
+        leurs indices ne filtrent pas de la même façon, un point que nous détaillons, pour ceux qui
+        découvrent le sujet, dans{" "}
         <LienArticle slug="etf-isr-debutants">
           notre méthode de lecture d'un ETF ISR en quatre documents
         </LienArticle>
@@ -149,10 +150,13 @@ export function Corps() {
           </tr>
           <tr>
             <td>3. Ce que vous pouvez vérifier</td>
-            <td>La règle de l'indice et la composition, publiées par l'émetteur</td>
             <td>
-              Le prospectus, l'annexe SFDR et les rapports périodiques ; la liste complète des
-              lignes est publiée moins souvent
+              La méthode de l'indice, publiée par son fournisseur ; la composition, que de nombreux
+              émetteurs mettent en ligne
+            </td>
+            <td>
+              Le prospectus, l'annexe SFDR et les rapports périodiques ; la fréquence de publication
+              de la composition complète varie d'un fonds à l'autre
             </td>
           </tr>
           <tr>
@@ -194,8 +198,9 @@ export function Corps() {
       <h2>Combien coûte un fonds ISR actif de plus qu'un ETF ISR ?</h2>
       <p>
         Environ un point de pourcentage par an en moyenne : 1,37 % contre 0,33 % sur les fonds
-        actions français en 2025 selon l'AMF, et 1,2 % contre 0,2 % sur les fonds actions ESG
-        européens en 2024 selon l'ESMA.
+        actions français en 2025 selon l'AMF, et 1,2 % contre 0,2 % entre fonds actions ESG non
+        cotés (gestion active et indicielle confondues) et ETF actions ESG de l'Union européenne en
+        2024 selon l'ESMA.
       </p>
       <p>
         Le premier jeu de chiffres vient de{" "}
@@ -288,12 +293,12 @@ export function Corps() {
           .
         </li>
         <li>
-          <strong>La rémunération du distributeur.</strong> Une partie des frais d'un fonds actif
-          peut être reversée à l'intermédiaire qui le distribue (rétrocession) ; un ETF n'en verse
-          en principe pas. Le professionnel doit vous communiquer le total des coûts du produit, du
-          service et des rétrocessions qu'il perçoit, en pourcentage et en euros : demandez ce
-          document. Par transparence, la rémunération du cabinet qui édite ce site est décrite sur
-          la page <a href="/tarifs">tarifs</a>.
+          <strong>La rémunération du distributeur.</strong> Une partie des frais de gestion d'un
+          fonds peut être reversée à l'intermédiaire qui le distribue (rétrocession). Selon l'AMF,
+          le professionnel doit vous communiquer le total des coûts du produit, du service et des
+          rétrocessions qu'il perçoit, en pourcentage et en euros : demandez ce document. Par
+          transparence, la rémunération du cabinet qui édite ce site est décrite sur la page{" "}
+          <a href="/tarifs">tarifs</a>.
         </li>
       </ul>
 
@@ -301,7 +306,8 @@ export function Corps() {
       <p>
         Pour 20 000 € placés dix ans, avec la même performance avant frais dans les deux cas, un
         point d'écart de frais annuels représente environ 3 100 € de capital final en moins pour le
-        fonds actif, dans l'hypothèse centrale ci-dessous.
+        fonds actif, dans l'exemple ci-dessous (performance de 5 % par an avant frais retenue par
+        convention de calcul, et non comme prévision).
       </p>
       <div className="callout">
         <p>
@@ -356,10 +362,10 @@ export function Corps() {
         </tbody>
       </table>
       <p>
-        L'écart entre l'ETF et le fonds actif est de 3 139 € au bout de dix ans. Il ne dépend pas
-        beaucoup de l'hypothèse de performance : avec 3 % par an avant frais, il serait d'environ 2
-        590 € ; avec 7 %, d'environ 3 790 €. Plus les marchés montent, plus un même pourcentage de
-        frais représente d'euros.
+        L'écart entre l'ETF et le fonds actif est de 3 139 € au bout de dix ans. Il varie avec
+        l'hypothèse de performance sans changer d'ordre de grandeur : avec 3 % par an avant frais,
+        il serait d'environ 2 590 € ; avec 7 %, d'environ 3 790 €. Plus les marchés montent, plus un
+        même pourcentage de frais représente d'euros.
       </p>
       <p>
         Lu autrement : pour arriver au même capital que l'ETF, le fonds actif de cet exemple doit
@@ -403,8 +409,8 @@ export function Corps() {
         Ces chiffres sont des moyennes sur des milliers de fonds, investisseurs particuliers et
         institutionnels confondus pour la comparaison entre gestion active et indicielle. Pour 2024,
         l'ESMA avance une explication possible du retard des fonds ESG : leur plus forte exposition
-        aux marchés européens et mondiaux, moins performants que le marché américain au second
-        semestre. Ces moyennes ne disent rien du fonds précis que vous regardez, ni des dix
+        aux marchés européens ou mondiaux, moins performants que les zones Amérique et Asie au
+        second semestre. Ces moyennes ne disent rien du fonds précis que vous regardez, ni des dix
         prochaines années. Les études académiques sur la performance de l'investissement responsable
         sont tout aussi partagées, selon la méthode et la période retenues ; nous les passons en
         revue dans{" "}
@@ -509,12 +515,13 @@ export function Corps() {
         </li>
       </ul>
       <p>
-        Ces exclusions concernent aussi les fonds actifs. Depuis le 21 mai 2025 pour les fonds
-        existants, les orientations de l'ESMA sur les noms de fonds demandent qu'un fonds dont le
-        nom contient un terme environnemental (y compris « ESG » ou « ISR »), « impact » ou «
-        durable » applique les exclusions des indices « accord de Paris », et qu'un fonds dont le
-        nom contient « transition », « social » ou « gouvernance » applique au moins les trois
-        exclusions de base (
+        Ces exclusions concernent aussi les fonds actifs. Depuis le 21 novembre 2024 pour les fonds
+        nouveaux et le 21 mai 2025 pour les fonds existants, les orientations de l'ESMA sur les noms
+        de fonds demandent qu'un fonds dont le nom contient un terme lié à l'environnement
+        (catégorie qui, selon ces orientations, peut inclure les abréviations « ESG » et « ISR »), à
+        l'« impact » ou à la « durabilité » applique les exclusions des indices « accord de Paris »,
+        et qu'un fonds dont le nom contient « transition », « social » ou « gouvernance » applique
+        au moins les trois exclusions de base (
         <a
           href="https://www.esma.europa.eu/sites/default/files/2024-08/ESMA34-1592494965-657_Guidelines_on_funds_names_using_ESG_or_sustainability_related_terms_FR.pdf"
           target="_blank"
@@ -542,19 +549,19 @@ export function Corps() {
         Un ETF qui détient physiquement les actions de son indice est un actionnaire comme un autre
         : sa société de gestion exerce les droits de vote en assemblée générale et peut mener un
         dialogue avec les entreprises. Certains ETF reproduisent en revanche leur indice par un
-        contrat d'échange (réplication synthétique), un montage utilisé notamment par des ETF
-        éligibles au PEA qui suivent un indice mondial ; le fonds ne détient alors pas
-        nécessairement les actions de l'indice, et la question du vote se pose autrement. Le mode de
-        réplication figure dans le prospectus et le document d'informations clés.
+        contrat d'échange (réplication synthétique) ; le fonds ne détient alors pas nécessairement
+        les actions de l'indice, et la question du vote se pose autrement. Le mode de réplication
+        figure dans le prospectus et le document d'informations clés.
       </p>
       <p>
         Un fonds actif n'est pas, par nature, un actionnaire plus engagé : tout dépend des moyens
         que la société de gestion y consacre et de ce qu'elle publie. Dans les deux cas, la preuve
-        se trouve dans les mêmes documents : la politique d'engagement actionnarial, le rapport
-        annuel de vote (combien de résolutions contestées, sur quels sujets) et, quand il existe, le
-        rapport d'engagement qui nomme les thèmes de dialogue et leurs résultats. Le débat de fond,
-        exclure ou rester pour peser, n'est pas tranché par la recherche ; nous en exposons les deux
-        lectures dans{" "}
+        se trouve dans les mêmes documents : la politique d'engagement actionnarial et son compte
+        rendu annuel, qui décrit notamment la manière dont les droits de vote ont été exercés, que
+        les sociétés de gestion de portefeuille publient en application des articles L. 533-22 et R.
+        533-16 du code monétaire et financier, et, quand il existe, le rapport d'engagement qui
+        nomme les thèmes de dialogue et leurs résultats. Le débat de fond, exclure ou rester pour
+        peser, n'est pas tranché par la recherche ; nous en exposons les deux lectures dans{" "}
         <LienArticle slug="engagement-actionnarial-vs-exclusion">
           notre comparatif entre exclusion et engagement actionnarial
         </LienArticle>
@@ -631,8 +638,10 @@ export function Corps() {
         </li>
         <li>
           <strong>Prendre un sigle pour un label.</strong> « ESG », « SRI » ou « Climate » dans le
-          nom d'un ETF décrivent la méthode d'un indice ; seuls « PAB » et « CTB » renvoient à des
-          seuils réglementaires, et aucun n'est le Label ISR.
+          nom d'un ETF décrivent d'abord la méthode d'un indice ; seuls « PAB » et « CTB » renvoient
+          à un cahier des charges d'indice fixé par un règlement (les autres termes déclenchent
+          toutefois les exclusions prévues par les orientations de l'ESMA sur les noms de fonds), et
+          aucun n'est le Label ISR.
         </li>
         <li>
           <strong>Comparer un ETF monde à un fonds actif européen.</strong> Les écarts de
